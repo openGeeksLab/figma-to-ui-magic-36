@@ -37,9 +37,8 @@ const ImageGallery = () => {
               </h3>
             </div>
           </div>
-           </article>
+            </article>
         </div>
-           
       </div>
       
       <div className="flex flex-col items-start gap-6 flex-1 h-full max-md:w-full">
