@@ -12,7 +12,13 @@ const ImageGallery = () => {
         }}
       >
         <div className="flex flex-col justify-end items-start flex-1 w-full">
-           
+           <article className="flex-1 w-full relative">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/b05f297504b121b19c41286afd42bf86029003c2?width=1358"
+            alt="Next generation wood cladding example"
+            className="w-full h-[492px] object-cover rounded-[28px]"
+          />
+                 </article>
           <div className="flex flex-col items-start">
             <div className="flex items-center gap-2.5 bg-white p-2.5">
               <h3 className="text-[#454545] text-[42px] font-bold max-md:text-[28px] max-sm:text-xl">
