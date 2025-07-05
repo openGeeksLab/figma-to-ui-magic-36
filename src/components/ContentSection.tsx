@@ -41,7 +41,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   };
 
   const contentElement = (
-    <div className="flex justify-center items-start gap-24 flex-1 w-full max-md:flex-col">
+    <div className="flex justify-center items-stretch gap-24 flex-1 w-full max-md:flex-col">
       {imageUrl && (
         <div className="flex justify-center items-center w-1/3 max-md:w-full max-md:h-[400px]">
           <img
@@ -51,7 +51,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
           />
         </div>
       )}
-      <div className="flex flex-col justify-center items-start gap-8 w-2/3 max-md:w-full h-full">
+      <div className="flex flex-col justify-center items-start gap-8 w-2/3 max-md:w-full">
         {renderTitle()}
         <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
           {description}
