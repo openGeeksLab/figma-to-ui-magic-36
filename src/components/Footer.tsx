@@ -61,12 +61,13 @@ const Footer = () => {
             
           </div>
           <div className="flex flex-col justify-center items-start gap-4 w-full">
-            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Email:</span>
+            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Email:
             <a href="mailto:info@wood-panel.se" className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">info@wood-panel.se</a>
           </div>
           <div className="flex flex-col justify-center items-start gap-4 w-full">
-            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Phone:</span>
+            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Phone:
             <a href="tel:+46772227545" className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">+46 77 222 75 45</a>
+              </span>
           </div>
         </address>
       </div>
