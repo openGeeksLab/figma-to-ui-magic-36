@@ -90,7 +90,7 @@ const ContactForm = () => {
 
   if (isSubmitted) {
     return (
-      <section className="flex h-[1053px] justify-between items-start w-full px-8 py-24 rounded-[28px] max-md:h-auto max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10" id="contact">
+      <section className="flex h-[1053px] justify-center items-start w-full px-8 py-24 rounded-[28px] max-md:h-auto max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10" id="contact">
         <div className="flex w-[1102px] flex-col justify-center items-center gap-8 max-md:w-full">
           <div className="w-[477px] text-[#454545] text-center text-[42px] font-bold max-md:w-full max-md:text-[32px] max-sm:text-2xl">
             <div className="text-[#454545]">Thank you for your</div>
@@ -111,7 +111,7 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="flex h-[1053px] justify-between items-start w-full px-8 py-24 rounded-[28px] max-md:h-auto max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10" id="contact">
+    <section className="flex h-[1053px] justify-center items-start w-full px-8 py-24 rounded-[28px] max-md:h-auto max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10" id="contact">
       <div className="flex w-[1102px] flex-col justify-center items-center gap-8 max-md:w-full">
         <header className="w-[477px] text-[#454545] text-center text-[42px] font-bold max-md:w-full max-md:text-[32px] max-sm:text-2xl">
           <h2>
