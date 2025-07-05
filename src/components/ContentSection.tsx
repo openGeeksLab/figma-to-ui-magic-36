@@ -43,15 +43,15 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   const contentElement = (
     <div className="flex justify-center items-start gap-24 flex-1 w-full max-md:flex-col">
       {imageUrl && (
-        <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
+        <div className="flex justify-center items-center w-1/3 max-md:w-full max-md:h-[400px]">
           <img
             src={imageUrl}
             alt={imageAlt}
-            className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+            className="w-full h-auto object-cover rounded-[28px] max-md:h-[400px]"
           />
         </div>
       )}
-      <div className="flex flex-col items-start gap-8 flex-1">
+      <div className="flex flex-col items-start gap-8 w-2/3 max-md:w-full">
         {renderTitle()}
         <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
           {description}
