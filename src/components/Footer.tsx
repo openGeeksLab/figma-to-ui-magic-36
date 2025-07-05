@@ -60,10 +60,18 @@ const Footer = () => {
             <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Address:</span>
             <span className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base whitespace-nowrap">Tulegatan 47, 172 72 Sundbyberg</span>
           </div>
-          <div className="flex flex-col justify-center items-start gap-4 w-full">
-            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Email:</span>
-            <a href="mailto:info@wood-panel.se" className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">info@wood-panel.se</a>
-          </div>
+       <div className="flex flex-col justify-center items-start gap-4 w-full">
+  <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">
+    Email:&nbsp;
+    <a
+      href="mailto:info@wood-panel.se"
+      className="text-white font-bold hover:text-[#DCB481] transition-colors"
+    >
+      info@wood-panel.se
+    </a>
+  </span>
+</div>
+
          <div className="flex flex-col justify-center items-start gap-4 w-full">
   <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">
     Phone:&nbsp;
