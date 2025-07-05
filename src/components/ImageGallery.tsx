@@ -34,6 +34,7 @@ const ImageGallery = () => {
               </h3>
                </article>
             </div>
+             </div>
             
            
             <div className="flex items-center gap-2.5 bg-white p-2.5">
