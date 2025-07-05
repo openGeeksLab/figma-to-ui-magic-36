@@ -57,8 +57,8 @@ const Footer = () => {
         
         <address className="flex w-[374px] flex-col items-start gap-6 max-md:w-full not-italic">
           <div className="flex flex-col justify-center items-start gap-4 w-full">
-            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Address:</span>
-            <span className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base whitespace-nowrap">Tulegatan 47, 172 72 Sundbyberg</span>
+            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Address: Tulegatan 47, 172 72 Sundbyberg</span>
+            
           </div>
           <div className="flex flex-col justify-center items-start gap-4 w-full">
             <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Email:</span>
