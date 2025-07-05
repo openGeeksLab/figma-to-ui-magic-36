@@ -41,35 +41,31 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   };
 
   const contentElement = (
-    <div className="flex flex-col items-center w-full">
-      <div className="w-full text-center mb-8">
+    <div className="flex justify-center items-start gap-24 flex-1 w-full max-md:flex-col">
+      {imageUrl && (
+        <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
+          <img
+            src={imageUrl}
+            alt={imageAlt}
+            className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+          />
+        </div>
+      )}
+      <div className="flex flex-col items-start gap-8 flex-1">
         {renderTitle()}
-      </div>
-      <div className="flex justify-center items-start gap-24 flex-1 w-full max-md:flex-col">
-        {imageUrl && (
-          <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
-            <img
-              src={imageUrl}
-              alt={imageAlt}
-              className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
-            />
+        <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+          {description}
+        </div>
+        {additionalDescription && (
+          <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+            {additionalDescription}
           </div>
         )}
-        <div className="flex flex-col items-start gap-8 flex-1">
-          <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-            {description}
-          </div>
-          {additionalDescription && (
-            <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-              {additionalDescription}
-            </div>
-          )}
-          {showButton && (
-            <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-base font-normal hover:bg-[#c9a373] transition-colors">
-              {buttonText}
-            </button>
-          )}
-        </div>
+        {showButton && (
+          <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-base font-normal hover:bg-[#c9a373] transition-colors">
+            {buttonText}
+          </button>
+        )}
       </div>
     </div>
   );
