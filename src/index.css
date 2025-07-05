@@ -103,10 +103,3 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
-
-@layer utilities {
-  .py-12 {
-    padding-top: 1.3rem;
-    padding-bottom: 1.3rem;
-  }
-}

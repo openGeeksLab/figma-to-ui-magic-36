@@ -47,7 +47,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="grid h-[54px] w-full grid-cols-[repeat(5,1fr)] py-12 px-8 mt-60 max-md:grid-cols-[repeat(2,1fr)] max-md:grid-rows-[repeat(3,1fr)] max-md:h-auto max-md:gap-5 max-md:px-5 max-md:py-10 max-sm:grid-cols-[1fr] max-sm:px-4 max-sm:py-[30px]" aria-label="Product features">
+    <section className="grid h-[54px] w-full grid-cols-[repeat(5,1fr)] pt-0 pb-[86px] px-8 mt-60 max-md:grid-cols-[repeat(2,1fr)] max-md:grid-rows-[repeat(3,1fr)] max-md:h-auto max-md:gap-5 max-md:px-5 max-md:py-10 max-sm:grid-cols-[1fr] max-sm:px-4 max-sm:py-[30px]" aria-label="Product features">
       {features.map((feature, index) => (
         <div
           key={index}
