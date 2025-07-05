@@ -41,7 +41,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   };
 
   const contentElement = (
-    <div className="flex justify-center items-start gap-24 flex-1 max-md:w-full max-md:flex-col">
+    <div className="flex justify-center items-start gap-72 flex-1 max-md:w-full max-md:flex-col">
       <div className="flex-1 max-md:w-full">
         {renderTitle()}
       </div>
