@@ -1,0 +1,90 @@
+import React from 'react';
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-sm:px-4 max-sm:py-0">
+      <div className="flex items-start gap-6 w-full bg-[#90837A] pt-[90px] pb-16 px-6 rounded-[28px] max-md:flex-col max-md:gap-10 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10">
+        <div className="flex w-[655px] items-center relative pr-[480px] max-md:w-full">
+          <div className="flex flex-col justify-center items-start gap-6 absolute w-[175px] h-32 left-0 top-0 max-md:static max-md:w-full max-md:h-auto">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/723189558e9ee19fa9754f444cc2199edb438c04?width=350"
+              alt="Thermowood company logo"
+              className="w-[175px] h-20 aspect-[35/16]"
+            />
+            <div className="flex items-center gap-3" role="list" aria-label="Social media links">
+              <a href="#" className="hover:opacity-80 transition-opacity" aria-label="Follow us on TikTok">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 8V16C21 17.3261 20.4732 18.5979 19.5355 19.5355C18.5979 20.4732 17.3261 21 16 21H8C6.67392 21 5.40215 20.4732 4.46447 19.5355C3.52678 18.5979 3 17.3261 3 16V8C3 6.67392 3.52678 5.40215 4.46447 4.46447C5.40215 3.52678 6.67392 3 8 3H16C17.3261 3 18.5979 3.52678 19.5355 4.46447C20.4732 5.40215 21 6.67392 21 8Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M10 12C9.40666 12 8.82664 12.1759 8.33329 12.5056C7.83994 12.8352 7.45543 13.3038 7.22836 13.8519C7.0013 14.4001 6.94189 15.0033 7.05765 15.5853C7.1734 16.1672 7.45912 16.7018 7.87868 17.1213C8.29824 17.5409 8.83279 17.8266 9.41473 17.9424C9.99667 18.0581 10.5999 17.9987 11.1481 17.7716C11.6962 17.5446 12.1648 17.1601 12.4944 16.6667C12.8241 16.1734 13 15.5933 13 15V6C13.333 7 14.6 9 17 9" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+              <a href="#" className="hover:opacity-80 transition-opacity" aria-label="Follow us on Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 8V16C21 17.3261 20.4732 18.5979 19.5355 19.5355C18.5979 20.4732 17.3261 21 16 21H8C6.67392 21 5.40215 20.4732 4.46447 19.5355C3.52678 18.5979 3 17.3261 3 16V8C3 6.67392 3.52678 5.40215 4.46447 4.46447C5.40215 3.52678 6.67392 3 8 3H16C17.3261 3 18.5979 3.52678 19.5355 4.46447C20.4732 5.40215 21 6.67392 21 8Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M11 21V12C11 9.813 11.5 8 15 8M9 13H15" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+              <a href="#" className="hover:opacity-80 transition-opacity" aria-label="Follow us on Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 16C13.0609 16 14.0783 15.5786 14.8284 14.8284C15.5786 14.0783 16 13.0609 16 12C16 10.9391 15.5786 9.92172 14.8284 9.17157C14.0783 8.42143 13.0609 8 12 8C10.9391 8 9.92172 8.42143 9.17157 9.17157C8.42143 9.92172 8 10.9391 8 12C8 13.0609 8.42143 14.0783 9.17157 14.8284C9.92172 15.5786 10.9391 16 12 16Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M3 16V8C3 6.67392 3.52678 5.40215 4.46447 4.46447C5.40215 3.52678 6.67392 3 8 3H16C17.3261 3 18.5979 3.52678 19.5355 4.46447C20.4732 5.40215 21 6.67392 21 8V16C21 17.3261 20.4732 18.5979 19.5355 19.5355C18.5979 20.4732 17.3261 21 16 21H8C6.67392 21 5.40215 20.4732 4.46447 19.5355C3.52678 18.5979 3 17.3261 3 16Z" stroke="white" strokeWidth="1.5"/>
+                  <path d="M17.5 6.51002L17.51 6.49902" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <nav className="flex w-[257px] flex-col items-start gap-6 max-md:w-full" aria-label="Company links">
+          <h3 className="text-white text-xl font-bold w-full max-sm:text-lg">Company</h3>
+          <ul className="flex flex-col justify-center items-start gap-4 w-full">
+            <li><a href="#blog" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Blog</a></li>
+            <li><a href="#about" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">About</a></li>
+            <li><a href="#contact" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <nav className="flex w-[257px] flex-col items-start gap-6 max-md:w-full" aria-label="Product links">
+          <h3 className="text-white text-xl font-bold w-full max-sm:text-lg">Product</h3>
+          <ul className="flex flex-col justify-center items-start gap-4 w-full">
+            <li><a href="#exterior-panels" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Exterior Wood Panels</a></li>
+            <li><a href="#interior-panels" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Interior Wood Panels</a></li>
+            <li><a href="#privacy" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Privacy Policy</a></li>
+          </ul>
+        </nav>
+        
+        <address className="flex w-[374px] flex-col items-start gap-6 max-md:w-full not-italic">
+          <div className="flex flex-col justify-center items-start gap-4 w-full">
+            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Address:</span>
+            <span className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base">Tulegatan 47, 172 72 Sundbyberg</span>
+          </div>
+          <div className="flex flex-col justify-center items-start gap-4 w-full">
+            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Email:</span>
+            <a href="mailto:info@wood-panel.se" className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">info@wood-panel.se</a>
+          </div>
+          <div className="flex flex-col justify-center items-start gap-4 w-full">
+            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Phone:</span>
+            <a href="tel:+46772227545" className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">+46 77 222 75 45</a>
+          </div>
+        </address>
+      </div>
+      
+      <div className="flex justify-between items-center w-full px-0 py-6 max-md:flex-col max-md:gap-5 max-md:items-start max-sm:px-0 max-sm:py-5">
+        <div className="flex items-center gap-8">
+          <span className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+            © {currentYear} Thermowood
+          </span>
+        </div>
+        <nav className="flex items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:gap-4" aria-label="Legal links">
+          <a href="#cookies" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Cookie Policy</a>
+          <a href="#terms" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">General Terms of Use</a>
+          <a href="#privacy" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Privacy Policy</a>
+        </nav>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
