@@ -27,12 +27,12 @@ const ContentSection: React.FC<ContentSectionProps> = ({
 }) => {
   const renderTitle = () => {
     if (!highlightedWord) {
-      return <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">{title}</h2>;
+      return <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">{title}</h2>;
     }
 
     const parts = title.split(highlightedWord);
     return (
-      <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
+      <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
         {parts[0]}
         <span className="text-[#DCB481]">{highlightedWord}</span>
         {parts[1]}
@@ -41,7 +41,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   };
 
   const contentElement = (
-    <div className="flex justify-center items-start gap-8 flex-1 max-md:w-full max-md:flex-col">
+    <div className="flex justify-center items-start gap-24 flex-1 max-md:w-full max-md:flex-col">
       <div className="flex-1 max-md:w-full">
         {renderTitle()}
       </div>
