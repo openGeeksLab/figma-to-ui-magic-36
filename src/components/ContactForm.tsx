@@ -112,7 +112,7 @@ const ContactForm = () => {
           </p>
           
           <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-md:flex-col max-md:p-[30px] max-sm:p-5 mx-0 my-[56px] px-[78px] py-0">
-            <form onSubmit={handleSubmit} className="flex w-[544px] flex-col items-end gap-6 max-md:w-full mx-[48px] my-[50px]">
+            <form onSubmit={handleSubmit} className="flex w-[544px] flex-col items-start gap-6 max-md:w-full mx-[48px] my-[50px]">
               <div className="flex flex-col items-start gap-6 w-full">
                 <div className="w-full">
                   <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Name" className={`flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] ${errors.name ? 'border-red-500' : 'border-[#E5E4E0]'}`} aria-invalid={errors.name ? 'true' : 'false'} aria-describedby={errors.name ? 'name-error' : undefined} />
