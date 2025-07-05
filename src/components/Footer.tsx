@@ -58,7 +58,7 @@ const Footer = () => {
         <address className="flex w-[374px] flex-col items-start gap-6 max-md:w-full not-italic">
           <div className="flex flex-col justify-center items-start gap-4 w-full">
             <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Address: Tulegatan 47, 172 72 Sundbyberg</span>
-            
+            </address>
           </div>
           <div className="flex flex-col justify-center items-start gap-4 w-full">
             <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Email:
@@ -69,7 +69,7 @@ const Footer = () => {
             <a href="tel:+46772227545" className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">+46 77 222 75 45</a>
               </span>
           </div>
-        </address>
+        
       </div>
       
       <div className="flex justify-between items-center w-full px-0 py-6 max-md:flex-col max-md:gap-5 max-md:items-start max-sm:px-0 max-sm:py-5">
