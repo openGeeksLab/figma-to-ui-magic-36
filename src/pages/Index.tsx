@@ -94,6 +94,7 @@ const Index = () => {
             description="Using only heat and steam, we've developed an exclusive method that enhances the natural properties of wood to an unprecedented level. By removing moisture from the wood cells, we've created a product that's not only durable and stable but also beautiful and sustainable, all without the use of any chemicals. Our technology is the result of years of research and development, which we're proud to say is the finest and most advanced in the market."
             imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/09dc51976a6b021b8cbe252d7d9de56cb807652f?width=1078"
             imageAlt="Wood panel installation demonstration"
+            reverse={false}
           />
           
           <ContentSection
