@@ -41,22 +41,59 @@ const Header = () => {
       </nav>
       
       <button 
-        className="hidden text-[#454545] text-2xl max-md:block"
+        className="hidden text-[#454545] text-2xl max-md:block p-2 rounded-lg hover:bg-gray-100 transition-colors"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-label="Toggle mobile menu"
       >
-        <i className="ti ti-menu-2" />
+        <div className="w-6 h-6 flex flex-col justify-center space-y-1">
+          <span className={`block h-0.5 bg-[#454545] transition-all ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+          <span className={`block h-0.5 bg-[#454545] transition-all ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+          <span className={`block h-0.5 bg-[#454545] transition-all ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+        </div>
       </button>
       
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-lg z-50 md:hidden">
-          <nav className="flex flex-col p-4 space-y-4">
-            <a href="#products" className="text-[#454545] text-lg font-normal py-2">Products</a>
-            <a href="#gallery" className="text-[#454545] text-lg font-normal py-2">Gallery</a>
-            <a href="#about" className="text-[#454545] text-lg font-normal py-2">About</a>
-            <a href="#blog" className="text-[#454545] text-lg font-normal py-2">Blog</a>
-            <a href="#contact" className="text-[#454545] text-lg font-normal py-2">Contact</a>
-            <button className="bg-[#DCB481] px-6 py-3 rounded-[28px] text-[#454545] text-lg font-normal mt-4">
+        <div className="absolute top-full left-0 w-full bg-white shadow-lg z-50 md:hidden border-t">
+          <nav className="flex flex-col p-6 space-y-6">
+            <a 
+              href="#products" 
+              className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Products
+            </a>
+            <a 
+              href="#gallery" 
+              className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Gallery
+            </a>
+            <a 
+              href="#about" 
+              className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              About
+            </a>
+            <a 
+              href="#blog" 
+              className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Blog
+            </a>
+            <a 
+              href="#contact" 
+              className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
+            </a>
+            <button 
+              className="bg-[#DCB481] px-8 py-4 rounded-[28px] text-[#454545] text-lg font-normal mt-4 w-full hover:bg-[#c9a373] transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
               Get a Free Sample
             </button>
           </nav>

@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="flex w-full max-w-[1728px] flex-col items-center mx-auto my-0">
+    <div className="flex w-full max-w-[1728px] flex-col items-center mx-auto my-0 min-h-screen">
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap"

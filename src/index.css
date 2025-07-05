@@ -101,6 +101,35 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    html {
+      font-size: 16px; /* Ensure readable font size on mobile */
+    }
+    
+    * {
+      /* Improve touch targets on mobile */
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    button, a, input, textarea {
+      /* Minimum touch target size for accessibility */
+      min-height: 44px;
+    }
+  }
+  
+  /* Ensure smooth scrolling on all devices */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
   }
 }
 
