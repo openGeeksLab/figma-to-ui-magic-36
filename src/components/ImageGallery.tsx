@@ -39,7 +39,7 @@ const ImageGallery = () => {
           </div>
         </div>
       </div>
-      
+      </article>
       <div className="flex flex-col items-start gap-6 flex-1 h-full max-md:w-full">
         <article className="flex-1 w-full relative">
           <img
