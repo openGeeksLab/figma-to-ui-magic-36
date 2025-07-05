@@ -26,6 +26,18 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   className = ""
 }) => {
   const renderTitle = () => {
+    // Special case for the 4-row title
+    if (title === "We enhance wood naturally with heat, steam, and nothing else") {
+      return (
+        <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
+          We enhance<br />
+          <span className="text-[#DCB481]">wood naturally</span><br />
+          with heat, steam,<br />
+          and nothing else
+        </h2>
+      );
+    }
+
     if (!highlightedWord) {
       return <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">{title}</h2>;
     }
