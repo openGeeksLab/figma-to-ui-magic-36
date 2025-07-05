@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
+import IntroSection from '@/components/IntroSection';
 import ContentSection from '@/components/ContentSection';
 import ImageGallery from '@/components/ImageGallery';
 import ContactForm from '@/components/ContactForm';
@@ -24,12 +25,7 @@ const Index = () => {
           
           <Features />
           
-          <ContentSection
-            title="We enhance wood naturally with heat, steam, and nothing else"
-            highlightedWord="wood naturally"
-            description="Using only heat and steam, we've developed an exclusive method that enhances the natural properties of wood to an unprecedented level. By removing moisture from the wood cells, we've created a product that's not only durable and stable but also beautiful and sustainable, all without the use of any chemicals. Our technology is the result of years of research and development, which we're proud to say is the finest and most advanced in the market."
-            additionalDescription="Creates a connection between urban life and nature. Grown and strengthened in the harsh climate of Finland, the renewable Nordic forest provides us the best wood material, which we enhance with heat and steam only. Lunawood offers an easy-to-maintain, long-lasting and thoroughly sustainable wood products for all climates."
-          />
+          <IntroSection />
           
           <ImageGallery />
           
