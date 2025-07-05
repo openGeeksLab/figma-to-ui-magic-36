@@ -111,7 +111,7 @@ const ContactForm = () => {
             Fill out the form and we'll provide you with the latest product information, news, and business opportunities tailored to your needs. We look forward to hearing from you.
           </p>
           
-          <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-md:flex-col max-md:p-[30px] max-sm:p-5 py-0 px-0 mx-[13px] my-[49px]">
+          <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-md:flex-col max-md:p-[30px] max-sm:p-5 mx-0 my-[56px] px-[78px] py-0">
             <form onSubmit={handleSubmit} className="flex w-[544px] flex-col items-end gap-6 max-md:w-full mx-[48px] my-[50px]">
               <div className="flex flex-col items-start gap-6 w-full">
                 <div className="w-full">
