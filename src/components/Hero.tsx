@@ -11,7 +11,7 @@ const Hero = () => {
       <img
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/73537d7f2c3068f85d9e5cfd7c6358027d8135a6?width=3348"
         alt="Western Red Cedar Siding application"
-        className="w-full h-[942px] absolute object-cover left-0 top-0"
+        className="w-full h-full absolute object-cover left-0 top-0"
       />
       
       <div className="flex w-[685px] flex-col justify-end items-start absolute h-[425px] left-10 top-[190px] max-md:w-[90%] max-md:h-auto max-md:left-5 max-md:top-[100px] max-sm:w-[calc(100%_-_32px)] max-sm:left-4 max-sm:top-20">
