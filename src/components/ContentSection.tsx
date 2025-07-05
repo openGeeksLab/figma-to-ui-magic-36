@@ -26,6 +26,18 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   className = ""
 }) => {
   const renderTitle = () => {
+    // Special case for the 4-row title
+    if (title === "We enhance wood naturally with heat, steam, and nothing else") {
+      return (
+        <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
+          We enhance<br />
+          <span className="text-[#DCB481]">wood naturally</span><br />
+          with heat, steam,<br />
+          and nothing else
+        </h2>
+      );
+    }
+
     if (!highlightedWord) {
       return <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">{title}</h2>;
     }
@@ -41,7 +53,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   };
 
   const contentElement = (
-    <div className="flex justify-center items-start gap-24 flex-1 max-md:w-full max-md:flex-col">
+    <div className="flex justify-center items-start gap-72 flex-1 max-md:w-full max-md:flex-col">
       <div className="flex-1 max-md:w-full">
         {renderTitle()}
       </div>
