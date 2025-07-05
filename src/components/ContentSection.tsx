@@ -61,22 +61,18 @@ const ContentSection: React.FC<ContentSectionProps> = ({
             </button>
           )}
         </div>
-        <div className="flex-1">
-          {/* Right column space for future content */}
-        </div>
+        {imageUrl && (
+          <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
+            <img
+              src={imageUrl}
+              alt={imageAlt}
+              className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+            />
+          </div>
+        )}
       </div>
     </div>
   );
-
-  const imageElement = imageUrl ? (
-    <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
-      <img
-        src={imageUrl}
-        alt={imageAlt}
-        className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
-      />
-    </div>
-  ) : null;
 
   return (
     <section className={`flex justify-center items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 ${className}`}>
