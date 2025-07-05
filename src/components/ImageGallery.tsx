@@ -31,7 +31,9 @@ const ImageGallery = () => {
                 <span className="text-[#DCB481]">Match </span>
                 <span className="text-[#454545]">Any</span>
               </h3>
+               </article>
             </div>
+            
            
             <div className="flex items-center gap-2.5 bg-white p-2.5">
               <h3 className="text-[#454545] text-[42px] font-bold max-md:text-[28px] max-sm:text-xl">
@@ -39,7 +41,7 @@ const ImageGallery = () => {
               </h3>
             </div>
           </div>
-              </article>
+             
         </div>
          
       </div>
