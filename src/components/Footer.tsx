@@ -55,22 +55,38 @@ const Footer = () => {
           </ul>
         </nav>
         
-        <address className="flex w-[374px] flex-col items-start gap-6 max-md:w-full not-italic">
-          <div className="flex flex-col justify-center items-start gap-4 w-full">
-            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Address: Tulegatan 47, 172 72 Sundbyberg</span>
-            </address>
-          </div>
-          <div className="flex flex-col justify-center items-start gap-4 w-full">
-            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Email:
-            <a href="mailto:info@wood-panel.se" className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">info@wood-panel.se</a>
-          </div>
-          <div className="flex flex-col justify-center items-start gap-4 w-full">
-            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Phone:
-            <a href="tel:+46772227545" className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">+46 77 222 75 45</a>
-              </span>
-          </div>
-        
-      </div>
+    <address className="flex w-[374px] flex-col items-start gap-6 max-md:w-full not-italic">
+  <div className="flex flex-col justify-center items-start gap-4 w-full">
+    <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">
+      Address: Tulegatan 47, 172 72 Sundbyberg
+    </span>
+  </div>
+
+  <div className="flex flex-col justify-center items-start gap-4 w-full">
+    <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">
+      Email:&nbsp;
+      <a
+        href="mailto:info@wood-panel.se"
+        className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors"
+      >
+        info@wood-panel.se
+      </a>
+    </span>
+  </div>
+
+  <div className="flex flex-col justify-center items-start gap-4 w-full">
+    <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">
+      Phone:&nbsp;
+      <a
+        href="tel:+46772227545"
+        className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors"
+      >
+        +46 77 222 75 45
+      </a>
+    </span>
+  </div>
+</address>
+
       
       <div className="flex justify-between items-center w-full px-0 py-6 max-md:flex-col max-md:gap-5 max-md:items-start max-sm:px-0 max-sm:py-5">
         <div className="flex items-center gap-8">
