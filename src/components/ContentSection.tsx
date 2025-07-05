@@ -41,23 +41,25 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   };
 
   const contentElement = (
-    <div className="flex flex-col justify-center items-start gap-8 flex-1 max-md:w-full">
-      <div className="max-md:w-full">
+    <div className="flex justify-center items-start gap-8 flex-1 max-md:w-full max-md:flex-col">
+      <div className="flex-1 max-md:w-full">
         {renderTitle()}
       </div>
-      <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-        {description}
-      </div>
-      {additionalDescription && (
+      <div className="flex flex-col items-start gap-8 flex-1">
         <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-          {additionalDescription}
+          {description}
         </div>
-      )}
-      {showButton && (
-        <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-base font-normal hover:bg-[#c9a373] transition-colors">
-          {buttonText}
-        </button>
-      )}
+        {additionalDescription && (
+          <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+            {additionalDescription}
+          </div>
+        )}
+        {showButton && (
+          <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-base font-normal hover:bg-[#c9a373] transition-colors">
+            {buttonText}
+          </button>
+        )}
+      </div>
     </div>
   );
 
