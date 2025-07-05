@@ -18,6 +18,7 @@ const ImageGallery = () => {
             alt="Next generation wood cladding example"
             className="w-full h-[492px] object-cover rounded-[28px]"
           />
+                 </article>
           <div className="flex flex-col items-start">
             <div className="flex items-center gap-2.5 bg-white p-2.5">
               <h3 className="text-[#454545] text-[42px] font-bold max-md:text-[28px] max-sm:text-xl">
@@ -39,7 +40,7 @@ const ImageGallery = () => {
           </div>
         </div>
       </div>
-      </article>
+  
       <div className="flex flex-col items-start gap-6 flex-1 h-full max-md:w-full">
         <article className="flex-1 w-full relative">
           <img
