@@ -46,6 +46,15 @@ const ContentSection: React.FC<ContentSectionProps> = ({
         {renderTitle()}
       </div>
       <div className="flex justify-center items-start gap-24 flex-1 w-full max-md:flex-col">
+        {imageUrl && (
+          <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
+            <img
+              src={imageUrl}
+              alt={imageAlt}
+              className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+            />
+          </div>
+        )}
         <div className="flex flex-col items-start gap-8 flex-1">
           <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
             {description}
@@ -61,15 +70,6 @@ const ContentSection: React.FC<ContentSectionProps> = ({
             </button>
           )}
         </div>
-        {imageUrl && (
-          <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
-            <img
-              src={imageUrl}
-              alt={imageAlt}
-              className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
-            />
-          </div>
-        )}
       </div>
     </div>
   );
