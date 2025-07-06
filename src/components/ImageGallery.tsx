@@ -2,7 +2,7 @@ import React from 'react';
 
 const ImageGallery = () => {
   return (
-    <section className="flex h-[1008px] items-start gap-6 w-full px-8 py-0 max-md:flex-col max-md:h-auto max-md:gap-5 max-md:px-5 max-md:py-0 max-sm:px-4 max-sm:py-0" aria-label="Product gallery">
+    <section className="flex h-[1008px] items-start gap-6 w-full py-0 max-md:flex-col max-md:h-auto max-md:gap-5 max-md:px-5 max-md:py-0 max-sm:px-4 max-sm:py-0" aria-label="Product gallery">
       <div 
         className="flex w-[961px] h-[1008px] flex-col justify-end items-start gap-2.5 p-10 rounded-[28px] max-md:w-full max-md:h-[600px] max-sm:h-[500px] max-sm:p-5"
         style={{
