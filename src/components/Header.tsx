@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,9 +24,9 @@ const Header = () => {
           Gallery
         </a>
         
-        <a href="#about" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+        <Link to="/about" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
           About
-        </a>
+        </Link>
         
         <a href="#blog" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
           Blog
@@ -69,13 +70,13 @@ const Header = () => {
             >
               Gallery
             </a>
-            <a 
-              href="#about" 
+            <Link 
+              to="/about" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
-            </a>
+            </Link>
             <a 
               href="#blog" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
