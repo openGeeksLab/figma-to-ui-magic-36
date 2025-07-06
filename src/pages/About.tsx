@@ -6,68 +6,115 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <main className="max-w-[1728px] mx-auto px-8 py-12 max-md:px-5 max-sm:px-4">
-        <section className="mb-16">
-          <h1 className="text-[#454545] text-[42px] font-bold mb-8 max-md:text-[32px] max-sm:text-2xl">
-            About <span className="text-[#DCB481]">Thermowood</span>
-          </h1>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <main className="max-w-[1728px] mx-auto px-8 py-16 max-md:px-5 max-sm:px-4">
+        {/* Simply wooden made section */}
+        <section className="mb-24 max-md:mb-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-center max-lg:gap-12">
             <div>
-              <p className="text-[#454545] text-lg leading-[26.28px] mb-6">
-                We are pioneers in sustainable wood technology, specializing in thermally modified timber that combines natural beauty with enhanced durability. Our innovative approach to wood treatment creates products that are environmentally responsible and built to last.
+              <h1 className="text-[#454545] text-[48px] font-normal mb-6 max-md:text-[36px] max-sm:text-[28px] leading-tight">
+                Simply <span className="text-[#DCB481]">wooden</span><br />made
+              </h1>
+              <p className="text-[#454545] text-lg leading-relaxed mb-6">
+                At Polar, our luxury interiors are defined through our partnerships with the finest manufacturers, while our artisans seamlessly integrate the timeless beauty and pure experience in thermally modified wood creating aesthetic elegance.
               </p>
-              <p className="text-[#454545] text-lg leading-[26.28px] mb-6">
-                With years of expertise in the industry, we've developed cutting-edge thermal modification processes that transform ordinary wood into extraordinary building materials. Our commitment to sustainability drives everything we do.
+              <p className="text-[#454545] text-lg leading-relaxed mb-6">
+                We believe in creating sustainable environments that not only look stunning but also stand the test of time. Our focus is on delivering extraordinary craftsmanship paired with innovative solutions that enhance living and working spaces while prioritizing long-term environmental sustainability.
               </p>
-              <p className="text-[#454545] text-lg leading-[26.28px]">
-                From residential cladding to commercial applications, our thermally modified wood solutions provide superior performance while maintaining the natural aesthetic that makes wood such a beloved building material.
+              <p className="text-[#454545] text-lg leading-relaxed">
+                Our dedication to excellence means that every project is a collaboration that reflects our commitment to quality design and environmental responsibility, where craftsmanship meets nature's finest materials.
               </p>
             </div>
             <div className="rounded-[28px] overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop"
-                alt="Modern sustainable building with wood cladding"
-                className="w-full h-[400px] object-cover"
+                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop"
+                alt="Modern wooden architecture with natural lighting"
+                className="w-full h-[500px] object-cover max-md:h-[400px]"
               />
             </div>
           </div>
         </section>
 
-        <section className="mb-16">
-          <h2 className="text-[#454545] text-[32px] font-bold mb-8 max-md:text-2xl max-sm:text-xl">
-            Our <span className="text-[#DCB481]">Mission</span>
-          </h2>
-          <div className="bg-[#f8f8f8] p-8 rounded-[28px]">
-            <p className="text-[#454545] text-lg leading-[26.28px] mb-4">
-              To revolutionize the construction industry by providing sustainable, high-performance wood products that reduce environmental impact while delivering exceptional quality and durability.
-            </p>
-            <p className="text-[#454545] text-lg leading-[26.28px]">
-              We believe that by harnessing the power of thermal modification technology, we can create wood products that not only meet but exceed the demands of modern construction, all while preserving our planet for future generations.
-            </p>
+        {/* Our Vision section */}
+        <section className="mb-24 max-md:mb-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-center max-lg:gap-12">
+            <div className="rounded-[28px] overflow-hidden lg:order-1 max-lg:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop"
+                alt="Contemporary house with wooden exterior"
+                className="w-full h-[500px] object-cover max-md:h-[400px]"
+              />
+            </div>
+            <div className="lg:order-2 max-lg:order-1">
+              <h2 className="text-[#454545] text-[42px] font-normal mb-6 max-md:text-[32px] max-sm:text-[24px] leading-tight">
+                Our <span className="text-[#DCB481]">Vision</span>
+              </h2>
+              <p className="text-[#454545] text-lg leading-relaxed mb-6">
+                To be the leading innovator in sustainable architecture solutions, creating harmonious spaces that respect both human needs and environmental stewardship.
+              </p>
+              <p className="text-[#454545] text-lg leading-relaxed">
+                We envision a future where every structure tells a story of responsible design, where thermal modification technology transforms ordinary wood into extraordinary architectural elements.
+              </p>
+            </div>
           </div>
         </section>
 
-        <section>
-          <h2 className="text-[#454545] text-[32px] font-bold mb-8 max-md:text-2xl max-sm:text-xl">
-            Why Choose <span className="text-[#DCB481]">Us?</span>
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-white border border-gray-100 rounded-[28px]">
-              <h3 className="text-[#DCB481] text-xl font-bold mb-4">Sustainability First</h3>
-              <p className="text-[#454545] text-base leading-[22px]">
-                Our thermal modification process uses only heat and steam, with no chemicals, making it completely eco-friendly.
-              </p>
+        {/* Our Values section */}
+        <section className="mb-24 max-md:mb-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-center max-lg:gap-12">
+            <div>
+              <h2 className="text-[#454545] text-[42px] font-normal mb-6 max-md:text-[32px] max-sm:text-[24px] leading-tight">
+                Our <span className="text-[#DCB481]">Values</span>
+              </h2>
+              <div className="space-y-4">
+                <p className="text-[#454545] text-lg leading-relaxed">
+                  <strong>Innovation:</strong> We continuously push the boundaries of what's possible with thermally modified wood.
+                </p>
+                <p className="text-[#454545] text-lg leading-relaxed">
+                  <strong>Sustainability:</strong> Every decision is made with environmental impact in mind.
+                </p>
+                <p className="text-[#454545] text-lg leading-relaxed">
+                  <strong>Quality:</strong> We never compromise on the excellence of our materials and craftsmanship.
+                </p>
+                <p className="text-[#454545] text-lg leading-relaxed">
+                  <strong>Partnership:</strong> We believe in collaborative relationships that create lasting value.
+                </p>
+                <p className="text-[#454545] text-lg leading-relaxed">
+                  <strong>Integrity:</strong> Transparency and honesty guide all our business practices.
+                </p>
+              </div>
             </div>
-            <div className="text-center p-6 bg-white border border-gray-100 rounded-[28px]">
-              <h3 className="text-[#DCB481] text-xl font-bold mb-4">Enhanced Durability</h3>
-              <p className="text-[#454545] text-base leading-[22px]">
-                Our thermally modified wood offers superior resistance to decay, insects, and moisture.
-              </p>
+            <div className="rounded-[28px] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=800&h=600&fit=crop"
+                alt="Sustainable modern home with wooden facade"
+                className="w-full h-[500px] object-cover max-md:h-[400px]"
+              />
             </div>
-            <div className="text-center p-6 bg-white border border-gray-100 rounded-[28px]">
-              <h3 className="text-[#DCB481] text-xl font-bold mb-4">Expert Craftsmanship</h3>
-              <p className="text-[#454545] text-base leading-[22px]">
-                Years of experience and cutting-edge technology ensure consistent, high-quality results.
+          </div>
+        </section>
+
+        {/* Sustainability section */}
+        <section className="mb-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-center max-lg:gap-12">
+            <div className="rounded-[28px] overflow-hidden lg:order-1 max-lg:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop"
+                alt="Eco-friendly wooden building surrounded by nature"
+                className="w-full h-[500px] object-cover max-md:h-[400px]"
+              />
+            </div>
+            <div className="lg:order-2 max-lg:order-1">
+              <h2 className="text-[#454545] text-[42px] font-normal mb-6 max-md:text-[32px] max-sm:text-[24px] leading-tight">
+                Sustainability
+              </h2>
+              <p className="text-[#454545] text-lg leading-relaxed mb-6">
+                We are committed to creating a sustainable future through responsible sourcing and innovative processing techniques that minimize environmental impact while maximizing durability.
+              </p>
+              <p className="text-[#454545] text-lg leading-relaxed mb-6">
+                Our thermal modification process uses only heat and steam to enhance wood properties, eliminating the need for chemical treatments while creating materials that naturally resist decay, insects, and moisture.
+              </p>
+              <p className="text-[#454545] text-lg leading-relaxed">
+                By choosing thermally modified wood from responsibly managed forests and a sustainable process, we're building today while protecting tomorrow's natural resources.
               </p>
             </div>
           </div>
