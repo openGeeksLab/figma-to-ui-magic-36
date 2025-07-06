@@ -5,7 +5,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="flex w-full justify-between items-center bg-white px-8 py-12 max-md:px-5 max-md:py-6 max-sm:p-4">
+    <header className="relative flex w-full justify-between items-center bg-white px-8 py-12 max-md:px-5 max-md:py-6 max-sm:p-4">
       <img
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/902b289f6044ad330a3742acb39d6cae82a5275c?width=350"
         alt="Thermowood logo"
