@@ -19,19 +19,19 @@ const ImageGallery = () => {
             className="w-full h-[492px] object-cover rounded-[28px]"
           /> */}
           <div className="flex flex-col items-start">
-            <div className="flex items-center gap-2.5 bg-white p-2.5">
+            <div className="flex items-center gap-2.5 bg-white p-2.5 rounded-[28px_28px_0px_0px]">
               <h3 className="text-[#454545] text-[42px] font-bold max-md:text-[28px] max-sm:text-xl">
                 Custom Cladding
               </h3>
             </div>
-            <div className="flex items-center gap-2.5 bg-white p-2.5">
+            <div className="flex items-center gap-2.5 bg-white p-2.5 rounded-[0px_28px_28px_0px]">
               <h3 className="text-[#454545] text-[42px] font-bold max-md:text-[28px] max-sm:text-xl">
                 <span className="text-[#454545]">to </span>
                 <span className="text-[#DCB481]">Match </span>
                 <span className="text-[#454545]">Any</span>
               </h3>
             </div>
-            <div className="flex items-center gap-2.5 bg-white p-2.5">
+            <div className="flex items-center gap-2.5 bg-white p-2.5 rounded-[0px_0px_28px_28px]">
               <h3 className="text-[#454545] text-[42px] font-bold max-md:text-[28px] max-sm:text-xl">
                 Aesthetic
               </h3>
