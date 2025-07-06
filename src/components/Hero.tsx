@@ -8,7 +8,7 @@ const Hero = () => {
   );
 
   return (
-    <section className="w-full max-w-[1664px] h-[844px] relative rounded-[28px] max-md:h-[600px] max-sm:h-[500px]" aria-label="Hero section">
+    <section className="w-full h-[844px] relative rounded-[28px] max-md:h-[600px] max-sm:h-[500px]" aria-label="Hero section">
       <Carousel
         plugins={[plugin.current]}
         className="w-full h-full"
