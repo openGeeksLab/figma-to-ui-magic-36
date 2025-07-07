@@ -16,7 +16,7 @@ const About = () => {
         />
         <div className="absolute bottom-8 left-16 max-md:left-13 max-sm:bottom-4 max-sm:left-8">
           <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl bg-white px-5 py-3 rounded-[28px]">
-            About Us
+            About <span className="text-[#DCB481]">Us</span>
           </h1>
         </div>
       </section>
