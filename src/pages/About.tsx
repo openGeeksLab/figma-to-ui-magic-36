@@ -9,7 +9,7 @@ const About = () => {
       <main className="flex flex-col w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10">
         {/* Simply wooden made section */}
         <section className="mb-24 max-md:mb-16">
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-lg:gap-12">
+          <div className="flex justify-between items-center w-full max-md:flex-col max-md:gap-10 gap-16">
             <div>
               <h1 className="text-[#454545] text-[48px] font-normal mb-6 max-md:text-[36px] max-sm:text-[28px] leading-tight">
                 Simply <span className="text-[#DCB481]">wooden</span><br />made
@@ -36,7 +36,7 @@ const About = () => {
 
         {/* Our Vision section */}
         <section className="mb-24 max-md:mb-16">
-          <div className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10 gap-16">
+          <div className="flex justify-between items-center w-full max-md:flex-col max-md:gap-10 gap-16">
             <div className="rounded-[28px] overflow-hidden lg:order-1 max-lg:order-2">
               <img
                 src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop"
@@ -60,7 +60,7 @@ const About = () => {
 
         {/* Our Values section */}
         <section className="mb-24 max-md:mb-16">
-          <div className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10 gap-16">
+          <div className="flex justify-between items-center w-full max-md:flex-col max-md:gap-10 gap-16">
             <div>
               <h2 className="text-[#454545] text-[42px] font-normal mb-6 max-md:text-[32px] max-sm:text-[24px] leading-tight">
                 Our <span className="text-[#DCB481]">Values</span>
@@ -95,7 +95,7 @@ const About = () => {
 
         {/* Sustainability section */}
         <section className="mb-16">
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-lg:gap-12">
+          <div className="flex justify-between items-center w-full max-md:flex-col max-md:gap-10 gap-16">
             <div className="rounded-[28px] overflow-hidden lg:order-1 max-lg:order-2">
               <img
                 src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop"
