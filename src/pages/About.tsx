@@ -62,7 +62,7 @@ const About = () => {
           </div>
           <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
             <img
-              src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop"
+              src="/lovable-uploads/cd3dd78f-3059-4fd1-947f-af87071531e3.png"
               alt="Contemporary house with wooden exterior"
               className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
             />
