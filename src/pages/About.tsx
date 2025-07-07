@@ -60,7 +60,7 @@ const About = () => {
 
         {/* Our Values section */}
         <section className="mb-24 max-md:mb-16">
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-lg:gap-12">
+          <div className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10 gap-16">
             <div>
               <h2 className="text-[#454545] text-[42px] font-normal mb-6 max-md:text-[32px] max-sm:text-[24px] leading-tight">
                 Our <span className="text-[#DCB481]">Values</span>
