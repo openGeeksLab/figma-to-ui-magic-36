@@ -10,7 +10,7 @@ const About = () => {
         {/* Simply wooden made section */}
         <section className="mb-24 max-md:mb-16">
           <div className="flex justify-between items-center w-full max-md:flex-col max-md:gap-10 gap-16">
-            <div>
+            <div className="flex-1">
               <h1 className="text-[#454545] text-[48px] font-normal mb-6 max-md:text-[36px] max-sm:text-[28px] leading-tight">
                 Simply <span className="text-[#DCB481]">wooden</span><br />made
               </h1>
@@ -24,7 +24,7 @@ const About = () => {
                 Our dedication to excellence means that every project is a collaboration that reflects our commitment to quality design and environmental responsibility, where craftsmanship meets nature's finest materials.
               </p>
             </div>
-            <div className="rounded-[28px] overflow-hidden">
+            <div className="flex-1 rounded-[28px] overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop"
                 alt="Modern wooden architecture with natural lighting"
@@ -37,14 +37,14 @@ const About = () => {
         {/* Our Vision section */}
         <section className="mb-24 max-md:mb-16">
           <div className="flex justify-between items-center w-full max-md:flex-col max-md:gap-10 gap-16">
-            <div className="rounded-[28px] overflow-hidden lg:order-1 max-lg:order-2">
+            <div className="flex-1 rounded-[28px] overflow-hidden lg:order-1 max-lg:order-2">
               <img
                 src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop"
                 alt="Contemporary house with wooden exterior"
                 className="w-full h-[500px] object-cover max-md:h-[400px]"
               />
             </div>
-            <div className="lg:order-2 max-lg:order-1">
+            <div className="flex-1 lg:order-2 max-lg:order-1">
               <h2 className="text-[#454545] text-[42px] font-normal mb-6 max-md:text-[32px] max-sm:text-[24px] leading-tight">
                 Our <span className="text-[#DCB481]">Vision</span>
               </h2>
@@ -61,7 +61,7 @@ const About = () => {
         {/* Our Values section */}
         <section className="mb-24 max-md:mb-16">
           <div className="flex justify-between items-center w-full max-md:flex-col max-md:gap-10 gap-16">
-            <div>
+            <div className="flex-1">
               <h2 className="text-[#454545] text-[42px] font-normal mb-6 max-md:text-[32px] max-sm:text-[24px] leading-tight">
                 Our <span className="text-[#DCB481]">Values</span>
               </h2>
@@ -83,7 +83,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="rounded-[28px] overflow-hidden">
+            <div className="flex-1 rounded-[28px] overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=800&h=600&fit=crop"
                 alt="Sustainable modern home with wooden facade"
@@ -96,14 +96,14 @@ const About = () => {
         {/* Sustainability section */}
         <section className="mb-16">
           <div className="flex justify-between items-center w-full max-md:flex-col max-md:gap-10 gap-16">
-            <div className="rounded-[28px] overflow-hidden lg:order-1 max-lg:order-2">
+            <div className="flex-1 rounded-[28px] overflow-hidden lg:order-1 max-lg:order-2">
               <img
                 src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop"
                 alt="Eco-friendly wooden building surrounded by nature"
                 className="w-full h-[500px] object-cover max-md:h-[400px]"
               />
             </div>
-            <div className="lg:order-2 max-lg:order-1">
+            <div className="flex-1 lg:order-2 max-lg:order-1">
               <h2 className="text-[#454545] text-[42px] font-normal mb-6 max-md:text-[32px] max-sm:text-[24px] leading-tight">
                 Sustainability
               </h2>
