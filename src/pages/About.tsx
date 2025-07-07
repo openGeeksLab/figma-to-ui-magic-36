@@ -73,7 +73,7 @@ const About = () => {
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
           <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
             <img
-              src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=800&h=600&fit=crop"
+              src="/lovable-uploads/1f9919c1-e70c-44f9-b504-9ae5c6fab3b3.png"
               alt="Sustainable modern home with wooden facade"
               className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
             />
