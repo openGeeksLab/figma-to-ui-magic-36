@@ -8,14 +8,14 @@ const About = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative w-full h-[500px] max-md:h-[400px] max-sm:h-[300px]">
+      <section className="relative w-full h-[500px] max-md:h-[400px] max-sm:h-[300px] px-8 max-md:px-5 max-sm:px-4">
         <img
           src="/lovable-uploads/3952c04f-b5c0-4be9-adfa-6fe82eef0feb.png"
           alt="Modern wooden house"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-[28px]"
         />
-        <div className="absolute bottom-8 left-8 max-sm:bottom-4 max-sm:left-4">
-          <h1 className="text-white text-[48px] font-bold max-md:text-[36px] max-sm:text-[28px] drop-shadow-lg">
+        <div className="absolute bottom-8 left-16 max-md:left-13 max-sm:bottom-4 max-sm:left-8">
+          <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl bg-white px-5 py-3 rounded-[28px]">
             About Us
           </h1>
         </div>
