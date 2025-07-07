@@ -21,6 +21,23 @@ const About = () => {
         </div>
       </section>
       
+      {/* Simply wooden made intro section */}
+      <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10 bg-gray-50">
+        <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
+          <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
+            Simply <span className="text-[#DCB481]">wooden</span><br />made
+          </h2>
+        </div>
+        <div className="flex flex-col items-start gap-6 flex-1 max-md:w-full">
+          <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+            At [Your Company Name], we are passionate about transforming spaces with the natural beauty and durability of exterior wood wall panels. With years of experience in the industry, we specialize in providing high-quality, sustainable wood solutions tailored to meet the unique needs of each client. Our commitment to craftsmanship, innovation, and customer satisfaction has earned us a reputation as a trusted leader in exterior design.
+          </div>
+          <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+            We believe in creating outdoor environments that not only look stunning but also stand the test of time. Whether you're enhancing a residential property or a commercial facade, our team is here to bring your vision to life with expert guidance and superior products.
+          </div>
+        </div>
+      </section>
+      
       <main className="flex flex-col w-full">
         {/* Simply wooden made section */}
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
