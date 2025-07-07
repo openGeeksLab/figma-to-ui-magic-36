@@ -6,11 +6,13 @@ const Header = () => {
 
   return (
     <header className="relative flex w-full justify-between items-center bg-white px-8 py-12 max-md:px-5 max-md:py-6 max-sm:p-4">
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/902b289f6044ad330a3742acb39d6cae82a5275c?width=350"
-        alt="Thermowood logo"
-        className="w-[175px] h-20 aspect-[35/16] max-sm:w-[120px] max-sm:h-[55px]"
-      />
+      <Link to="/">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/902b289f6044ad330a3742acb39d6cae82a5275c?width=350"
+          alt="Thermowood logo"
+          className="w-[175px] h-20 aspect-[35/16] max-sm:w-[120px] max-sm:h-[55px] cursor-pointer"
+        />
+      </Link>
       
       <nav className="flex items-center gap-[49px] max-md:hidden" role="navigation" aria-label="Main navigation">
         <div className="flex h-10 justify-center items-center gap-2.5 px-0 py-2">
