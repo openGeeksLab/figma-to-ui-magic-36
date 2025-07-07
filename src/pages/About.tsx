@@ -36,7 +36,7 @@ const About = () => {
 
         {/* Our Vision section */}
         <section className="mb-24 max-md:mb-16">
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-lg:gap-12">
+          <div className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
             <div className="rounded-[28px] overflow-hidden lg:order-1 max-lg:order-2">
               <img
                 src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop"
