@@ -22,7 +22,7 @@ const About = () => {
       </section>
       
       {/* Simply wooden made intro section */}
-      <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10 bg-gray-50">
+      <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
         <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
           <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
             Simply <span className="text-[#DCB481]">wooden</span><br />made
