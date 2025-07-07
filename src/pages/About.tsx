@@ -6,6 +6,21 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      
+      {/* Hero Section */}
+      <section className="relative w-full h-[500px] max-md:h-[400px] max-sm:h-[300px]">
+        <img
+          src="/lovable-uploads/3952c04f-b5c0-4be9-adfa-6fe82eef0feb.png"
+          alt="Modern wooden house"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute bottom-8 left-8 max-sm:bottom-4 max-sm:left-4">
+          <h1 className="text-white text-[48px] font-bold max-md:text-[36px] max-sm:text-[28px] drop-shadow-lg">
+            About Us
+          </h1>
+        </div>
+      </section>
+      
       <main className="flex flex-col w-full">
         {/* Simply wooden made section */}
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
