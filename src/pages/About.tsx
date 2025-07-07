@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <main className="max-w-[1728px] mx-auto px-8 py-16 max-md:px-5 max-sm:px-4">
+      <main className="max-w-[1728px] mx-auto px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10">
         {/* Simply wooden made section */}
         <section className="mb-24 max-md:mb-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center max-lg:gap-12">
