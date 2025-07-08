@@ -39,7 +39,7 @@ const About = () => {
       </section>
       
       <main className="flex flex-col w-full">
-        {/* Simply wooden made section */}
+        {/* Our Vision  section */}
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
           <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
             <img
@@ -59,27 +59,32 @@ const About = () => {
           </div>
         </section>
 
-        {/* Our Vision section
+        {/* Our Values section */}
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col-reverse max-md:gap-10">
           <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
-            <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
-              Our <span className="text-[#DCB481]">Vision</span>
-            </h2>
+            <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
+            Our <span className="text-[#DCB481]">Values</span>
+            </h1>
             <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-              To be the leading innovator in sustainable architecture solutions, creating harmonious spaces that respect both human needs and environmental stewardship.
+              Commitment, Quality and Responsibility in everything we do. Our core values describe how we should act towards each other and towards our customers, suppliers, and other partners.
             </div>
             <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-              We envision a future where every structure tells a story of responsible design, where thermal modification technology transforms ordinary wood into extraordinary architectural elements.
+            <ul>
+            <li> Tailored solutions that match your architectural style.</li >
+            <li> Expert advice to guide you from concept to completion.</li >
+            <li> Skilled installation ensuring perfect alignment and durability.</li >
+            <li> Keeping your wood panels looking their best year after year.</li >
+            </ul>
             </div>
           </div>
           <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
             <img
-              src="/lovable-uploads/cd3dd78f-3059-4fd1-947f-af87071531e3.png"
+              src="/lovable-uploads/1f9919c1-e70c-44f9-b504-9ae5c6fab3b3.png"
               alt="Contemporary house with wooden exterior"
               className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
             />
           </div>
-        </section> */}
+        </section>
 
         {/* Our Values section */}
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
@@ -104,7 +109,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Sustainability section */}
+        {/* Sustainability section
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col-reverse max-md:gap-10">
           <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
             <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
@@ -127,7 +132,7 @@ const About = () => {
               className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
             />
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>
