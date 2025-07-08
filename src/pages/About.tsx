@@ -42,12 +42,11 @@ const About = () => {
         {/* Our Vision  section */}
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
           <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
-          <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
-              Our <span className="text-[#DCB481]">Vision</span>
-            </h1>
-            <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-            To be the leading provider of premium exterior wood wall panels, inspiring sustainable and innovative design solutions that transform outdoor spaces worldwide.
-            </div>
+            <img
+              src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
+              alt="Modern wooden architecture with natural lighting"
+              className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+            />
           </div>
           <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
             <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
