@@ -20,7 +20,48 @@ const About = () => {
           </h1>
         </div>
       </section>
-      
+      {/* Section 0: Intro - Simply wooden made + about text */}
+<section className="w-full flex justify-between items-start px-8 py-24 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
+  {/* Column 1: Heading */}
+  <div className="flex-1 flex items-start max-md:w-full">
+    <h1 className="text-[#454545] text-[42px] font-bold leading-tight max-md:text-[32px] max-sm:text-2xl text-left">
+      Simply <span className="text-[#DCB481]">wooden</span><br />made
+    </h1>
+  </div>
+
+  {/* Column 2: About paragraphs */}
+  <div className="flex-1 flex flex-col gap-6 max-md:w-full">
+    <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+      At [Your Company Name], we are passionate about transforming spaces with the natural beauty and durability of exterior wood wall panels. With years of experience in the industry, we specialize in providing high-quality, sustainable wood solutions tailored to meet the unique needs of each client. Our commitment to craftsmanship, innovation, and customer satisfaction has earned us a reputation as a trusted leader in exterior design.
+    </p>
+    <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+      We believe in creating outdoor environments that not only look stunning but also stand the test of time. Whether you're enhancing a residential property or a commercial facade, our team is here to bring your vision to life with expert guidance and superior products.
+    </p>
+  </div>
+</section>
+
+{/* Section 1: Image on left, Vision on right */}
+<section className="w-full flex justify-between items-center px-8 py-24 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
+  {/* Column 1: Image */}
+  <div className="flex-1 flex justify-center items-center max-md:w-full max-md:h-[400px]">
+    <img
+      src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
+      alt="Modern wooden architecture"
+      className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+    />
+  </div>
+
+  {/* Column 2: Vision text */}
+  <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full">
+    <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
+      Our <span className="text-[#DCB481]">Vision</span>
+    </h2>
+    <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+      To be the leading provider of premium exterior wood wall panels, inspiring sustainable and innovative design solutions that transform outdoor spaces worldwide.
+    </p>
+  </div>
+</section>
+
       {/* Simply wooden made intro section */}
       <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
         <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
