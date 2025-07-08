@@ -39,15 +39,13 @@ const About = () => {
       </section>
       
       <main className="flex flex-col w-full">
-       {/* SECTION 1 – Image Left, Text Right */}
-<section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
-  <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
-    <img
-      src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
-      alt="Modern wooden architecture"
-      className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
-    />
-  </div>
+       {/* SECTION 1: Image Left, Text Right */}
+<section className="flex justify-between items-center w-full px-8 py-24 gap-12 max-md:flex-col max-md:gap-10 max-md:py-[60px] max-sm:py-10">
+  <img
+    src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
+    alt="Modern wooden architecture"
+    className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+  />
   <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
     <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
       Our <span className="text-[#DCB481]">Vision</span>
@@ -58,40 +56,36 @@ const About = () => {
   </div>
 </section>
 
-{/* SECTION 2 – Image Right, Text Left */}
-<section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col-reverse max-md:gap-10">
+{/* SECTION 2: Text Left, Image Right */}
+<section className="flex justify-between items-center w-full px-8 py-24 gap-12 max-md:flex-col-reverse max-md:gap-10 max-md:py-[60px] max-sm:py-10">
   <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
     <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
       Our <span className="text-[#DCB481]">Mission</span>
     </h1>
     <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-      Deliver outstanding craftsmanship and long-lasting beauty through eco-friendly materials and customer-focused service.
+      Deliver excellence in exterior wood paneling through innovation, sustainability, and craftsmanship that enhances every environment we touch.
     </div>
   </div>
-  <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
-    <img
-      src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
-      alt="Sustainable wood design"
-      className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
-    />
-  </div>
+  <img
+    src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
+    alt="Architectural detail close-up"
+    className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+  />
 </section>
 
-{/* SECTION 3 – Image Left, Text Right */}
-<section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
-  <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
-    <img
-      src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
-      alt="Architectural wood paneling"
-      className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
-    />
-  </div>
+{/* SECTION 3: Image Left, Text Right */}
+<section className="flex justify-between items-center w-full px-8 py-24 gap-12 max-md:flex-col max-md:gap-10 max-md:py-[60px] max-sm:py-10">
+  <img
+    src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
+    alt="Wood facade in natural environment"
+    className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+  />
   <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
     <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
       Our <span className="text-[#DCB481]">Promise</span>
     </h1>
     <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-      We promise durability, natural beauty, and personalized support to help you build spaces that last and inspire.
+      We commit to timeless aesthetics, environmental responsibility, and customer satisfaction in every panel we create.
     </div>
   </div>
 </section>
