@@ -81,7 +81,7 @@ const About = () => {
             <img
               src="/lovable-uploads/1f9919c1-e70c-44f9-b504-9ae5c6fab3b3.png"
               alt="Contemporary house with wooden exterior"
-              className="flex justify-end items-center flex-1 max-md:w-full max-md:h-[400px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+              className="w-[539px] h-[539px] flex justify-end items-center object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
             />
           {/* </div> */}
         </section>
