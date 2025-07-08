@@ -39,7 +39,7 @@ const About = () => {
       </section>
       
       <main className="flex flex-col w-full">
-        {/* Simply wooden made section */}
+        {/* Simply wooden made section
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
           <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
             <img
@@ -62,7 +62,7 @@ const About = () => {
               Our dedication to excellence means that every project is a collaboration that reflects our commitment to quality design and environmental responsibility, where craftsmanship meets nature's finest materials.
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Our Vision section */}
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col-reverse max-md:gap-10">
