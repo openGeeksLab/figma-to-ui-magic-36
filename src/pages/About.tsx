@@ -42,7 +42,7 @@ const About = () => {
         {/* Our Vision  section */}
 
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
-          <div className="flex justify-start items-center flex-1 max-md:w-full max-md:h-[400px]">
+          <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
 
             <img
               src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
