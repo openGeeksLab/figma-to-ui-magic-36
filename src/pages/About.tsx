@@ -70,7 +70,7 @@ const About = () => {
   </div>
   <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
     <img
-      src="/lovable-uploads/alt-image-1.png"
+      src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
       alt="Sustainable wood design"
       className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
     />
@@ -81,7 +81,7 @@ const About = () => {
 <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
   <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
     <img
-      src="/lovable-uploads/alt-image-2.png"
+      src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
       alt="Architectural wood paneling"
       className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
     />
