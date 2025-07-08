@@ -39,7 +39,7 @@ const About = () => {
       </section>
       
       <main className="flex flex-col w-full">
-        {/* Simply wooden made section
+        {/* Simply wooden made section */}
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
           <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
             <img
@@ -50,21 +50,16 @@ const About = () => {
           </div>
           <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
             <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
-              Simply <span className="text-[#DCB481]">wooden</span><br />made
+              Our <span className="text-[#DCB481]">Vision</span>
             </h1>
             <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-              At Polar, our luxury interiors are defined through our partnerships with the finest manufacturers, while our artisans seamlessly integrate the timeless beauty and pure experience in thermally modified wood creating aesthetic elegance.
+            To be the leading provider of premium exterior wood wall panels, inspiring sustainable and innovative design solutions that transform outdoor spaces worldwide.
             </div>
-            <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-              We believe in creating sustainable environments that not only look stunning but also stand the test of time. Our focus is on delivering extraordinary craftsmanship paired with innovative solutions that enhance living and working spaces while prioritizing long-term environmental sustainability.
-            </div>
-            <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-              Our dedication to excellence means that every project is a collaboration that reflects our commitment to quality design and environmental responsibility, where craftsmanship meets nature's finest materials.
-            </div>
+            
           </div>
-        </section> */}
+        </section>
 
-        {/* Our Vision section */}
+        {/* Our Vision section
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col-reverse max-md:gap-10">
           <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
             <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
@@ -79,12 +74,12 @@ const About = () => {
           </div>
           <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
             <img
-              src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
+              src="/lovable-uploads/cd3dd78f-3059-4fd1-947f-af87071531e3.png"
               alt="Contemporary house with wooden exterior"
               className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
             />
           </div>
-        </section>
+        </section> */}
 
         {/* Our Values section */}
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
