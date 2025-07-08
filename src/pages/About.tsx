@@ -61,11 +61,19 @@ const About = () => {
 <section className="w-full flex justify-between items-center px-8 py-24 gap-12 max-md:flex-col-reverse max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
   <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full">
     <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
-      Our <span className="text-[#DCB481]">Mission</span>
+      Our <span className="text-[#DCB481]">Values</span>
     </h2>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-      We are committed to providing eco-friendly wood solutions that combine aesthetics, durability, and functionality. Our mission is to enable customers to build beautiful, sustainable spaces with minimal environmental impact.
+    Commitment, Quality and Responsibility in everything we do. Our core values describe how we should act towards each other and towards our customers, suppliers, and other partners.
     </p>
+    <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+  <ul className="list-disc ml-6">
+    <li>Tailored solutions that match your architectural style.</li>
+    <li>Expert advice to guide you from concept to completion.</li>
+    <li>Skilled installation ensuring perfect alignment and durability.</li>
+    <li>Keeping your wood panels looking their best year after year.</li>
+  </ul>
+</div>
   </div>
   <div className="flex-1 flex justify-center items-center max-md:w-full max-md:h-[400px]">
     <img
@@ -87,7 +95,8 @@ const About = () => {
   </div>
   <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full">
     <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
-      Our <span className="text-[#DCB481]">Promise</span>
+      {/* Our <span className="text-[#DCB481]">Promise</span> */}
+      Sustainability
     </h2>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
       Quality, sustainability, and reliability — our promise is to always deliver wood paneling that not only enhances your property but respects the planet and your peace of mind.
