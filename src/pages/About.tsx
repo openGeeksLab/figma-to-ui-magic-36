@@ -8,7 +8,19 @@ const About = () => {
       <Header />
       
       {/* Hero Section */}
-      {/* SECTION 0: Heading + About text */}
+      <section className="relative w-full h-[500px] max-md:h-[400px] max-sm:h-[300px] px-8 max-md:px-5 max-sm:px-4">
+        <img
+          src="/lovable-uploads/3952c04f-b5c0-4be9-adfa-6fe82eef0feb.png"
+          alt="Modern wooden house"
+          className="w-full h-full object-cover rounded-[28px]"
+        />
+        <div className="absolute bottom-8 left-16 max-md:left-13 max-sm:bottom-4 max-sm:left-8">
+          <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl bg-white px-5 py-3 rounded-[28px]">
+            About <span className="text-[#DCB481]">Us</span>
+          </h1>
+        </div>
+      </section>
+     {/* SECTION 0: Heading + About text */}
 <section className="w-full flex justify-between items-start px-8 py-24 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
   <div className="flex-1 flex items-start max-md:w-full">
     <h1 className="text-[#454545] text-[42px] font-bold leading-tight max-md:text-[32px] max-sm:text-2xl text-left">
