@@ -86,7 +86,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Our Values section */}
+        {/* Our Values section
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
           <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
             <img
@@ -97,7 +97,7 @@ const About = () => {
           </div>
           <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
             <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
-              Our <span className="text-[#DCB481]">Values</span>
+            Sustainability
             </h2>
             <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base space-y-4">
               <p><strong>Innovation:</strong> We continuously push the boundaries of what's possible with thermally modified wood.</p>
@@ -107,9 +107,9 @@ const About = () => {
               <p><strong>Integrity:</strong> Transparency and honesty guide all our business practices.</p>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* Sustainability section
+        {/* Sustainability section */}
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col-reverse max-md:gap-10">
           <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
             <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
@@ -132,7 +132,7 @@ const About = () => {
               className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
             />
           </div>
-        </section> */}
+        </section>
       </main>
       <Footer />
     </div>
