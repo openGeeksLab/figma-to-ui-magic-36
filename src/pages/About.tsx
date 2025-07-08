@@ -88,8 +88,8 @@ const About = () => {
 <section className="w-full flex justify-between items-center px-8 py-24 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
   <div className="flex-1 flex justify-center items-center max-md:w-full max-md:h-[400px]">
     <img
-      src="/lovable-uploads/sample-image-3.png"
-      alt="Promise"
+      src="/lovable-uploads/11f4848a-da9c-4f0c-b73b-f4b0fd9607a9.png"
+      alt="Sustainability"
       className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
     />
   </div>
