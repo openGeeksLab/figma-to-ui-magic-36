@@ -41,7 +41,7 @@ const About = () => {
       <main className="flex flex-col w-full">
         {/* Our Vision  section */}
 
-        <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
+        <section className="flex items-center gap-12 w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
           <div className="flex justify-center items-center flex-1">
 
             <img
