@@ -24,9 +24,9 @@ const About = () => {
       {/* Simply wooden made intro section */}
       <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col max-md:gap-10">
         <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
-          <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
+          <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
             Simply <span className="text-[#DCB481]">wooden</span><br />made
-          </h2>
+          </h1>
         </div>
         <div className="flex flex-col items-start gap-6 flex-1 max-md:w-full">
           <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
@@ -111,27 +111,27 @@ const About = () => {
 
         {/* Sustainability section */}
         <section className="flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 max-md:flex-col-reverse max-md:gap-10">
+        <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
+        <img
+              src="/lovable-uploads/1f9919c1-e70c-44f9-b504-9ae5c6fab3b3.png"
+              alt="Sustainable modern home with wooden facade"
+              className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+            />
+          </div>
           <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
-            <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
+            <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
               Sustainability
-            </h2>
+            </h1>
             <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-              We are committed to creating a sustainable future through responsible sourcing and innovative processing techniques that minimize environmental impact while maximizing durability.
+            To be the leading provider of premium exterior wood wall panels, inspiring sustainable and innovative design solutions that transform outdoor spaces worldwide.
             </div>
             <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
               Our thermal modification process uses only heat and steam to enhance wood properties, eliminating the need for chemical treatments while creating materials that naturally resist decay, insects, and moisture.
             </div>
-            <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-              By choosing thermally modified wood from responsibly managed forests and a sustainable process, we're building today while protecting tomorrow's natural resources.
-            </div>
+            For us, the environment and sustainability are obvious issues in everyday life. We are not satisfied with wood being a sustainable product, but work long-term with our entire business to contribute to a sustainable society.
+            Our raw material comes from responsibly managed forests and is certified.We continuously work to reduce our climate footprint, e.g. by gradually switching to the latest technology and actively influencing our subcontractors.
           </div>
-          <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
-            <img
-              src="/lovable-uploads/1f9919c1-e70c-44f9-b504-9ae5c6fab3b3.png"
-              alt="Eco-friendly wooden building surrounded by nature"
-              className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
-            />
-          </div>
+          
         </section>
       </main>
       <Footer />
