@@ -47,7 +47,7 @@ const About = () => {
             <img
               src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
               alt="Modern wooden architecture with natural lighting"
-              className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+              
             />
           </div>
           <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
