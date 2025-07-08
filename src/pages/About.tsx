@@ -77,8 +77,8 @@ const About = () => {
   </div>
   <div className="flex-1 flex justify-center items-center max-md:w-full max-md:h-[400px]">
     <img
-      src="/lovable-uploads/sample-image-2.png"
-      alt="Mission"
+      src="/lovable-uploads/98324750-941a-4426-8bfc-ec88d6d651d3.png"
+      alt="Our Values - Modern wooden house"
       className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
     />
   </div>
