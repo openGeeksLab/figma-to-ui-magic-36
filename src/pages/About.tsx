@@ -77,8 +77,8 @@ const About = () => {
   </div>
   <div className="flex-1 flex justify-center items-center max-md:w-full max-md:h-[400px]">
     <img
-      src="/lovable-uploads/98324750-941a-4426-8bfc-ec88d6d651d3.png"
-      alt="Our Values - Modern wooden house"
+      src="/lovable-uploads/sample-image-2.png"
+      alt="Mission"
       className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
     />
   </div>
@@ -100,11 +100,7 @@ const About = () => {
     </h2>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
     To be the leading provider of premium exterior wood wall panels, inspiring sustainable and innovative design solutions that transform outdoor spaces worldwide.
-
-    
-    For us, the environment and sustainability are obvious issues in everyday life. We are not satisfied with wood being a sustainable product, but work long-term with our entire business to contribute to a sustainable society.
-Our raw material comes from responsibly managed forests and is certified.We continuously work to reduce our climate footprint, e.g. by gradually switching to the latest technology and actively influencing our subcontractors.
-</p>
+    </p>
   </div>
 </section>
 
