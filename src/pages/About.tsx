@@ -77,7 +77,7 @@ const About = () => {
             </ul>
             </div>
           </div>
-          <div className="flex justify-center items-center flex-1 max-md:w-full max-md:h-[400px]">
+          <div className="flex justify-right items-right flex-1 max-md:w-full max-md:h-[400px]">
             <img
               src="/lovable-uploads/1f9919c1-e70c-44f9-b504-9ae5c6fab3b3.png"
               alt="Contemporary house with wooden exterior"
