@@ -77,8 +77,8 @@ const About = () => {
   </div>
   <div className="flex-1 flex justify-center items-center max-md:w-full max-md:h-[400px]">
     <img
-      src="/lovable-uploads/sample-image-2.png"
-      alt="Mission"
+      src="/lovable-uploads/d1f3649f-8d67-4d19-b1ea-291d1bfc5b02.png"
+      alt="Values"
       className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
     />
   </div>
