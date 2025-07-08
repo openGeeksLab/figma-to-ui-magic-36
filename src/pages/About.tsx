@@ -69,7 +69,7 @@ const About = () => {
               Commitment, Quality and Responsibility in everything we do. Our core values describe how we should act towards each other and towards our customers, suppliers, and other partners.
             </div>
             <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-            <ul>
+            <ul className="list-disc ml-6">
             <li> Tailored solutions that match your architectural style.</li >
             <li> Expert advice to guide you from concept to completion.</li >
             <li> Skilled installation ensuring perfect alignment and durability.</li >
