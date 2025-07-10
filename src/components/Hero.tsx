@@ -8,29 +8,29 @@ const Hero = () => {
   );
 
   return (
-    <section className="w-full h-[844px] relative rounded-[28px] max-md:h-[600px] max-sm:h-[500px]" aria-label="Hero section">
+    <section className="w-full h-[844px] relative rounded-[28px] overflow-hidden max-md:h-[600px] max-sm:h-[500px]" aria-label="Hero section">
       <Carousel
         plugins={[plugin.current]}
-        className="w-full h-full"
+        className="w-full h-full rounded-[28px]"
         opts={{
           align: "start",
           loop: true,
-          dragFree: true,
+          dragFree: false,
         }}
       >
-        <CarouselContent className="h-full">
+        <CarouselContent className="h-full rounded-[28px]">
           <CarouselItem className="h-full">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/18cc0c9ae0b327a4d86bd24feb262b1e431a376d?width=3328"
               alt="Sustainable wood building facade"
-              className="w-full h-[844px] object-cover rounded-[28px] max-md:h-[600px] max-sm:h-[500px]"
+              className="w-full h-[844px] object-cover max-md:h-[600px] max-sm:h-[500px]"
             />
           </CarouselItem>
           <CarouselItem className="h-full">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/73537d7f2c3068f85d9e5cfd7c6358027d8135a6?width=3348"
               alt="Western Red Cedar Siding application"
-              className="w-full h-[844px] object-cover rounded-[28px] max-md:h-[600px] max-sm:h-[500px]"
+              className="w-full h-[844px] object-cover max-md:h-[600px] max-sm:h-[500px]"
             />
           </CarouselItem>
         </CarouselContent>
