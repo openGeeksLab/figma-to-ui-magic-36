@@ -29,7 +29,7 @@ const About = () => {
      <section className="relative w-full px-8 max-md:px-5 max-sm:px-4">
   <Carousel 
     plugins={[plugin.current]}
-    className="w-full h-full max-sm:h-[280px] max-md:h-[400px]"  // ✅ Set mobile height
+    className="w-full h-full max-sm:h-[280px] max-md:h-[200px]"  // ✅ Set mobile height
     onMouseEnter={plugin.current.stop}
     onMouseLeave={plugin.current.reset}
   >
@@ -39,7 +39,7 @@ const About = () => {
           <img
             src={image.src}
             alt={image.alt}
-            className="w-full h-full object-cover rounded-[28px]"
+            className="w-full h-full object-cover max-md:h-[200px] rounded-[28px]"
           />
         </CarouselItem>
       ))}
