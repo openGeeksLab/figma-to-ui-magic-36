@@ -111,8 +111,8 @@ const ContactForm = () => {
             Fill out the form and we'll provide you with the latest product information, news, and business opportunities tailored to your needs. We look forward to hearing from you.
           </p>
           
-          <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-md:flex-col max-md:p-[30px] max-sm:p-5 mx-0 my-[56px] px-[78px] py-0">
-            <form onSubmit={handleSubmit} className="flex w-[544px] flex-col items-start gap-6 max-md:w-full mx-[48px] my-[50px]">
+          <div className="flex justify-center items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-lg:p-8 max-md:p-6 max-sm:p-5 mx-0 my-[56px]">
+            <form onSubmit={handleSubmit} className="flex w-full max-w-[600px] flex-col items-start gap-6">
               <div className="flex flex-col items-start gap-6 w-full">
                 <div className="w-full">
                   <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Name" className={`flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] ${errors.name ? 'border-red-500' : 'border-[#E5E4E0]'}`} aria-invalid={errors.name ? 'true' : 'false'} aria-describedby={errors.name ? 'name-error' : undefined} />
@@ -143,15 +143,10 @@ const ContactForm = () => {
                   </p>}
               </div>
               
-              <button type="submit" disabled={isSubmitting} className="flex w-[264px] h-[52px] justify-center items-center gap-2.5 bg-[#90837A] px-8 py-[18px] rounded-[28px] max-sm:w-full text-white text-xl font-normal hover:bg-[#7a6f66] transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+              <button type="submit" disabled={isSubmitting} className="flex w-full max-w-[264px] h-[52px] justify-center items-center gap-2.5 bg-[#90837A] px-8 py-[18px] rounded-[28px] mx-auto text-white text-xl font-normal hover:bg-[#7a6f66] transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
                 {isSubmitting ? 'Sending...' : 'Send'}
               </button>
             </form>
-            
-            <div className="w-[414px] h-[577px] relative top-[-73px] left-12 max-md:static max-md:w-full max-md:h-[300px] max-md:mt-5">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bdaedf6a2b4b249871135b39b9604b32a3debd6?width=826" alt="Wood panel installation example" className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0 max-md:w-full max-md:h-[300px]" />
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/31eddc13a4ce4b7976d9a399d6774eed069fcb1f?width=828" alt="Detailed wood panel texture" className="w-[414px] h-[504px] absolute object-cover rounded-[0px_0px_28px_28px] left-0 top-[73px] max-md:w-full max-md:h-[300px]" />
-            </div>
           </div>
         </div>
       </div>
