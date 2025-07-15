@@ -36,11 +36,13 @@ const About = () => {
           <CarouselContent className="h-full">
             {images.map((image, index) => (
               <CarouselItem key={index} className="h-full">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover rounded-[28px]"
-                />
+                <div className="w-full h-full">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover rounded-[28px]"
+                  />
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
