@@ -111,16 +111,8 @@ const ContactForm = () => {
             Fill out the form and we'll provide you with the latest product information, news, and business opportunities tailored to your needs. We look forward to hearing from you.
           </p>
           
-          <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-md:flex-col max-md:items-center max-md:p-[30px] max-sm:p-5 mx-0 my-[56px] px-[78px] py-0 max-md:px-0 max-md:py-[30px]">
-            
-            {/* Image container - appears first on mobile/tablet, second on desktop */}
-            <div className="w-[414px] h-[577px] relative top-[-73px] left-12 md:order-2 max-md:order-1 max-md:static max-md:w-full max-md:h-[300px] max-md:mb-6 max-md:left-0 max-md:top-0">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bdaedf6a2b4b249871135b39b9604b32a3debd6?width=826" alt="Wood panel installation example" className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0 max-md:w-full max-md:h-[300px] max-md:relative" />
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/31eddc13a4ce4b7976d9a399d6774eed069fcb1f?width=828" alt="Detailed wood panel texture" className="w-[414px] h-[504px] absolute object-cover rounded-[0px_0px_28px_28px] left-0 top-[73px] max-md:w-full max-md:h-[300px] max-md:relative max-md:top-0" />
-            </div>
-
-            {/* Form container - appears second on mobile/tablet, first on desktop */}
-            <form onSubmit={handleSubmit} className="flex w-[544px] flex-col items-start gap-6 max-md:w-full mx-[48px] my-[50px] md:order-1 max-md:order-2 max-md:mx-0 max-md:my-0">
+          <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-md:flex-col max-md:p-[30px] max-sm:p-5 mx-0 my-[56px] px-[78px] py-0">
+            <form onSubmit={handleSubmit} className="flex w-[544px] flex-col items-start gap-6 max-md:w-full mx-[48px] my-[50px]">
               <div className="flex flex-col items-start gap-6 w-full">
                 <div className="w-full">
                   <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Name" className={`flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] ${errors.name ? 'border-red-500' : 'border-[#E5E4E0]'}`} aria-invalid={errors.name ? 'true' : 'false'} aria-describedby={errors.name ? 'name-error' : undefined} />
@@ -155,6 +147,11 @@ const ContactForm = () => {
                 {isSubmitting ? 'Sending...' : 'Send'}
               </button>
             </form>
+            
+            <div className="w-[414px] h-[577px] relative top-[-73px] left-12 max-md:static max-md:w-full max-md:h-[300px] max-md:mt-5">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bdaedf6a2b4b249871135b39b9604b32a3debd6?width=826" alt="Wood panel installation example" className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0 max-md:w-full max-md:h-[300px]" />
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/31eddc13a4ce4b7976d9a399d6774eed069fcb1f?width=828" alt="Detailed wood panel texture" className="w-[414px] h-[504px] absolute object-cover rounded-[0px_0px_28px_28px] left-0 top-[73px] max-md:w-full max-md:h-[300px]" />
+            </div>
           </div>
         </div>
       </div>
