@@ -46,7 +46,7 @@ const About = () => {
     </CarouselContent>
   </Carousel>
   
-  <div className="absolute bottom-8 left-16 max-md:left-10 max-sm:bottom-4 max-sm:left-5 z-10">
+  <div className="absolute bottom-8 left-16 max-md:left-10 max-sm:relative max-sm:bottom-auto max-sm:left-auto max-sm:mt-4 max-sm:px-4 z-10">
     <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-[22px] bg-white px-5 py-3 max-sm:px-3 max-sm:py-2 rounded-[28px] leading-tight">
       About <span className="text-[#DCB481]">Us</span>
     </h1>
