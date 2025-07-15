@@ -27,83 +27,67 @@ const Gallery = () => {
   const galleryImages = [
     {
       src: "/lovable-uploads/01971fdd-2225-4207-8884-ed6cc8f94713.png",
-      alt: "Modern wooden house with vertical panels in natural setting",
-      span: "col-span-2"
+      alt: "Modern wooden house with vertical panels in natural setting"
     },
     {
       src: "/lovable-uploads/349c3aec-dd39-4d32-9ccd-aa47ec139e57.png",
-      alt: "Contemporary wood-clad house",
-      span: ""
+      alt: "Contemporary wood-clad house"
     },
     {
       src: "/lovable-uploads/a9bc92c2-f3e1-405d-a0b4-38d5614ac1be.png",
-      alt: "Modern wooden house with warm lighting",
-      span: ""
+      alt: "Modern wooden house with warm lighting"
     },
     {
       src: "/lovable-uploads/b83a3e1b-84b0-4345-a1a0-e4d631266738.png",
-      alt: "Modern wooden house exterior",
-      span: "col-span-2 row-span-2"
+      alt: "Modern wooden house exterior"
     },
     {
       src: "/lovable-uploads/1f9919c1-e70c-44f9-b504-9ae5c6fab3b3.png",
-      alt: "Modern house design",
-      span: ""
+      alt: "Modern house design"
     },
     {
       src: "/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png",
-      alt: "Contemporary architecture",
-      span: ""
+      alt: "Contemporary architecture"
     },
     {
       src: "/lovable-uploads/1aed7f42-8ce9-4786-9b6c-63d07c28d2c1.png",
-      alt: "Modern wooden house with stone foundation",
-      span: "col-span-2"
+      alt: "Modern wooden house with stone foundation"
     },
     {
       src: "/lovable-uploads/266af241-4d7b-41f6-9dc5-2936a467e630.png",
-      alt: "Modern wooden architecture",
-      span: ""
+      alt: "Modern wooden architecture"
     },
     {
       src: "/lovable-uploads/3952c04f-b5c0-4be9-adfa-6fe82eef0feb.png",
-      alt: "Contemporary wooden house design",
-      span: ""
+      alt: "Contemporary wooden house design"
     },
     {
       src: "/lovable-uploads/41ff9733-f2d0-474b-bdaa-aa10dac0e929.png",
-      alt: "Modern wooden house with glass elements",
-      span: "row-span-2"
+      alt: "Modern wooden house with glass elements"
     },
     {
       src: "/lovable-uploads/8d0609b8-a6a9-478c-8b36-1b184fd59746.png",
-      alt: "Wooden house in natural setting",
-      span: ""
+      alt: "Wooden house in natural setting"
     },
     {
       src: "/lovable-uploads/98324750-941a-4426-8bfc-ec88d6d651d3.png",
-      alt: "Contemporary wooden architecture",
-      span: ""
+      alt: "Contemporary wooden architecture"
     },
     {
       src: "/lovable-uploads/b97e8d9c-7a1b-40a8-bbb0-d64df74603e2.png",
-      alt: "Modern house with wooden panels",
-      span: "col-span-2"
+      alt: "Modern house with wooden panels"
     },
     {
       src: "/lovable-uploads/cd3dd78f-3059-4fd1-947f-af87071531e3.png",
-      alt: "Wooden house exterior design",
-      span: ""
+      alt: "Wooden house exterior design"
     },
     {
       src: "/lovable-uploads/d1f3649f-8d67-4d19-b1ea-291d1bfc5b02.png",
-      alt: "Contemporary wooden house",
-      span: ""
+      alt: "Contemporary wooden house"
     },
     {
       src: "/lovable-uploads/ebaf1a4f-ebc2-45b7-a703-6288b90e46fc.png",
-      alt: "Modern wooden architecture design",
-      span: ""
+      alt: "Modern wooden architecture design"
     }
   ];
 
@@ -154,15 +138,15 @@ const Gallery = () => {
             </div>
             
             {/* Gallery grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
+            <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
               {galleryImages.map((image, index) => (
                 <Dialog key={index}>
                   <DialogTrigger asChild>
-                    <div className={`group relative overflow-hidden rounded-[16px] cursor-pointer hover:scale-[1.02] transition-transform duration-300 ${image.span}`}>
+                    <div className="group relative overflow-hidden rounded-[16px] cursor-pointer hover:scale-[1.02] transition-transform duration-300 break-inside-avoid mb-4">
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300" />
                     </div>
