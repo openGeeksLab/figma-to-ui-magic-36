@@ -114,8 +114,8 @@ const Contact = () => {
             </div>
             
             {/* Contact form with image */}
-            <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-md:flex-col max-md:p-[30px] max-sm:p-5 mx-0 my-[56px] px-[78px] py-0">
-              <form className="flex w-[544px] flex-col items-start gap-6 max-md:w-full mx-[48px] my-[50px]">
+            <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-lg:justify-center max-lg:p-12 max-md:p-6 max-sm:p-4 mx-0 my-[56px]">
+              <form className="flex w-[544px] flex-col items-start gap-6 max-lg:w-full max-lg:max-w-md max-lg:mx-auto">
                 <div className="flex flex-col items-start gap-6 w-full">
                   <div className="w-full">
                     <input
@@ -162,11 +162,11 @@ const Contact = () => {
                 </button>
               </form>
               
-              <div className="w-[414px] h-[577px] relative top-[-73px] left-12 max-md:static max-md:w-full max-md:h-[300px] max-md:mt-5">
+              <div className="w-[414px] h-[577px] relative top-[-73px] left-12 hidden lg:block">
                 <img 
                   src="/lovable-uploads/b83a3e1b-84b0-4345-a1a0-e4d631266738.png" 
                   alt="Modern wooden house exterior" 
-                  className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0 max-md:w-full max-md:h-[300px]" 
+                  className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0" 
                 />
               </div>
             </div>
