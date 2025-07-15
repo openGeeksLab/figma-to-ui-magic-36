@@ -118,9 +118,9 @@ const Contact = () => {
               {/* Image */}
               <div className="order-2 lg:order-1">
                 <img
-                  src="/lovable-uploads/266af241-4d7b-41f6-9dc5-2936a467e630.png"
+                  src="/lovable-uploads/b97e8d9c-7a1b-40a8-bbb0-d64df74603e2.png"
                   alt="Modern wooden house exterior"
-                  className="w-full h-[400px] object-cover rounded-[28px]"
+                  className="w-full h-full min-h-[500px] object-cover rounded-[28px]"
                 />
               </div>
               
