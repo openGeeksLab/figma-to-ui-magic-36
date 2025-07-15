@@ -57,28 +57,29 @@ const Products = () => {
 
 
       {/* Products Preview Section */}
-      <section className="w-full px-8 py-24 max-md:px-5 max-sm:px-4 max-md:py-[60px] max-sm:py-10">
-        {/* Category Navigation */}
-        <div className="flex gap-4 mb-12 flex-wrap max-sm:gap-2">
-          <button className="bg-[#454545] text-white px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-[#363636] transition-colors">
-            All Products
-          </button>
-          <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
-            Fasad
-          </button>
-          <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
-            Cladding
-          </button>
-          <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
-            Decking
-          </button>
-          <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
-            Accessories
-          </button>
-        </div>
+      <section className="w-full px-8 py-12 max-md:px-5 max-sm:px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Category Navigation */}
+          <div className="flex gap-4 mb-12 flex-wrap max-sm:gap-2">
+            <button className="bg-[#454545] text-white px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-[#363636] transition-colors">
+              All Products
+            </button>
+            <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
+              Fasad
+            </button>
+            <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
+              Cladding
+            </button>
+            <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
+              Decking
+            </button>
+            <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
+              Accessories
+            </button>
+          </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-sm:gap-6">
+          {/* Products Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {/* Product 1 */}
           <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
             <div className="aspect-square overflow-hidden">
@@ -135,6 +136,7 @@ const Products = () => {
                 <div className="absolute top-2 left-2 w-16 h-8 bg-[#B8956B] rounded-sm"></div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
