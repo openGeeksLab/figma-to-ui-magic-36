@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Header from "@/components/Header";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
-import ImageUpload from "@/components/ImageUpload";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -85,10 +84,6 @@ const Gallery = () => {
               </p>
             </div>
             
-            {/* Upload button */}
-            <div className="mb-8">
-              <ImageUpload />
-            </div>
             
             {/* Loading state */}
             {loading ? (
