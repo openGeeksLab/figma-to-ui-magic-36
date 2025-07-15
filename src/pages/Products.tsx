@@ -55,22 +55,6 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Product Categories Section */}
-      <section className="w-full flex justify-between items-start px-8 py-24 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
-        <div className="flex-1 flex items-start max-md:w-full">
-          <h1 className="text-[#454545] text-[42px] font-bold leading-tight max-md:text-[32px] max-sm:text-2xl text-left">
-            Premium <span className="text-[#DCB481]">exterior</span><br />wood panels
-          </h1>
-        </div>
-        <div className="flex-1 flex flex-col gap-6 max-md:w-full">
-          <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-            Discover our comprehensive range of thermally modified wood wall panels, designed to enhance any exterior with natural beauty and exceptional durability. Each product is crafted with precision and backed by years of expertise.
-          </p>
-          <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-            From residential homes to commercial buildings, our panels offer versatile solutions that combine aesthetic appeal with superior weather resistance and sustainability.
-          </p>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="w-full px-8 max-md:px-5 max-sm:px-4">
