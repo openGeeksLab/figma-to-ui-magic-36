@@ -93,7 +93,7 @@ const About = () => {
       className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
     />
   </div>
-  <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full">
+  <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full mr-36">
     <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
       {/* Our <span className="text-[#DCB481]">Promise</span> */}
       Sustainability
