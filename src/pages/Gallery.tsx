@@ -10,8 +10,8 @@ const Gallery = () => {
 
   const heroImages = [
     {
-      src: "/lovable-uploads/1aed7f42-8ce9-4786-9b6c-63d07c28d2c1.png",
-      alt: "Modern wooden house with stone foundation"
+      src: "/lovable-uploads/01971fdd-2225-4207-8884-ed6cc8f94713.png",
+      alt: "Modern wooden house with vertical panels in natural setting"
     },
     {
       src: "/lovable-uploads/349c3aec-dd39-4d32-9ccd-aa47ec139e57.png",
