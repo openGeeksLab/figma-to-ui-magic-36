@@ -26,16 +26,16 @@ const About = () => {
       <Header />
       
       {/* Hero Section with Carousel */}
-      <section className="relative w-full px-8 max-md:px-5 max-sm:px-4 max-sm:h-[800px]">
+      <section className="relative w-full px-8 max-md:px-5 max-sm:px-4">
         <Carousel 
           plugins={[plugin.current]}
-          className="w-full h-full max-sm:h-[800px]"
+          className="w-full h-full"
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
-          <CarouselContent className="h-full max-sm:h-[800px]">
+          <CarouselContent className="h-full">
             {images.map((image, index) => (
-              <CarouselItem key={index} className="h-full max-sm:h-[800px]">
+              <CarouselItem key={index} className="h-full">
                 <img
                   src={image.src}
                   alt={image.alt}
