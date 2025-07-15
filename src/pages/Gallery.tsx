@@ -5,13 +5,13 @@ import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Trash2, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { useGallery } from "@/hooks/useGallery";
 import Autoplay from "embla-carousel-autoplay";
 
 const Gallery = () => {
   const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
-  const { images, loading, deleteImage } = useGallery();
+  const { images, loading } = useGallery();
 
   const heroImages = [
     {
@@ -28,15 +28,6 @@ const Gallery = () => {
     }
   ];
 
-  const handleDeleteImage = async (id: string, storagePath: string) => {
-    if (window.confirm('Are you sure you want to delete this image?')) {
-      try {
-        await deleteImage(id, storagePath);
-      } catch (error) {
-        console.error('Failed to delete image:', error);
-      }
-    }
-  };
 
   return (
     <div className="flex w-full max-w-[1728px] flex-col items-center mx-auto my-0 min-h-screen">
@@ -104,18 +95,6 @@ const Gallery = () => {
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300" />
                         
-                        {/* Delete button */}
-                        <Button
-                          variant="destructive"
-                          size="sm"
-                          className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleDeleteImage(image.id, image.storage_path);
-                          }}
-                        >
-                          <Trash2 className="h-4 w-4" />
-                        </Button>
                         
                         {/* Image title overlay */}
                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
