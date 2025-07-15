@@ -26,32 +26,33 @@ const About = () => {
       <Header />
       
       {/* Hero Section with Carousel */}
-      <section className="relative w-full px-8 max-md:px-5 max-sm:px-4">
-        <Carousel 
-          plugins={[plugin.current]}
-          className="w-full h-full"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
-        >
-          <CarouselContent className="h-full">
-            {images.map((image, index) => (
-              <CarouselItem key={index} className="h-full">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover rounded-[28px]"
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-        
-        <div className="absolute bottom-8 left-16 max-md:left-13 max-sm:bottom-4 max-sm:left-8 z-10">
-          <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl bg-white px-5 py-3 rounded-[28px]">
-            About <span className="text-[#DCB481]">Us</span>
-          </h1>
-        </div>
-      </section>
+     <section className="relative w-full px-8 max-md:px-5 max-sm:px-4">
+  <Carousel 
+    plugins={[plugin.current]}
+    className="w-full h-full max-sm:h-[280px] max-md:h-[400px]"  // ✅ Set mobile height
+    onMouseEnter={plugin.current.stop}
+    onMouseLeave={plugin.current.reset}
+  >
+    <CarouselContent className="h-full">
+      {images.map((image, index) => (
+        <CarouselItem key={index} className="h-full">
+          <img
+            src={image.src}
+            alt={image.alt}
+            className="w-full h-full object-cover rounded-[28px]"
+          />
+        </CarouselItem>
+      ))}
+    </CarouselContent>
+  </Carousel>
+  
+  <div className="absolute bottom-8 left-16 max-md:left-10 max-sm:bottom-4 max-sm:left-5 z-10">
+    <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-[22px] bg-white px-5 py-3 max-sm:px-3 max-sm:py-2 rounded-[28px] leading-tight">
+      About <span className="text-[#DCB481]">Us</span>
+    </h1>
+  </div>
+</section>
+
       
      {/* SECTION 0: Heading + About text */}
 <section className="w-full flex justify-between items-start px-8 py-24 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
