@@ -44,7 +44,7 @@ const About = () => {
     <img
       src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
       alt="Vision"
-      className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+      className="w-[539px] h-[539px] object-cover rounded-[28px] max-lg:w-[400px] max-lg:h-[400px] max-md:w-full max-md:h-[350px]"
     />
   </div>
   <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full mr-36 max-md:mr-0">
@@ -79,7 +79,7 @@ const About = () => {
     <img
       src="/lovable-uploads/d1f3649f-8d67-4d19-b1ea-291d1bfc5b02.png"
       alt="Values"
-      className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+      className="w-[539px] h-[539px] object-cover rounded-[28px] max-lg:w-[400px] max-lg:h-[400px] max-md:w-full max-md:h-[350px]"
     />
   </div>
 </section>
@@ -90,7 +90,7 @@ const About = () => {
     <img
       src="/lovable-uploads/11f4848a-da9c-4f0c-b73b-f4b0fd9607a9.png"
       alt="Sustainability"
-      className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
+      className="w-[539px] h-[539px] object-cover rounded-[28px] max-lg:w-[400px] max-lg:h-[400px] max-md:w-full max-md:h-[350px]"
     />
   </div>
   <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full mr-36 max-md:mr-0">
