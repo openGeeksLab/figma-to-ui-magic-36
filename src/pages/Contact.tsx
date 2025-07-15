@@ -163,7 +163,7 @@ const Contact = () => {
             
             <div className="w-[414px] h-[577px] relative top-[-73px] left-12 max-md:static max-md:w-full max-md:h-[300px] max-md:mt-5">
               <img 
-                src="/lovable-uploads/b97e8d9c-7a1b-40a8-bbb0-d64df74603e2.png" 
+                src="/lovable-uploads/41ff9733-f2d0-474b-bdaa-aa10dac0e929.png" 
                 alt="Modern wooden house exterior" 
                 className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0 max-md:w-full max-md:h-[300px]" 
               />
