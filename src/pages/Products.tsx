@@ -91,7 +91,11 @@ const Products = () => {
               </button>
             </div>
             <div className="bg-white rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
-              <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
+              <img 
+                src="/lovable-uploads/04e0d11f-7bea-4c62-ba5e-4132c7813742.png" 
+                alt="Thermotra Thermowood F-1" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-1</h3>
           </div>
