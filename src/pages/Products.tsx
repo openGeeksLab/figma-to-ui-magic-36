@@ -90,14 +90,14 @@ const Products = () => {
                 </svg>
               </button>
             </div>
-            <div className="aspect-square overflow-hidden">
+            <div className="bg-gray-50 rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center overflow-hidden">
               <img 
                 src="/lovable-uploads/04e0d11f-7bea-4c62-ba5e-4132c7813742.png" 
                 alt="Thermotra Thermowood F-1" 
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <div className="p-4">
+            <div className="px-4 pb-4">
               <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-1</h3>
             </div>
           </div>
@@ -113,7 +113,7 @@ const Products = () => {
                 </svg>
               </button>
             </div>
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center">
+            <div className="bg-gray-50 rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
               <div className="flex gap-1">
                 <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
                 <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
@@ -121,7 +121,7 @@ const Products = () => {
                 <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
               </div>
             </div>
-            <div className="p-4">
+            <div className="px-4 pb-4">
               <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-2</h3>
             </div>
           </div>
@@ -137,12 +137,12 @@ const Products = () => {
                 </svg>
               </button>
             </div>
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center">
+            <div className="bg-gray-50 rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
               <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
                 <div className="absolute top-2 left-2 w-16 h-8 bg-[#B8956B] rounded-sm"></div>
               </div>
             </div>
-            <div className="p-4">
+            <div className="px-4 pb-4">
               <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-3</h3>
             </div>
           </div>
@@ -158,13 +158,13 @@ const Products = () => {
                 </svg>
               </button>
             </div>
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center">
+            <div className="bg-gray-50 rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
               <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
                 <div className="absolute bottom-0 left-2 w-3 h-10 bg-[#B8956B] rounded-sm"></div>
                 <div className="absolute bottom-0 right-2 w-3 h-10 bg-[#B8956B] rounded-sm"></div>
               </div>
             </div>
-            <div className="p-4">
+            <div className="px-4 pb-4">
               <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-4</h3>
             </div>
           </div>
@@ -180,10 +180,10 @@ const Products = () => {
                 </svg>
               </button>
             </div>
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center">
+            <div className="bg-gray-50 rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
               <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
             </div>
-            <div className="p-4">
+            <div className="px-4 pb-4">
               <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-5</h3>
             </div>
           </div>
@@ -199,12 +199,12 @@ const Products = () => {
                 </svg>
               </button>
             </div>
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center">
+            <div className="bg-gray-50 rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
               <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
                 <div className="absolute top-2 left-2 w-16 h-8 bg-[#B8956B] rounded-sm"></div>
               </div>
             </div>
-            <div className="p-4">
+            <div className="px-4 pb-4">
               <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-6</h3>
             </div>
           </div>
