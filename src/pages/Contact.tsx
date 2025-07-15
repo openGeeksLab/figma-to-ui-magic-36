@@ -28,7 +28,7 @@ const Contact = () => {
       <Header />
       
       {/* Hero Section with Carousel */}
-      <section className="relative w-full h-[500px] max-md:h-[400px] max-sm:h-[300px] px-8 max-md:px-5 max-sm:px-4">
+      <section className="relative w-full px-8 max-md:px-5 max-sm:px-4">
         <Carousel 
           plugins={[plugin.current]}
           className="w-full h-full"
