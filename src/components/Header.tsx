@@ -15,12 +15,9 @@ const Header = () => {
       </Link>
       
       <nav className="flex items-center gap-[49px] max-md:hidden" role="navigation" aria-label="Main navigation">
-        <div className="flex h-10 justify-center items-center gap-2.5 px-0 py-2">
-          <span className="text-[#454545] text-xl font-normal leading-[29.2px]">Products</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="dropdown-arrow">
-            <path fillRule="evenodd" clipRule="evenodd" d="M5.30687 8.713C5.36364 8.57594 5.45978 8.45879 5.58313 8.37638C5.70649 8.29396 5.85151 8.24998 5.99987 8.25H17.9999C18.1481 8.25013 18.293 8.29419 18.4162 8.37661C18.5394 8.45903 18.6354 8.57611 18.6922 8.71308C18.7489 8.85004 18.7637 9.00074 18.7348 9.14614C18.7059 9.29154 18.6346 9.42511 18.5299 9.53L12.5299 15.53C12.3892 15.6705 12.1986 15.7493 11.9999 15.7493C11.8011 15.7493 11.6105 15.6705 11.4699 15.53L5.46987 9.53C5.36498 9.42519 5.29351 9.29163 5.2645 9.14621C5.23548 9.0008 5.25023 8.85004 5.30687 8.713Z" fill="#454545"/>
-          </svg>
-        </div>
+        <Link to="/products" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+          Products
+        </Link>
         
         <Link to="/gallery" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
           Gallery
@@ -58,13 +55,13 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg z-50 md:hidden border-t">
           <nav className="flex flex-col p-6 space-y-6">
-            <a 
-              href="#products" 
+            <Link 
+              to="/products" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Products
-            </a>
+            </Link>
             <Link 
               to="/gallery" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
