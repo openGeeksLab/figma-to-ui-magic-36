@@ -26,7 +26,7 @@ const About = () => {
       <Header />
       
       {/* Hero Section with Carousel */}
-      <section className="relative w-full px-8 max-md:px-5 max-sm:px-4 h-[400px] max-sm:h-[800px]">
+      <section className="relative w-full px-8 max-md:px-5 max-sm:px-4">
         <Carousel 
           plugins={[plugin.current]}
           className="w-full h-full"
@@ -36,13 +36,11 @@ const About = () => {
           <CarouselContent className="h-full">
             {images.map((image, index) => (
               <CarouselItem key={index} className="h-full">
-                <div className="w-full h-full">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover rounded-[28px]"
-                  />
-                </div>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover rounded-[28px]"
+                />
               </CarouselItem>
             ))}
           </CarouselContent>
