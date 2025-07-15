@@ -42,7 +42,7 @@ const Contact = () => {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover rounded-[28px]"
+                    className="w-full h-full object-cover max-md:h-[200px] rounded-[28px]"
                   />
                 </CarouselItem>
               ))}
