@@ -90,11 +90,11 @@ const Products = () => {
                 </svg>
               </button>
             </div>
-            <div className="bg-white rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
+            <div className="bg-white rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center overflow-hidden">
               <img 
                 src="/lovable-uploads/04e0d11f-7bea-4c62-ba5e-4132c7813742.png" 
                 alt="Thermotra Thermowood F-1" 
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
               />
             </div>
             <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-1</h3>
