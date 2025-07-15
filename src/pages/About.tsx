@@ -26,7 +26,7 @@ const About = () => {
       <Header />
       
       {/* Hero Section with Carousel */}
-      <section className="relative w-full px-8 max-md:px-5 max-sm:px-4">
+      <section className="relative w-full px-8 max-md:px-5 max-sm:px-4 h-[400px] max-sm:h-[800px]">
         <Carousel 
           plugins={[plugin.current]}
           className="w-full h-full"
