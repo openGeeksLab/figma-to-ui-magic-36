@@ -22,9 +22,9 @@ const Header = () => {
           </svg>
         </div>
         
-        <a href="#gallery" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+        <Link to="/gallery" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
           Gallery
-        </a>
+        </Link>
         
         <Link to="/about" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
           About
@@ -65,13 +65,13 @@ const Header = () => {
             >
               Products
             </a>
-            <a 
-              href="#gallery" 
+            <Link 
+              to="/gallery" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Gallery
-            </a>
+            </Link>
             <Link 
               to="/about" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
