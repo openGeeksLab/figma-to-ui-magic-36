@@ -113,60 +113,60 @@ const Contact = () => {
           </div>
           
           {/* Contact form with image */}
-          <div className="bg-[#F5F4F1] rounded-[28px] p-12 max-md:p-8 max-sm:p-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Image */}
-              <div className="order-2 lg:order-1">
-                <img
-                  src="/lovable-uploads/b97e8d9c-7a1b-40a8-bbb0-d64df74603e2.png"
-                  alt="Modern wooden house exterior"
-                  className="w-full h-full min-h-[500px] object-cover rounded-[28px]"
+          <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-md:flex-col max-md:p-[30px] max-sm:p-5 mx-0 my-[56px] px-[78px] py-0">
+            <form className="flex w-[544px] flex-col items-start gap-6 max-md:w-full mx-[48px] my-[50px]">
+              <div className="flex flex-col items-start gap-6 w-full">
+                <div className="w-full">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    className="flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] border-[#E5E4E0]"
+                  />
+                </div>
+              </div>
+              
+              <div className="w-full">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  className="flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] border-[#E5E4E0]"
                 />
               </div>
               
-              {/* Contact Form */}
-              <div className="order-1 lg:order-2">
-                <form className="space-y-6">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      className="w-full h-[58px] px-6 py-4 bg-white border border-[#E5E4E0] rounded-[28px] text-[#454545] placeholder-[#999] focus:outline-none focus:ring-2 focus:ring-[#DCB481] focus:border-transparent"
-                    />
-                  </div>
-                  
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      className="w-full h-[58px] px-6 py-4 bg-white border border-[#E5E4E0] rounded-[28px] text-[#454545] placeholder-[#999] focus:outline-none focus:ring-2 focus:ring-[#DCB481] focus:border-transparent"
-                    />
-                  </div>
-                  
-                  <div>
-                    <input
-                      type="tel"
-                      placeholder="Phone"
-                      className="w-full h-[58px] px-6 py-4 bg-white border border-[#E5E4E0] rounded-[28px] text-[#454545] placeholder-[#999] focus:outline-none focus:ring-2 focus:ring-[#DCB481] focus:border-transparent"
-                    />
-                  </div>
-                  
-                  <div>
-                    <textarea
-                      placeholder="Message"
-                      rows={4}
-                      className="w-full px-6 py-4 bg-white border border-[#E5E4E0] rounded-[28px] text-[#454545] placeholder-[#999] focus:outline-none focus:ring-2 focus:ring-[#DCB481] focus:border-transparent resize-none"
-                    ></textarea>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    className="w-full lg:w-auto px-12 py-4 bg-[#90837A] text-white text-lg font-medium rounded-[28px] hover:bg-[#7a6f66] transition-colors"
-                  >
-                    Send
-                  </button>
-                </form>
+              <div className="w-full">
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone"
+                  className="flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] border-[#E5E4E0]"
+                />
               </div>
+              
+              <div className="w-full">
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  rows={4}
+                  className="flex h-[134px] items-start gap-2.5 w-full border bg-white px-8 py-6 rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base resize-none focus:outline-none focus:ring-2 focus:ring-[#DCB481] border-[#E5E4E0]"
+                />
+              </div>
+              
+              <button
+                type="submit"
+                className="flex w-[264px] h-[52px] justify-center items-center gap-2.5 bg-[#90837A] px-8 py-[18px] rounded-[28px] max-sm:w-full text-white text-xl font-normal hover:bg-[#7a6f66] transition-colors"
+              >
+                Send
+              </button>
+            </form>
+            
+            <div className="w-[414px] h-[577px] relative top-[-73px] left-12 max-md:static max-md:w-full max-md:h-[300px] max-md:mt-5">
+              <img 
+                src="/lovable-uploads/b97e8d9c-7a1b-40a8-bbb0-d64df74603e2.png" 
+                alt="Modern wooden house exterior" 
+                className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0 max-md:w-full max-md:h-[300px]" 
+              />
             </div>
           </div>
         </div>
