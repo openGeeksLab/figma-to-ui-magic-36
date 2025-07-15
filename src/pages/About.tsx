@@ -47,7 +47,7 @@ const About = () => {
       className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
     />
   </div>
-  <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full mr-36">
+  <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full mr-36 max-md:mr-0">
     <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
       Our <span className="text-[#DCB481]">Vision</span>
     </h2>
@@ -59,7 +59,7 @@ const About = () => {
 
 {/* SECTION 2: Text left, Image right */}
 <section className="w-full flex justify-between items-center px-8 py-24 gap-12 max-md:flex-col-reverse max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
-  <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full ml-36">
+  <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full ml-36 max-md:ml-0">
     <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
       Our <span className="text-[#DCB481]">Values</span>
     </h2>
@@ -93,7 +93,7 @@ const About = () => {
       className="w-[539px] h-[539px] object-cover rounded-[28px] max-md:w-full max-md:h-[400px]"
     />
   </div>
-  <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full mr-36">
+  <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full mr-36 max-md:mr-0">
     <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
       {/* Our <span className="text-[#DCB481]">Promise</span> */}
       Sustainability
