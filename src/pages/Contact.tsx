@@ -37,22 +37,21 @@ const Contact = () => {
         >
           <CarouselContent className="h-full">
             {images.map((image, index) => (
-              <CarouselItem key={index} className="h-full">
+              <CarouselItem key={index} className="h-full relative">
                 <img
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover rounded-[28px]"
                 />
+                <div className="absolute bottom-8 left-16 max-md:left-13 max-sm:bottom-4 max-sm:left-8">
+                  <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl bg-white px-5 py-3 rounded-[28px]">
+                    Contact <span className="text-[#DCB481]">Us</span>
+                  </h1>
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
-        
-        <div className="absolute bottom-8 left-16 max-md:left-13 max-sm:bottom-4 max-sm:left-8 z-10">
-          <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl bg-white px-5 py-3 rounded-[28px]">
-            Contact <span className="text-[#DCB481]">Us</span>
-          </h1>
-        </div>
       </section>
       
       <main className="flex-grow">
