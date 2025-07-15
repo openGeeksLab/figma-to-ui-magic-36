@@ -56,7 +56,145 @@ const Products = () => {
       </section>
 
 
-      {/* FAQ Section */}
+      {/* Products Preview Section */}
+      <section className="w-full px-8 py-24 max-md:px-5 max-sm:px-4 max-md:py-[60px] max-sm:py-10">
+        {/* Category Navigation */}
+        <div className="flex gap-4 mb-12 flex-wrap max-sm:gap-2">
+          <button className="bg-[#454545] text-white px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-[#363636] transition-colors">
+            All Products
+          </button>
+          <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
+            Fasad
+          </button>
+          <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
+            Cladding
+          </button>
+          <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
+            Decking
+          </button>
+          <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
+            Accessories
+          </button>
+        </div>
+
+        {/* Products Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-sm:gap-6">
+          {/* Product 1 */}
+          <div className="bg-gray-50 rounded-[28px] p-6 group hover:shadow-lg transition-all duration-300 hover-scale">
+            <div className="relative mb-4">
+              <span className="text-[#454545] text-sm font-medium mb-3 block">Fasad</span>
+              <button className="absolute top-0 right-0 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7" stroke="#454545" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M7 7h10v10" stroke="#454545" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div className="bg-white rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
+              <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
+            </div>
+            <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-1</h3>
+          </div>
+
+          {/* Product 2 */}
+          <div className="bg-gray-50 rounded-[28px] p-6 group hover:shadow-lg transition-all duration-300 hover-scale">
+            <div className="relative mb-4">
+              <span className="text-[#454545] text-sm font-medium mb-3 block">Fasad</span>
+              <button className="absolute top-0 right-0 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7" stroke="#454545" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M7 7h10v10" stroke="#454545" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div className="bg-white rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
+              <div className="flex gap-1">
+                <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
+                <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
+                <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
+                <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
+              </div>
+            </div>
+            <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-2</h3>
+          </div>
+
+          {/* Product 3 */}
+          <div className="bg-gray-50 rounded-[28px] p-6 group hover:shadow-lg transition-all duration-300 hover-scale">
+            <div className="relative mb-4">
+              <span className="text-[#454545] text-sm font-medium mb-3 block">Fasad</span>
+              <button className="absolute top-0 right-0 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7" stroke="#454545" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M7 7h10v10" stroke="#454545" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div className="bg-white rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
+              <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
+                <div className="absolute top-2 left-2 w-16 h-8 bg-[#B8956B] rounded-sm"></div>
+              </div>
+            </div>
+            <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-3</h3>
+          </div>
+
+          {/* Product 4 */}
+          <div className="bg-gray-50 rounded-[28px] p-6 group hover:shadow-lg transition-all duration-300 hover-scale">
+            <div className="relative mb-4">
+              <span className="text-[#454545] text-sm font-medium mb-3 block">Fasad</span>
+              <button className="absolute top-0 right-0 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7" stroke="#454545" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M7 7h10v10" stroke="#454545" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div className="bg-white rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
+              <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
+                <div className="absolute bottom-0 left-2 w-3 h-10 bg-[#B8956B] rounded-sm"></div>
+                <div className="absolute bottom-0 right-2 w-3 h-10 bg-[#B8956B] rounded-sm"></div>
+              </div>
+            </div>
+            <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-4</h3>
+          </div>
+
+          {/* Product 5 */}
+          <div className="bg-gray-50 rounded-[28px] p-6 group hover:shadow-lg transition-all duration-300 hover-scale">
+            <div className="relative mb-4">
+              <span className="text-[#454545] text-sm font-medium mb-3 block">Fasad</span>
+              <button className="absolute top-0 right-0 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7" stroke="#454545" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M7 7h10v10" stroke="#454545" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div className="bg-white rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
+              <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
+            </div>
+            <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-5</h3>
+          </div>
+
+          {/* Product 6 */}
+          <div className="bg-gray-50 rounded-[28px] p-6 group hover:shadow-lg transition-all duration-300 hover-scale">
+            <div className="relative mb-4">
+              <span className="text-[#454545] text-sm font-medium mb-3 block">Fasad</span>
+              <button className="absolute top-0 right-0 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7" stroke="#454545" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M7 7h10v10" stroke="#454545" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div className="bg-white rounded-[20px] p-6 mb-4 h-32 flex items-center justify-center">
+              <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
+                <div className="absolute top-2 left-2 w-16 h-8 bg-[#B8956B] rounded-sm"></div>
+              </div>
+            </div>
+            <h3 className="text-[#454545] text-lg font-bold">Thermotra Thermowood F-6</h3>
+          </div>
+        </div>
+      </section>
+
       <section className="w-full px-8 max-md:px-5 max-sm:px-4">
         <FAQ />
       </section>
