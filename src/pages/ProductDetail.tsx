@@ -13,7 +13,7 @@ const ProductDetail = () => {
   const [selectedImage, setSelectedImage] = useState<string>('');
   const [loading, setLoading] = useState(true);
   const [selectedSurfaceTreatment, setSelectedSurfaceTreatment] = useState('Smooth planed');
-  const [selectedDimension, setSelectedDimension] = useState('18x90 mm');
+  const [selectedDimension, setSelectedDimension] = useState('');
 
   useEffect(() => {
     if (productName) {
@@ -25,6 +25,11 @@ const ProductDetail = () => {
     if (product) {
       setSelectedImage(product.main_picture_url);
       fetchProductImages();
+      // Set first available size as default
+      if (product.sizes && Array.isArray(product.sizes) && product.sizes.length > 0) {
+        const sizes = product.sizes as string[];
+        setSelectedDimension(`${sizes[0]} mm`);
+      }
     }
   }, [product]);
 
@@ -211,9 +216,9 @@ const ProductDetail = () => {
                     onChange={(e) => setSelectedDimension(e.target.value)}
                     className="w-full p-3 border border-gray-300 rounded-lg appearance-none bg-white focus:outline-none focus:ring-2 focus:ring-[#DCB481]"
                   >
-                    <option value="18x90 mm">18x90 mm</option>
-                    <option value="22x95 mm">22x95 mm</option>
-                    <option value="28x120 mm">28x120 mm</option>
+                    {product.sizes && Array.isArray(product.sizes) && (product.sizes as string[]).map((size) => (
+                      <option key={size} value={`${size} mm`}>{size} mm</option>
+                    ))}
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
                 </div>
