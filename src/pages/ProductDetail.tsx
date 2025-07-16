@@ -219,7 +219,7 @@ const ProductDetail = () => {
             </div>
 
             {/* Product Info */}
-            <div className="space-y-3">
+            <div className="space-y-1">
               <h1 className="text-4xl font-bold text-[#454545]">{product.name}</h1>
               
               <p className="text-gray-600 leading-relaxed">
