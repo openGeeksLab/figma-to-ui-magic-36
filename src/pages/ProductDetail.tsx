@@ -309,15 +309,27 @@ const ProductDetail = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
+                  <div 
+                    className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                      selectedColorSwatch === 6 ? 'border-[#DCB481]' : 'border-gray-200'
+                    }`}
+                    onClick={() => setSelectedColorSwatch(6)}
+                  >
+                    <img 
+                      src="/lovable-uploads/462b321a-546f-408a-805b-c0a6540cd991.png" 
+                      alt="Steel wood color" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   {/* Remaining color swatches */}
-                  {colorSwatches.slice(6).map((color, index) => (
+                  {colorSwatches.slice(7).map((color, index) => (
                     <div 
-                      key={index + 6} 
+                      key={index + 7} 
                       className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors ${
-                        selectedColorSwatch === index + 6 ? 'border-[#DCB481]' : 'border-gray-200'
+                        selectedColorSwatch === index + 7 ? 'border-[#DCB481]' : 'border-gray-200'
                       }`}
                       style={{ backgroundColor: color }}
-                      onClick={() => setSelectedColorSwatch(index + 6)}
+                      onClick={() => setSelectedColorSwatch(index + 7)}
                     />
                   ))}
                 </div>
