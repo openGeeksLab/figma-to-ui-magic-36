@@ -18,7 +18,7 @@ const ProductDetail = () => {
   const [selectedDimension, setSelectedDimension] = useState('');
   const [selectedColorSwatch, setSelectedColorSwatch] = useState(0); // Default to first swatch
   
-  const colorNames = ['Netonets', 'Natural', 'Russet', 'Mocha', 'Ivory', 'Silver', 'Steel', 'Graphit', 'Coal', 'Graphit Black', 'Graphit Grey', 'Smoke'];
+  const colorNames = ['Netonets', 'Natural', 'Russet', 'Mocha', 'Ivory', 'Silver', 'Steel', 'Graphit', 'Coal', 'Graphit Black', 'Graphit Grey', 'Virsi'];
 
   useEffect(() => {
     if (productName) {
@@ -370,17 +370,18 @@ const ProductDetail = () => {
                        className="w-full h-full object-cover"
                      />
                    </div>
-                   {/* Remaining color swatches */}
-                   {colorSwatches.slice(11).map((color, index) => (
-                     <div 
-                       key={index + 11} 
-                       className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors ${
-                         selectedColorSwatch === index + 11 ? 'border-[#DCB481]' : 'border-gray-200'
-                       }`}
-                       style={{ backgroundColor: color }}
-                       onClick={() => setSelectedColorSwatch(index + 11)}
+                   <div 
+                     className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                       selectedColorSwatch === 11 ? 'border-[#DCB481]' : 'border-gray-200'
+                     }`}
+                     onClick={() => setSelectedColorSwatch(11)}
+                   >
+                     <img 
+                       src="/lovable-uploads/3025c833-0d09-44ac-970a-6ad39f2befb9.png" 
+                       alt="Virsi wood color" 
+                       className="w-full h-full object-cover"
                      />
-                   ))}
+                   </div>
                 </div>
               </div>
 
