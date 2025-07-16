@@ -270,181 +270,181 @@ const ProductDetail = () => {
                   Tone Color: <span className="text-gray-600">{colorNames[selectedColorSwatch]}</span>
                 </h3>
                 <div className="grid grid-cols-4 gap-1 scale-75 origin-top-left">
-                  {/* First row - Wood texture images */}
-                  <div 
-                    className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
-                      selectedColorSwatch === 0 ? 'border-[#DCB481]' : 'border-gray-200'
-                    }`}
-                    onClick={() => setSelectedColorSwatch(0)}
-                  >
-                    <img 
-                      src="/lovable-uploads/eb3d4163-bcd2-4f72-94e3-c0be7b636786.png" 
-                      alt="Netonets wood color" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div 
-                    className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
-                      selectedColorSwatch === 1 ? 'border-[#DCB481]' : 'border-gray-200'
-                    }`}
-                    onClick={() => setSelectedColorSwatch(1)}
-                  >
-                    <img 
-                      src="/lovable-uploads/4b21b648-bde9-4e3b-bf8a-cb68fadd5627.png" 
-                      alt="Natural wood color" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div 
-                    className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
-                      selectedColorSwatch === 2 ? 'border-[#DCB481]' : 'border-gray-200'
-                    }`}
-                    onClick={() => setSelectedColorSwatch(2)}
-                  >
-                    <img 
-                      src="/lovable-uploads/523aa0c7-9a58-4626-9df0-4a4dee48eb10.png" 
-                      alt="Russet wood color" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div 
-                    className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
-                      selectedColorSwatch === 3 ? 'border-[#DCB481]' : 'border-gray-200'
-                    }`}
-                    onClick={() => setSelectedColorSwatch(3)}
-                  >
-                    <img 
-                      src="/lovable-uploads/5debd376-6790-402c-b921-56f83ad814b2.png" 
-                      alt="Mocha wood color" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  {/* Second row - First item is Ivory image, rest are color swatches */}
-                  <div 
-                    className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
-                      selectedColorSwatch === 4 ? 'border-[#DCB481]' : 'border-gray-200'
-                    }`}
-                    onClick={() => setSelectedColorSwatch(4)}
-                  >
-                    <img 
-                      src="/lovable-uploads/a6446978-767f-4249-b113-de0ac14115b6.png" 
-                      alt="Ivory wood color" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div 
-                    className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
-                      selectedColorSwatch === 5 ? 'border-[#DCB481]' : 'border-gray-200'
-                    }`}
-                    onClick={() => setSelectedColorSwatch(5)}
-                  >
-                    <img 
-                      src="/lovable-uploads/51ba69fb-8156-41d1-aa37-7b07cc9fbee9.png" 
-                      alt="Silver wood color" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div 
-                    className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
-                      selectedColorSwatch === 6 ? 'border-[#DCB481]' : 'border-gray-200'
-                    }`}
-                    onClick={() => setSelectedColorSwatch(6)}
-                  >
-                    <img 
-                      src="/lovable-uploads/462b321a-546f-408a-805b-c0a6540cd991.png" 
-                      alt="Steel wood color" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div 
-                    className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
-                      selectedColorSwatch === 7 ? 'border-[#DCB481]' : 'border-gray-200'
-                    }`}
-                    onClick={() => setSelectedColorSwatch(7)}
-                  >
-                    <img 
-                      src="/lovable-uploads/8df80e0c-d0e9-44d7-8f78-c99aed25cf1b.png" 
-                      alt="Graphit wood color" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                   {/* Third row - First item is Coal image, rest are color swatches */}
+                   {/* First row - Wood texture images */}
                    <div 
                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
-                       selectedColorSwatch === 8 ? 'border-[#DCB481]' : 'border-gray-200'
+                       selectedColorSwatch === 0 ? 'border-[#DCB481]' : 'border-gray-200'
                      }`}
-                     onClick={() => setSelectedColorSwatch(8)}
+                     onClick={() => setSelectedColorSwatch(0)}
                    >
                      <img 
-                       src="/lovable-uploads/eeac43cb-ba5f-4a99-a3aa-03d90e5aa027.png" 
-                       alt="Coal wood color" 
+                       src="/lovable-uploads/eb3d4163-bcd2-4f72-94e3-c0be7b636786.png" 
+                       alt="Netonets wood color" 
                        className="w-full h-full object-cover"
                      />
                    </div>
                    <div 
                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
-                       selectedColorSwatch === 9 ? 'border-[#DCB481]' : 'border-gray-200'
+                       selectedColorSwatch === 1 ? 'border-[#DCB481]' : 'border-gray-200'
                      }`}
-                     onClick={() => setSelectedColorSwatch(9)}
+                     onClick={() => setSelectedColorSwatch(1)}
                    >
                      <img 
-                       src="/lovable-uploads/4ba74904-71d0-463a-b25a-2e0b2cb79eec.png" 
-                       alt="Graphit Black wood color" 
+                       src="/lovable-uploads/4b21b648-bde9-4e3b-bf8a-cb68fadd5627.png" 
+                       alt="Natural wood color" 
                        className="w-full h-full object-cover"
                      />
                    </div>
                    <div 
                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
-                       selectedColorSwatch === 10 ? 'border-[#DCB481]' : 'border-gray-200'
+                       selectedColorSwatch === 2 ? 'border-[#DCB481]' : 'border-gray-200'
                      }`}
-                     onClick={() => setSelectedColorSwatch(10)}
+                     onClick={() => setSelectedColorSwatch(2)}
                    >
                      <img 
-                       src="/lovable-uploads/ead99fef-d4b4-448e-9261-1ee450b9629b.png" 
-                       alt="Graphit Grey wood color" 
+                       src="/lovable-uploads/523aa0c7-9a58-4626-9df0-4a4dee48eb10.png" 
+                       alt="Russet wood color" 
                        className="w-full h-full object-cover"
                      />
                    </div>
                    <div 
                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
-                       selectedColorSwatch === 11 ? 'border-[#DCB481]' : 'border-gray-200'
+                       selectedColorSwatch === 3 ? 'border-[#DCB481]' : 'border-gray-200'
                      }`}
-                     onClick={() => setSelectedColorSwatch(11)}
+                     onClick={() => setSelectedColorSwatch(3)}
                    >
                      <img 
-                       src="/lovable-uploads/3025c833-0d09-44ac-970a-6ad39f2befb9.png" 
-                       alt="Virsi wood color" 
+                       src="/lovable-uploads/5debd376-6790-402c-b921-56f83ad814b2.png" 
+                       alt="Mocha wood color" 
                        className="w-full h-full object-cover"
                      />
                    </div>
-                </div>
-              </div>
-
-              {/* Specification */}
-              <div>
-                <h3 className="text-lg font-semibold text-[#454545] mb-4">Specification</h3>
-                <div className="space-y-2">
-                  {(product?.specifications as string[] || []).map((spec, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <Check className="w-5 h-5 text-green-500" />
-                      <span className="text-gray-600">{spec}</span>
+                   {/* Second row - First item is Ivory image, rest are color swatches */}
+                   <div 
+                     className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                       selectedColorSwatch === 4 ? 'border-[#DCB481]' : 'border-gray-200'
+                     }`}
+                     onClick={() => setSelectedColorSwatch(4)}
+                   >
+                     <img 
+                       src="/lovable-uploads/a6446978-767f-4249-b113-de0ac14115b6.png" 
+                       alt="Ivory wood color" 
+                       className="w-full h-full object-cover"
+                     />
+                   </div>
+                   <div 
+                     className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                       selectedColorSwatch === 5 ? 'border-[#DCB481]' : 'border-gray-200'
+                     }`}
+                     onClick={() => setSelectedColorSwatch(5)}
+                   >
+                     <img 
+                       src="/lovable-uploads/51ba69fb-8156-41d1-aa37-7b07cc9fbee9.png" 
+                       alt="Silver wood color" 
+                       className="w-full h-full object-cover"
+                     />
+                   </div>
+                   <div 
+                     className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                       selectedColorSwatch === 6 ? 'border-[#DCB481]' : 'border-gray-200'
+                     }`}
+                     onClick={() => setSelectedColorSwatch(6)}
+                   >
+                     <img 
+                       src="/lovable-uploads/462b321a-546f-408a-805b-c0a6540cd991.png" 
+                       alt="Steel wood color" 
+                       className="w-full h-full object-cover"
+                     />
+                   </div>
+                   <div 
+                     className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                       selectedColorSwatch === 7 ? 'border-[#DCB481]' : 'border-gray-200'
+                     }`}
+                     onClick={() => setSelectedColorSwatch(7)}
+                   >
+                     <img 
+                       src="/lovable-uploads/8df80e0c-d0e9-44d7-8f78-c99aed25cf1b.png" 
+                       alt="Graphit wood color" 
+                       className="w-full h-full object-cover"
+                     />
+                   </div>
+                    {/* Third row - First item is Coal image, rest are color swatches */}
+                    <div 
+                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                        selectedColorSwatch === 8 ? 'border-[#DCB481]' : 'border-gray-200'
+                      }`}
+                      onClick={() => setSelectedColorSwatch(8)}
+                    >
+                      <img 
+                        src="/lovable-uploads/eeac43cb-ba5f-4a99-a3aa-03d90e5aa027.png" 
+                        alt="Coal wood color" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Details */}
-              <div>
-                <h3 className="text-lg font-semibold text-[#454545] mb-4">Details</h3>
-                <div className="space-y-2">
-                  {(product?.details as string[] || []).map((detail, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <Check className="w-5 h-5 text-green-500" />
-                      <span className="text-gray-600">{detail}</span>
+                    <div 
+                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                        selectedColorSwatch === 9 ? 'border-[#DCB481]' : 'border-gray-200'
+                      }`}
+                      onClick={() => setSelectedColorSwatch(9)}
+                    >
+                      <img 
+                        src="/lovable-uploads/4ba74904-71d0-463a-b25a-2e0b2cb79eec.png" 
+                        alt="Graphit Black wood color" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                  ))}
-                </div>
-              </div>
+                    <div 
+                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                        selectedColorSwatch === 10 ? 'border-[#DCB481]' : 'border-gray-200'
+                      }`}
+                      onClick={() => setSelectedColorSwatch(10)}
+                    >
+                      <img 
+                        src="/lovable-uploads/ead99fef-d4b4-448e-9261-1ee450b9629b.png" 
+                        alt="Graphit Grey wood color" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div 
+                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                        selectedColorSwatch === 11 ? 'border-[#DCB481]' : 'border-gray-200'
+                      }`}
+                      onClick={() => setSelectedColorSwatch(11)}
+                    >
+                      <img 
+                        src="/lovable-uploads/3025c833-0d09-44ac-970a-6ad39f2befb9.png" 
+                        alt="Virsi wood color" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                 </div>
+               </div>
+
+               {/* Specification */}
+               <div>
+                 <h3 className="text-lg font-semibold text-[#454545] mb-4">Specification</h3>
+                 <div className="space-y-2">
+                   {(product?.specifications as string[] || []).map((spec, index) => (
+                     <div key={index} className="flex items-center space-x-2">
+                       <Check className="w-5 h-5 text-green-500" />
+                       <span className="text-gray-600">{spec}</span>
+                     </div>
+                   ))}
+                 </div>
+               </div>
+
+               {/* Details */}
+               <div>
+                 <h3 className="text-lg font-semibold text-[#454545] mb-4">Details</h3>
+                 <div className="space-y-2">
+                   {(product?.details as string[] || []).map((detail, index) => (
+                     <div key={index} className="flex items-center space-x-2">
+                       <Check className="w-5 h-5 text-green-500" />
+                       <span className="text-gray-600">{detail}</span>
+                     </div>
+                   ))}
+                 </div>
+               </div>
 
               {/* Calculate Price Button */}
               <button className="w-full bg-[#DCB481] text-white py-4 px-6 rounded-lg font-semibold hover:bg-[#C8A373] transition-colors text-lg">
