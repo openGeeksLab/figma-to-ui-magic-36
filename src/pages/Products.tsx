@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { supabase } from "@/integrations/supabase/client";
+import type { Tables } from "@/integrations/supabase/types";
 
 const Products = () => {
   const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
+  const [products, setProducts] = useState<Tables<"products">[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All Products");
 
   const images = [
     {
@@ -22,6 +26,28 @@ const Products = () => {
       alt: "Modern wooden house with warm lighting"
     }
   ];
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    const { data, error } = await supabase
+      .from('products')
+      .select('*');
+
+    if (error) {
+      console.error('Error fetching products:', error);
+    } else {
+      setProducts(data || []);
+    }
+  };
+
+  const filteredProducts = selectedCategory === "All Products" 
+    ? products 
+    : products.filter(product => product.type === selectedCategory);
+
+  const uniqueTypes = Array.from(new Set(products.map(product => product.type)));
 
   return (
     <div className="min-h-screen bg-background">
@@ -61,148 +87,55 @@ const Products = () => {
         <div className="max-w-6xl mx-auto">
           {/* Category Navigation */}
           <div className="flex gap-4 mb-12 flex-wrap max-sm:gap-2">
-            <button className="bg-[#454545] text-white px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-[#363636] transition-colors">
+            <button 
+              onClick={() => setSelectedCategory("All Products")}
+              className={`px-6 py-3 rounded-[28px] text-sm font-medium transition-colors ${
+                selectedCategory === "All Products" 
+                  ? "bg-[#454545] text-white hover:bg-[#363636]" 
+                  : "bg-gray-100 text-[#454545] hover:bg-gray-200"
+              }`}
+            >
               All Products
             </button>
-            <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
-              Fasad
-            </button>
-            <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
-              Cladding
-            </button>
-            <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
-              Decking
-            </button>
-            <button className="bg-gray-100 text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-200 transition-colors">
-              Accessories
-            </button>
+            {uniqueTypes.map((type) => (
+              <button 
+                key={type}
+                onClick={() => setSelectedCategory(type)}
+                className={`px-6 py-3 rounded-[28px] text-sm font-medium transition-colors ${
+                  selectedCategory === type 
+                    ? "bg-[#454545] text-white hover:bg-[#363636]" 
+                    : "bg-gray-100 text-[#454545] hover:bg-gray-200"
+                }`}
+              >
+                {type}
+              </button>
+            ))}
           </div>
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {/* Product 1 */}
-          <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
-            <div className="aspect-square overflow-hidden relative">
-              <img 
-                src="/lovable-uploads/04e0d11f-7bea-4c62-ba5e-4132c7813742.png" 
-                alt="Thermotra Thermowood F-1" 
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors">
-                Cladding
-              </button>
-              <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
-                <svg className="w-4 h-4 text-[#454545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                </svg>
-              </button>
-              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
-                <h3 className="text-sm font-medium">Thermotra Thermowood F-1</h3>
+            {filteredProducts.map((product) => (
+              <div key={product.id} className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
+                <div className="aspect-square overflow-hidden relative">
+                  <img 
+                    src={product.main_picture_url} 
+                    alt={product.name} 
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors">
+                    {product.type}
+                  </button>
+                  <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
+                    <svg className="w-4 h-4 text-[#454545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                  </button>
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
+                    <h3 className="text-sm font-medium">{product.name}</h3>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          {/* Product 2 */}
-          <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center relative">
-              <div className="flex gap-1">
-                <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
-                <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
-                <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
-                <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
-              </div>
-              <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors">
-                Cladding
-              </button>
-              <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
-                <svg className="w-4 h-4 text-[#454545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                </svg>
-              </button>
-              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
-                <h3 className="text-sm font-medium">Thermowood Decking</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* Product 3 */}
-          <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center relative">
-              <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
-                <div className="absolute top-2 left-2 w-16 h-8 bg-[#B8956B] rounded-sm"></div>
-              </div>
-              <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors">
-                Cladding
-              </button>
-              <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
-                <svg className="w-4 h-4 text-[#454545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                </svg>
-              </button>
-              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
-                <h3 className="text-sm font-medium">Fasad Cladding</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* Product 4 */}
-          <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center relative">
-              <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
-                <div className="absolute bottom-0 left-2 w-3 h-10 bg-[#B8956B] rounded-sm"></div>
-                <div className="absolute bottom-0 right-2 w-3 h-10 bg-[#B8956B] rounded-sm"></div>
-              </div>
-              <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors">
-                Cladding
-              </button>
-              <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
-                <svg className="w-4 h-4 text-[#454545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                </svg>
-              </button>
-              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
-                <h3 className="text-sm font-medium">Vertical Cladding</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* Product 5 */}
-          <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center relative">
-              <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
-              <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors">
-                Cladding
-              </button>
-              <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
-                <svg className="w-4 h-4 text-[#454545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                </svg>
-              </button>
-              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
-                <h3 className="text-sm font-medium">Thermowood Plank</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* Product 6 */}
-          <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center relative">
-              <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
-                <div className="absolute top-2 left-2 w-16 h-8 bg-[#B8956B] rounded-sm"></div>
-              </div>
-              <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors">
-                Cladding
-              </button>
-              <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
-                <svg className="w-4 h-4 text-[#454545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                </svg>
-              </button>
-              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
-                <h3 className="text-sm font-medium">Premium Fasad</h3>
-              </div>
-            </div>
-          </div>
+            ))}
           </div>
         </div>
       </section>
