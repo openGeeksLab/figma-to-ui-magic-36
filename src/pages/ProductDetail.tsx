@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import FAQ from '@/components/FAQ';
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { ChevronDown, Check } from 'lucide-react';
@@ -504,6 +505,11 @@ const ProductDetail = () => {
           </div>
         </section>
       )}
+      
+      {/* FAQ Section */}
+      <section className="w-full px-8 max-md:px-5 max-sm:px-4">
+        <FAQ />
+      </section>
       
       <Footer />
     </div>
