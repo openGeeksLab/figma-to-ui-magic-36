@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,29 +9,28 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, Upload, X } from "lucide-react";
+import { Loader2, Upload, X, Plus } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
-const POST_TYPES = [
-  "Sustainability",
-  "Guide", 
-  "Maintenance",
-  "Architecture",
-  "Installation",
-  "Custom"
-];
+interface PostType {
+  id: string;
+  name: string;
+  is_default: boolean;
+}
 
 const BlogAdding = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [postTypes, setPostTypes] = useState<PostType[]>([]);
+  const [showCustomInput, setShowCustomInput] = useState(false);
   const [formData, setFormData] = useState({
     title: "",
     content: "",
     seoKeywords: "",
     youtubeLink: "",
-    postType: "",
+    postTypeId: "",
     customPostType: ""
   });
   
@@ -40,8 +39,41 @@ const BlogAdding = () => {
   const [mainPicturePreview, setMainPicturePreview] = useState<string>("");
   const [additionalPreviews, setAdditionalPreviews] = useState<string[]>([]);
 
+  // Fetch post types on component mount
+  useEffect(() => {
+    fetchPostTypes();
+  }, []);
+
+  const fetchPostTypes = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('post_types')
+        .select('*')
+        .order('is_default', { ascending: false })
+        .order('name', { ascending: true });
+
+      if (error) throw error;
+      setPostTypes(data || []);
+    } catch (error) {
+      console.error('Error fetching post types:', error);
+      toast({
+        title: "Error",
+        description: "Failed to load post types",
+        variant: "destructive",
+      });
+    }
+  };
+
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+    
+    // Show custom input when "Add Custom" is selected
+    if (field === 'postTypeId' && value === 'custom') {
+      setShowCustomInput(true);
+    } else if (field === 'postTypeId') {
+      setShowCustomInput(false);
+      setFormData(prev => ({ ...prev, customPostType: "" }));
+    }
   };
 
   const handleMainPictureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -80,6 +112,17 @@ const BlogAdding = () => {
     return { path: data.path, url: publicUrl };
   };
 
+  const createCustomPostType = async (name: string) => {
+    const { data, error } = await supabase
+      .from('post_types')
+      .insert({ name, is_default: false })
+      .select()
+      .single();
+
+    if (error) throw error;
+    return data;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -88,12 +131,12 @@ const BlogAdding = () => {
       return;
     }
     
-    if (!formData.postType) {
+    if (!formData.postTypeId) {
       toast({ title: "Error", description: "Post type is required", variant: "destructive" });
       return;
     }
     
-    if (formData.postType === 'Custom' && !formData.customPostType.trim()) {
+    if (showCustomInput && !formData.customPostType.trim()) {
       toast({ title: "Error", description: "Custom post type is required", variant: "destructive" });
       return;
     }
@@ -110,9 +153,14 @@ const BlogAdding = () => {
       const mainImagePath = `main/${Date.now()}-${mainPicture.name}`;
       const mainImageResult = await uploadImage(mainPicture, mainImagePath);
 
+      // Handle custom post type creation
+      let finalPostTypeId = formData.postTypeId;
+      if (showCustomInput && formData.customPostType.trim()) {
+        const newPostType = await createCustomPostType(formData.customPostType.trim());
+        finalPostTypeId = newPostType.id;
+      }
+
       // Create blog post
-      const finalPostType = formData.postType === 'Custom' ? formData.customPostType : formData.postType;
-      
       const { data: blogPost, error: blogError } = await supabase
         .from('blog_posts')
         .insert({
@@ -122,7 +170,7 @@ const BlogAdding = () => {
           main_picture_path: mainImageResult.path,
           seo_keywords: formData.seoKeywords || null,
           youtube_link: formData.youtubeLink || null,
-          post_type: finalPostType
+          post_type_id: finalPostTypeId
         })
         .select()
         .single();
@@ -191,21 +239,27 @@ const BlogAdding = () => {
               {/* Post Type */}
               <div className="space-y-2">
                 <Label htmlFor="postType">Post Type *</Label>
-                <Select value={formData.postType} onValueChange={(value) => handleInputChange('postType', value)}>
+                <Select value={formData.postTypeId} onValueChange={(value) => handleInputChange('postTypeId', value)}>
                   <SelectTrigger className="bg-background">
                     <SelectValue placeholder="Select post type" />
                   </SelectTrigger>
                   <SelectContent className="bg-background border border-border z-50">
-                    {POST_TYPES.map((type) => (
-                      <SelectItem key={type} value={type} className="hover:bg-muted">
-                        {type}
+                    {postTypes.map((type) => (
+                      <SelectItem key={type.id} value={type.id} className="hover:bg-muted">
+                        {type.name}
                       </SelectItem>
                     ))}
+                    <SelectItem value="custom" className="hover:bg-muted">
+                      <div className="flex items-center gap-2">
+                        <Plus className="h-4 w-4" />
+                        Add Custom Post Type
+                      </div>
+                    </SelectItem>
                   </SelectContent>
                 </Select>
                 
                 {/* Custom Post Type Input */}
-                {formData.postType === 'Custom' && (
+                {showCustomInput && (
                   <div className="mt-2">
                     <Input
                       id="customPostType"

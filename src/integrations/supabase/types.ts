@@ -53,7 +53,7 @@ export type Database = {
           id: string
           main_picture_path: string
           main_picture_url: string
-          post_type: string
+          post_type_id: string
           seo_keywords: string | null
           title: string
           updated_at: string
@@ -65,7 +65,7 @@ export type Database = {
           id?: string
           main_picture_path: string
           main_picture_url: string
-          post_type: string
+          post_type_id: string
           seo_keywords?: string | null
           title: string
           updated_at?: string
@@ -77,13 +77,21 @@ export type Database = {
           id?: string
           main_picture_path?: string
           main_picture_url?: string
-          post_type?: string
+          post_type_id?: string
           seo_keywords?: string | null
           title?: string
           updated_at?: string
           youtube_link?: string | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "blog_posts_post_type_id_fkey"
+            columns: ["post_type_id"]
+            isOneToOne: false
+            referencedRelation: "post_types"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       gallery_images: {
         Row: {
@@ -112,6 +120,27 @@ export type Database = {
           storage_path?: string
           title?: string
           updated_at?: string
+        }
+        Relationships: []
+      }
+      post_types: {
+        Row: {
+          created_at: string
+          id: string
+          is_default: boolean
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_default?: boolean
+          name: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_default?: boolean
+          name?: string
         }
         Relationships: []
       }
