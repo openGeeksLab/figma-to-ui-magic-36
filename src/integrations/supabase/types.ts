@@ -79,31 +79,40 @@ export type Database = {
       products: {
         Row: {
           created_at: string
+          description: string | null
+          details: Json | null
           id: string
           main_picture_path: string
           main_picture_url: string
           name: string
           sizes: Json
+          specifications: Json | null
           type: string
           updated_at: string
         }
         Insert: {
           created_at?: string
+          description?: string | null
+          details?: Json | null
           id?: string
           main_picture_path: string
           main_picture_url: string
           name: string
           sizes?: Json
+          specifications?: Json | null
           type: string
           updated_at?: string
         }
         Update: {
           created_at?: string
+          description?: string | null
+          details?: Json | null
           id?: string
           main_picture_path?: string
           main_picture_url?: string
           name?: string
           sizes?: Json
+          specifications?: Json | null
           type?: string
           updated_at?: string
         }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -12,7 +13,10 @@ import { useNavigate } from "react-router-dom";
 
 interface ProductFormData {
   name: string;
+  description?: string;
   sizes: string[];
+  specifications: string[];
+  details: string[];
   type: "Cladding" | "Decking" | "Accessories";
   mainPicture: FileList;
 }
@@ -31,6 +35,8 @@ interface OptionalImage {
 const ProductsAddingN = () => {
   const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm<ProductFormData>();
   const [sizes, setSizes] = useState<SizeEntry[]>([{ id: '1', value: '' }]);
+  const [specifications, setSpecifications] = useState<SizeEntry[]>([{ id: '1', value: '' }]);
+  const [details, setDetails] = useState<SizeEntry[]>([{ id: '1', value: '' }]);
   const [optionalImages, setOptionalImages] = useState<OptionalImage[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -75,6 +81,40 @@ const ProductsAddingN = () => {
     }
   };
 
+  const addSpecification = () => {
+    const newId = Math.random().toString(36).substring(2);
+    setSpecifications(prev => [...prev, { id: newId, value: '' }]);
+  };
+
+  const updateSpecification = (id: string, value: string) => {
+    setSpecifications(prev => prev.map(spec => 
+      spec.id === id ? { ...spec, value } : spec
+    ));
+  };
+
+  const removeSpecification = (id: string) => {
+    if (specifications.length > 1) {
+      setSpecifications(prev => prev.filter(spec => spec.id !== id));
+    }
+  };
+
+  const addDetail = () => {
+    const newId = Math.random().toString(36).substring(2);
+    setDetails(prev => [...prev, { id: newId, value: '' }]);
+  };
+
+  const updateDetail = (id: string, value: string) => {
+    setDetails(prev => prev.map(detail => 
+      detail.id === id ? { ...detail, value } : detail
+    ));
+  };
+
+  const removeDetail = (id: string) => {
+    if (details.length > 1) {
+      setDetails(prev => prev.filter(detail => detail.id !== id));
+    }
+  };
+
   const handleOptionalImageAdd = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (!files) return;
@@ -114,6 +154,10 @@ const ProductsAddingN = () => {
         return;
       }
 
+      // Process specifications and details
+      const validSpecifications = specifications.filter(spec => spec.value.trim() !== '').map(spec => spec.value.trim());
+      const validDetails = details.filter(detail => detail.value.trim() !== '').map(detail => detail.value.trim());
+
       if (!data.mainPicture || data.mainPicture.length === 0) {
         toast({
           title: "Error",
@@ -136,7 +180,10 @@ const ProductsAddingN = () => {
         .from("products")
         .insert({
           name: data.name,
+          description: data.description || null,
           sizes: validSizes,
+          specifications: validSpecifications,
+          details: validDetails,
           type: data.type,
           main_picture_url: mainPictureUrl,
           main_picture_path: mainPicturePath,
@@ -290,6 +337,93 @@ const ProductsAddingN = () => {
                   {errors.type && (
                     <p className="text-sm text-destructive">Product type is required</p>
                   )}
+                </div>
+
+                {/* Description Field */}
+                <div className="space-y-2">
+                  <Label htmlFor="description">Product Description</Label>
+                  <Textarea
+                    id="description"
+                    {...register("description")}
+                    placeholder="Enter product description"
+                    rows={4}
+                  />
+                </div>
+
+                {/* Specifications Field */}
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <Label>Product Specifications</Label>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={addSpecification}
+                    >
+                      Add Specification
+                    </Button>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    {specifications.map((spec, index) => (
+                      <div key={spec.id} className="flex items-center gap-2">
+                        <Input
+                          value={spec.value}
+                          onChange={(e) => updateSpecification(spec.id, e.target.value)}
+                          placeholder={`Enter specification ${index + 1}`}
+                          className="flex-1"
+                        />
+                        {specifications.length > 1 && (
+                          <Button
+                            type="button"
+                            variant="outline"
+                            size="sm"
+                            onClick={() => removeSpecification(spec.id)}
+                          >
+                            <X className="w-4 h-4" />
+                          </Button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Details Field */}
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <Label>Product Details</Label>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={addDetail}
+                    >
+                      Add Detail
+                    </Button>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    {details.map((detail, index) => (
+                      <div key={detail.id} className="flex items-center gap-2">
+                        <Input
+                          value={detail.value}
+                          onChange={(e) => updateDetail(detail.id, e.target.value)}
+                          placeholder={`Enter detail ${index + 1}`}
+                          className="flex-1"
+                        />
+                        {details.length > 1 && (
+                          <Button
+                            type="button"
+                            variant="outline"
+                            size="sm"
+                            onClick={() => removeDetail(detail.id)}
+                          >
+                            <X className="w-4 h-4" />
+                          </Button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Main Picture */}
