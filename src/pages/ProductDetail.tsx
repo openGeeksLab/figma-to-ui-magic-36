@@ -244,7 +244,7 @@ const ProductDetail = () => {
               <div>
                 <h3 className="text-lg font-semibold text-[#454545] mb-4">Specification</h3>
                 <div className="space-y-2">
-                  {['Dimensionally stable', 'Without added chemicals', '100% natural product'].map((spec, index) => (
+                  {(product?.specifications as string[] || []).map((spec, index) => (
                     <div key={index} className="flex items-center space-x-2">
                       <Check className="w-5 h-5 text-green-500" />
                       <span className="text-gray-600">{spec}</span>
@@ -257,7 +257,7 @@ const ProductDetail = () => {
               <div>
                 <h3 className="text-lg font-semibold text-[#454545] mb-4">Details</h3>
                 <div className="space-y-2">
-                  {['Wood type: pine', 'Surface: Smooth planed', 'Color: Black pigmented'].map((detail, index) => (
+                  {(product?.details as string[] || []).map((detail, index) => (
                     <div key={index} className="flex items-center space-x-2">
                       <Check className="w-5 h-5 text-green-500" />
                       <span className="text-gray-600">{detail}</span>
