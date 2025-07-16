@@ -31,7 +31,8 @@ const BlogAdding = () => {
     content: "",
     seoKeywords: "",
     youtubeLink: "",
-    postType: ""
+    postType: "",
+    customPostType: ""
   });
   
   const [mainPicture, setMainPicture] = useState<File | null>(null);
@@ -92,6 +93,11 @@ const BlogAdding = () => {
       return;
     }
     
+    if (formData.postType === 'Custom' && !formData.customPostType.trim()) {
+      toast({ title: "Error", description: "Custom post type is required", variant: "destructive" });
+      return;
+    }
+    
     if (!mainPicture) {
       toast({ title: "Error", description: "Main picture is required", variant: "destructive" });
       return;
@@ -105,6 +111,8 @@ const BlogAdding = () => {
       const mainImageResult = await uploadImage(mainPicture, mainImagePath);
 
       // Create blog post
+      const finalPostType = formData.postType === 'Custom' ? formData.customPostType : formData.postType;
+      
       const { data: blogPost, error: blogError } = await supabase
         .from('blog_posts')
         .insert({
@@ -114,7 +122,7 @@ const BlogAdding = () => {
           main_picture_path: mainImageResult.path,
           seo_keywords: formData.seoKeywords || null,
           youtube_link: formData.youtubeLink || null,
-          post_type: formData.postType
+          post_type: finalPostType
         })
         .select()
         .single();
@@ -184,17 +192,30 @@ const BlogAdding = () => {
               <div className="space-y-2">
                 <Label htmlFor="postType">Post Type *</Label>
                 <Select value={formData.postType} onValueChange={(value) => handleInputChange('postType', value)}>
-                  <SelectTrigger>
+                  <SelectTrigger className="bg-background">
                     <SelectValue placeholder="Select post type" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="bg-background border border-border z-50">
                     {POST_TYPES.map((type) => (
-                      <SelectItem key={type} value={type}>
+                      <SelectItem key={type} value={type} className="hover:bg-muted">
                         {type}
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
+                
+                {/* Custom Post Type Input */}
+                {formData.postType === 'Custom' && (
+                  <div className="mt-2">
+                    <Input
+                      id="customPostType"
+                      value={formData.customPostType}
+                      onChange={(e) => handleInputChange('customPostType', e.target.value)}
+                      placeholder="Enter custom post type"
+                      required
+                    />
+                  </div>
+                )}
               </div>
 
               {/* Main Picture */}
