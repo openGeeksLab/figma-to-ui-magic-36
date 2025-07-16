@@ -82,77 +82,77 @@ const Products = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {/* Product 1 */}
           <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
-            <div className="aspect-square overflow-hidden">
+            <div className="aspect-square overflow-hidden relative">
               <img 
                 src="/lovable-uploads/04e0d11f-7bea-4c62-ba5e-4132c7813742.png" 
                 alt="Thermotra Thermowood F-1" 
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
-            <div className="p-3">
-              <h3 className="text-sm font-medium text-[#454545]">Thermotra Thermowood F-1</h3>
+              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
+                <h3 className="text-sm font-medium">Thermotra Thermowood F-1</h3>
+              </div>
             </div>
           </div>
 
           {/* Product 2 */}
           <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center">
+            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center relative">
               <div className="flex gap-1">
                 <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
                 <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
                 <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
                 <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
               </div>
-            </div>
-            <div className="p-3">
-              <h3 className="text-sm font-medium text-[#454545]">Thermowood Decking</h3>
+              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
+                <h3 className="text-sm font-medium">Thermowood Decking</h3>
+              </div>
             </div>
           </div>
 
           {/* Product 3 */}
           <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center">
+            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center relative">
               <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
                 <div className="absolute top-2 left-2 w-16 h-8 bg-[#B8956B] rounded-sm"></div>
               </div>
-            </div>
-            <div className="p-3">
-              <h3 className="text-sm font-medium text-[#454545]">Fasad Cladding</h3>
+              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
+                <h3 className="text-sm font-medium">Fasad Cladding</h3>
+              </div>
             </div>
           </div>
 
           {/* Product 4 */}
           <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center">
+            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center relative">
               <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
                 <div className="absolute bottom-0 left-2 w-3 h-10 bg-[#B8956B] rounded-sm"></div>
                 <div className="absolute bottom-0 right-2 w-3 h-10 bg-[#B8956B] rounded-sm"></div>
               </div>
-            </div>
-            <div className="p-3">
-              <h3 className="text-sm font-medium text-[#454545]">Vertical Cladding</h3>
+              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
+                <h3 className="text-sm font-medium">Vertical Cladding</h3>
+              </div>
             </div>
           </div>
 
           {/* Product 5 */}
           <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center">
+            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center relative">
               <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
-            </div>
-            <div className="p-3">
-              <h3 className="text-sm font-medium text-[#454545]">Thermowood Plank</h3>
+              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
+                <h3 className="text-sm font-medium">Thermowood Plank</h3>
+              </div>
             </div>
           </div>
 
           {/* Product 6 */}
           <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
-            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center">
+            <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center relative">
               <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
                 <div className="absolute top-2 left-2 w-16 h-8 bg-[#B8956B] rounded-sm"></div>
               </div>
-            </div>
-            <div className="p-3">
-              <h3 className="text-sm font-medium text-[#454545]">Premium Fasad</h3>
+              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
+                <h3 className="text-sm font-medium">Premium Fasad</h3>
+              </div>
             </div>
           </div>
           </div>
