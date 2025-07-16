@@ -510,12 +510,11 @@ const ProductDetail = () => {
         </section>
       )}
       
-      {/* FAQ Section */}
-      <section className="w-full bg-[#F3F0E7] px-8 max-md:px-5 max-sm:px-4">
-        <FAQ />
-      </section>
       
-      <Footer />
+      <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-sm:px-4 max-sm:py-0">
+        <FAQ />
+        <Footer />
+      </div>
     </div>
   );
 };
