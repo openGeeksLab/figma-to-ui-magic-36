@@ -421,7 +421,7 @@ const ProductDetail = () => {
       </section>
 
       {/* Personalised Orders Section */}
-      <section className="w-full px-8 py-16 bg-[#F5F2ED] rounded-2xl mx-8 max-md:px-5 max-sm:px-4 max-md:mx-5 max-sm:mx-4">
+      <section className="px-8 py-16 bg-[#F5F2ED] rounded-2xl mx-8 max-md:px-5 max-sm:px-4 max-md:mx-5 max-sm:mx-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-[#454545] mb-8">Personalised orders</h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-8">
