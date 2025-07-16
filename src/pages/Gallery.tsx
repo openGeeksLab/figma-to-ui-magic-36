@@ -105,12 +105,15 @@ const Gallery = () => {
                         </div>
                       </div>
                     </DialogTrigger>
-                    <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 border-0 bg-black/80">
-                      <img
-                        src={image.image_url}
-                        alt={image.title}
-                        className="w-full h-full object-contain"
-                      />
+                    <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 border-0 bg-black/80 overflow-auto">
+                      <div className="min-h-full flex items-center justify-center p-4">
+                        <img
+                          src={image.image_url}
+                          alt={image.title}
+                          className="max-w-none cursor-move"
+                          style={{ minWidth: '100%', minHeight: '100%' }}
+                        />
+                      </div>
                     </DialogContent>
                   </Dialog>
                 ))}
