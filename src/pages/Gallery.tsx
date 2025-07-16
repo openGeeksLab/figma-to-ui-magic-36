@@ -105,13 +105,17 @@ const Gallery = () => {
                         </div>
                       </div>
                     </DialogTrigger>
-                    <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 border-0 bg-black/80 overflow-auto">
-                      <div className="min-h-full flex items-center justify-center p-4">
+                    <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 border-0 bg-black/80">
+                      <div className="w-full h-full overflow-auto touch-pan-x touch-pan-y">
                         <img
                           src={image.image_url}
                           alt={image.title}
-                          className="max-w-none cursor-move"
-                          style={{ minWidth: '100%', minHeight: '100%' }}
+                          className="min-w-full min-h-full object-contain cursor-grab active:cursor-grabbing"
+                          style={{ 
+                            minWidth: 'max(100%, auto)',
+                            minHeight: 'max(100%, auto)',
+                            touchAction: 'pan-x pan-y'
+                          }}
                         />
                       </div>
                     </DialogContent>
