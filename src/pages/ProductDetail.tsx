@@ -26,6 +26,8 @@ const ProductDetail = () => {
   useEffect(() => {
     if (productName) {
       fetchProduct();
+      // Scroll to top when product changes
+      window.scrollTo(0, 0);
     }
   }, [productName]);
 
