@@ -418,7 +418,6 @@ const ProductDetail = () => {
                       />
                     </div>
                  </div>
-               </div>
 
                {/* Specification */}
                <div>
@@ -444,6 +443,7 @@ const ProductDetail = () => {
                      </div>
                    ))}
                  </div>
+               </div>
                </div>
 
               {/* Calculate Price Button */}
