@@ -18,7 +18,7 @@ const ProductDetail = () => {
   const [selectedDimension, setSelectedDimension] = useState('');
   const [selectedColorSwatch, setSelectedColorSwatch] = useState(0); // Default to first swatch
   
-  const colorNames = ['Netonets', 'Natural', 'Silver', 'Charcoal', 'Ash', 'Slate', 'Steel', 'Graphite', 'Navy', 'Storm', 'Ocean', 'Smoke'];
+  const colorNames = ['Netonets', 'Natural', 'Russet', 'Charcoal', 'Ash', 'Slate', 'Steel', 'Graphite', 'Navy', 'Storm', 'Ocean', 'Smoke'];
 
   useEffect(() => {
     if (productName) {
@@ -260,15 +260,27 @@ const ProductDetail = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
+                  <div 
+                    className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                      selectedColorSwatch === 2 ? 'border-[#DCB481]' : 'border-gray-200'
+                    }`}
+                    onClick={() => setSelectedColorSwatch(2)}
+                  >
+                    <img 
+                      src="/lovable-uploads/523aa0c7-9a58-4626-9df0-4a4dee48eb10.png" 
+                      alt="Russet wood color" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   {/* Remaining color swatches */}
-                  {colorSwatches.slice(2).map((color, index) => (
+                  {colorSwatches.slice(3).map((color, index) => (
                     <div 
-                      key={index + 2} 
+                      key={index + 3} 
                       className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors ${
-                        selectedColorSwatch === index + 2 ? 'border-[#DCB481]' : 'border-gray-200'
+                        selectedColorSwatch === index + 3 ? 'border-[#DCB481]' : 'border-gray-200'
                       }`}
                       style={{ backgroundColor: color }}
-                      onClick={() => setSelectedColorSwatch(index + 2)}
+                      onClick={() => setSelectedColorSwatch(index + 3)}
                     />
                   ))}
                 </div>
