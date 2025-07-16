@@ -88,7 +88,7 @@ const Products = () => {
                 alt="Thermotra Thermowood F-1" 
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <button className="absolute top-3 left-3 bg-[#DCB481] text-white px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-[#C5A373] transition-colors">
+              <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors border border-gray-200">
                 Cladding
               </button>
               <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
@@ -111,7 +111,7 @@ const Products = () => {
                 <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
                 <div className="w-4 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
               </div>
-              <button className="absolute top-3 left-3 bg-[#DCB481] text-white px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-[#C5A373] transition-colors">
+              <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors border border-gray-200">
                 Cladding
               </button>
               <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
@@ -131,7 +131,7 @@ const Products = () => {
               <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
                 <div className="absolute top-2 left-2 w-16 h-8 bg-[#B8956B] rounded-sm"></div>
               </div>
-              <button className="absolute top-3 left-3 bg-[#DCB481] text-white px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-[#C5A373] transition-colors">
+              <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors border border-gray-200">
                 Cladding
               </button>
               <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
@@ -152,7 +152,7 @@ const Products = () => {
                 <div className="absolute bottom-0 left-2 w-3 h-10 bg-[#B8956B] rounded-sm"></div>
                 <div className="absolute bottom-0 right-2 w-3 h-10 bg-[#B8956B] rounded-sm"></div>
               </div>
-              <button className="absolute top-3 left-3 bg-[#DCB481] text-white px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-[#C5A373] transition-colors">
+              <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors border border-gray-200">
                 Cladding
               </button>
               <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
@@ -170,7 +170,7 @@ const Products = () => {
           <div className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
             <div className="aspect-square overflow-hidden bg-gray-50 flex items-center justify-center relative">
               <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80"></div>
-              <button className="absolute top-3 left-3 bg-[#DCB481] text-white px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-[#C5A373] transition-colors">
+              <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors border border-gray-200">
                 Cladding
               </button>
               <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
@@ -190,7 +190,7 @@ const Products = () => {
               <div className="w-20 h-12 bg-[#DCB481] rounded-sm opacity-80 relative">
                 <div className="absolute top-2 left-2 w-16 h-8 bg-[#B8956B] rounded-sm"></div>
               </div>
-              <button className="absolute top-3 left-3 bg-[#DCB481] text-white px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-[#C5A373] transition-colors">
+              <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors border border-gray-200">
                 Cladding
               </button>
               <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
