@@ -235,7 +235,7 @@ const ProductDetail = () => {
                   {/* First row - Wood texture images */}
                   <div className="aspect-square rounded-lg border-2 border-gray-200 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden">
                     <img 
-                      src={colorNetonets} 
+                      src="/lovable-uploads/eb3d4163-bcd2-4f72-94e3-c0be7b636786.png" 
                       alt="Netonets wood color" 
                       className="w-full h-full object-cover"
                     />
