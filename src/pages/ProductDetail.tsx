@@ -9,6 +9,8 @@ import { ChevronDown, Check } from 'lucide-react';
 const ProductDetail = () => {
   const { type, productName } = useParams();
   const [product, setProduct] = useState<Tables<"products"> | null>(null);
+  const [productImages, setProductImages] = useState<Tables<"product_images">[]>([]);
+  const [selectedImage, setSelectedImage] = useState<string>('');
   const [loading, setLoading] = useState(true);
   const [selectedSurfaceTreatment, setSelectedSurfaceTreatment] = useState('Smooth planed');
   const [selectedDimension, setSelectedDimension] = useState('18x90 mm');
@@ -18,6 +20,13 @@ const ProductDetail = () => {
       fetchProduct();
     }
   }, [productName]);
+
+  useEffect(() => {
+    if (product) {
+      setSelectedImage(product.main_picture_url);
+      fetchProductImages();
+    }
+  }, [product]);
 
   const fetchProduct = async () => {
     try {
@@ -42,6 +51,27 @@ const ProductDetail = () => {
       console.error('Error:', error);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const fetchProductImages = async () => {
+    if (!product?.id) return;
+    
+    try {
+      const { data, error } = await supabase
+        .from('product_images')
+        .select('*')
+        .eq('product_id', product.id)
+        .order('created_at', { ascending: true });
+
+      if (error) {
+        console.error('Error fetching product images:', error);
+      } else {
+        console.log('Found product images:', data);
+        setProductImages(data || []);
+      }
+    } catch (error) {
+      console.error('Error fetching product images:', error);
     }
   };
 
@@ -88,6 +118,12 @@ const ProductDetail = () => {
     '#2F4F4F', '#708090', '#4682B4', '#778899'
   ];
 
+  // Combine main image with additional images for the gallery
+  const allImages = [
+    { url: product?.main_picture_url || '', isMain: true },
+    ...productImages.map(img => ({ url: img.image_url, isMain: false }))
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -113,25 +149,24 @@ const ProductDetail = () => {
             <div className="space-y-4">
               <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
                 <img 
-                  src={product.main_picture_url} 
+                  src={selectedImage || product.main_picture_url} 
                   alt={product.name}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="grid grid-cols-4 gap-2">
-                <div className="aspect-square bg-gray-100 rounded border-2 border-[#DCB481]">
-                  <img 
-                    src={product.main_picture_url} 
-                    alt={product.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {[1,2,3].map((i) => (
-                  <div key={i} className="aspect-square bg-gray-100 rounded">
+                {allImages.slice(0, 4).map((image, index) => (
+                  <div 
+                    key={index} 
+                    className={`aspect-square bg-gray-100 rounded cursor-pointer transition-all ${
+                      selectedImage === image.url ? 'border-2 border-[#DCB481]' : 'border border-gray-200 hover:border-[#DCB481]'
+                    }`}
+                    onClick={() => setSelectedImage(image.url)}
+                  >
                     <img 
-                      src={product.main_picture_url} 
-                      alt={`${product.name} view ${i + 1}`}
-                      className="w-full h-full object-cover opacity-60"
+                      src={image.url} 
+                      alt={`${product.name} view ${index + 1}`}
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 ))}
