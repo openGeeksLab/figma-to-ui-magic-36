@@ -17,6 +17,8 @@ const ProductDetail = () => {
   const [selectedSurfaceTreatment, setSelectedSurfaceTreatment] = useState('Smooth planed');
   const [selectedDimension, setSelectedDimension] = useState('');
   const [selectedColorSwatch, setSelectedColorSwatch] = useState(0); // Default to first swatch
+  
+  const colorNames = ['Netonets', 'Natural', 'Silver', 'Charcoal', 'Ash', 'Slate', 'Steel', 'Graphite', 'Navy', 'Storm', 'Ocean', 'Smoke'];
 
   useEffect(() => {
     if (productName) {
@@ -230,7 +232,7 @@ const ProductDetail = () => {
               {/* Tone Color */}
               <div>
                 <h3 className="text-lg font-semibold text-[#454545] mb-4">
-                  Tone Color: <span className="text-gray-600">Netonets</span>
+                  Tone Color: <span className="text-gray-600">{colorNames[selectedColorSwatch]}</span>
                 </h3>
                 <div className="grid grid-cols-4 gap-3">
                   {/* First row - Wood texture images */}
@@ -253,7 +255,7 @@ const ProductDetail = () => {
                     onClick={() => setSelectedColorSwatch(1)}
                   >
                     <img 
-                      src={colorNatural} 
+                      src="/lovable-uploads/4b21b648-bde9-4e3b-bf8a-cb68fadd5627.png" 
                       alt="Natural wood color" 
                       className="w-full h-full object-cover"
                     />
