@@ -5,8 +5,6 @@ import Footer from '@/components/Footer';
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { ChevronDown, Check } from 'lucide-react';
-import colorNetonets from '@/assets/color-netonets.png';
-import colorNatural from '@/assets/color-natural.png';
 
 const ProductDetail = () => {
   const { type, productName } = useParams();
@@ -232,25 +230,9 @@ const ProductDetail = () => {
                   Tone Color: <span className="text-gray-600">Silver</span>
                 </h3>
                 <div className="grid grid-cols-4 gap-3">
-                  {/* First row - Image swatches */}
-                  <div className="aspect-square rounded-lg border-2 border-gray-200 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden">
-                    <img 
-                      src={colorNetonets} 
-                      alt="Netonets color" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="aspect-square rounded-lg border-2 border-gray-200 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden">
-                    <img 
-                      src={colorNatural} 
-                      alt="Natural color" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  {/* Remaining color swatches */}
-                  {colorSwatches.slice(2).map((color, index) => (
+                  {colorSwatches.map((color, index) => (
                     <div 
-                      key={index + 2} 
+                      key={index} 
                       className="aspect-square rounded-lg border-2 border-gray-200 cursor-pointer hover:border-[#DCB481] transition-colors"
                       style={{ backgroundColor: color }}
                     />
