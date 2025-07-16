@@ -16,6 +16,7 @@ const ProductDetail = () => {
   const [loading, setLoading] = useState(true);
   const [selectedSurfaceTreatment, setSelectedSurfaceTreatment] = useState('Smooth planed');
   const [selectedDimension, setSelectedDimension] = useState('');
+  const [selectedColorSwatch, setSelectedColorSwatch] = useState(0); // Default to first swatch
 
   useEffect(() => {
     if (productName) {
@@ -229,18 +230,28 @@ const ProductDetail = () => {
               {/* Tone Color */}
               <div>
                 <h3 className="text-lg font-semibold text-[#454545] mb-4">
-                  Tone Color: <span className="text-gray-600">Silver</span>
+                  Tone Color: <span className="text-gray-600">Netonets</span>
                 </h3>
                 <div className="grid grid-cols-4 gap-3">
                   {/* First row - Wood texture images */}
-                  <div className="aspect-square rounded-lg border-2 border-gray-200 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden">
+                  <div 
+                    className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                      selectedColorSwatch === 0 ? 'border-[#DCB481]' : 'border-gray-200'
+                    }`}
+                    onClick={() => setSelectedColorSwatch(0)}
+                  >
                     <img 
                       src="/lovable-uploads/eb3d4163-bcd2-4f72-94e3-c0be7b636786.png" 
                       alt="Netonets wood color" 
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="aspect-square rounded-lg border-2 border-gray-200 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden">
+                  <div 
+                    className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                      selectedColorSwatch === 1 ? 'border-[#DCB481]' : 'border-gray-200'
+                    }`}
+                    onClick={() => setSelectedColorSwatch(1)}
+                  >
                     <img 
                       src={colorNatural} 
                       alt="Natural wood color" 
@@ -251,8 +262,11 @@ const ProductDetail = () => {
                   {colorSwatches.slice(2).map((color, index) => (
                     <div 
                       key={index + 2} 
-                      className="aspect-square rounded-lg border-2 border-gray-200 cursor-pointer hover:border-[#DCB481] transition-colors"
+                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors ${
+                        selectedColorSwatch === index + 2 ? 'border-[#DCB481]' : 'border-gray-200'
+                      }`}
                       style={{ backgroundColor: color }}
+                      onClick={() => setSelectedColorSwatch(index + 2)}
                     />
                   ))}
                 </div>
