@@ -234,7 +234,7 @@ const ProductDetail = () => {
                 <h3 className="text-lg font-semibold text-[#454545] mb-4">
                   Tone Color: <span className="text-gray-600">{colorNames[selectedColorSwatch]}</span>
                 </h3>
-                <div className="grid grid-cols-4 gap-1 w-1/2 scale-75 origin-top-left">
+                <div className="grid grid-cols-4 gap-1 scale-75 origin-top-left">
                   {/* First row - Wood texture images */}
                   <div 
                     className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
