@@ -27,9 +27,9 @@ const Header = () => {
           About
         </Link>
         
-        <a href="#blog" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+        <Link to="/blog" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
           Blog
-        </a>
+        </Link>
         
         <Link to="/contact" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
           Contact
@@ -76,13 +76,13 @@ const Header = () => {
             >
               About
             </Link>
-            <a 
-              href="#blog" 
+            <Link 
+              to="/blog" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Blog
-            </a>
+            </Link>
             <Link 
               to="/contact" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"

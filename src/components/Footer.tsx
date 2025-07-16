@@ -40,7 +40,7 @@ const Footer = () => {
         <nav className="flex w-[257px] flex-col items-start gap-6 max-md:w-full" aria-label="Company links">
           <h3 className="text-white text-xl font-bold w-full max-sm:text-lg">Company</h3>
           <ul className="flex flex-col justify-center items-start gap-4 w-full">
-            <li><a href="#blog" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Blog</a></li>
+            <li><a href="/blog" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Blog</a></li>
             <li><a href="#about" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">About</a></li>
             <li><a href="#contact" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Contact</a></li>
           </ul>

@@ -10,6 +10,7 @@ import ProductDetail from "./pages/ProductDetail";
 import ProductsAddingN from "./pages/ProductsAddingN";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
+import Blog from "./pages/Blog";
 import UploadingPictures from "./pages/UploadingPictures";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/products-adding-n" element={<ProductsAddingN />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/uploading-pictures" element={<UploadingPictures />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
