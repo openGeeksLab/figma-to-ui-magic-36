@@ -25,6 +25,15 @@ const BlogAdding = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [postTypes, setPostTypes] = useState<PostType[]>([]);
   const [showCustomInput, setShowCustomInput] = useState(false);
+  
+  // Fallback post types in case of caching issues
+  const fallbackPostTypes = [
+    { id: 'sustainability', name: 'Sustainability', is_default: true },
+    { id: 'guide', name: 'Guide', is_default: true },
+    { id: 'maintenance', name: 'Maintenance', is_default: true },
+    { id: 'architecture', name: 'Architecture', is_default: true },
+    { id: 'installation', name: 'Installation', is_default: true }
+  ];
   const [formData, setFormData] = useState({
     title: "",
     content: "",
@@ -53,12 +62,14 @@ const BlogAdding = () => {
         .order('name', { ascending: true });
 
       if (error) throw error;
-      setPostTypes(data || []);
+      setPostTypes(data || fallbackPostTypes);
     } catch (error) {
       console.error('Error fetching post types:', error);
+      // Use fallback post types if database fetch fails
+      setPostTypes(fallbackPostTypes);
       toast({
         title: "Error",
-        description: "Failed to load post types",
+        description: "Failed to load post types, using defaults",
         variant: "destructive",
       });
     }
