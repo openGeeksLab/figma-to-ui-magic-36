@@ -467,7 +467,7 @@ const ProductDetail = () => {
       {similarProducts.length > 0 && (
         <section className="w-full px-8 py-12 max-md:px-5 max-sm:px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-[#454545] mb-8">Similar Products</h2>
+            <h2 className="text-4xl font-bold text-[#DCB481] mb-8">Similar Products</h2>
             
             {/* Products Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
