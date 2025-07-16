@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { supabase } from "@/integrations/supabase/client";
@@ -10,8 +10,10 @@ import colorNatural from '@/assets/color-natural.png';
 
 const ProductDetail = () => {
   const { type, productName } = useParams();
+  const navigate = useNavigate();
   const [product, setProduct] = useState<Tables<"products"> | null>(null);
   const [productImages, setProductImages] = useState<Tables<"product_images">[]>([]);
+  const [similarProducts, setSimilarProducts] = useState<Tables<"products">[]>([]);
   const [selectedImage, setSelectedImage] = useState<string>('');
   const [loading, setLoading] = useState(true);
   const [selectedSurfaceTreatment, setSelectedSurfaceTreatment] = useState('Smooth planed');
@@ -30,6 +32,7 @@ const ProductDetail = () => {
     if (product) {
       setSelectedImage(product.main_picture_url);
       fetchProductImages();
+      fetchSimilarProducts();
       // Set first available size as default
       if (product.sizes && Array.isArray(product.sizes) && product.sizes.length > 0) {
         const sizes = product.sizes as string[];
@@ -85,6 +88,27 @@ const ProductDetail = () => {
     }
   };
 
+  const fetchSimilarProducts = async () => {
+    if (!product?.id || !product?.type) return;
+    
+    try {
+      const { data, error } = await supabase
+        .from('products')
+        .select('*')
+        .eq('type', product.type)
+        .neq('id', product.id)
+        .limit(4);
+
+      if (error) {
+        console.error('Error fetching similar products:', error);
+      } else {
+        setSimilarProducts(data || []);
+      }
+    } catch (error) {
+      console.error('Error fetching similar products:', error);
+    }
+  };
+
   const formatProductName = (name: string) => {
     return name.replace(/\s+/g, '-').toLowerCase();
   };
@@ -96,6 +120,12 @@ const ProductDetail = () => {
       case 'accessories': return 'Accessories';
       default: return type;
     }
+  };
+
+  const handleProductClick = (product: Tables<"products">) => {
+    const formattedName = formatProductName(product.name);
+    const formattedType = product.type.toLowerCase();
+    navigate(`/${formattedType}/${formattedName}`);
   };
 
   if (loading) {
@@ -432,6 +462,45 @@ const ProductDetail = () => {
           </button>
         </div>
       </section>
+
+      {/* Similar Products Section */}
+      {similarProducts.length > 0 && (
+        <section className="w-full px-8 py-12 max-md:px-5 max-sm:px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-[#454545] mb-8">Similar Products</h2>
+            
+            {/* Products Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {similarProducts.map((similarProduct) => (
+                <div 
+                  key={similarProduct.id} 
+                  className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border cursor-pointer"
+                  onClick={() => handleProductClick(similarProduct)}
+                >
+                  <div className="aspect-square overflow-hidden relative">
+                    <img 
+                      src={similarProduct.main_picture_url} 
+                      alt={similarProduct.name} 
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors">
+                      {similarProduct.type}
+                    </button>
+                    <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors">
+                      <svg className="w-4 h-4 text-[#454545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                      </svg>
+                    </button>
+                    <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
+                      <h3 className="text-sm font-medium">{similarProduct.name}</h3>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
       
       <Footer />
     </div>
