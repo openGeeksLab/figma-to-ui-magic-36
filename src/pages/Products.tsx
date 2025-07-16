@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
@@ -8,6 +9,7 @@ import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 
 const Products = () => {
+  const navigate = useNavigate();
   const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
   const [products, setProducts] = useState<Tables<"products">[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("All Products");
@@ -49,6 +51,16 @@ const Products = () => {
     : products.filter(product => product.type === selectedCategory);
 
   const uniqueTypes = Array.from(new Set(products.map(product => product.type)));
+
+  const formatProductName = (name: string) => {
+    return name.replace(/\s+/g, '-').toLowerCase();
+  };
+
+  const handleProductClick = (product: Tables<"products">) => {
+    const formattedName = formatProductName(product.name);
+    const formattedType = product.type.toLowerCase();
+    navigate(`/${formattedType}/${formattedName}`);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -116,7 +128,11 @@ const Products = () => {
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProducts.map((product) => (
-              <div key={product.id} className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border">
+              <div 
+                key={product.id} 
+                className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border cursor-pointer"
+                onClick={() => handleProductClick(product)}
+              >
                 <div className="aspect-square overflow-hidden relative">
                   <img 
                     src={product.main_picture_url} 
