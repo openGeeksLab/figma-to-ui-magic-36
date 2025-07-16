@@ -420,7 +420,7 @@ const ProductDetail = () => {
                  </div>
 
                {/* Specification */}
-               <div className="mt-8">
+               <div>
                  <h3 className="text-lg font-semibold text-[#454545] mb-4">Specification</h3>
                  <div className="space-y-2">
                    {(product?.specifications as string[] || []).map((spec, index) => (
