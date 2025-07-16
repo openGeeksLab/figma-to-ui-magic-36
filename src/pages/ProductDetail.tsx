@@ -124,6 +124,8 @@ const ProductDetail = () => {
   };
 
   const handleProductClick = (product: Tables<"products">) => {
+    // Show loading state during navigation
+    setLoading(true);
     const formattedName = formatProductName(product.name);
     const formattedType = product.type.toLowerCase();
     navigate(`/${formattedType}/${formattedName}`);
