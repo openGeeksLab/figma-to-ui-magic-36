@@ -107,7 +107,7 @@ const ContactForm = () => {
         </header>
         
         <div className="flex flex-col items-start gap-[5px] w-full">
-          <p className="text-[#454545] text-center text-lg font-normal leading-[26.28px] w-full max-sm:text-base">
+          <p className="text-[#454545] text-center text-lg font-normal leading-[26.28px] w-full max-sm:text-base mx-0 my-[63px] px-0">
             Fill out the form and we'll provide you with the latest product information, news, and business opportunities tailored to your needs. We look forward to hearing from you.
           </p>
           
