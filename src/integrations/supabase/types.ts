@@ -83,7 +83,7 @@ export type Database = {
           main_picture_path: string
           main_picture_url: string
           name: string
-          size: string
+          sizes: Json
           type: string
           updated_at: string
         }
@@ -93,7 +93,7 @@ export type Database = {
           main_picture_path: string
           main_picture_url: string
           name: string
-          size: string
+          sizes?: Json
           type: string
           updated_at?: string
         }
@@ -103,7 +103,7 @@ export type Database = {
           main_picture_path?: string
           main_picture_url?: string
           name?: string
-          size?: string
+          sizes?: Json
           type?: string
           updated_at?: string
         }

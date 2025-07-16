@@ -12,9 +12,14 @@ import { useNavigate } from "react-router-dom";
 
 interface ProductFormData {
   name: string;
-  size: string;
+  sizes: string[];
   type: "Cladding" | "Decking" | "Accessories";
   mainPicture: FileList;
+}
+
+interface SizeEntry {
+  id: string;
+  value: string;
 }
 
 interface OptionalImage {
@@ -25,6 +30,7 @@ interface OptionalImage {
 
 const ProductsAddingN = () => {
   const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm<ProductFormData>();
+  const [sizes, setSizes] = useState<SizeEntry[]>([{ id: '1', value: '' }]);
   const [optionalImages, setOptionalImages] = useState<OptionalImage[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -50,6 +56,23 @@ const ProductsAddingN = () => {
       .getPublicUrl(filePath);
 
     return { url: publicUrl, path: filePath };
+  };
+
+  const addSize = () => {
+    const newId = Math.random().toString(36).substring(2);
+    setSizes(prev => [...prev, { id: newId, value: '' }]);
+  };
+
+  const updateSize = (id: string, value: string) => {
+    setSizes(prev => prev.map(size => 
+      size.id === id ? { ...size, value } : size
+    ));
+  };
+
+  const removeSize = (id: string) => {
+    if (sizes.length > 1) {
+      setSizes(prev => prev.filter(size => size.id !== id));
+    }
   };
 
   const handleOptionalImageAdd = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -80,6 +103,17 @@ const ProductsAddingN = () => {
     try {
       setIsSubmitting(true);
 
+      // Validate sizes
+      const validSizes = sizes.filter(size => size.value.trim() !== '').map(size => size.value.trim());
+      if (validSizes.length === 0) {
+        toast({
+          title: "Error",
+          description: "At least one size is required",
+          variant: "destructive",
+        });
+        return;
+      }
+
       if (!data.mainPicture || data.mainPicture.length === 0) {
         toast({
           title: "Error",
@@ -102,7 +136,7 @@ const ProductsAddingN = () => {
         .from("products")
         .insert({
           name: data.name,
-          size: data.size,
+          sizes: validSizes,
           type: data.type,
           main_picture_url: mainPictureUrl,
           main_picture_path: mainPicturePath,
@@ -195,16 +229,45 @@ const ProductsAddingN = () => {
                   )}
                 </div>
 
-                {/* Size Field */}
-                <div className="space-y-2">
-                  <Label htmlFor="size">Size *</Label>
-                  <Input
-                    id="size"
-                    {...register("size", { required: "Size is required" })}
-                    placeholder="Enter product size (e.g., 2400x140x20mm)"
-                  />
-                  {errors.size && (
-                    <p className="text-sm text-destructive">{errors.size.message}</p>
+                {/* Sizes Field */}
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <Label>Product Sizes *</Label>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={addSize}
+                    >
+                      Add Size
+                    </Button>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    {sizes.map((size, index) => (
+                      <div key={size.id} className="flex items-center gap-2">
+                        <Input
+                          value={size.value}
+                          onChange={(e) => updateSize(size.id, e.target.value)}
+                          placeholder={`Enter size ${index + 1} (e.g., 2400x140x20mm)`}
+                          className="flex-1"
+                        />
+                        {sizes.length > 1 && (
+                          <Button
+                            type="button"
+                            variant="outline"
+                            size="sm"
+                            onClick={() => removeSize(size.id)}
+                          >
+                            <X className="w-4 h-4" />
+                          </Button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {sizes.every(size => size.value.trim() === '') && (
+                    <p className="text-sm text-destructive">At least one size is required</p>
                   )}
                 </div>
 
