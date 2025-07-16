@@ -18,7 +18,7 @@ const ProductDetail = () => {
   const [selectedDimension, setSelectedDimension] = useState('');
   const [selectedColorSwatch, setSelectedColorSwatch] = useState(0); // Default to first swatch
   
-  const colorNames = ['Netonets', 'Natural', 'Russet', 'Mocha', 'Ivory', 'Silver', 'Steel', 'Graphit', 'Coal', 'Storm', 'Ocean', 'Smoke'];
+  const colorNames = ['Netonets', 'Natural', 'Russet', 'Mocha', 'Ivory', 'Silver', 'Steel', 'Graphit', 'Coal', 'Graphit Black', 'Ocean', 'Smoke'];
 
   useEffect(() => {
     if (productName) {
@@ -346,15 +346,27 @@ const ProductDetail = () => {
                        className="w-full h-full object-cover"
                      />
                    </div>
+                   <div 
+                     className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
+                       selectedColorSwatch === 9 ? 'border-[#DCB481]' : 'border-gray-200'
+                     }`}
+                     onClick={() => setSelectedColorSwatch(9)}
+                   >
+                     <img 
+                       src="/lovable-uploads/4ba74904-71d0-463a-b25a-2e0b2cb79eec.png" 
+                       alt="Graphit Black wood color" 
+                       className="w-full h-full object-cover"
+                     />
+                   </div>
                    {/* Remaining color swatches */}
-                   {colorSwatches.slice(9).map((color, index) => (
+                   {colorSwatches.slice(10).map((color, index) => (
                      <div 
-                       key={index + 9} 
+                       key={index + 10} 
                        className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors ${
-                         selectedColorSwatch === index + 9 ? 'border-[#DCB481]' : 'border-gray-200'
+                         selectedColorSwatch === index + 10 ? 'border-[#DCB481]' : 'border-gray-200'
                        }`}
                        style={{ backgroundColor: color }}
-                       onClick={() => setSelectedColorSwatch(index + 9)}
+                       onClick={() => setSelectedColorSwatch(index + 10)}
                      />
                    ))}
                 </div>
