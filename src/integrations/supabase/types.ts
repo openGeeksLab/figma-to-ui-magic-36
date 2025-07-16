@@ -14,6 +14,77 @@ export type Database = {
   }
   public: {
     Tables: {
+      blog_images: {
+        Row: {
+          blog_post_id: string
+          created_at: string
+          id: string
+          image_url: string
+          storage_path: string
+        }
+        Insert: {
+          blog_post_id: string
+          created_at?: string
+          id?: string
+          image_url: string
+          storage_path: string
+        }
+        Update: {
+          blog_post_id?: string
+          created_at?: string
+          id?: string
+          image_url?: string
+          storage_path?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "blog_images_blog_post_id_fkey"
+            columns: ["blog_post_id"]
+            isOneToOne: false
+            referencedRelation: "blog_posts"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      blog_posts: {
+        Row: {
+          content: string | null
+          created_at: string
+          id: string
+          main_picture_path: string
+          main_picture_url: string
+          post_type: string
+          seo_keywords: string | null
+          title: string
+          updated_at: string
+          youtube_link: string | null
+        }
+        Insert: {
+          content?: string | null
+          created_at?: string
+          id?: string
+          main_picture_path: string
+          main_picture_url: string
+          post_type: string
+          seo_keywords?: string | null
+          title: string
+          updated_at?: string
+          youtube_link?: string | null
+        }
+        Update: {
+          content?: string | null
+          created_at?: string
+          id?: string
+          main_picture_path?: string
+          main_picture_url?: string
+          post_type?: string
+          seo_keywords?: string | null
+          title?: string
+          updated_at?: string
+          youtube_link?: string | null
+        }
+        Relationships: []
+      }
       gallery_images: {
         Row: {
           created_at: string
