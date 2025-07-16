@@ -21,16 +21,21 @@ const ProductDetail = () => {
 
   const fetchProduct = async () => {
     try {
-      const formattedName = productName?.replace(/-/g, ' ');
+      // Convert URL parameter back to product name format
+      // URL: /cladding/f-5 -> productName: "f-5" -> search for: "F-5"
+      const searchName = productName?.toUpperCase() || '';
+      console.log('Searching for product:', searchName);
+      
       const { data, error } = await supabase
         .from('products')
         .select('*')
-        .ilike('name', formattedName || '')
+        .ilike('name', searchName)
         .single();
 
       if (error) {
         console.error('Error fetching product:', error);
       } else {
+        console.log('Found product:', data);
         setProduct(data);
       }
     } catch (error) {
