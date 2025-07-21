@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
+
+interface BlogPost {
+  id: string;
+  title: string;
+  content: string;
+  main_picture_url: string;
+  created_at: string;
+  post_type_id: string;
+}
+
+interface PostType {
+  id: string;
+  name: string;
+}
 
 const Blog = () => {
   const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [postTypes, setPostTypes] = useState<PostType[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState("All Posts");
+  const [loading, setLoading] = useState(true);
+  const { toast } = useToast();
 
   const images = [
     {
@@ -23,63 +45,78 @@ const Blog = () => {
     }
   ];
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: "The Benefits of Thermally Modified Wood",
-      excerpt: "Discover why thermally modified wood is becoming the preferred choice for sustainable construction projects.",
-      image: "/lovable-uploads/266af241-4d7b-41f6-9dc5-2936a467e630.png",
-      date: "March 15, 2024",
-      category: "Sustainability"
-    },
-    {
-      id: 2,
-      title: "Choosing the Right Wood Panel for Your Project",
-      excerpt: "A comprehensive guide to selecting the perfect wood panels for interior and exterior applications.",
-      image: "/lovable-uploads/3952c04f-b5c0-4be9-adfa-6fe82eef0feb.png",
-      date: "March 10, 2024",
-      category: "Guide"
-    },
-    {
-      id: 3,
-      title: "Maintenance Tips for Thermowood Panels",
-      excerpt: "Keep your thermowood panels looking beautiful with these essential maintenance practices.",
-      image: "/lovable-uploads/4b21b648-bde9-4e3b-bf8a-cb68fadd5627.png",
-      date: "March 5, 2024",
-      category: "Maintenance"
-    },
-    {
-      id: 4,
-      title: "Modern Architecture with Wood Panels",
-      excerpt: "Explore how contemporary architects are using wood panels to create stunning modern buildings.",
-      image: "/lovable-uploads/523aa0c7-9a58-4626-9df0-4a4dee48eb10.png",
-      date: "February 28, 2024",
-      category: "Architecture"
-    },
-    {
-      id: 5,
-      title: "Sustainable Building Materials of the Future",
-      excerpt: "Learn about the environmental benefits of choosing thermally modified wood for construction.",
-      image: "/lovable-uploads/b83a3e1b-84b0-4345-a1a0-e4d631266738.png",
-      date: "February 20, 2024",
-      category: "Sustainability"
-    },
-    {
-      id: 6,
-      title: "Installation Best Practices",
-      excerpt: "Professional tips for installing wood panels to ensure longevity and optimal performance.",
-      image: "/lovable-uploads/cd3dd78f-3059-4fd1-947f-af87071531e3.png",
-      date: "February 15, 2024",
-      category: "Installation"
+  useEffect(() => {
+    fetchBlogPosts();
+    fetchPostTypes();
+  }, []);
+
+  const fetchBlogPosts = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('blog_posts')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+      setBlogPosts(data || []);
+    } catch (error) {
+      console.error('Error fetching blog posts:', error);
+      toast({
+        title: "Error",
+        description: "Failed to load blog posts",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
     }
-  ];
+  };
 
-  const categories = ["All Posts", "Sustainability", "Guide", "Maintenance", "Architecture", "Installation"];
-  const [selectedCategory, setSelectedCategory] = React.useState("All Posts");
+  const fetchPostTypes = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('post_types')
+        .select('*')
+        .order('name', { ascending: true });
 
+      if (error) throw error;
+      setPostTypes(data || []);
+    } catch (error) {
+      console.error('Error fetching post types:', error);
+    }
+  };
+
+  const categories = ["All Posts", ...postTypes.map(type => type.name)];
+  
   const filteredPosts = selectedCategory === "All Posts" 
     ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
+    : blogPosts.filter(post => {
+        const postType = postTypes.find(type => type.id === post.post_type_id);
+        return postType?.name === selectedCategory;
+      });
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  const getPostTypeName = (postTypeId: string) => {
+    const postType = postTypes.find(type => type.id === postTypeId);
+    return postType?.name || 'Unknown';
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <div className="flex justify-center items-center py-20">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#DCB481]"></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -136,37 +173,38 @@ const Blog = () => {
           {/* Blog Posts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <article 
-                key={post.id} 
-                className="group bg-white rounded-[16px] overflow-hidden shadow-sm border hover:shadow-md transition-shadow cursor-pointer"
+              <Link
+                key={post.id}
+                to={`/blog/${post.id}`}
+                className="group bg-white rounded-[16px] overflow-hidden shadow-sm border hover:shadow-md transition-shadow cursor-pointer block"
               >
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img 
-                    src={post.image} 
+                    src={post.main_picture_url} 
                     alt={post.title} 
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute top-3 left-3 bg-[#DCB481] text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium">
-                    {post.category}
+                    {getPostTypeName(post.post_type_id)}
                   </div>
                 </div>
                 
                 <div className="p-6">
-                  <div className="text-sm text-gray-500 mb-2">{post.date}</div>
+                  <div className="text-sm text-gray-500 mb-2">{formatDate(post.created_at)}</div>
                   <h2 className="text-xl font-bold text-[#454545] mb-3 group-hover:text-[#DCB481] transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                    {post.excerpt}
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                    {post.content ? post.content.substring(0, 150) + '...' : 'No content available'}
                   </p>
-                  <button className="text-[#DCB481] hover:text-[#454545] font-medium text-sm transition-colors flex items-center gap-2">
+                  <div className="text-[#DCB481] hover:text-[#454545] font-medium text-sm transition-colors flex items-center gap-2">
                     Read More
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
-                  </button>
+                  </div>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
