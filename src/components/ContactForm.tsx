@@ -97,7 +97,7 @@ const ContactForm = () => {
         </div>
       </section>;
   }
-  return <section className="flex h-[1053px] justify-center items-start w-full px-8 py-24 rounded-[28px] max-md:h-auto max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10" id="contact">
+  return <section id="contact" className="flex h-[1053px] justify-center items-start w-full px-8 rounded-[28px] max-md:h-auto max-md:px-5 max-sm:px-4 py-[75px]">
       <div className="flex w-[1102px] flex-col justify-center items-center gap-8 max-md:w-full">
         <header className="w-[477px] text-[#454545] text-center text-[42px] font-bold max-md:w-full max-md:text-[32px] max-sm:text-2xl">
           <h2>
@@ -150,7 +150,7 @@ const ContactForm = () => {
             
             <div className="w-[414px] h-[577px] relative top-[-73px] left-12 hidden lg:block">
               <div className="relative w-full h-full">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bdaedf6a2b4b249871135b39b9604b32a3debd6?width=826" alt="Wood panel installation example" className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-[-25px]"  />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bdaedf6a2b4b249871135b39b9604b32a3debd6?width=826" alt="Wood panel installation example" className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-[-25px]" />
               </div>
             </div>
           </div>
