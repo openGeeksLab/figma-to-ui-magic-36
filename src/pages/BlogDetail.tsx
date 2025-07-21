@@ -314,15 +314,14 @@ const BlogDetail = () => {
       <div className="bg-[#F3F0E7] mt-16">
         <div className="max-w-4xl mx-auto px-8 max-md:px-5 max-sm:px-4 py-16">
           {/* Newsletter Section */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#454545] mb-2">
-              Get our monthly
-            </h2>
-            <h2 className="text-3xl font-bold text-[#DCB481] mb-8">
-              newsletter
-            </h2>
+          <div className="flex items-center justify-between gap-8 mb-16 max-md:flex-col max-md:text-center">
+            <div className="flex-shrink-0">
+              <h2 className="text-3xl font-bold text-[#454545]">
+                Get our monthly <span className="text-[#DCB481]">newsletter</span>
+              </h2>
+            </div>
             
-            <form className="flex gap-4 max-w-md mx-auto">
+            <form className="flex gap-4 max-w-md w-full max-md:max-w-none">
               <input
                 type="email"
                 placeholder="Email"
