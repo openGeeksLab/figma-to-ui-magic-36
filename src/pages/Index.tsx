@@ -135,7 +135,9 @@ const Index = () => {
             </article>
           </section>
           
-          <ContactForm />
+          <div className="w-full py-16">
+            <ContactForm />
+          </div>
         </main>
         
         <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-sm:px-4 max-sm:py-0">
