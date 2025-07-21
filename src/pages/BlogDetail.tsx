@@ -308,10 +308,13 @@ const BlogDetail = () => {
             Back to Blog
           </Link>
         </div>
+      </main>
 
-        {/* Newsletter Subscription */}
-        <div className="mt-16 pt-8 border-t border-gray-200">
-          <div className="bg-[#F3F0E7] rounded-[16px] p-8 text-center">
+      {/* Newsletter + Footer Section - Connected */}
+      <div className="bg-[#F3F0E7] mt-16">
+        <div className="max-w-4xl mx-auto px-8 max-md:px-5 max-sm:px-4 py-16">
+          {/* Newsletter Section */}
+          <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-[#454545] mb-2">
               Get our monthly
             </h2>
@@ -335,9 +338,8 @@ const BlogDetail = () => {
             </form>
           </div>
         </div>
-      </main>
-
-      <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-sm:px-4 max-sm:py-0">
+        
+        {/* Footer */}
         <Footer />
       </div>
     </div>
