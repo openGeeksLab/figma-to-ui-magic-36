@@ -149,11 +149,9 @@ const ContactForm = () => {
             </form>
             
             <div className="w-[414px] h-[577px] relative top-[-73px] left-12 hidden lg:block">
-              <img 
-                src="/lovable-uploads/b83a3e1b-84b0-4345-a1a0-e4d631266738.png" 
-                alt="Modern wooden house exterior" 
-                className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0" 
-              />
+              <div className="relative w-full h-full">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bdaedf6a2b4b249871135b39b9604b32a3debd6?width=826" alt="Wood panel installation example" className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0"  />
+              </div>
             </div>
           </div>
         </div>
