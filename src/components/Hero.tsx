@@ -36,7 +36,7 @@ const Hero = () => {
         </CarouselContent>
       </Carousel>
       
-      <div className="flex w-[685px] flex-col justify-end items-start absolute h-[425px] left-10 top-[190px] max-md:w-[90%] max-md:h-auto max-md:left-5 max-md:top-[100px] max-sm:w-[calc(100%_-_32px)] max-sm:left-4 max-sm:bottom-10 max-sm:top-auto z-10">
+      <div className="flex w-full max-w-[685px] flex-col justify-end items-start absolute h-auto min-h-[425px] left-10 top-[190px] max-xl:left-8 max-xl:w-[calc(100%_-_64px)] max-md:w-[90%] max-md:h-auto max-md:left-5 max-md:top-[100px] max-sm:w-[calc(100%_-_32px)] max-sm:left-4 max-sm:bottom-10 max-sm:top-auto z-10">
         <div className="flex flex-col items-start gap-[15px] bg-white p-5 rounded-[28px_28px_0px_0px]">
           <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
             <span className="text-[#454545]">Sustainable by nature,</span>
