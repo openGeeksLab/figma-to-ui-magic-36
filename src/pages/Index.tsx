@@ -9,7 +9,7 @@ import ContactForm from '@/components/ContactForm';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 const Index = () => {
-  return <div className="flex w-full max-w-full flex-col items-center mx-auto my-0 min-h-screen overflow-x-hidden">
+  return <div className="flex w-full max-w-[1728px] flex-col items-center mx-auto my-0 min-h-screen overflow-x-hidden">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" />
       
       <div className="flex flex-col items-center w-full bg-white">
@@ -25,7 +25,7 @@ const Index = () => {
           <ImageGallery />
           
           <section className="flex flex-col items-center gap-16 w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10">
-            <header className="w-full max-w-[778px] text-[#454545] text-center text-[42px] font-bold max-md:w-full max-md:text-[32px] max-sm:text-2xl">
+            <header className="w-[778px] text-[#454545] text-center text-[42px] font-bold max-md:w-full max-md:text-[32px] max-sm:text-2xl">
               <h2>
                 <span className="text-[#454545]">We enhance </span>
                 <span className="text-[#DCB481]">wood naturally </span>
@@ -87,7 +87,7 @@ const Index = () => {
           
           <section className="w-full relative h-[655px] rounded-[28px] max-md:h-[600px] max-sm:h-[550px]">
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/99469a5d7bec7a772eece7e4e3da6594e67fdfee?width=3338" alt="Lunawood Thermowood Ca l'Amo Ibiza project" className="w-full h-[655px] absolute object-cover rounded-[41px] left-0 top-0" />
-            <article className="inline-flex flex-col items-start absolute w-full max-w-[684px] h-auto min-h-[345px] right-[105px] top-[270px] max-xl:right-8 max-xl:w-[calc(100%_-_64px)] max-md:w-[calc(100%_-_40px)] max-md:right-5 max-md:top-[150px] max-sm:w-[calc(100%_-_32px)] max-sm:right-4 max-sm:top-[100px]">
+            <article className="inline-flex flex-col items-start absolute w-[684px] h-[345px] right-[105px] top-[270px] max-md:w-[calc(100%_-_40px)] max-md:right-5 max-md:top-[150px] max-sm:w-[calc(100%_-_32px)] max-sm:right-4 max-sm:top-[100px]">
               <header className="flex flex-col items-start gap-[15px] w-full bg-white p-5 rounded-[28px_28px_0px_0px]">
                 <h2 className="text-[#454545] text-[32px] font-bold max-md:text-2xl max-sm:text-xl">
                   <span className="text-[#454545]">Interior Wall Panel </span>
