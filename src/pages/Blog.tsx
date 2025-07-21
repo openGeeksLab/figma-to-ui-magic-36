@@ -15,6 +15,7 @@ interface BlogPost {
   main_picture_url: string;
   created_at: string;
   post_type_id: string;
+  slug: string;
 }
 
 interface PostType {
@@ -175,7 +176,7 @@ const Blog = () => {
             {filteredPosts.map((post) => (
               <Link
                 key={post.id}
-                to={`/blog/${post.id}`}
+                to={`/blog/${post.slug}`}
                 className="group bg-white rounded-[16px] overflow-hidden shadow-sm border hover:shadow-md transition-shadow cursor-pointer block"
               >
                 <div className="aspect-[4/3] overflow-hidden relative">

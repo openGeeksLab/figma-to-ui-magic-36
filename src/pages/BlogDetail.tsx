@@ -13,6 +13,7 @@ interface BlogPost {
   main_picture_url: string;
   created_at: string;
   post_type_id: string;
+  slug: string;
   youtube_link?: string;
   seo_keywords?: string;
 }
@@ -23,7 +24,7 @@ interface PostType {
 }
 
 const BlogDetail = () => {
-  const { id } = useParams<{ id: string }>();
+  const { slug } = useParams<{ slug: string }>();
   const [blogPost, setBlogPost] = useState<BlogPost | null>(null);
   const [postType, setPostType] = useState<PostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
@@ -31,20 +32,20 @@ const BlogDetail = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    if (id) {
+    if (slug) {
       fetchBlogPost();
     }
-  }, [id]);
+  }, [slug]);
 
   const fetchBlogPost = async () => {
     try {
       setLoading(true);
       
-      // Fetch the blog post
+      // Fetch the blog post by slug
       const { data: post, error: postError } = await supabase
         .from('blog_posts')
         .select('*')
-        .eq('id', id)
+        .eq('slug', slug)
         .single();
 
       if (postError) throw postError;
@@ -63,9 +64,9 @@ const BlogDetail = () => {
       // Fetch related posts from the same category
       const { data: related, error: relatedError } = await supabase
         .from('blog_posts')
-        .select('id, title, main_picture_url, created_at, content, post_type_id')
+        .select('id, title, main_picture_url, created_at, content, post_type_id, slug')
         .eq('post_type_id', post.post_type_id)
-        .neq('id', id)
+        .neq('id', post.id)
         .limit(2);
 
       if (relatedError) throw relatedError;
@@ -202,7 +203,7 @@ const BlogDetail = () => {
               {relatedPosts.map((post) => (
                 <Link
                   key={post.id}
-                  to={`/blog/${post.id}`}
+                  to={`/blog/${post.slug}`}
                   className="group block bg-white rounded-[16px] overflow-hidden shadow-sm border hover:shadow-md transition-all"
                 >
                   <div className="aspect-[16/9] overflow-hidden">
