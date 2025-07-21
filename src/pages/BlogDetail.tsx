@@ -308,6 +308,33 @@ const BlogDetail = () => {
             Back to Blog
           </Link>
         </div>
+
+        {/* Newsletter Subscription */}
+        <div className="mt-16 pt-8 border-t border-gray-200">
+          <div className="bg-[#F3F0E7] rounded-[16px] p-8 text-center">
+            <h2 className="text-3xl font-bold text-[#454545] mb-2">
+              Get our monthly
+            </h2>
+            <h2 className="text-3xl font-bold text-[#DCB481] mb-8">
+              newsletter
+            </h2>
+            
+            <form className="flex gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Email"
+                className="flex-1 px-4 py-3 rounded-[12px] border border-gray-300 bg-white text-[#454545] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#DCB481] focus:border-transparent"
+                required
+              />
+              <button
+                type="submit"
+                className="px-8 py-3 bg-[#DCB481] text-[#454545] font-medium rounded-[12px] hover:bg-[#c5a373] transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
       </main>
 
       <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-sm:px-4 max-sm:py-0">
