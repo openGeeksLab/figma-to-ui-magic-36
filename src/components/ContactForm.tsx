@@ -97,7 +97,7 @@ const ContactForm = () => {
         </div>
       </section>;
   }
-  return <section id="contact" className="flex h-[1053px] justify-center items-start w-full px-8 rounded-[28px] max-md:h-auto max-md:px-5 max-sm:px-4 py-[75px]">
+  return <section id="contact" className="flex h-[1053px] justify-center items-start w-full px-8 rounded-[28px] max-md:h-auto max-md:px-5 max-sm:px-4 py-16 max-md:py-12 max-sm:py-8">
       <div className="flex w-[1102px] flex-col justify-center items-center gap-8 max-md:w-full">
         <header className="w-[477px] text-[#454545] text-center text-[42px] font-bold max-md:w-full max-md:text-[32px] max-sm:text-2xl">
           <h2>
