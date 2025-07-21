@@ -2,7 +2,6 @@ import React from "react";
 import Header from "@/components/Header";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
-import ContactForm from "@/components/ContactForm";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -114,10 +113,65 @@ const Contact = () => {
               </div>
             </div>
             
+            {/* Contact form with image */}
+            <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-lg:justify-center max-lg:p-12 max-md:p-6 max-sm:p-4 mx-0 my-[56px] px-[78px] py-0">
+              <form className="flex w-[544px] flex-col items-start gap-6 max-lg:w-full max-lg:max-w-md max-lg:mx-auto mx-[48px] my-[50px]">
+                <div className="flex flex-col items-start gap-6 w-full">
+                  <div className="w-full">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Name"
+                      className="flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] border-[#E5E4E0]"
+                    />
+                  </div>
+                </div>
+                
+                <div className="w-full">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    className="flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] border-[#E5E4E0]"
+                  />
+                </div>
+                
+                <div className="w-full">
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone"
+                    className="flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] border-[#E5E4E0]"
+                  />
+                </div>
+                
+                <div className="w-full">
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    rows={4}
+                    className="flex h-[134px] items-start gap-2.5 w-full border bg-white px-8 py-6 rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base resize-none focus:outline-none focus:ring-2 focus:ring-[#DCB481] border-[#E5E4E0]"
+                  />
+                </div>
+                
+                <button
+                  type="submit"
+                  className="flex w-[264px] h-[52px] justify-center items-center gap-2.5 bg-[#90837A] px-8 py-[18px] rounded-[28px] max-sm:w-full text-white text-xl font-normal hover:bg-[#7a6f66] transition-colors"
+                >
+                  Send
+                </button>
+              </form>
+              
+              <div className="w-[414px] h-[577px] relative top-[-73px] left-12 hidden lg:block">
+                <img 
+                  src="/lovable-uploads/b83a3e1b-84b0-4345-a1a0-e4d631266738.png" 
+                  alt="Modern wooden house exterior" 
+                  className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0" 
+                />
+              </div>
+            </div>
           </div>
         </section>
-        
-        <ContactForm />
         
         <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-sm:px-4 max-sm:py-0">
           <FAQ />
