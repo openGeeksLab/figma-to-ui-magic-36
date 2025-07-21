@@ -85,7 +85,7 @@ const Index = () => {
           
           <ContentSection title="We enhance wood naturally with heat, steam, and nothing else" highlightedWord="wood naturally" description="Using only heat and steam, we've developed an exclusive method that enhances the natural properties of wood to an unprecedented level. By removing moisture from the wood cells, we've created a product that's not only durable and stable but also beautiful and sustainable, all without the use of any chemicals. Our technology is the result of years of research and development, which we're proud to say is the finest and most advanced in the market." imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/a198877c4ebc32a9e02e15743f9b5792f6eb3b1d?width=1078" imageAlt="Sustainable wood processing facility" />
           
-          <section className="w-full relative h-[655px] rounded-[28px] max-md:h-[500px]">
+          <section className="w-full relative h-[655px] rounded-[28px] max-md:h-[600px] max-sm:h-[550px]">
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/99469a5d7bec7a772eece7e4e3da6594e67fdfee?width=3338" alt="Lunawood Thermowood Ca l'Amo Ibiza project" className="w-full h-[655px] absolute object-cover rounded-[41px] left-0 top-0" />
             <article className="inline-flex flex-col items-start absolute w-[684px] h-[345px] right-[105px] top-[270px] max-md:w-[calc(100%_-_40px)] max-md:right-5 max-md:top-[150px] max-sm:w-[calc(100%_-_32px)] max-sm:right-4 max-sm:top-[100px]">
               <header className="flex flex-col items-start gap-[15px] w-full bg-white p-5 rounded-[28px_28px_0px_0px]">
