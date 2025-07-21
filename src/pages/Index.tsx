@@ -107,7 +107,7 @@ const Index = () => {
             </article>
           </section>
           
-          <div className="w-full py-16">
+          <div className="w-full py-16 my-[56px]">
             <ContactForm />
           </div>
         </main>
