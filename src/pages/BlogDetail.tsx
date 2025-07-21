@@ -18,6 +18,12 @@ interface BlogPost {
   seo_keywords?: string;
 }
 
+interface BlogImage {
+  id: string;
+  image_url: string;
+  storage_path: string;
+}
+
 interface PostType {
   id: string;
   name: string;
@@ -28,6 +34,7 @@ const BlogDetail = () => {
   const [blogPost, setBlogPost] = useState<BlogPost | null>(null);
   const [postType, setPostType] = useState<PostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
+  const [additionalImages, setAdditionalImages] = useState<BlogImage[]>([]);
   const [loading, setLoading] = useState(true);
   const { toast } = useToast();
 
@@ -72,6 +79,15 @@ const BlogDetail = () => {
       if (relatedError) throw relatedError;
       setRelatedPosts(related || []);
 
+      // Fetch additional images for this blog post
+      const { data: images, error: imagesError } = await supabase
+        .from('blog_images')
+        .select('id, image_url, storage_path')
+        .eq('blog_post_id', post.id);
+
+      if (imagesError) throw imagesError;
+      setAdditionalImages(images || []);
+
     } catch (error) {
       console.error('Error fetching blog post:', error);
       toast({
@@ -101,6 +117,15 @@ const BlogDetail = () => {
     if (diffInDays === 0) return 'Today';
     if (diffInDays === 1) return '1 day ago';
     return `${diffInDays} days ago`;
+  };
+
+  const getYouTubeEmbedUrl = (url: string) => {
+    try {
+      const videoId = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/);
+      return videoId ? `https://www.youtube.com/embed/${videoId[1]}` : url;
+    } catch {
+      return url;
+    }
   };
 
   if (loading) {
@@ -177,12 +202,31 @@ const BlogDetail = () => {
           />
         </article>
 
+        {/* Additional Images */}
+        {additionalImages.length > 0 && (
+          <div className="mb-12">
+            <h3 className="text-xl font-bold text-[#454545] mb-6">More images</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {additionalImages.slice(0, 2).map((image) => (
+                <div key={image.id} className="aspect-[16/9] overflow-hidden rounded-[16px]">
+                  <img
+                    src={image.image_url}
+                    alt="Additional content"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* YouTube Video if available */}
         {blogPost.youtube_link && (
           <div className="mb-12">
+            <h3 className="text-xl font-bold text-[#454545] mb-6">Video</h3>
             <div className="aspect-video">
               <iframe
-                src={blogPost.youtube_link.replace('watch?v=', 'embed/')}
+                src={getYouTubeEmbedUrl(blogPost.youtube_link)}
                 title="YouTube video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
