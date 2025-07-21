@@ -312,9 +312,9 @@ const BlogDetail = () => {
 
       {/* Newsletter + Footer Section - Connected */}
       <div className="bg-[#F3F0E7] mt-16">
-        <div className="max-w-4xl mx-auto px-8 max-md:px-5 max-sm:px-4 py-16">
+        <div className="max-w-4xl mx-auto px-8 max-md:px-5 max-sm:px-4 pt-16">
           {/* Newsletter Section */}
-          <div className="flex items-center justify-between gap-8 mb-16 max-md:flex-col max-md:items-start">
+          <div className="flex items-center justify-between gap-8 mb-16 max-md:flex-col max-md:items-start px-6 max-md:px-5 max-sm:px-4">
             <div className="text-left">
               <h2 className="text-3xl font-bold text-[#454545]">
                 Get our monthly <span className="text-[#DCB481]">newsletter</span>
