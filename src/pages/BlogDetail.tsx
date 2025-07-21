@@ -196,29 +196,51 @@ const BlogDetail = () => {
 
         {/* Article Content */}
         <article className="prose prose-lg max-w-none mb-12">
-          <div 
-            className="text-gray-700 leading-relaxed whitespace-pre-wrap"
-            dangerouslySetInnerHTML={{ __html: blogPost.content || '' }}
-          />
-        </article>
-
-        {/* Additional Images */}
-        {additionalImages.length > 0 && (
-          <div className="mb-12">
-            <h3 className="text-xl font-bold text-[#454545] mb-6">More images</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {additionalImages.slice(0, 2).map((image) => (
-                <div key={image.id} className="aspect-[16/9] overflow-hidden rounded-[16px]">
-                  <img
-                    src={image.image_url}
-                    alt="Additional content"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
+          <div className="text-gray-700 leading-relaxed whitespace-pre-wrap">
+            {/* Split content into parts for image insertion */}
+            {(() => {
+              const content = blogPost.content || '';
+              const paragraphs = content.split('\n').filter(p => p.trim());
+              const midPoint = Math.floor(paragraphs.length / 2);
+              
+              return (
+                <>
+                  {/* First half of content */}
+                  <div dangerouslySetInnerHTML={{ 
+                    __html: paragraphs.slice(0, midPoint).join('\n') 
+                  }} />
+                  
+                  {/* First additional image in middle */}
+                  {additionalImages[0] && (
+                    <div className="my-8">
+                      <img
+                        src={additionalImages[0].image_url}
+                        alt="Content image"
+                        className="w-full h-[400px] max-md:h-[300px] object-cover rounded-[16px]"
+                      />
+                    </div>
+                  )}
+                  
+                  {/* Second half of content */}
+                  <div dangerouslySetInnerHTML={{ 
+                    __html: paragraphs.slice(midPoint).join('\n') 
+                  }} />
+                  
+                  {/* Second additional image at end */}
+                  {additionalImages[1] && (
+                    <div className="mt-8">
+                      <img
+                        src={additionalImages[1].image_url}
+                        alt="Content image"
+                        className="w-full h-[400px] max-md:h-[300px] object-cover rounded-[16px]"
+                      />
+                    </div>
+                  )}
+                </>
+              );
+            })()}
           </div>
-        )}
+        </article>
 
         {/* YouTube Video if available */}
         {blogPost.youtube_link && (
