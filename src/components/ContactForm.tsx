@@ -111,8 +111,8 @@ const ContactForm = () => {
             Fill out the form and we'll provide you with the latest product information, news, and business opportunities tailored to your needs. We look forward to hearing from you.
           </p>
           
-          <div className="flex justify-between items-start gap-6 w-full bg-[#E5E4E0] p-12 rounded-[28px] max-lg:justify-center max-lg:p-12 max-md:p-6 max-sm:p-4">
-            <form onSubmit={handleSubmit} className="flex w-[544px] flex-col items-start gap-6 max-lg:w-full max-lg:max-w-md max-lg:mx-auto">
+          <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-lg:justify-center max-lg:p-12 max-md:p-6 max-sm:p-4 mx-0 my-[56px] px-[78px] py-0">
+            <form onSubmit={handleSubmit} className="flex w-[544px] flex-col items-start gap-6 max-lg:w-full max-lg:max-w-md max-lg:mx-auto mx-[48px] my-[50px]">
               <div className="flex flex-col items-start gap-6 w-full">
                 <div className="w-full">
                   <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Name" className={`flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] ${errors.name ? 'border-red-500' : 'border-[#E5E4E0]'}`} aria-invalid={errors.name ? 'true' : 'false'} aria-describedby={errors.name ? 'name-error' : undefined} />
@@ -148,10 +148,12 @@ const ContactForm = () => {
               </button>
             </form>
             
-            <div className="w-[414px] h-[577px] top-[1px] left-12 hidden lg:block">
-              <div className="relative w-full h-full">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bdaedf6a2b4b249871135b39b9604b32a3debd6?width=826" alt="Wood panel installation example" className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0"  />
-              </div>
+            <div className="w-[414px] h-[577px] relative top-[-73px] left-12 hidden lg:block">
+              <img 
+                src="/lovable-uploads/b83a3e1b-84b0-4345-a1a0-e4d631266738.png" 
+                alt="Modern wooden house exterior" 
+                className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0" 
+              />
             </div>
           </div>
         </div>
