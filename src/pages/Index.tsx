@@ -107,7 +107,7 @@ const Index = () => {
             </article>
           </section>
           
-          <div className="w-full py-16 my-[56px]">
+          <div className="w-full px-8 py-24 max-md:px-5 max-sm:px-4 max-md:py-16 max-sm:py-12">
             <ContactForm />
           </div>
         </main>
