@@ -130,7 +130,7 @@ const BlogDetail = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background overflow-x-hidden">
         <Header />
         <div className="flex justify-center items-center py-20">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#DCB481]"></div>
@@ -141,7 +141,7 @@ const BlogDetail = () => {
 
   if (!blogPost || !postType) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background overflow-x-hidden">
         <Header />
         <div className="max-w-4xl mx-auto py-20 px-8">
           <h1 className="text-2xl font-bold text-[#454545]">Blog post not found</h1>
@@ -154,7 +154,7 @@ const BlogDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       
       <main className="max-w-4xl mx-auto py-8 px-8 max-md:px-5 max-sm:px-4">
@@ -314,23 +314,23 @@ const BlogDetail = () => {
       <div className="bg-[#F3F0E7] mt-16">
         <div className="max-w-4xl mx-auto px-8 max-md:px-5 max-sm:px-4 pt-16">
           {/* Newsletter Section */}
-          <div className="flex items-center justify-between gap-8 mb-16 max-md:flex-col max-md:items-start px-6 max-md:px-5 max-sm:px-4">
+          <div className="flex items-center justify-between gap-8 mb-16 max-md:flex-col max-md:items-start max-md:gap-4">
             <div className="text-left">
-              <h2 className="text-3xl font-bold text-[#454545]">
+              <h2 className="text-3xl max-md:text-2xl font-bold text-[#454545]">
                 Get our monthly <span className="text-[#DCB481]">newsletter</span>
               </h2>
             </div>
             
-            <form className="flex gap-4 max-w-md max-md:w-full">
+            <form className="flex gap-2 max-w-md max-md:w-full max-md:flex-col max-md:gap-3">
               <input
                 type="email"
                 placeholder="Email"
-                className="flex-1 px-4 py-3 rounded-[12px] border border-gray-300 bg-white text-[#454545] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#DCB481] focus:border-transparent min-w-[200px]"
+                className="flex-1 px-4 py-3 rounded-[12px] border border-gray-300 bg-white text-[#454545] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#DCB481] focus:border-transparent max-md:w-full"
                 required
               />
               <button
                 type="submit"
-                className="px-8 py-3 bg-[#DCB481] text-[#454545] font-medium rounded-[12px] hover:bg-[#c5a373] transition-colors whitespace-nowrap"
+                className="px-8 py-3 bg-[#DCB481] text-[#454545] font-medium rounded-[12px] hover:bg-[#c5a373] transition-colors whitespace-nowrap max-md:w-full"
               >
                 Subscribe
               </button>
