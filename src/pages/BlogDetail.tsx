@@ -314,23 +314,23 @@ const BlogDetail = () => {
       <div className="bg-[#F3F0E7] mt-16">
         <div className="max-w-4xl mx-auto px-8 max-md:px-5 max-sm:px-4 py-16">
           {/* Newsletter Section */}
-          <div className="flex items-center justify-between gap-8 mb-16 max-md:flex-col max-md:text-center">
-            <div className="flex-shrink-0">
+          <div className="flex items-center justify-between gap-8 mb-16 max-md:flex-col max-md:items-start">
+            <div className="text-left">
               <h2 className="text-3xl font-bold text-[#454545]">
                 Get our monthly <span className="text-[#DCB481]">newsletter</span>
               </h2>
             </div>
             
-            <form className="flex gap-4 max-w-md w-full max-md:max-w-none">
+            <form className="flex gap-4 max-w-md max-md:w-full">
               <input
                 type="email"
                 placeholder="Email"
-                className="flex-1 px-4 py-3 rounded-[12px] border border-gray-300 bg-white text-[#454545] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#DCB481] focus:border-transparent"
+                className="flex-1 px-4 py-3 rounded-[12px] border border-gray-300 bg-white text-[#454545] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#DCB481] focus:border-transparent min-w-[200px]"
                 required
               />
               <button
                 type="submit"
-                className="px-8 py-3 bg-[#DCB481] text-[#454545] font-medium rounded-[12px] hover:bg-[#c5a373] transition-colors"
+                className="px-8 py-3 bg-[#DCB481] text-[#454545] font-medium rounded-[12px] hover:bg-[#c5a373] transition-colors whitespace-nowrap"
               >
                 Subscribe
               </button>
