@@ -111,7 +111,7 @@ const ContactForm = () => {
             Fill out the form and we'll provide you with the latest product information, news, and business opportunities tailored to your needs. We look forward to hearing from you.
           </p>
           
-          <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-lg:justify-center max-lg:p-12 max-md:p-6 max-sm:p-4 my-0 mx-px px-[26px]">
+          <div className="flex justify-between items-start gap-6 w-full bg-[#E5E4E0] p-12 rounded-[28px] max-lg:justify-center max-lg:p-12 max-md:p-6 max-sm:p-4">
             <form onSubmit={handleSubmit} className="flex w-[544px] flex-col items-start gap-6 max-lg:w-full max-lg:max-w-md max-lg:mx-auto">
               <div className="flex flex-col items-start gap-6 w-full">
                 <div className="w-full">
@@ -148,9 +148,10 @@ const ContactForm = () => {
               </button>
             </form>
             
-            <div className="w-[414px] h-[577px] relative top-[-73px] left-12 hidden lg:block">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bdaedf6a2b4b249871135b39b9604b32a3debd6?width=826" alt="Wood panel installation example" className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-0" />
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/31eddc13a4ce4b7976d9a399d6774eed069fcb1f?width=828" alt="Detailed wood panel texture" className="w-[414px] h-[504px] absolute object-cover rounded-[0px_0px_28px_28px] left-0 top-[73px]" />
+            <div className="w-[414px] h-[577px] flex-shrink-0 hidden lg:block">
+              <div className="relative w-full h-full">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bdaedf6a2b4b249871135b39b9604b32a3debd6?width=826" alt="Wood panel installation example" className="w-full h-full object-cover rounded-[28px]" />
+              </div>
             </div>
           </div>
         </div>
