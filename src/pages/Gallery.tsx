@@ -28,8 +28,9 @@ const Gallery = () => {
     }
   ];
 
+
   return (
-    <div className="flex w-full max-w-[1728px] flex-col items-center mx-auto my-0 min-h-screen overflow-x-hidden">
+    <div className="flex w-full max-w-[1728px] flex-col items-center mx-auto my-0 min-h-screen">
       <div className="flex flex-col items-center w-full bg-white">
         <Header />
         

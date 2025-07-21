@@ -130,7 +130,7 @@ const BlogDetail = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background overflow-x-hidden">
+      <div className="min-h-screen bg-background">
         <Header />
         <div className="flex justify-center items-center py-20">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#DCB481]"></div>
@@ -141,7 +141,7 @@ const BlogDetail = () => {
 
   if (!blogPost || !postType) {
     return (
-      <div className="min-h-screen bg-background overflow-x-hidden">
+      <div className="min-h-screen bg-background">
         <Header />
         <div className="max-w-4xl mx-auto py-20 px-8">
           <h1 className="text-2xl font-bold text-[#454545]">Blog post not found</h1>
@@ -154,7 +154,7 @@ const BlogDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-background">
       <Header />
       
       <main className="max-w-4xl mx-auto py-8 px-8 max-md:px-5 max-sm:px-4">
