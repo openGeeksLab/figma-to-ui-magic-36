@@ -57,7 +57,7 @@ const Contact = () => {
         </section>
         
         {/* Get in touch section */}
-        <section className="w-full px-8 py-16 max-md:px-5 max-sm:px-4 max-md:py-12 max-sm:py-8">
+        <section className="w-full px-8 py-24 max-md:px-5 max-sm:px-4 max-md:py-16 max-sm:py-12">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="text-center mb-16">
@@ -114,8 +114,8 @@ const Contact = () => {
             </div>
             
             {/* Contact form with image */}
-            <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-lg:justify-center max-lg:p-12 max-md:p-6 max-sm:p-4 mb-16">
-              <form className="flex w-[544px] flex-col items-start gap-6 max-lg:w-full max-lg:max-w-md max-lg:mx-auto">
+            <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 rounded-[28px] max-lg:justify-center max-lg:p-12 max-md:p-6 max-sm:p-4 mx-0 my-[56px] px-[78px] py-0">
+              <form className="flex w-[544px] flex-col items-start gap-6 max-lg:w-full max-lg:max-w-md max-lg:mx-auto mx-[48px] my-[50px]">
                 <div className="flex flex-col items-start gap-6 w-full">
                   <div className="w-full">
                     <input
