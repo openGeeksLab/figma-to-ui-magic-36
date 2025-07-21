@@ -150,7 +150,7 @@ const ContactForm = () => {
             
             <div className="w-[414px] h-[577px] relative top-[-73px] left-12 hidden lg:block">
               <div className="relative w-full h-full">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bdaedf6a2b4b249871135b39b9604b32a3debd6?width=826" alt="Wood panel installation example" className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-[-15px]"  />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bdaedf6a2b4b249871135b39b9604b32a3debd6?width=826" alt="Wood panel installation example" className="w-[413px] h-[577px] absolute object-cover rounded-[28px] left-0 top-[-20px]"  />
               </div>
             </div>
           </div>
