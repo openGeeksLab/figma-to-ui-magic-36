@@ -107,12 +107,12 @@ const Index = () => {
             </article>
           </section>
           
-          <div className="w-full px-8 py-24 max-md:px-5 max-sm:px-4 max-md:py-16 max-sm:py-12">
+          <div className="w-full px-8 py-24 max-md:px-5 max-sm:px-4 max-md:py-16 max-sm:py-12 mx-0 my-[56px]">
             <ContactForm />
           </div>
         </main>
         
-        <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-sm:px-4 max-sm:py-0 my-[120px]">
+        <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-sm:px-4 max-sm:py-0">
           <FAQ />
           <Footer />
         </div>
