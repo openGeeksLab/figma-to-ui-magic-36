@@ -1,4 +1,5 @@
 import React from 'react';
+import SampleRequestPopup from './SampleRequestPopup';
 
 interface ContentSectionProps {
   title: string;
@@ -52,9 +53,11 @@ const ContentSection: React.FC<ContentSectionProps> = ({
         </div>
       )}
       {showButton && (
-        <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-base font-normal hover:bg-[#c9a373] transition-colors">
-          {buttonText}
-        </button>
+        <SampleRequestPopup>
+          <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-base font-normal hover:bg-[#c9a373] transition-colors">
+            {buttonText}
+          </button>
+        </SampleRequestPopup>
       )}
     </div>
   );
