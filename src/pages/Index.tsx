@@ -24,7 +24,7 @@ const Index = () => {
           
           <ImageGallery />
           
-          <section className="flex flex-col items-center gap-16 w-full px-8 py-24 max-lg:px-6 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10">
+          <section className="flex flex-col items-center gap-16 w-full px-8 py-24 max-xl:px-6 max-lg:px-6 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10">
             <header className="w-full max-w-[778px] text-[#454545] text-center text-[42px] font-bold max-md:w-full max-md:text-[32px] max-sm:text-2xl">
               <h2>
                 <span className="text-[#454545]">We enhance </span>
@@ -107,12 +107,12 @@ const Index = () => {
             </article>
           </section>
           
-          <div className="w-full px-8 py-24 max-lg:px-6 max-md:px-5 max-sm:px-4 max-md:py-16 max-sm:py-12 mx-0 my-[56px]">
+          <div className="w-full px-8 py-24 max-xl:px-6 max-lg:px-6 max-md:px-5 max-sm:px-4 max-md:py-16 max-sm:py-12 mx-0 my-[56px]">
             <ContactForm />
           </div>
         </main>
         
-        <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-lg:px-6 max-sm:px-4 max-sm:py-0">
+        <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-xl:px-6 max-lg:px-6 max-sm:px-4 max-sm:py-0">
           <FAQ />
           <Footer />
         </div>
