@@ -2,6 +2,7 @@
 import React from 'react';
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface ProductFilterProps {
   availableSizes: string[];
@@ -28,11 +29,12 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
 
   return (
     <div className="bg-gray-50 rounded-[16px] border border-gray-200 p-6 mb-8 shadow-sm">
-      <div className="flex items-start justify-between">
+      <div className="flex items-start justify-between max-md:flex-col max-md:gap-4">
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-[#454545] mb-4">Filter by</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Desktop Grid Layout */}
+          <div className="hidden md:grid grid-cols-4 gap-8">
             {/* Sizes Column */}
             <div>
               <h4 className="text-sm font-medium text-[#454545] mb-3">Sizes</h4>
@@ -123,10 +125,119 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
               </div>
             </div>
           </div>
+
+          {/* Mobile Accordion Layout */}
+          <div className="md:hidden">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="sizes" className="border-none">
+                <AccordionTrigger className="text-sm font-medium text-[#454545] py-2 hover:no-underline">
+                  Sizes
+                </AccordionTrigger>
+                <AccordionContent className="pb-4">
+                  <div className="space-y-2">
+                    {availableSizes.map((size) => (
+                      <div key={size} className="flex items-center space-x-2">
+                        <Checkbox
+                          id={`mobile-${size}`}
+                          checked={selectedSizes.includes(size)}
+                          onCheckedChange={() => handleSizeToggle(size)}
+                          className="border-gray-300"
+                        />
+                        <label 
+                          htmlFor={`mobile-${size}`} 
+                          className="text-sm text-gray-600 cursor-pointer"
+                        >
+                          {size} mm
+                        </label>
+                      </div>
+                    ))}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="category1" className="border-none">
+                <AccordionTrigger className="text-sm font-medium text-[#454545] py-2 hover:no-underline">
+                  Something
+                </AccordionTrigger>
+                <AccordionContent className="pb-4">
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Checkbox id="mobile-placeholder1" className="border-gray-300" />
+                      <label htmlFor="mobile-placeholder1" className="text-sm text-gray-600">
+                        Lorem ipsum dolor sit amet
+                      </label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Checkbox id="mobile-placeholder2" className="border-gray-300" />
+                      <label htmlFor="mobile-placeholder2" className="text-sm text-gray-600">
+                        Ut facilisis pretium purus
+                      </label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Checkbox id="mobile-placeholder3" className="border-gray-300" />
+                      <label htmlFor="mobile-placeholder3" className="text-sm text-gray-600">
+                        Ut facilisis pretium purus
+                      </label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Checkbox id="mobile-placeholder4" className="border-gray-300" />
+                      <label htmlFor="mobile-placeholder4" className="text-sm text-gray-600">
+                        Duis aliquet felis
+                      </label>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="category2" className="border-none">
+                <AccordionTrigger className="text-sm font-medium text-[#454545] py-2 hover:no-underline">
+                  Something
+                </AccordionTrigger>
+                <AccordionContent className="pb-4">
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Checkbox id="mobile-placeholder5" className="border-gray-300" />
+                      <label htmlFor="mobile-placeholder5" className="text-sm text-gray-600">
+                        Ut facilisis pretium purus
+                      </label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Checkbox id="mobile-placeholder6" className="border-gray-300" />
+                      <label htmlFor="mobile-placeholder6" className="text-sm text-gray-600">
+                        Duis aliquet felis
+                      </label>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="category3" className="border-none">
+                <AccordionTrigger className="text-sm font-medium text-[#454545] py-2 hover:no-underline">
+                  Something
+                </AccordionTrigger>
+                <AccordionContent className="pb-4">
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Checkbox id="mobile-placeholder7" className="border-gray-300" />
+                      <label htmlFor="mobile-placeholder7" className="text-sm text-gray-600">
+                        Lorem dolor sit amet ipsum
+                      </label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Checkbox id="mobile-placeholder8" className="border-gray-300" />
+                      <label htmlFor="mobile-placeholder8" className="text-sm text-gray-600">
+                        Ut facilisis pretium purus
+                      </label>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex gap-3 ml-8">
+        <div className="flex gap-3 max-md:ml-0 ml-8 max-md:w-full max-md:justify-end">
           <Button 
             variant="outline" 
             onClick={onCancel}
