@@ -58,7 +58,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="max-w-5xl w-full h-[650px] p-0 bg-transparent rounded-[28px] overflow-visible border-0 max-md:max-w-[calc(100vw-8px)] max-md:w-[calc(100vw-8px)] max-md:h-[90vh] max-md:mx-1">
+      <DialogContent className="max-w-5xl w-full h-[650px] p-0 bg-transparent rounded-[28px] overflow-visible border-0 max-md:max-w-[100vw] max-md:w-[100vw] max-md:h-[90vh] max-md:mx-0">
         <section 
           className="flex flex-col items-stretch pt-[47px]"
           role="dialog"
@@ -75,7 +75,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
             </button>
           </header>
           
-          <main className="shadow-[0px_15px_60px_0px_rgba(0,0,0,0.15)] relative flex gap-6 pt-[var(--sds-size-space-1200,48px)] pr-[var(--sds-size-space-1200,48px)] pb-[var(--sds-size-space-1200,48px)] pl-[var(--sds-size-space-1200,48px)] bg-[#F3F0E7] rounded-[28px] max-md:px-2 max-md:py-4 max-md:gap-0">
+          <main className="shadow-[0px_15px_60px_0px_rgba(0,0,0,0.15)] relative flex gap-6 pt-[var(--sds-size-space-1200,48px)] pr-[var(--sds-size-space-1200,48px)] pb-[var(--sds-size-space-1200,48px)] pl-[var(--sds-size-space-1200,48px)] bg-[#F3F0E7] rounded-[28px] max-md:px-1 max-md:py-4 max-md:gap-0 max-md:mx-1">
             <aside 
               className="absolute z-0 flex min-w-60 flex-col top-[-73px] w-[414px] h-[577px] pt-[29px] left-12 max-md:hidden"
               aria-hidden="true"
