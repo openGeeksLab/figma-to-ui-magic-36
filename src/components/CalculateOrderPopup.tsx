@@ -137,7 +137,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
           </div>
 
           {/* Action Buttons */}
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-start mt-8">
             <button
               onClick={handleContactUs}
               className="bg-white hover:bg-gray-50 text-[#454545] py-3 px-8 rounded-full font-medium border border-gray-200 transition-colors"
