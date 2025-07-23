@@ -3,6 +3,8 @@ import {
   Dialog,
   DialogContent,
   DialogTrigger,
+  DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -74,6 +76,8 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
         {children}
       </DialogTrigger>
       <DialogContent className="max-w-2xl w-full bg-[#F3F0E7] rounded-[28px] p-8 border-0 [&>button]:hidden">
+        <DialogTitle className="sr-only">Calculate Your Order</DialogTitle>
+        <DialogDescription className="sr-only">Fill out the form to get an approximate estimate for your order</DialogDescription>
         <div className="relative">
           {/* Close Button */}
           <button
