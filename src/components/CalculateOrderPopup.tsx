@@ -137,16 +137,10 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <button
-              onClick={handleSavePDF}
-              className="flex-1 bg-[#DCB481] hover:bg-[#C8A373] text-white py-3 px-6 rounded-full font-medium transition-colors"
-            >
-              Save PDF
-            </button>
+          <div className="flex justify-center mt-8">
             <button
               onClick={handleContactUs}
-              className="flex-1 bg-white hover:bg-gray-50 text-[#454545] py-3 px-6 rounded-full font-medium border border-gray-200 transition-colors"
+              className="bg-white hover:bg-gray-50 text-[#454545] py-3 px-8 rounded-full font-medium border border-gray-200 transition-colors"
             >
               Contact US
             </button>
