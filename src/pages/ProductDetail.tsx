@@ -448,9 +448,11 @@ const ProductDetail = () => {
                </div>
 
               {/* Calculate Price Button */}
-              <button className="w-full bg-[#DCB481] text-white py-4 px-6 rounded-lg font-semibold hover:bg-[#C8A373] transition-colors text-lg">
-                Calculate Price
-              </button>
+              <CalculateOrderPopup>
+                <button className="w-full bg-[#DCB481] text-white py-4 px-6 rounded-lg font-semibold hover:bg-[#C8A373] transition-colors text-lg">
+                  Calculate Price
+                </button>
+              </CalculateOrderPopup>
             </div>
           </div>
         </div>
