@@ -170,7 +170,7 @@ const ProductDetail = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-background overflow-x-hidden w-full">
       <Header />
       
       {/* Breadcrumb */}
@@ -187,9 +187,9 @@ const ProductDetail = () => {
       </div>
 
       {/* Product Detail */}
-      <section className="w-full px-8 py-8 max-md:px-5 max-sm:px-4 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-sm:gap-6">
+      <section className="w-full px-4 py-8 max-md:px-3 max-sm:px-2 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 max-sm:gap-4">
             {/* Product Images */}
             <div className="space-y-4 overflow-hidden">
               <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden w-full">
@@ -220,7 +220,7 @@ const ProductDetail = () => {
 
             {/* Product Info */}
             <div className="space-y-1 overflow-hidden w-full">
-              <h1 className="text-4xl font-bold text-[#454545]">{product.name}</h1>
+              <h1 className="text-2xl md:text-4xl font-bold text-[#454545] max-sm:text-xl break-words">{product.name}</h1>
               
               <p className="text-gray-600 leading-relaxed">
                 {product.description || `${product.name} is a sophisticated 3D cladding of Nordic Pine. It creates a visually elegant and modern wood surface. Highly suitable for facades, interiors, and other decorative surfaces where a sustainable and chemical-free wood surface is desired.`}
@@ -269,7 +269,7 @@ const ProductDetail = () => {
                 <h3 className="text-lg font-semibold text-[#454545] mb-4">
                   Tone Color: <span className="text-gray-600">{colorNames[selectedColorSwatch]}</span>
                 </h3>
-                <div className="grid grid-cols-4 gap-1 max-sm:gap-0.5 w-full max-w-full overflow-hidden max-sm:scale-75 max-sm:origin-left sm:scale-75 sm:origin-top-left">
+                <div className="grid grid-cols-3 max-sm:grid-cols-3 gap-1 max-sm:gap-0.5 w-full max-w-full overflow-hidden max-sm:scale-90 max-sm:origin-left">
                    {/* First row - Wood texture images */}
                    <div 
                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
@@ -456,9 +456,9 @@ const ProductDetail = () => {
       </section>
 
       {/* Personalised Orders Section */}
-      <section className="px-8 py-8 bg-[#F3F0E7] rounded-2xl mx-8 mt-8 max-md:px-5 max-sm:px-4 max-md:mx-5 max-sm:mx-4 overflow-hidden">
-        <div className="mx-auto">
-          <h2 className="text-4xl font-bold text-[#454545] mb-8">Personalised orders</h2>
+      <section className="px-4 py-8 bg-[#F3F0E7] rounded-2xl mx-4 mt-8 max-md:px-3 max-sm:px-2 max-md:mx-3 max-sm:mx-2 overflow-hidden">
+        <div className="mx-auto max-w-full">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#454545] mb-8 max-sm:text-xl break-words">Personalised orders</h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-4">
             Luna Trio 26x92 is a sophisticated 3D cladding of Nordic Pine. It creates a visually elegant and modern wood surface. Luna Trio is highly suitable for facades, interiors, and other decorative surfaces where a sustainable and chemical-free wood surface is desired. Additionally, if left untreated outside, it develops a beautiful naturally greyed patina.
           </p>
@@ -470,9 +470,9 @@ const ProductDetail = () => {
 
       {/* Similar Products Section */}
       {similarProducts.length > 0 && (
-        <section className="w-full px-8 py-12 max-md:px-5 max-sm:px-4 overflow-hidden">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8">
+        <section className="w-full px-4 py-12 max-md:px-3 max-sm:px-2 overflow-hidden">
+          <div className="max-w-6xl mx-auto px-0">
+            <h2 className="text-2xl md:text-4xl font-bold mb-8 max-sm:text-xl break-words">
               <span className="text-[#DCB481]">Similar </span>
               <span className="text-[#454545]">Products</span>
             </h2>
@@ -511,7 +511,7 @@ const ProductDetail = () => {
       )}
       
       
-      <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-sm:px-4 max-sm:py-0 overflow-x-hidden">
+      <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-4 py-0 max-sm:px-2 max-sm:py-0 overflow-x-hidden">
         <FAQ />
         <Footer />
       </div>
