@@ -58,7 +58,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="max-w-5xl w-full h-[650px] p-0 bg-transparent rounded-[28px] overflow-visible border-0 max-md:max-w-[95vw] max-md:h-[90vh] max-md:mx-4">
+      <DialogContent className="max-w-5xl w-full h-[650px] p-0 bg-transparent rounded-[28px] overflow-visible border-0 max-md:max-w-[calc(100vw-16px)] max-md:w-[calc(100vw-16px)] max-md:h-[90vh] max-md:mx-2">
         <section 
           className="flex flex-col items-stretch pt-[47px]"
           role="dialog"
@@ -75,7 +75,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
             </button>
           </header>
           
-          <main className="shadow-[0px_15px_60px_0px_rgba(0,0,0,0.15)] relative flex gap-6 pt-[var(--sds-size-space-1200,48px)] pr-[var(--sds-size-space-1200,48px)] pb-[var(--sds-size-space-1200,48px)] pl-[var(--sds-size-space-1200,48px)] bg-[#F3F0E7] rounded-[28px] max-md:px-4 max-md:py-8 max-md:gap-0">
+          <main className="shadow-[0px_15px_60px_0px_rgba(0,0,0,0.15)] relative flex gap-6 pt-[var(--sds-size-space-1200,48px)] pr-[var(--sds-size-space-1200,48px)] pb-[var(--sds-size-space-1200,48px)] pl-[var(--sds-size-space-1200,48px)] bg-[#F3F0E7] rounded-[28px] max-md:px-3 max-md:py-6 max-md:gap-0">
             <aside 
               className="absolute z-0 flex min-w-60 flex-col top-[-73px] w-[414px] h-[577px] pt-[29px] left-12 max-md:hidden"
               aria-hidden="true"
@@ -90,11 +90,11 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
               </div>
             </aside>
             
-            <div className="z-10 relative ml-auto max-md:ml-0 max-md:w-full max-md:px-2">
+            <div className="z-10 relative ml-auto max-md:ml-0 max-md:w-full">
               <h1 id="sample-request-form-title" className="sr-only">
                 Sample Request Form
               </h1>
-              <form onSubmit={handleSubmit} className="space-y-6 w-[400px] max-md:w-full max-md:max-w-none">
+              <form onSubmit={handleSubmit} className="space-y-6 w-[400px] max-md:w-full">
                 <Input
                   type="text"
                   name="name"
