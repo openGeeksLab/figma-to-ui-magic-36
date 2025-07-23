@@ -8,8 +8,8 @@ const Header = () => {
     <header className="relative flex w-full justify-between items-center bg-white px-8 py-12 max-md:px-5 max-md:py-6 max-sm:p-4">
       <Link to="/">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/902b289f6044ad330a3742acb39d6cae82a5275c?width=350"
-          alt="Thermowood logo"
+          src="/lovable-uploads/d2da4a36-70aa-4200-b7fb-4e837d970d47.png"
+          alt="Nordic Thermotra logo"
           className="w-[175px] h-20 aspect-[35/16] max-sm:w-[120px] max-sm:h-[55px] cursor-pointer"
         />
       </Link>
