@@ -3,6 +3,8 @@ import {
   Dialog,
   DialogContent,
   DialogTrigger,
+  DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -59,7 +61,9 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
         {children}
       </DialogTrigger>
       <DialogContent className="max-w-5xl w-full h-[650px] p-0 bg-transparent rounded-[28px] overflow-visible border-0 max-md:max-w-[100vw] max-md:w-[100vw] max-md:h-[90vh] max-md:mx-0 [&>button]:hidden">
-        <section 
+        <DialogTitle className="sr-only">Request a Free Sample</DialogTitle>
+        <DialogDescription className="sr-only">Fill out the form to request a free wood sample</DialogDescription>
+        <section
           className="flex flex-col items-stretch pt-[47px]"
           role="dialog"
           aria-labelledby="sample-request-form-title"
