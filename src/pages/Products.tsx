@@ -160,16 +160,15 @@ const Products = () => {
             
             <button 
               onClick={handleFilterToggle}
-              className={`flex items-center justify-center w-10 h-10 rounded-full border transition-colors max-sm:w-8 max-sm:h-8 ${
-                showFilter 
-                  ? "bg-[#DCB481] border-[#DCB481] hover:bg-[#c8a370]" 
-                  : "bg-white border-gray-200 hover:bg-gray-50"
-              }`}
+              className="flex items-center justify-center w-10 h-10 rounded-full transition-colors max-sm:w-8 max-sm:h-8"
             >
               <img 
-                src="/lovable-uploads/877f5da8-f5dd-4a71-b314-db39dd6fd6c0.png" 
+                src={showFilter 
+                  ? "/lovable-uploads/0df385a1-4f95-49ef-ad8b-b3517e7701c3.png"
+                  : "/lovable-uploads/877f5da8-f5dd-4a71-b314-db39dd6fd6c0.png"
+                } 
                 alt="Filter options" 
-                className="w-5 h-5 max-sm:w-4 max-sm:h-4"
+                className="w-10 h-10 max-sm:w-8 max-sm:h-8"
               />
             </button>
           </div>
