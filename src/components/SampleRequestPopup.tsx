@@ -59,7 +59,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
           {/* Left side - Image */}
           <div className="flex-1 relative">
             <img
-              src="/lovable-uploads/244e4782-b4d5-4e82-aed1-15adc8873d43.png"
+              src="/lovable-uploads/02f5b661-7aee-4a51-939d-80a2dc7ce514.png"
               alt="Modern house with wood panels"
               className="w-full h-full object-cover"
             />
