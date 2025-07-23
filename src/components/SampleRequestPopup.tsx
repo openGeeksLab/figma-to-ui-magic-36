@@ -77,7 +77,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
           
           <main className="shadow-[0px_15px_60px_0px_rgba(0,0,0,0.15)] relative flex gap-6 pt-[var(--sds-size-space-1200,48px)] pr-[var(--sds-size-space-1200,48px)] pb-[var(--sds-size-space-1200,48px)] pl-[var(--sds-size-space-1200,48px)] bg-[#F3F0E7] rounded-[28px] max-md:px-5">
             <aside 
-              className="absolute z-0 flex min-w-60 flex-col top-[-73px] w-[414px] h-[577px] pt-[29px] left-12"
+              className="absolute z-0 flex min-w-60 flex-col w-[414px] h-[577px] pt-[29px] left-12 bottom-0"
               aria-hidden="true"
             >
               <div className="flex flex-col relative z-10 aspect-[0.753] w-full pt-11">
@@ -90,7 +90,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
               </div>
             </aside>
             
-            <div className="z-10 relative ml-auto flex flex-col justify-end h-[504px]">
+            <div className="z-10 relative ml-auto">
               <h1 id="sample-request-form-title" className="sr-only">
                 Sample Request Form
               </h1>
