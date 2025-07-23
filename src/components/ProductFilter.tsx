@@ -27,7 +27,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
   };
 
   return (
-    <div className="bg-white rounded-[16px] border border-gray-200 p-6 mb-8 shadow-sm">
+    <div className="bg-gray-50 rounded-[16px] border border-gray-200 p-6 mb-8 shadow-sm">
       <div className="flex items-start justify-between">
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-[#454545] mb-4">Filter by</h3>

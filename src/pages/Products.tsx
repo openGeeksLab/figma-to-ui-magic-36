@@ -55,7 +55,7 @@ const Products = () => {
 
   const sizeFilteredProducts = selectedSizes.length > 0 
     ? filteredProducts.filter(product => 
-        selectedSizes.some(size => product.sizes.includes(size))
+        selectedSizes.some(size => (product.sizes as string[])?.includes(size))
       )
     : filteredProducts;
 
@@ -63,7 +63,7 @@ const Products = () => {
 
   // Get all unique sizes from products
   const allSizes = Array.from(new Set(
-    products.flatMap(product => product.sizes)
+    products.flatMap(product => (product.sizes as string[]) || [])
   )).sort();
 
   const formatProductName = (name: string) => {
