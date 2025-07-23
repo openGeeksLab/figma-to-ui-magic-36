@@ -8,6 +8,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import ProductFilter from '@/components/ProductFilter';
+import { SlidersHorizontal } from 'lucide-react';
 
 const Products = () => {
   const navigate = useNavigate();
@@ -162,14 +163,14 @@ const Products = () => {
               onClick={handleFilterToggle}
               className={`flex items-center justify-center w-10 h-10 rounded-full border transition-colors max-sm:w-8 max-sm:h-8 ${
                 showFilter 
-                  ? "bg-[#454545] border-[#454545]"
+                  ? "bg-[#DCB481] border-[#DCB481]"
                   : "bg-white border-gray-200 hover:bg-gray-50"
               }`}
             >
-              <img 
-                src="/lovable-uploads/877f5da8-f5dd-4a71-b314-db39dd6fd6c0.png" 
-                alt="Filter options" 
-                className={`w-5 h-5 max-sm:w-4 max-sm:h-4 ${showFilter ? "brightness-0 invert" : ""}`}
+              <SlidersHorizontal 
+                className={`w-5 h-5 max-sm:w-4 max-sm:h-4 ${
+                  showFilter ? "text-white" : "text-[#454545]"
+                }`}
               />
             </button>
           </div>
