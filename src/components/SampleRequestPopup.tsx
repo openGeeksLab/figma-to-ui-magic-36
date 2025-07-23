@@ -54,7 +54,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="max-w-4xl w-full h-[600px] p-0 bg-white rounded-[20px] overflow-hidden">
+      <DialogContent className="max-w-5xl w-full h-[650px] p-0 bg-white rounded-[28px] overflow-hidden border-0">
         <div className="flex h-full">
           {/* Left side - Image */}
           <div className="flex-1 relative">
@@ -66,8 +66,8 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
           </div>
           
           {/* Right side - Form */}
-          <div className="flex-1 p-8 flex flex-col justify-center bg-gray-50">
-            <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="flex-1 p-12 flex flex-col justify-center bg-[#F5F5F0]">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <Input
                 type="text"
                 name="name"
@@ -75,7 +75,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="w-full h-12 px-4 rounded-full border border-gray-300 bg-white placeholder-gray-400"
+                className="w-full h-14 px-6 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
               />
               
               <Input
@@ -85,7 +85,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full h-12 px-4 rounded-full border border-gray-300 bg-white placeholder-gray-400"
+                className="w-full h-14 px-6 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
               />
               
               <Input
@@ -94,7 +94,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
                 placeholder="Phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="w-full h-12 px-4 rounded-full border border-gray-300 bg-white placeholder-gray-400"
+                className="w-full h-14 px-6 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
               />
               
               <Textarea
@@ -103,13 +103,13 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={4}
-                className="w-full px-4 py-3 rounded-[20px] border border-gray-300 bg-white placeholder-gray-400 resize-none"
+                className="w-full px-6 py-4 rounded-[28px] border-0 bg-white placeholder-gray-400 text-gray-700 resize-none shadow-sm"
               />
               
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-12 bg-[#8B7355] hover:bg-[#7A6348] text-white rounded-full font-medium transition-colors"
+                className="w-full h-14 bg-[#A0906B] hover:bg-[#8B7A5A] text-white rounded-full font-medium text-lg transition-colors mt-8"
               >
                 {isSubmitting ? "Sending..." : "Send"}
               </Button>
