@@ -160,12 +160,16 @@ const Products = () => {
             
             <button 
               onClick={handleFilterToggle}
-              className="flex items-center justify-center w-10 h-10 bg-white rounded-full border border-gray-200 hover:bg-gray-50 transition-colors max-sm:w-8 max-sm:h-8"
+              className={`flex items-center justify-center w-10 h-10 rounded-full border transition-colors max-sm:w-8 max-sm:h-8 ${
+                showFilter 
+                  ? "bg-[#454545] border-[#454545]"
+                  : "bg-white border-gray-200 hover:bg-gray-50"
+              }`}
             >
               <img 
                 src="/lovable-uploads/877f5da8-f5dd-4a71-b314-db39dd6fd6c0.png" 
                 alt="Filter options" 
-                className="w-5 h-5 max-sm:w-4 max-sm:h-4"
+                className={`w-5 h-5 max-sm:w-4 max-sm:h-4 ${showFilter ? "brightness-0 invert" : ""}`}
               />
             </button>
           </div>
