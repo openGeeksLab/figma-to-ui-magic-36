@@ -7,12 +7,15 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import Autoplay from "embla-carousel-autoplay";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
+import ProductFilter from '@/components/ProductFilter';
 
 const Products = () => {
   const navigate = useNavigate();
   const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
   const [products, setProducts] = useState<Tables<"products">[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("All Products");
+  const [showFilter, setShowFilter] = useState(false);
+  const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
 
   const images = [
     {
@@ -50,7 +53,18 @@ const Products = () => {
     ? products 
     : products.filter(product => product.type === selectedCategory);
 
+  const sizeFilteredProducts = selectedSizes.length > 0 
+    ? filteredProducts.filter(product => 
+        selectedSizes.some(size => product.sizes.includes(size))
+      )
+    : filteredProducts;
+
   const uniqueTypes = Array.from(new Set(products.map(product => product.type)));
+
+  // Get all unique sizes from products
+  const allSizes = Array.from(new Set(
+    products.flatMap(product => product.sizes)
+  )).sort();
 
   const formatProductName = (name: string) => {
     return name.replace(/\s+/g, '-').toLowerCase();
@@ -60,6 +74,23 @@ const Products = () => {
     const formattedName = formatProductName(product.name);
     const formattedType = product.type.toLowerCase();
     navigate(`/${formattedType}/${formattedName}`);
+  };
+
+  const handleFilterToggle = () => {
+    setShowFilter(!showFilter);
+  };
+
+  const handleSizeFilterChange = (sizes: string[]) => {
+    setSelectedSizes(sizes);
+  };
+
+  const handleApplyFilter = () => {
+    setShowFilter(false);
+  };
+
+  const handleCancelFilter = () => {
+    setSelectedSizes([]);
+    setShowFilter(false);
   };
 
   return (
@@ -96,7 +127,6 @@ const Products = () => {
         </div>
       </section>
 
-
       {/* Products Preview Section */}
       <section className="w-full px-8 py-12 max-md:px-5 max-sm:px-4">
         <div className="max-w-6xl mx-auto">
@@ -128,7 +158,10 @@ const Products = () => {
               ))}
             </div>
             
-            <button className="flex items-center justify-center w-10 h-10 bg-white rounded-full border border-gray-200 hover:bg-gray-50 transition-colors max-sm:w-8 max-sm:h-8">
+            <button 
+              onClick={handleFilterToggle}
+              className="flex items-center justify-center w-10 h-10 bg-white rounded-full border border-gray-200 hover:bg-gray-50 transition-colors max-sm:w-8 max-sm:h-8"
+            >
               <img 
                 src="/lovable-uploads/877f5da8-f5dd-4a71-b314-db39dd6fd6c0.png" 
                 alt="Filter options" 
@@ -137,9 +170,20 @@ const Products = () => {
             </button>
           </div>
 
+          {/* Filter Section */}
+          {showFilter && (
+            <ProductFilter
+              availableSizes={allSizes}
+              selectedSizes={selectedSizes}
+              onSizeChange={handleSizeFilterChange}
+              onApply={handleApplyFilter}
+              onCancel={handleCancelFilter}
+            />
+          )}
+
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProducts.map((product) => (
+            {sizeFilteredProducts.map((product) => (
               <div 
                 key={product.id} 
                 className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border cursor-pointer"
