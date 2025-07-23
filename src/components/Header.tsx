@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SampleRequestPopup from './SampleRequestPopup';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -35,9 +36,11 @@ const Header = () => {
           Contact
         </Link>
         
-        <button className="flex h-[51px] justify-center items-center gap-2.5 bg-[#DCB481] px-8 py-[18px] rounded-[28px] text-[#454545] text-xl font-normal hover:bg-[#c9a373] transition-colors">
-          Get a Free Sample
-        </button>
+        <SampleRequestPopup>
+          <button className="flex h-[51px] justify-center items-center gap-2.5 bg-[#DCB481] px-8 py-[18px] rounded-[28px] text-[#454545] text-xl font-normal hover:bg-[#c9a373] transition-colors">
+            Get a Free Sample
+          </button>
+        </SampleRequestPopup>
       </nav>
       
       <button 
@@ -90,12 +93,14 @@ const Header = () => {
             >
               Contact
             </Link>
-            <button 
-              className="bg-[#DCB481] px-8 py-4 rounded-[28px] text-[#454545] text-lg font-normal mt-4 w-full hover:bg-[#c9a373] transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Get a Free Sample
-            </button>
+            <SampleRequestPopup>
+              <button 
+                className="bg-[#DCB481] px-8 py-4 rounded-[28px] text-[#454545] text-lg font-normal mt-4 w-full hover:bg-[#c9a373] transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Get a Free Sample
+              </button>
+            </SampleRequestPopup>
           </nav>
         </div>
       )}

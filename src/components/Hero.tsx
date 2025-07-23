@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
+import SampleRequestPopup from './SampleRequestPopup';
 
 const Hero = () => {
   const plugin = React.useRef(
@@ -54,9 +55,11 @@ const Hero = () => {
         </div>
         
         <div className="flex flex-col items-start gap-2.5 bg-white p-5 rounded-[0px_0px_28px_28px]">
-          <button className="flex w-[326px] h-[52px] justify-center items-center gap-2.5 bg-[#DCB481] px-8 py-[18px] rounded-[28px] max-sm:w-full text-[#454545] text-xl font-normal hover:bg-[#c9a373] transition-colors">
-            Get a free sample
-          </button>
+          <SampleRequestPopup>
+            <button className="flex w-[326px] h-[52px] justify-center items-center gap-2.5 bg-[#DCB481] px-8 py-[18px] rounded-[28px] max-sm:w-full text-[#454545] text-xl font-normal hover:bg-[#c9a373] transition-colors">
+              Get a free sample
+            </button>
+          </SampleRequestPopup>
         </div>
       </div>
     </section>
