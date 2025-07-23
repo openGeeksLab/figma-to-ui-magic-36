@@ -170,11 +170,11 @@ const ProductDetail = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       
       {/* Breadcrumb */}
-      <div className="w-full px-8 py-4 max-md:px-5 max-sm:px-4">
+      <div className="w-full px-8 py-4 max-md:px-5 max-sm:px-4 overflow-x-hidden">
         <nav className="text-sm text-gray-600">
           <Link to="/" className="hover:text-[#DCB481]">Home</Link>
           <span className="mx-2">/</span>
@@ -191,15 +191,15 @@ const ProductDetail = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-sm:gap-6">
             {/* Product Images */}
-            <div className="space-y-4">
-              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+            <div className="space-y-4 overflow-hidden">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden w-full">
                 <img 
                   src={selectedImage || product.main_picture_url} 
                   alt={product.name}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-4 gap-2 w-full max-w-full overflow-hidden">
                 {allImages.slice(0, 4).map((image, index) => (
                   <div 
                     key={index} 
@@ -219,7 +219,7 @@ const ProductDetail = () => {
             </div>
 
             {/* Product Info */}
-            <div className="space-y-1">
+            <div className="space-y-1 overflow-hidden w-full">
               <h1 className="text-4xl font-bold text-[#454545]">{product.name}</h1>
               
               <p className="text-gray-600 leading-relaxed">
@@ -269,7 +269,7 @@ const ProductDetail = () => {
                 <h3 className="text-lg font-semibold text-[#454545] mb-4">
                   Tone Color: <span className="text-gray-600">{colorNames[selectedColorSwatch]}</span>
                 </h3>
-                <div className="grid grid-cols-4 gap-1 max-sm:gap-0.5 max-sm:scale-90 max-sm:origin-top-left sm:scale-75 sm:origin-top-left">
+                <div className="grid grid-cols-4 gap-1 max-sm:gap-0.5 w-full max-w-full overflow-hidden max-sm:scale-75 max-sm:origin-left sm:scale-75 sm:origin-top-left">
                    {/* First row - Wood texture images */}
                    <div 
                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
@@ -511,7 +511,7 @@ const ProductDetail = () => {
       )}
       
       
-      <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-sm:px-4 max-sm:py-0">
+      <div className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-sm:px-4 max-sm:py-0 overflow-x-hidden">
         <FAQ />
         <Footer />
       </div>
