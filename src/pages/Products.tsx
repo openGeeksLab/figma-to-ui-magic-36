@@ -101,30 +101,40 @@ const Products = () => {
       <section className="w-full px-8 py-12 max-md:px-5 max-sm:px-4">
         <div className="max-w-6xl mx-auto">
           {/* Category Navigation */}
-          <div className="flex gap-4 mb-12 flex-wrap max-sm:gap-2">
-            <button 
-              onClick={() => setSelectedCategory("All Products")}
-              className={`px-6 py-3 rounded-[28px] text-sm font-medium transition-colors ${
-                selectedCategory === "All Products" 
-                  ? "bg-[#454545] text-white hover:bg-[#363636]" 
-                  : "bg-gray-100 text-[#454545] hover:bg-gray-200"
-              }`}
-            >
-              All Products
-            </button>
-            {uniqueTypes.map((type) => (
+          <div className="flex items-center justify-between mb-12 max-sm:flex-col max-sm:gap-4">
+            <div className="flex gap-4 flex-wrap max-sm:gap-2">
               <button 
-                key={type}
-                onClick={() => setSelectedCategory(type)}
+                onClick={() => setSelectedCategory("All Products")}
                 className={`px-6 py-3 rounded-[28px] text-sm font-medium transition-colors ${
-                  selectedCategory === type 
+                  selectedCategory === "All Products" 
                     ? "bg-[#454545] text-white hover:bg-[#363636]" 
                     : "bg-gray-100 text-[#454545] hover:bg-gray-200"
                 }`}
               >
-                {type}
+                All Products
               </button>
-            ))}
+              {uniqueTypes.map((type) => (
+                <button 
+                  key={type}
+                  onClick={() => setSelectedCategory(type)}
+                  className={`px-6 py-3 rounded-[28px] text-sm font-medium transition-colors ${
+                    selectedCategory === type 
+                      ? "bg-[#454545] text-white hover:bg-[#363636]" 
+                      : "bg-gray-100 text-[#454545] hover:bg-gray-200"
+                  }`}
+                >
+                  {type}
+                </button>
+              ))}
+            </div>
+            
+            <button className="flex items-center justify-center w-10 h-10 bg-white rounded-full border border-gray-200 hover:bg-gray-50 transition-colors max-sm:w-8 max-sm:h-8">
+              <img 
+                src="/lovable-uploads/877f5da8-f5dd-4a71-b314-db39dd6fd6c0.png" 
+                alt="Filter options" 
+                className="w-5 h-5 max-sm:w-4 max-sm:h-4"
+              />
+            </button>
           </div>
 
           {/* Products Grid */}
