@@ -161,15 +161,15 @@ const Products = () => {
             
             <button 
               onClick={handleFilterToggle}
-              className={`flex items-center justify-center w-10 h-10 rounded-full border transition-colors max-sm:w-8 max-sm:h-8 ${
+              className={`flex items-center justify-center w-10 h-10 rounded-full border-2 transition-colors max-sm:w-8 max-sm:h-8 ${
                 showFilter 
                   ? "bg-[#DCB481] border-[#DCB481]"
-                  : "bg-white border-gray-200 hover:bg-gray-50"
+                  : "bg-white border-[#DCB481] hover:bg-[#DCB481]/10"
               }`}
             >
               <SlidersHorizontal 
                 className={`w-5 h-5 max-sm:w-4 max-sm:h-4 ${
-                  showFilter ? "text-white" : "text-[#454545]"
+                  showFilter ? "text-white" : "text-[#DCB481]"
                 }`}
               />
             </button>
