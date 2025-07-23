@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex w-[655px] items-center relative pr-[480px] max-md:w-full">
           <div className="flex flex-col justify-center items-start gap-6 absolute w-[175px] h-32 left-0 top-0 max-md:static max-md:w-full max-md:h-auto">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/723189558e9ee19fa9754f444cc2199edb438c04?width=350"
+              src="/lovable-uploads/bfdf01b0-3b6e-4eb7-9aac-33eb68eb50b2.png"
               alt="Thermowood company logo"
               className="w-[175px] h-20 aspect-[35/16]"
             />
