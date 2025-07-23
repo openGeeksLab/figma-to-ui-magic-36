@@ -90,7 +90,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
               </div>
             </aside>
             
-            <div className="z-10 relative ml-auto">
+            <div className="z-10 relative ml-auto flex flex-col justify-end h-[504px]">
               <h1 id="sample-request-form-title" className="sr-only">
                 Sample Request Form
               </h1>
