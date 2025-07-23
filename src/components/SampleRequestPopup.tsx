@@ -58,7 +58,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="max-w-5xl w-full h-[650px] p-0 bg-transparent rounded-[28px] overflow-visible border-0 max-md:max-w-[100vw] max-md:w-[100vw] max-md:h-[90vh] max-md:mx-0">
+      <DialogContent className="max-w-5xl w-full h-[650px] p-0 bg-transparent rounded-[28px] overflow-visible border-0 max-md:max-w-[100vw] max-md:w-[100vw] max-md:h-[90vh] max-md:mx-0 [&>button]:hidden">
         <section 
           className="flex flex-col items-stretch pt-[47px]"
           role="dialog"
