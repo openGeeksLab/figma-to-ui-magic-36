@@ -41,7 +41,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   };
 
   const contentElement = (
-    <div className="flex flex-col items-start gap-8 flex-1 max-md:w-full">
+    <div className={`flex flex-col items-start gap-6 flex-1 max-md:w-full ${reverse ? 'ml-36 max-md:ml-0' : 'mr-36 max-md:mr-0'}`}>
       {renderTitle()}
       <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
         {description}
@@ -70,7 +70,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   ) : null;
 
   return (
-    <section className={`flex justify-between items-center w-full px-8 py-24 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10 ${reverse ? 'max-md:flex-col-reverse' : 'max-md:flex-col'} max-md:gap-10 ${className}`}>
+    <section className={`w-full flex justify-between items-center px-8 py-24 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10 ${reverse ? 'max-md:flex-col-reverse' : ''} ${className}`}>
       {reverse ? (
         <>
           {contentElement}
