@@ -84,7 +84,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
                 <img
                   src="/lovable-uploads/02f5b661-7aee-4a51-939d-80a2dc7ce514.png"
                   alt=""
-                  className="absolute h-full w-full object-cover object-[center_top_-100px] inset-0"
+                  className="absolute h-full w-full object-cover object-[center_top_-200px] inset-0"
                   loading="lazy"
                 />
               </div>
