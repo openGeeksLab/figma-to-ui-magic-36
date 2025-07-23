@@ -61,7 +61,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
             <img
               src="/lovable-uploads/02f5b661-7aee-4a51-939d-80a2dc7ce514.png"
               alt="Modern house with wood panels"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </div>
           
