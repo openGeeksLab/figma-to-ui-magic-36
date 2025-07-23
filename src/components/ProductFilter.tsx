@@ -45,7 +45,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                       id={size}
                       checked={selectedSizes.includes(size)}
                       onCheckedChange={() => handleSizeToggle(size)}
-                      className="border-gray-300"
+                      className="border-gray-300 h-4 w-4 rounded-sm shrink-0"
                     />
                     <label 
                       htmlFor={size} 
@@ -63,25 +63,25 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
               <h4 className="text-sm font-medium text-[#454545] mb-3">Something</h4>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="placeholder1" className="border-gray-300" />
+                  <Checkbox id="placeholder1" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                   <label htmlFor="placeholder1" className="text-sm text-gray-600">
                     Lorem ipsum dolor sit amet
                   </label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="placeholder2" className="border-gray-300" />
+                  <Checkbox id="placeholder2" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                   <label htmlFor="placeholder2" className="text-sm text-gray-600">
                     Ut facilisis pretium purus
                   </label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="placeholder3" className="border-gray-300" />
+                  <Checkbox id="placeholder3" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                   <label htmlFor="placeholder3" className="text-sm text-gray-600">
                     Ut facilisis pretium purus
                   </label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="placeholder4" className="border-gray-300" />
+                  <Checkbox id="placeholder4" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                   <label htmlFor="placeholder4" className="text-sm text-gray-600">
                     Duis aliquet felis
                   </label>
@@ -93,13 +93,13 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
               <h4 className="text-sm font-medium text-[#454545] mb-3">Something</h4>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="placeholder5" className="border-gray-300" />
+                  <Checkbox id="placeholder5" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                   <label htmlFor="placeholder5" className="text-sm text-gray-600">
                     Ut facilisis pretium purus
                   </label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="placeholder6" className="border-gray-300" />
+                  <Checkbox id="placeholder6" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                   <label htmlFor="placeholder6" className="text-sm text-gray-600">
                     Duis aliquet felis
                   </label>
@@ -111,13 +111,13 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
               <h4 className="text-sm font-medium text-[#454545] mb-3">Something</h4>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="placeholder7" className="border-gray-300" />
+                  <Checkbox id="placeholder7" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                   <label htmlFor="placeholder7" className="text-sm text-gray-600">
                     Lorem dolor sit amet ipsum
                   </label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="placeholder8" className="border-gray-300" />
+                  <Checkbox id="placeholder8" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                   <label htmlFor="placeholder8" className="text-sm text-gray-600">
                     Ut facilisis pretium purus
                   </label>
@@ -141,7 +141,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                           id={`mobile-${size}`}
                           checked={selectedSizes.includes(size)}
                           onCheckedChange={() => handleSizeToggle(size)}
-                          className="border-gray-300"
+                          className="border-gray-300 h-4 w-4 rounded-sm shrink-0"
                         />
                         <label 
                           htmlFor={`mobile-${size}`} 
@@ -162,25 +162,25 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                 <AccordionContent className="pb-4">
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
-                      <Checkbox id="mobile-placeholder1" className="border-gray-300" />
+                      <Checkbox id="mobile-placeholder1" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                       <label htmlFor="mobile-placeholder1" className="text-sm text-gray-600">
                         Lorem ipsum dolor sit amet
                       </label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Checkbox id="mobile-placeholder2" className="border-gray-300" />
+                      <Checkbox id="mobile-placeholder2" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                       <label htmlFor="mobile-placeholder2" className="text-sm text-gray-600">
                         Ut facilisis pretium purus
                       </label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Checkbox id="mobile-placeholder3" className="border-gray-300" />
+                      <Checkbox id="mobile-placeholder3" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                       <label htmlFor="mobile-placeholder3" className="text-sm text-gray-600">
                         Ut facilisis pretium purus
                       </label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Checkbox id="mobile-placeholder4" className="border-gray-300" />
+                      <Checkbox id="mobile-placeholder4" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                       <label htmlFor="mobile-placeholder4" className="text-sm text-gray-600">
                         Duis aliquet felis
                       </label>
@@ -196,13 +196,13 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                 <AccordionContent className="pb-4">
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
-                      <Checkbox id="mobile-placeholder5" className="border-gray-300" />
+                      <Checkbox id="mobile-placeholder5" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                       <label htmlFor="mobile-placeholder5" className="text-sm text-gray-600">
                         Ut facilisis pretium purus
                       </label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Checkbox id="mobile-placeholder6" className="border-gray-300" />
+                      <Checkbox id="mobile-placeholder6" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                       <label htmlFor="mobile-placeholder6" className="text-sm text-gray-600">
                         Duis aliquet felis
                       </label>
@@ -218,13 +218,13 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                 <AccordionContent className="pb-4">
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
-                      <Checkbox id="mobile-placeholder7" className="border-gray-300" />
+                      <Checkbox id="mobile-placeholder7" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                       <label htmlFor="mobile-placeholder7" className="text-sm text-gray-600">
                         Lorem dolor sit amet ipsum
                       </label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Checkbox id="mobile-placeholder8" className="border-gray-300" />
+                      <Checkbox id="mobile-placeholder8" className="border-gray-300 h-4 w-4 rounded-sm shrink-0" />
                       <label htmlFor="mobile-placeholder8" className="text-sm text-gray-600">
                         Ut facilisis pretium purus
                       </label>
