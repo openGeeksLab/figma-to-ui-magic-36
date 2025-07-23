@@ -187,9 +187,9 @@ const ProductDetail = () => {
       </div>
 
       {/* Product Detail */}
-      <section className="w-full px-8 py-8 max-md:px-5 max-sm:px-4">
+      <section className="w-full px-8 py-8 max-md:px-5 max-sm:px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-sm:gap-6">
             {/* Product Images */}
             <div className="space-y-4">
               <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
@@ -269,7 +269,7 @@ const ProductDetail = () => {
                 <h3 className="text-lg font-semibold text-[#454545] mb-4">
                   Tone Color: <span className="text-gray-600">{colorNames[selectedColorSwatch]}</span>
                 </h3>
-                <div className="grid grid-cols-4 gap-1 scale-75 origin-top-left">
+                <div className="grid grid-cols-4 gap-1 max-sm:gap-0.5 max-sm:scale-90 max-sm:origin-top-left sm:scale-75 sm:origin-top-left">
                    {/* First row - Wood texture images */}
                    <div 
                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
@@ -456,7 +456,7 @@ const ProductDetail = () => {
       </section>
 
       {/* Personalised Orders Section */}
-      <section className="px-8 py-8 bg-[#F3F0E7] rounded-2xl mx-8 mt-8 max-md:px-5 max-sm:px-4 max-md:mx-5 max-sm:mx-4">
+      <section className="px-8 py-8 bg-[#F3F0E7] rounded-2xl mx-8 mt-8 max-md:px-5 max-sm:px-4 max-md:mx-5 max-sm:mx-4 overflow-hidden">
         <div className="mx-auto">
           <h2 className="text-4xl font-bold text-[#454545] mb-8">Personalised orders</h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-4">
@@ -470,7 +470,7 @@ const ProductDetail = () => {
 
       {/* Similar Products Section */}
       {similarProducts.length > 0 && (
-        <section className="w-full px-8 py-12 max-md:px-5 max-sm:px-4">
+        <section className="w-full px-8 py-12 max-md:px-5 max-sm:px-4 overflow-hidden">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-8">
               <span className="text-[#DCB481]">Similar </span>
