@@ -65,7 +65,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
           aria-labelledby="sample-request-form-title"
           aria-modal="true"
         >
-          <header className="items-center z-10 flex w-[52px] gap-2.5 h-[52px] bg-white mr-12 p-2.5 rounded-[28px] max-md:mr-2.5">
+          <header className="items-center z-10 flex w-[52px] gap-2.5 h-[52px] bg-white ml-auto p-2.5 rounded-[28px]">
             <button
               onClick={handleClose}
               className="aspect-[1] w-8 self-stretch my-auto flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
