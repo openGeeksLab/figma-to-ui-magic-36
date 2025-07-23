@@ -77,11 +77,13 @@ const Products = () => {
           <CarouselContent className="h-full">
             {images.map((image, index) => (
               <CarouselItem key={index} className="h-full">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover max-md:h-[200px] rounded-[28px]"
-                />
+                <div className="w-full h-full rounded-[28px] overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover max-md:h-[200px]"
+                  />
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
