@@ -131,7 +131,7 @@ const Products = () => {
       <section className="w-full px-8 py-12 max-md:px-5 max-sm:px-4">
         <div className="max-w-6xl mx-auto">
           {/* Category Navigation */}
-          <div className="flex items-center justify-between mb-12 max-sm:flex-col max-sm:gap-4">
+          <div className="flex items-center justify-between mb-12 max-sm:flex-col max-sm:gap-4 max-sm:items-start">
             <div className="flex gap-4 flex-wrap max-sm:gap-2">
               <button 
                 onClick={() => setSelectedCategory("All Products")}
