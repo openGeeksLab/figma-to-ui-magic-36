@@ -120,13 +120,6 @@ All colors MUST be HSL.
       /* Minimum touch target size for accessibility */
       min-height: 44px;
     }
-    
-    /* Override for checkboxes to maintain square shape */
-    [role="checkbox"], input[type="checkbox"] {
-      min-height: unset !important;
-      height: 1rem !important;
-      width: 1rem !important;
-    }
   }
   
   /* Ensure smooth scrolling on all devices */
