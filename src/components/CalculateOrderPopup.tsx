@@ -147,7 +147,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
               onClick={handleContactUs}
               className="bg-white hover:bg-gray-50 text-[#454545] py-3 px-8 rounded-full font-medium border border-gray-200 transition-colors"
             >
-              Contact US
+              Contact Us
             </button>
           </div>
         </div>
