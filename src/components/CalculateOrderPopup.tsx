@@ -82,8 +82,8 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
           {/* Close Button */}
           <button
             onClick={handleClose}
-            className="absolute -top-3 -right-3 min-w-[40px] min-h-[40px] w-10 h-10 bg-white flex items-center justify-center hover:bg-gray-100 transition-colors shadow-md border border-gray-200 max-sm:w-8 max-sm:h-8 max-sm:min-w-[32px] max-sm:min-h-[32px] max-sm:-top-2 max-sm:-right-2"
-            style={{ borderRadius: '50%', aspectRatio: '1/1' }}
+            className="absolute -top-3 -right-3 w-10 h-10 bg-white flex items-center justify-center hover:bg-gray-100 transition-colors shadow-md border border-gray-200 max-sm:w-8 max-sm:h-8 max-sm:-top-2 max-sm:-right-2"
+            style={{ borderRadius: '50%', aspectRatio: '1/1', minWidth: '40px', minHeight: '40px' }}
             aria-label="Close calculator"
           >
             <X size={18} className="text-gray-600 max-sm:w-4 max-sm:h-4" />
