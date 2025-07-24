@@ -339,10 +339,10 @@ const ProductDetail = () => {
                      }`}
                      onClick={() => setSelectedColorSwatch(5)}
                    >
-                     <img 
-                       src="/lovable-uploads/51ba69fb-8156-41d1-aa37-7b07cc9fbee9.png" 
-                       alt="Silver wood color" 
-                       className="w-full h-full object-cover"
+                      <img 
+                        src="/lovable-uploads/8537934d-8239-405c-860c-51211cb11d2d.png" 
+                        alt="Silver wood color" 
+                        className="w-full h-full object-cover"
                      />
                    </div>
                    <div 
