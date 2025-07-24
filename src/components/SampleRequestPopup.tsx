@@ -71,7 +71,8 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
               <header className="items-center z-10 flex w-[52px] gap-2.5 h-[52px] bg-white ml-auto p-2.5 rounded-[28px] max-md:mr-4 max-md:mt-4">
                 <button
                   onClick={handleClose}
-                  className="aspect-square w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors duration-200 focus:outline-none border-0"
+                  className="w-8 h-8 min-w-[32px] min-h-[32px] flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors duration-200 focus:outline-none border-0 flex-shrink-0"
+                  style={{ aspectRatio: '1/1' }}
                   aria-label="Close sample request form"
                 >
                   <X size={20} className="text-gray-600" />
