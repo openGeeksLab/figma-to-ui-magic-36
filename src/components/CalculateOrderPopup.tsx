@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   Dialog,
   DialogContent,
@@ -15,6 +16,7 @@ interface CalculateOrderPopupProps {
 }
 
 const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) => {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     length: '',
@@ -43,8 +45,10 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
           square: square.toFixed(2)
         }));
         
-        // Calculate approximate price  m²)
-        setCalculatedPrice(square * (235+(235*0.25)+235+(235*0.25/2)));
+        // Calculate approximate price based on route
+        const isSpecialCladdingRoute = ['/cladding/f-1', '/cladding/f-2', '/cladding/f-3', '/cladding/f-4', '/cladding/f-5', '/cladding/f-6', '/cladding/f-8'].includes(location.pathname);
+        const basePrice = isSpecialCladdingRoute ? 235 : 279;
+        setCalculatedPrice(square * (basePrice+(basePrice*0.25)+basePrice+(basePrice*0.25/2)));
       } else {
         // Clear square and price when either field is empty
         setFormData(prev => ({
