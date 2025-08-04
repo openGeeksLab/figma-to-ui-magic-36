@@ -100,33 +100,42 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Form Section */}
             <div className="space-y-4">
-              <Input
-                type="number"
-                name="length"
-                placeholder="Length mm"
-                value={formData.length}
-                onChange={handleInputChange}
-                className="w-full h-12 px-4 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
-              />
+              <div className="relative">
+                <Input
+                  type="number"
+                  name="length"
+                  placeholder="Length"
+                  value={formData.length}
+                  onChange={handleInputChange}
+                  className="w-full h-12 px-4 pr-12 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
+                />
+                <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">mm</span>
+              </div>
               
-              <Input
-                type="number"
-                name="width"
-                placeholder="Wide mm"
-                value={formData.width}
-                onChange={handleInputChange}
-                className="w-full h-12 px-4 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
-              />
+              <div className="relative">
+                <Input
+                  type="number"
+                  name="width"
+                  placeholder="Wide"
+                  value={formData.width}
+                  onChange={handleInputChange}
+                  className="w-full h-12 px-4 pr-12 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
+                />
+                <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">mm</span>
+              </div>
               
-              <Input
-                type="number"
-                name="square"
-                placeholder="Square m²"
-                value={formData.square}
-                onChange={handleInputChange}
-                className="w-full h-12 px-4 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
-                readOnly
-              />
+              <div className="relative">
+                <Input
+                  type="number"
+                  name="square"
+                  placeholder="Square"
+                  value={formData.square}
+                  onChange={handleInputChange}
+                  className="w-full h-12 px-4 pr-12 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
+                  readOnly
+                />
+                <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">m²</span>
+              </div>
             </div>
 
             {/* Price Section */}
