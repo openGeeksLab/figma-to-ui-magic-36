@@ -43,7 +43,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
           square: square.toFixed(2)
         }));
         
-        // Calculate approximate price (example: €50 per m²)
+        // Calculate approximate price  m²)
         setCalculatedPrice(square * (235+(235*0.25)+235+(235*0.25/2)));
       } else {
         // Clear square and price when either field is empty
@@ -149,7 +149,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
             <div className="flex flex-col justify-center items-center lg:items-start">
               <h3 className="text-xl font-semibold text-[#454545] mb-4">Your prise is:</h3>
               <div className="text-4xl font-bold text-[#DCB481] mb-4">
-                {calculatedPrice ? `€${calculatedPrice.toFixed(0)}*` : '-- €*'}
+                {calculatedPrice ? `SEK${calculatedPrice.toFixed(0)}*` : '-- SEK*'}
               </div>
               <p className="text-sm text-gray-500 text-center lg:text-left">
                 * The calculation is approximate. Leave a request and we will make an exact calculation of your order.
