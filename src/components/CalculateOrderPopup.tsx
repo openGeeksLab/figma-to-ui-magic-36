@@ -37,7 +37,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
       const width = name === 'width' ? parseFloat(value) : parseFloat(formData.width);
       
       if (length && width) {
-        const square = (length * width) / 1000000; // Convert mm² to m²
+        const square = (length * width) / 100;
         setFormData(prev => ({
           ...prev,
           square: square.toFixed(2)
