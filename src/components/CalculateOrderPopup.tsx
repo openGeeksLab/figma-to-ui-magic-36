@@ -45,6 +45,13 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
         
         // Calculate approximate price (example: €50 per m²)
         setCalculatedPrice(square * 50);
+      } else {
+        // Clear square and price when either field is empty
+        setFormData(prev => ({
+          ...prev,
+          square: ''
+        }));
+        setCalculatedPrice(null);
       }
     }
   };
