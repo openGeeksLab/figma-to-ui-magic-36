@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrench, Users } from 'lucide-react';
+import { Wrench, Users, ShieldCheck, Ban } from 'lucide-react';
 
 const Features = () => {
   const features = [
@@ -29,20 +29,11 @@ const Features = () => {
       title: "Sustainability"
     },
     {
-      icon: (
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21.7998 19.452L12.7998 12.842V3M21.7998 19.452L21.2378 16.71M21.7998 19.452L18.9878 20M12.7998 3L10.5498 5.194M12.7998 3L15.0498 5.194M12.7998 12.843L3.7998 19.452M3.7998 19.452L6.6128 20M3.7998 19.452L4.3628 16.71" stroke="#C09E85" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
+      icon: <ShieldCheck size={24} color="#C09E85" strokeWidth={1.5} />,
       title: "Toxin-free and Chemical-fre"
     },
     {
-      icon: (
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6.6001 3H3.6001V6M18.6001 3H21.6001V6M6.6001 21H3.6001V18M18.6001 21H21.6001V18M13.1151 17.691L17.1151 15.291C17.263 15.2021 17.3854 15.0765 17.4704 14.9263C17.5554 14.7762 17.6001 14.6066 17.6001 14.434V10.566C17.6001 10.3934 17.5554 10.2238 17.4704 10.0737C17.3854 9.92349 17.263 9.79786 17.1151 9.709L13.1151 7.309C12.9596 7.21556 12.7815 7.16619 12.6001 7.16619C12.4187 7.16619 12.2406 7.21556 12.0851 7.309L8.0851 9.709C7.93719 9.79786 7.81479 9.92349 7.7298 10.0737C7.64481 10.2238 7.60013 10.3934 7.6001 10.566V14.434C7.60023 14.6066 7.64507 14.7763 7.73023 14.9265C7.8154 15.0767 7.938 15.2023 8.0861 15.291L12.0861 17.691C12.2414 17.7841 12.419 17.8332 12.6001 17.8332C12.7811 17.8332 12.9588 17.7841 13.1141 17.691" stroke="#C09E85" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M8.1001 10.5L12.6001 13M12.6001 13C12.6001 13 16.3641 10.95 17.1001 10.5M12.6001 13V17.5" stroke="#C09E85" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
+      icon: <Ban size={24} color="#C09E85" strokeWidth={1.5} />,
       title: "No Resin"
     },
     {
