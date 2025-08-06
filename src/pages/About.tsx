@@ -141,6 +141,25 @@ const About = () => {
   </div>
 </section>
 
+{/* SECTION 4: Text left, Image right - We Provide */}
+<section className="w-full flex justify-between items-center px-8 py-24 gap-12 max-md:flex-col-reverse max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
+  <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full ml-36 max-md:ml-0">
+    <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
+      We <span className="text-[#DCB481]">Provide</span>
+    </h2>
+    <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+      We provide comprehensive wood solutions from design consultation to installation and maintenance. Our expertise covers both interior and exterior applications, ensuring your project achieves the perfect balance of aesthetics and functionality.
+    </p>
+  </div>
+  <div className="flex-1 flex justify-center items-center max-md:w-full max-md:h-[400px]">
+    <img
+      src="/lovable-uploads/e30f97b1-5531-4ac9-a9f6-9991fa3cf92d.png"
+      alt="Modern wooden structure with glass elements"
+      className="w-[539px] h-[539px] object-cover rounded-[28px] max-lg:w-[400px] max-lg:h-[400px] max-md:w-full max-md:h-[350px]"
+    />
+  </div>
+</section>
+
       <Footer />
     </div>
   );
