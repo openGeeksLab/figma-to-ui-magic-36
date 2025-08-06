@@ -146,7 +146,10 @@ const About = () => {
     As a leading provider of premium interior and exterior wood wall panels, Nordic Thermoträ delivers sustainable and innovative design solutions that transform indoor and outdoor spaces.
     </p>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-    For us, the environment and sustainability are obvious issues in everyday life. We work to contribute to a sustainable society thriving in harmony with nature. Our heat-treated wood is sustainably produced in Finland, using timber from FSC-certified forests and a treatment process completely free from chemicals. The result? A wood that’s not only beautiful – it’s strong, dimensionally stable, and built to last, no matter the climate. We continuously work to reduce our climate footprint, e.g. by gradually switching to the latest technology and actively influencing our subcontractors
+    For us, the environment and sustainability are obvious issues in everyday life. We work to contribute to a sustainable society thriving in harmony with nature. Our heat-treated wood is sustainably produced in Finland, using timber from FSC-certified forests and a treatment process completely free from chemicals. 
+    </p>
+    <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+    The result? A wood that’s not only beautiful – it’s strong, dimensionally stable, and built to last, no matter the climate. We continuously work to reduce our climate footprint, e.g. by gradually switching to the latest technology and actively influencing our subcontractors
     </p>
   </div>
   </div>
