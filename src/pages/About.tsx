@@ -141,9 +141,14 @@ const About = () => {
       {/* Our <span className="text-[#DCB481]">Promise</span> */}
       Sustainability
     </h2>
+    <div className="flex-1 flex flex-col gap-6 max-md:w-full">
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-      We provide comprehensive wood solutions from design consultation to installation and maintenance. Our expertise covers both interior and exterior applications, ensuring your project achieves the perfect balance of aesthetics and functionality.
+    As a leading provider of premium interior and exterior wood wall panels, Nordic Thermoträ delivers sustainable and innovative design solutions that transform indoor and outdoor spaces.
     </p>
+    <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+    For us, the environment and sustainability are obvious issues in everyday life. We work to contribute to a sustainable society thriving in harmony with nature. Our heat-treated wood is sustainably produced in Finland, using timber from FSC-certified forests and a treatment process completely free from chemicals. The result? A wood that’s not only beautiful – it’s strong, dimensionally stable, and built to last, no matter the climate. We continuously work to reduce our climate footprint, e.g. by gradually switching to the latest technology and actively influencing our subcontractors
+    </p>
+  </div>
   </div>
   <div className="flex-1 flex justify-center items-center max-md:w-full max-md:h-[400px]">
     <img
