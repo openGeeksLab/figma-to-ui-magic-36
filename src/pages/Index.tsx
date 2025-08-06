@@ -96,7 +96,7 @@ const Index = () => {
               </header>
               <div className="flex justify-center items-center gap-2.5 w-full bg-white p-5 rounded-[0px_28px_28px_0px]">
                 <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-                  Proin felis metus, cursus sed justo at, dignissim pellentesque tortor. Praesent cursus felis diam, eu venenatis sem faucibus vitae. Sed varius augue ex, ac pulvinar mauris lobortis in. Aliquam erat volutpat. Fusce ex justo, eleifend a tristique ultricies, ultrices ut lectus. Mauris nec magna dolor. Duis eget orci ut augue ultrices finibus.
+                You can get the catalogue with our panels here.
                 </p>
               </div>
               <div className="flex flex-col items-start gap-2.5 w-full bg-white p-5 rounded-[0px_0px_28px_28px]">
