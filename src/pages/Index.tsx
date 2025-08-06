@@ -95,9 +95,10 @@ const Index = () => {
                 </h2>
               </header>
               <div className="flex justify-center items-center gap-2.5 w-full bg-white p-5 rounded-[0px_28px_28px_0px]">
-                <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+                {/* <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base"> */}
                 You can get the catalogue with our panels here.
-                </p>
+
+                {/* </p> */}
               </div>
               <div className="flex flex-col items-start gap-2.5 w-full bg-white p-5 rounded-[0px_0px_28px_28px]">
                 <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-xl font-normal hover:bg-[#c9a373] transition-colors">
