@@ -58,15 +58,15 @@ const About = () => {
 <section className="w-full flex justify-between items-start px-8 py-24 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
   <div className="flex-1 flex items-start max-md:w-full">
     <h1 className="text-[#454545] text-[42px] font-bold leading-tight max-md:text-[32px] max-sm:text-2xl text-left">
-      Simply <span className="text-[#DCB481]">wooden</span><br />made
+      Simply <span className="text-[#DCB481]">made</span><br />of wood
     </h1>
   </div>
   <div className="flex-1 flex flex-col gap-6 max-md:w-full">
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-      At [Your Company Name], we are passionate about transforming spaces with the natural beauty and durability of exterior wood wall panels. With years of experience in the industry, we specialize in providing high-quality, sustainable wood solutions tailored to meet the unique needs of each client.
+    At Nordic Thermoträ, we are passionate about transforming spaces with the natural beauty and durability of heat-treated wood. With years of experience in the industry, we specialize in providing high-quality, sustainable wood solutions tailored to meet the unique needs of each client.
     </p>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-      We believe in creating outdoor environments that not only look stunning but also stand the test of time. Whether you're enhancing a residential property or a commercial facade, our team is here to bring your vision to life with expert guidance and superior products.
+    We believe in creating interior and outdoor environments that not only look stunning but also stand the test of time. Whether you're enhancing a residential property or a commercial facade, our team is here to bring your vision to life with expert guidance and superior products.
     </p>
   </div>
 </section>
@@ -85,7 +85,7 @@ const About = () => {
       Our <span className="text-[#DCB481]">Vision</span>
     </h2>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-      To be the leading provider of premium exterior wood wall panels, inspiring sustainable and innovative design solutions that transform outdoor spaces worldwide.
+    Our Vision is to be the leading provider of premium interior and exterior wood wall panels, inspiring sustainable and innovative design solutions that transform indoor and outdoor spaces in the Nordic countries.
     </p>
   </div>
 </section>
@@ -97,7 +97,7 @@ const About = () => {
       Our <span className="text-[#DCB481]">Values</span>
     </h2>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-    Commitment, Quality and Responsibility in everything we do. Our core values describe how we should act towards each other and towards our customers, suppliers, and other partners.
+    Our core values are Commitment, Quality and Responsibility in everything we do. Our core values describe how we act towards each other and towards our customers, suppliers, and other partners.
     </p>
     <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
   <ul className="list-disc ml-6">
