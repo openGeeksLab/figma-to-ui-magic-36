@@ -99,14 +99,7 @@ const About = () => {
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
     Our core values are Commitment, Quality and Responsibility in everything we do. Our core values describe how we act towards each other and towards our customers, suppliers, and other partners.
     </p>
-    <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-  <ul className="list-disc ml-6">
-    <li>Tailored solutions that match your architectural style.</li>
-    <li>Expert advice to guide you from concept to completion.</li>
-    <li>Skilled installation ensuring perfect alignment and durability.</li>
-    <li>Keeping your wood panels looking their best year after year.</li>
-  </ul>
-</div>
+    
   </div>
   <div className="flex-1 flex justify-center items-center max-md:w-full max-md:h-[400px]">
     <img
@@ -130,13 +123,14 @@ const About = () => {
       <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
       We <span className="text-[#DCB481]">Provide</span>
     </h2>
-    <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-    To be the leading provider of premium exterior wood wall panels, inspiring sustainable and innovative design solutions that transform outdoor spaces worldwide.
-    </p>
-    <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-      For us, the environment and sustainability are obvious issues in everyday life. We are not satisfied with wood being a sustainable product, but work long-term with our entire business to contribute to a sustainable society.
-      Our raw material comes from responsibly managed forests and is certified.We continuously work to reduce our climate footprint, e.g. by gradually switching to the latest technology and actively influencing our subcontractors.
-    </p>
+    <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
+  <ul className="list-disc ml-6">
+    <li>Tailored solutions that match your architectural style.</li>
+    <li>Expert advice to guide you from concept to completion.</li>
+    <li>Skilled installation ensuring perfect alignment and durability.</li>
+    <li>Keeping your wood panels looking their best year after year.</li>
+  </ul>
+</div>
   </div>
 </section>
 
