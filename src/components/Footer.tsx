@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="flex w-[655px] items-center relative pr-[480px] max-md:w-full">
           <div className="flex flex-col justify-center items-start gap-6 absolute w-[175px] h-32 left-0 top-0 max-md:static max-md:w-full max-md:h-auto">
             <img
-              src="/lovable-uploads/bfdf01b0-3b6e-4eb7-9aac-33eb68eb50b2.png"
-              alt="Thermowood company logo"
+              src="/lovable-uploads/10e1a49d-9139-4459-ad9b-83cea977cde3.png"
+              alt="Nordic Thermoträ logo"
               className="w-[175px] h-20 aspect-[35/16]"
             />
             <div className="flex items-center gap-3" role="list" aria-label="Social media links">
