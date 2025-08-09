@@ -65,9 +65,23 @@ const ContactForm = () => {
     }
     setIsSubmitting(true);
 
-    // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await fetch('https://xksrscyjywtnmtwmgihm.supabase.co/functions/v1/send-contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhrc3JzY3lqeXd0bm10d21naWhtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4NzcyMjYsImV4cCI6MjA2NzQ1MzIyNn0.yX65KXWNzewok7zd-V2gNQW97yDryang9jdCdM1-Btg`,
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
+      const result = await response.json();
+      console.log('Email sent successfully:', result);
+      
       setIsSubmitted(true);
       setFormData({
         name: '',
@@ -77,6 +91,8 @@ const ContactForm = () => {
       });
     } catch (error) {
       console.error('Form submission error:', error);
+      // You might want to show an error message to the user here
+      alert('Sorry, there was an error sending your message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
