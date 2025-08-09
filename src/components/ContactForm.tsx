@@ -65,13 +65,18 @@ const ContactForm = () => {
       return;
     }
     setIsSubmitting(true);
+    console.log('Starting form submission with data:', formData);
 
     try {
+      console.log('Calling Supabase function...');
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData,
       });
 
+      console.log('Supabase response:', { data, error });
+
       if (error) {
+        console.error('Supabase function error:', error);
         throw error;
       }
 
@@ -86,8 +91,9 @@ const ContactForm = () => {
       });
     } catch (error) {
       console.error('Form submission error:', error);
+      console.error('Error details:', JSON.stringify(error, null, 2));
       // You might want to show an error message to the user here
-      alert('Sorry, there was an error sending your message. Please try again.');
+      alert(`Sorry, there was an error sending your message: ${error.message || 'Unknown error'}. Please try again.`);
     } finally {
       setIsSubmitting(false);
     }
