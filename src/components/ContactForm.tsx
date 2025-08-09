@@ -61,35 +61,28 @@ const ContactForm = () => {
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted!'); // Debug log
+    alert('Form submitted - checking...'); // Immediate feedback
     
     if (!validateForm()) {
-      console.log('Form validation failed');
+      alert('Form validation failed');
       return;
     }
     
-    console.log('Form validation passed');
     setIsSubmitting(true);
-    console.log('Starting form submission with data:', formData);
-    console.log('Supabase client initialized:', !!supabase);
-
+    
     try {
-      console.log('About to call Supabase function send-contact-email...');
-      console.log('Form data being sent:', JSON.stringify(formData, null, 2));
+      // Test basic connectivity first
+      alert('Calling Supabase function...');
       
-      // Test if supabase client works by trying a simple function call
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData,
       });
 
-      console.log('Supabase response received:', { data, error });
+      alert(`Response: ${JSON.stringify({ data, error })}`);
 
       if (error) {
-        console.error('Supabase function error:', error);
         throw new Error(`Function error: ${error.message}`);
       }
-
-      console.log('Email sent successfully:', data);
       
       setIsSubmitted(true);
       setFormData({
@@ -99,10 +92,7 @@ const ContactForm = () => {
         message: ''
       });
     } catch (error) {
-      console.error('Form submission error:', error);
-      console.error('Error details:', JSON.stringify(error, null, 2));
-      // You might want to show an error message to the user here
-      alert(`Sorry, there was an error sending your message: ${error.message || 'Unknown error'}. Please try again.`);
+      alert(`Error: ${error.message || 'Unknown error'}`);
     } finally {
       setIsSubmitting(false);
     }
