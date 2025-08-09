@@ -49,7 +49,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
         const isSpecialCladdingRoute = ['/cladding/f-1', '/cladding/f-2', '/cladding/f-3', '/cladding/f-4', '/cladding/f-5', '/cladding/f-6', '/cladding/f-8', '/cladding/f-10'].includes(location.pathname);
         const basePrice = isSpecialCladdingRoute ? 21.5 : 279;
         const kurs = 11.15;
-        setCalculatedPrice((basePrice*1.25*1.5)*kurs);
+        setCalculatedPrice(basePrice*1.25*1.5*kurs);
       } else {
         // Clear square and price when either field is empty
         setFormData(prev => ({
