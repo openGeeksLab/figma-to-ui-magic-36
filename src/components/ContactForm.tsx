@@ -61,15 +61,23 @@ const ContactForm = () => {
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Form submitted!'); // Debug log
+    
     if (!validateForm()) {
+      console.log('Form validation failed');
       return;
     }
+    
+    console.log('Form validation passed');
     setIsSubmitting(true);
     console.log('Starting form submission with data:', formData);
     console.log('Supabase client initialized:', !!supabase);
 
     try {
-      console.log('Calling Supabase function send-contact-email...');
+      console.log('About to call Supabase function send-contact-email...');
+      console.log('Form data being sent:', JSON.stringify(formData, null, 2));
+      
+      // Test if supabase client works by trying a simple function call
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData,
       });
