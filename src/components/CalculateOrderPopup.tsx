@@ -48,7 +48,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
         // Calculate approximate price based on route 
         const isSpecialCladdingRoute = ['/cladding/f-1', '/cladding/f-2', '/cladding/f-3', '/cladding/f-4', '/cladding/f-5', '/cladding/f-6', '/cladding/f-8', '/cladding/f-10', '/cladding/shp-s', '/cladding/shp' ].includes(location.pathname);
         // const isSpecialRoute = ['/cladding/f-9', '/cladding/f-7'].includes(location.pathname);//Deco must be added to the list
-        const basePrice = isSpecialCladdingRoute ? 21.5 : 0;
+        const basePrice = isSpecialCladdingRoute ? 21.5 : 25;
         const kurs = 11.15;
         setCalculatedPrice(basePrice*1.25*1.5*kurs);
       } 
