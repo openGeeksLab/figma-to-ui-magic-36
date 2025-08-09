@@ -9,8 +9,8 @@ const Header = () => {
     <header className="relative flex w-full justify-between items-center bg-white px-8 py-12 max-md:px-5 max-md:py-6 max-sm:p-4">
       <Link to="/">
         <img
-          src="/lovable-uploads/5888c2e7-6488-44e1-8916-c0b433872c52.png"
-          alt="Nordic Thermotra logo"
+          src="/lovable-uploads/10e1a49d-9139-4459-ad9b-83cea977cde3.png"
+          alt="Nordic Thermoträ logo"
           className="w-[175px] h-20 aspect-[35/16] max-sm:w-[120px] max-sm:h-[55px] cursor-pointer"
         />
       </Link>
