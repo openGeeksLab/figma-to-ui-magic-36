@@ -61,27 +61,29 @@ const ContactForm = () => {
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Form submitted - checking...'); // Immediate feedback
     
     if (!validateForm()) {
-      alert('Form validation failed');
+      alert('Please fill in all fields correctly');
       return;
     }
     
     setIsSubmitting(true);
     
     try {
-      // Test basic connectivity first
-      alert('Calling Supabase function...');
-      
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData,
+      // Use direct fetch to the edge function
+      const response = await fetch('https://xksrscyjywtnmtwmgihm.supabase.co/functions/v1/send-contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhrc3JzY3lqeXd0bm10d21naWhtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4NzcyMjYsImV4cCI6MjA2NzQ1MzIyNn0.yX65KXWNzewok7zd-V2gNQW97yDryang9jdCdM1-Btg',
+        },
+        body: JSON.stringify(formData),
       });
 
-      alert(`Response: ${JSON.stringify({ data, error })}`);
-
-      if (error) {
-        throw new Error(`Function error: ${error.message}`);
+      const result = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send email');
       }
       
       setIsSubmitted(true);
@@ -92,7 +94,7 @@ const ContactForm = () => {
         message: ''
       });
     } catch (error) {
-      alert(`Error: ${error.message || 'Unknown error'}`);
+      alert(`Error sending message: ${error.message}`);
     } finally {
       setIsSubmitting(false);
     }
