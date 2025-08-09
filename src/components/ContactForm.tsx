@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
 interface FormData {
   name: string;
   email: string;
@@ -66,21 +67,15 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://xksrscyjywtnmtwmgihm.supabase.co/functions/v1/send-contact-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhrc3JzY3lqeXd0bm10d21naWhtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4NzcyMjYsImV4cCI6MjA2NzQ1MzIyNn0.yX65KXWNzewok7zd-V2gNQW97yDryang9jdCdM1-Btg`,
-        },
-        body: JSON.stringify(formData),
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData,
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to send email');
+      if (error) {
+        throw error;
       }
 
-      const result = await response.json();
-      console.log('Email sent successfully:', result);
+      console.log('Email sent successfully:', data);
       
       setIsSubmitted(true);
       setFormData({
