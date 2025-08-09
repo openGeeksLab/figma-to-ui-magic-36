@@ -46,9 +46,10 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
         }));
         
         // Calculate approximate price based on route
-        const isSpecialCladdingRoute = ['/cladding/f-1', '/cladding/f-2', '/cladding/f-3', '/cladding/f-4', '/cladding/f-5', '/cladding/f-6', '/cladding/f-8'].includes(location.pathname);
-        const basePrice = isSpecialCladdingRoute ? 235 : 279;
-        setCalculatedPrice(square * ((basePrice+(basePrice*0.25))+((basePrice+((basePrice*0.25)))/2)));
+        const isSpecialCladdingRoute = ['/cladding/f-1', '/cladding/f-2', '/cladding/f-3', '/cladding/f-4', '/cladding/f-5', '/cladding/f-6', '/cladding/f-8', '/cladding/f-10'].includes(location.pathname);
+        const basePrice = isSpecialCladdingRoute ? 21.5 : 279;
+        const kurs = 11.15;
+        setCalculatedPrice((basePrice+(basePrice*0.25)*1.5)*1.25*kurs);
       } else {
         // Clear square and price when either field is empty
         setFormData(prev => ({
