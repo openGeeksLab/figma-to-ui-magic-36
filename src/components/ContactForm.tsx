@@ -66,18 +66,19 @@ const ContactForm = () => {
     }
     setIsSubmitting(true);
     console.log('Starting form submission with data:', formData);
+    console.log('Supabase client initialized:', !!supabase);
 
     try {
-      console.log('Calling Supabase function...');
+      console.log('Calling Supabase function send-contact-email...');
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData,
       });
 
-      console.log('Supabase response:', { data, error });
+      console.log('Supabase response received:', { data, error });
 
       if (error) {
         console.error('Supabase function error:', error);
-        throw error;
+        throw new Error(`Function error: ${error.message}`);
       }
 
       console.log('Email sent successfully:', data);
