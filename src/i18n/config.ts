@@ -188,7 +188,11 @@ const resources = {
       "sampleRequestSent": "Sample Request Sent!",
       "sampleRequestDescription": "We'll send you a free sample within 2-3 business days.",
       "sampleRequestFailed": "Failed to send sample request. Please try again.",
-      "sampleCloseAriaLabel": "Close sample request form"
+      "sampleCloseAriaLabel": "Close sample request form",
+      
+      // Product detail selected options
+      "surface": "Surface",
+      "color": "Color"
     }
   },
   sv: {
@@ -375,7 +379,11 @@ const resources = {
       "sampleRequestSent": "Provförfrågan skickad!",
       "sampleRequestDescription": "Vi skickar dig ett gratis prov inom 2-3 arbetsdagar.",
       "sampleRequestFailed": "Misslyckades med att skicka provförfrågan. Vänligen försök igen.",
-      "sampleCloseAriaLabel": "Stäng formulär för provförfrågan"
+      "sampleCloseAriaLabel": "Stäng formulär för provförfrågan",
+      
+      // Product detail selected options
+      "surface": "Yta",
+      "color": "Färg"
     }
   }
 };

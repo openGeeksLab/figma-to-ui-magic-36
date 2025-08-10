@@ -464,18 +464,31 @@ const ProductDetail = () => {
                  </div>
                </div>
 
-               {/* Details */}
-               <div>
-                 <h3 className="text-lg font-semibold text-[#454545] mb-4">Details</h3>
-                  <div className="space-y-2">
-                    {(getProductDetails() as string[] || []).map((detail, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <Check className="w-5 h-5 text-green-500" />
-                        <span className="text-gray-600">{detail}</span>
-                      </div>
-                    ))}
-                  </div>
-               </div>
+                {/* Details */}
+                <div>
+                  <h3 className="text-lg font-semibold text-[#454545] mb-4">Details</h3>
+                   <div className="space-y-2">
+                     {/* Selected Surface Treatment */}
+                     <div className="flex items-center space-x-2">
+                       <Check className="w-5 h-5 text-green-500" />
+                       <span className="text-gray-600">{t('surface')}: {t(selectedSurfaceTreatment === 'Smooth planed' ? 'smoothPlaned' : selectedSurfaceTreatment === 'Finely sawn' ? 'roughSawn' : 'brushed')}</span>
+                     </div>
+                     
+                     {/* Selected Color */}
+                     <div className="flex items-center space-x-2">
+                       <Check className="w-5 h-5 text-green-500" />
+                       <span className="text-gray-600">{t('color')}: {colorNames[selectedColorSwatch]}</span>
+                     </div>
+                     
+                     {/* Original product details */}
+                     {(getProductDetails() as string[] || []).map((detail, index) => (
+                       <div key={index} className="flex items-center space-x-2">
+                         <Check className="w-5 h-5 text-green-500" />
+                         <span className="text-gray-600">{detail}</span>
+                       </div>
+                     ))}
+                   </div>
+                </div>
                </div>
 
               {/* Calculate Price Button */}
