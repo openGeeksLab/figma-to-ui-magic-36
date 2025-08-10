@@ -24,7 +24,11 @@ const resources = {
       "email": "Email:",
       "phone": "Phone:",
       "cookiePolicy": "Cookie Policy",
-      "termsOfUse": "General Terms of Use"
+      "termsOfUse": "General Terms of Use",
+      
+      // About page
+      "aboutUs": "About",
+      "aboutUsHighlight": "Us"
     }
   },
   sv: {
@@ -47,7 +51,11 @@ const resources = {
       "email": "E-post:",
       "phone": "Telefon:",
       "cookiePolicy": "Cookie Policy",
-      "termsOfUse": "Allmänna Villkor"
+      "termsOfUse": "Allmänna Villkor",
+      
+      // About page
+      "aboutUs": "Om",
+      "aboutUsHighlight": "Oss"
     }
   }
 };

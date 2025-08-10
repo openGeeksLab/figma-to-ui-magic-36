@@ -3,8 +3,10 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   const plugin = React.useRef(Autoplay({ delay: 70000, stopOnInteraction: true }));
 
   const images = [
@@ -48,7 +50,7 @@ const About = () => {
   
   <div className="absolute bottom-8 left-16 max-md:left-10 max-sm:bottom-4 max-sm:left-5 z-10">
     <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-[22px] bg-white px-5 py-3 max-sm:px-3 max-sm:py-2 rounded-[28px] leading-tight">
-      About <span className="text-[#DCB481]">Us</span>
+      {t('aboutUs')} <span className="text-[#DCB481]">{t('aboutUsHighlight')}</span>
     </h1>
   </div>
 </section>
