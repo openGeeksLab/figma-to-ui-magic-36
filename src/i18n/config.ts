@@ -142,7 +142,11 @@ const resources = {
       
       // Effortless installation section
       "effortlessInstallationTitle": "Effortless installation with unparalleled lightweight superiority",
-      "effortlessInstallationHighlight": "unparalleled"
+      "effortlessInstallationHighlight": "unparalleled",
+      
+      // Catalog section
+      "catalogTitle": "Interior & Exterior Wall Panel Catalog",
+      "catalogHighlight": "Catalog"
     }
   },
   sv: {
@@ -283,7 +287,11 @@ const resources = {
       
       // Effortless installation section
       "effortlessInstallationTitle": "Enkel installation med oöverträffad lätt överlägsenhet",
-      "effortlessInstallationHighlight": "oöverträffad"
+      "effortlessInstallationHighlight": "oöverträffad",
+      
+      // Catalog section
+      "catalogTitle": "Katalog med Väggpaneler för Interiör och Exteriör",
+      "catalogHighlight": "Katalog"
     }
   }
 };
