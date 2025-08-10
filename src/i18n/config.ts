@@ -58,9 +58,28 @@ const resources = {
       "getInTouchHighlight": "in touch",
       "contactDescription": "Our team is dedicated to assisting you with any inquiries or concerns. We are committed to delivering exceptional customer service, high-quality products, and fast shipping.",
       "callUs": "Call us",
-      "emailUs": "Email us",
+      "emailUs": "Email us", 
       "contactAddress": "Address",
-      "operatingHours": "Operating Hours"
+      "operatingHours": "Operating Hours",
+      "experienceExcellence": "Experience of the",
+      "excellenceHighlight": "excellence",
+      "contactFormDescription": "Fill out the form and we'll provide you with the latest product information, news, and business opportunities tailored to your needs. We look forward to hearing from you.",
+      "namePlaceholder": "Name",
+      "emailPlaceholder": "Email",
+      "phonePlaceholder": "Phone",
+      "messagePlaceholder": "Message",
+      "sending": "Sending...",
+      "send": "Send",
+      "thankYouMessage": "Thank you for your",
+      "messageHighlight": "message!",
+      "thankYouDescription": "We'll get back to you within 24 hours with the latest product information and business opportunities.",
+      "sendAnotherMessage": "Send Another Message",
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "validEmailRequired": "Please enter a valid email address",
+      "phoneRequired": "Phone number is required",
+      "validPhoneRequired": "Please enter a valid phone number",
+      "messageRequired": "Message is required"
     }
   },
   sv: {
@@ -119,7 +138,26 @@ const resources = {
       "callUs": "Ring oss",
       "emailUs": "Mejla oss",
       "contactAddress": "Adress",
-      "operatingHours": "Öppettider"
+      "operatingHours": "Öppettider",
+      "experienceExcellence": "Upplev",
+      "excellenceHighlight": "excellensen",
+      "contactFormDescription": "Fyll i formuläret så ger vi dig den senaste produktinformationen, nyheter och affärsmöjligheter anpassade efter dina behov. Vi ser fram emot att höra från dig.",
+      "namePlaceholder": "Namn",
+      "emailPlaceholder": "E-post",
+      "phonePlaceholder": "Telefon",
+      "messagePlaceholder": "Meddelande",
+      "sending": "Skickar...",
+      "send": "Skicka",
+      "thankYouMessage": "Tack för ditt",
+      "messageHighlight": "meddelande!",
+      "thankYouDescription": "Vi återkommer inom 24 timmar med den senaste produktinformationen och affärsmöjligheterna.",
+      "sendAnotherMessage": "Skicka ett nytt meddelande",
+      "nameRequired": "Namn krävs",
+      "emailRequired": "E-post krävs",
+      "validEmailRequired": "Vänligen ange en giltig e-postadress",
+      "phoneRequired": "Telefonnummer krävs",
+      "validPhoneRequired": "Vänligen ange ett giltigt telefonnummer",
+      "messageRequired": "Meddelande krävs"
     }
   }
 };

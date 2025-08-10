@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { supabase } from '@/integrations/supabase/client';
 interface FormData {
   name: string;
@@ -13,6 +14,7 @@ interface FormErrors {
   message?: string;
 }
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -27,31 +29,31 @@ const ContactForm = () => {
     
     // Name validation
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = t('nameRequired');
     }
     
     // Email validation
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = t('emailRequired');
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = t('validEmailRequired');
     }
     
     // Phone validation
     if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone number is required';
+      newErrors.phone = t('phoneRequired');
     } else {
       // Remove all non-digit characters for validation
       const cleanPhone = formData.phone.replace(/\D/g, '');
       // Check if it's a valid phone number (at least 7 digits, max 15)
       if (cleanPhone.length < 7 || cleanPhone.length > 15) {
-        newErrors.phone = 'Please enter a valid phone number';
+        newErrors.phone = t('validPhoneRequired');
       }
     }
     
     // Message validation
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors.message = t('messageRequired');
     }
     
     setErrors(newErrors);
@@ -135,14 +137,14 @@ const ContactForm = () => {
     return <section className="flex h-[1053px] justify-center items-start w-full px-8 py-24 rounded-[28px] max-md:h-auto max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10" id="contact">
         <div className="flex w-[1102px] flex-col justify-center items-center gap-8 max-md:w-full">
           <div className="w-[477px] text-[#454545] text-center text-[42px] font-bold max-md:w-full max-md:text-[32px] max-sm:text-2xl">
-            <div className="text-[#454545]">Thank you for your</div>
-            <div className="text-[#DCB481]">message!</div>
+            <div className="text-[#454545]">{t('thankYouMessage')}</div>
+            <div className="text-[#DCB481]">{t('messageHighlight')}</div>
           </div>
           <p className="text-[#454545] text-center text-lg font-normal leading-[26.28px] w-full max-sm:text-base">
-            We'll get back to you within 24 hours with the latest product information and business opportunities.
+            {t('thankYouDescription')}
           </p>
           <button onClick={() => setIsSubmitted(false)} className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-base font-normal hover:bg-[#c9a373] transition-colors">
-            Send Another Message
+            {t('sendAnotherMessage')}
           </button>
         </div>
       </section>;
@@ -151,21 +153,21 @@ const ContactForm = () => {
       <div className="flex w-[1102px] flex-col justify-center items-center gap-8 max-md:w-full">
         <header className="w-[477px] text-[#454545] text-center text-[42px] font-bold max-md:w-full max-md:text-[32px] max-sm:text-2xl">
           <h2>
-            <span className="text-[#454545]">Experience of the </span>
-            <span className="text-[#DCB481]">excellence</span>
+            <span className="text-[#454545]">{t('experienceExcellence')} </span>
+            <span className="text-[#DCB481]">{t('excellenceHighlight')}</span>
           </h2>
         </header>
         
         <div className="flex flex-col items-start gap-[5px] w-full">
           <p className="text-[#454545] text-center text-lg font-normal leading-[26.28px] w-full max-sm:text-base my-[57px] py-0">
-            Fill out the form and we'll provide you with the latest product information, news, and business opportunities tailored to your needs. We look forward to hearing from you.
+            {t('contactFormDescription')}
           </p>
           
           <div className="flex justify-end items-start gap-6 w-full relative bg-[#E5E4E0] p-12 max-xl:p-8 rounded-[28px] max-lg:justify-center max-lg:p-8 max-md:p-6 max-sm:p-4 mx-0 mt-[56px] max-xl:px-0 px-[78px] py-0">
             <form onSubmit={handleSubmit} className="flex w-[544px] max-xl:w-full max-xl:max-w-lg flex-col items-start gap-6 max-lg:w-full max-lg:max-w-md max-lg:mx-auto mx-[48px] max-xl:mx-0 my-[50px]">
               <div className="flex flex-col items-start gap-6 w-full">
                 <div className="w-full">
-                  <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Name" className={`flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] ${errors.name ? 'border-red-500' : 'border-[#E5E4E0]'}`} aria-invalid={errors.name ? 'true' : 'false'} aria-describedby={errors.name ? 'name-error' : undefined} />
+                  <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder={t('namePlaceholder')} className={`flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] ${errors.name ? 'border-red-500' : 'border-[#E5E4E0]'}`} aria-invalid={errors.name ? 'true' : 'false'} aria-describedby={errors.name ? 'name-error' : undefined} />
                   {errors.name && <p id="name-error" className="text-red-500 text-sm mt-1 px-2" role="alert">
                       {errors.name}
                     </p>}
@@ -173,28 +175,28 @@ const ContactForm = () => {
               </div>
               
               <div className="w-full">
-                <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email" className={`flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] ${errors.email ? 'border-red-500' : 'border-[#E5E4E0]'}`} aria-invalid={errors.email ? 'true' : 'false'} aria-describedby={errors.email ? 'email-error' : undefined} />
+                <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder={t('emailPlaceholder')} className={`flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] ${errors.email ? 'border-red-500' : 'border-[#E5E4E0]'}`} aria-invalid={errors.email ? 'true' : 'false'} aria-describedby={errors.email ? 'email-error' : undefined} />
                 {errors.email && <p id="email-error" className="text-red-500 text-sm mt-1 px-2" role="alert">
                     {errors.email}
                   </p>}
               </div>
               
               <div className="w-full">
-                <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="Phone" className={`flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] ${errors.phone ? 'border-red-500' : 'border-[#E5E4E0]'}`} aria-invalid={errors.phone ? 'true' : 'false'} aria-describedby={errors.phone ? 'phone-error' : undefined} />
+                <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} placeholder={t('phonePlaceholder')} className={`flex h-[58px] items-center gap-2.5 w-full border bg-white px-8 py-[18px] rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base focus:outline-none focus:ring-2 focus:ring-[#DCB481] ${errors.phone ? 'border-red-500' : 'border-[#E5E4E0]'}`} aria-invalid={errors.phone ? 'true' : 'false'} aria-describedby={errors.phone ? 'phone-error' : undefined} />
                 {errors.phone && <p id="phone-error" className="text-red-500 text-sm mt-1 px-2" role="alert">
                     {errors.phone}
                   </p>}
               </div>
               
               <div className="w-full">
-                <textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Message" rows={4} className={`flex h-[134px] items-start gap-2.5 w-full border bg-white px-8 py-6 rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base resize-none focus:outline-none focus:ring-2 focus:ring-[#DCB481] ${errors.message ? 'border-red-500' : 'border-[#E5E4E0]'}`} aria-invalid={errors.message ? 'true' : 'false'} aria-describedby={errors.message ? 'message-error' : undefined} />
+                <textarea name="message" value={formData.message} onChange={handleInputChange} placeholder={t('messagePlaceholder')} rows={4} className={`flex h-[134px] items-start gap-2.5 w-full border bg-white px-8 py-6 rounded-[28px] border-solid max-sm:px-5 max-sm:py-4 text-lg font-normal leading-[26.28px] max-sm:text-base resize-none focus:outline-none focus:ring-2 focus:ring-[#DCB481] ${errors.message ? 'border-red-500' : 'border-[#E5E4E0]'}`} aria-invalid={errors.message ? 'true' : 'false'} aria-describedby={errors.message ? 'message-error' : undefined} />
                 {errors.message && <p id="message-error" className="text-red-500 text-sm mt-1 px-2" role="alert">
                     {errors.message}
                   </p>}
               </div>
               
               <button type="submit" disabled={isSubmitting} className="flex w-[264px] h-[52px] justify-center items-center gap-2.5 bg-[#90837A] px-8 py-[18px] rounded-[28px] max-sm:w-full text-white text-xl font-normal hover:bg-[#7a6f66] transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
-                {isSubmitting ? 'Sending...' : 'Send'}
+                {isSubmitting ? t('sending') : t('send')}
               </button>
             </form>
             
