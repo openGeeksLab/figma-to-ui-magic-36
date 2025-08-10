@@ -11,7 +11,7 @@ import ProductFilter from '@/components/ProductFilter';
 
 const Products = () => {
   const navigate = useNavigate();
-  const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
+  const plugin = React.useRef(Autoplay({ delay: 70000, stopOnInteraction: true }));
   const [products, setProducts] = useState<Tables<"products">[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("All Products");
   const [showFilter, setShowFilter] = useState(false);

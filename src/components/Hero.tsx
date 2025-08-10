@@ -5,7 +5,7 @@ import SampleRequestPopup from './SampleRequestPopup';
 
 const Hero = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
+    Autoplay({ delay: 470000, stopOnInteraction: true })
   );
 
   return (

@@ -90,7 +90,7 @@ const Index = () => {
             <article className="inline-flex flex-col items-start absolute w-full max-w-[684px] h-auto min-h-[345px] right-[105px] top-[270px] max-xl:right-8 max-xl:w-[calc(100%_-_64px)] max-md:w-[calc(100%_-_40px)] max-md:right-5 max-md:top-[150px] max-sm:w-[calc(100%_-_32px)] max-sm:right-4 max-sm:top-[100px]">
               <header className="flex flex-col items-start gap-[15px] w-full bg-white p-5 rounded-[28px_28px_0px_0px]">
                 <h2 className="text-[#454545] text-[32px] font-bold max-md:text-2xl max-sm:text-xl">
-                  <span className="text-[#454545]">Interior Wall Panel </span>
+                  <span className="text-[#454545]">Interior & Exterior Wall Panel </span>
                   <span className="text-[#DCB481]">Catalog</span>
                 </h2>
               </header>

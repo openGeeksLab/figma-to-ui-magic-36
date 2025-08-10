@@ -7,7 +7,7 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import Autoplay from "embla-carousel-autoplay";
 
 const Contact = () => {
-  const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
+  const plugin = React.useRef(Autoplay({ delay: 70000, stopOnInteraction: true }));
 
   const images = [
     {
