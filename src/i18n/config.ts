@@ -147,7 +147,8 @@ const resources = {
       // Catalog section
       "catalogTitle": "Interior & Exterior Wall Panel Catalog",
       "catalogHighlight": "Catalog",
-      "catalogDescription": "You can get the catalogue with our panels here."
+      "catalogDescription": "You can get the catalogue with our panels here.",
+      "downloadCatalog": "Download Catalog"
     }
   },
   sv: {
@@ -293,7 +294,8 @@ const resources = {
       // Catalog section
       "catalogTitle": "Katalog med Väggpaneler för Interiör och Exteriör",
       "catalogHighlight": "Katalog",
-      "catalogDescription": "Du kan hämta katalogen med våra paneler här."
+      "catalogDescription": "Du kan hämta katalogen med våra paneler här.",
+      "downloadCatalog": "Hämta Katalogen"
     }
   }
 };

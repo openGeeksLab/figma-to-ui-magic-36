@@ -110,7 +110,7 @@ const Index = () => {
               </p>
                 <SampleRequestPopup>
                   <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-xl font-normal hover:bg-[#c9a373] transition-colors">
-                    Download Catalog
+                    {t('downloadCatalog')}
                   </button>
                 </SampleRequestPopup>
               </div>
