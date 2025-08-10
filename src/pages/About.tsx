@@ -150,7 +150,7 @@ const About = () => {
     {t('sustainabilityParagraph2')} 
     </p>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-    The result? A wood that’s not only beautiful – it’s strong, dimensionally stable, and built to last, no matter the climate. We continuously work to reduce our climate footprint, e.g. by gradually switching to the latest technology and actively influencing our subcontractors
+    {t('sustainabilityParagraph3')}
     </p>
   </div>
   </div>
