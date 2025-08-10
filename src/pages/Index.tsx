@@ -74,9 +74,9 @@ const Index = () => {
                   </svg>
                 </div>
                 <div className="flex flex-col items-center gap-4">
-                  <h3 className="text-[#454545] text-center text-xl font-bold">Sustainability</h3>
+                  <h3 className="text-[#454545] text-center text-xl font-bold">Hållbarhet</h3>
                   <p className="text-[#454545] text-center text-base font-normal leading-[23.36px]">
-                  Sustainability that protects nature for generations ahead.
+                  Hållbarhet som skyddar naturen för kommande generationer.
                   </p>
                 </div>
               </article>
