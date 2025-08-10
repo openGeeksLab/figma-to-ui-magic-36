@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from 'react-i18next';
 import { X } from "lucide-react";
 
 interface SampleRequestPopupProps {
@@ -16,6 +17,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const { t } = useTranslation();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -50,8 +52,8 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
     // Basic validation
     if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
       toast({
-        title: "Error",
-        description: "Please fill in all required fields.",
+        title: t("sampleError"),
+        description: t("sampleFillRequired"),
       });
       return;
     }
@@ -59,8 +61,8 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
     // Email validation
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       toast({
-        title: "Error",
-        description: "Please enter a valid email address.",
+        title: t("sampleError"),
+        description: t("sampleValidEmail"),
       });
       return;
     }
@@ -69,8 +71,8 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
     const cleanPhone = formData.phone.replace(/\D/g, '');
     if (cleanPhone.length < 7 || cleanPhone.length > 15) {
       toast({
-        title: "Error",
-        description: "Please enter a valid phone number.",
+        title: t("sampleError"),
+        description: t("sampleValidPhone"),
       });
       return;
     }
@@ -95,8 +97,8 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
 
       if (response.ok) {
         toast({
-          title: "Sample Request Sent!",
-          description: "We'll send you a free sample within 2-3 business days.",
+          title: t("sampleRequestSent"),
+          description: t("sampleRequestDescription"),
         });
         
         // Reset form and close popup
@@ -104,14 +106,14 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
         setIsOpen(false);
       } else {
         toast({
-          title: "Error",
-          description: "Failed to send sample request. Please try again.",
+          title: t("sampleError"),
+          description: t("sampleRequestFailed"),
         });
       }
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Failed to send sample request. Please try again.",
+        title: t("sampleError"),
+        description: t("sampleRequestFailed"),
       });
     } finally {
       setIsSubmitting(false);
@@ -149,7 +151,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
                   onClick={handleClose}
                   className="w-8 h-8 min-w-[32px] min-h-[32px] flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors duration-200 focus:outline-none border-0 flex-shrink-0"
                   style={{ aspectRatio: '1/1' }}
-                  aria-label="Close sample request form"
+                  aria-label={t("sampleCloseAriaLabel")}
                 >
                   <X size={20} className="text-gray-600" />
                 </button>
@@ -172,7 +174,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
                     <input
                       type="text"
                       name="name"
-                      placeholder="Name"
+                      placeholder={t("sampleNamePlaceholder")}
                       value={formData.name}
                       onChange={handleInputChange}
                       required
@@ -182,7 +184,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
                     <input
                       type="email"
                       name="email"
-                      placeholder="Email"
+                      placeholder={t("sampleEmailPlaceholder")}
                       value={formData.email}
                       onChange={handleInputChange}
                       required
@@ -192,7 +194,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
                     <input
                       type="tel"
                       name="phone"
-                      placeholder="Phone"
+                      placeholder={t("samplePhonePlaceholder")}
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
@@ -201,7 +203,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
                     
                     <textarea
                       name="message"
-                      placeholder="Message"
+                      placeholder={t("sampleMessagePlaceholder")}
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={4}
@@ -213,7 +215,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
                       disabled={isSubmitting}
                       className="w-full h-14 bg-[#A0906B] hover:bg-[#8B7A5A] text-white rounded-full font-medium text-lg transition-colors mt-8"
                     >
-                      {isSubmitting ? "Sending..." : "Send"}
+                      {isSubmitting ? t("sampleSending") : t("sampleSend")}
                     </button>
                   </form>
                 </div>
