@@ -140,6 +140,9 @@ const Blog = () => {
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover max-md:h-[200px] rounded-[28px]"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  fetchPriority={index === 0 ? "high" : "low"}
+                  decoding="async"
                 />
               </CarouselItem>
             ))}
@@ -186,6 +189,8 @@ const Blog = () => {
                     src={post.main_picture_url} 
                     alt={post.title} 
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute top-3 left-3 bg-[#DCB481] text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium">
                     {getPostTypeName(post.post_type_id)}
