@@ -35,8 +35,17 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   highlightTranslationKey,
   descriptionTranslationKey
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const renderTitle = () => {
+    console.log('ContentSection debug:', {
+      useTranslationProp,
+      translationKey,
+      highlightTranslationKey,
+      currentLanguage: i18n.language,
+      translatedTitle: translationKey ? t(translationKey) : 'no key',
+      fallbackTitle: title
+    });
+    
     const displayTitle = useTranslationProp && translationKey ? t(translationKey) : title;
     const displayHighlight = useTranslationProp && highlightTranslationKey ? t(highlightTranslationKey) : highlightedWord;
     
