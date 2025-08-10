@@ -117,6 +117,7 @@ const resources = {
       "heroLine1": "Naturally sustainable,",
       "heroLine2": "Reliable,", 
       "heroLine3": "Sustainability through technology",
+      "heroDescription": "Inspired by revolutionary innovation. Experience the power of science with our ultra-safe, heat-treated wood. Through innovation, our wood combines advanced science and precision engineering for outstanding performance.",
       
       // Features
       "unmatchedStability": "Oöverträffad stabilitet",
@@ -286,6 +287,7 @@ const resources = {
       "heroLine1": "Naturligt hållbar,",
       "heroLine2": "Pålitlig,",
       "heroLine3": "Hållbar tack vare teknik",
+      "heroDescription": "Drivs av banbrytande teknik. Upplev vetenskapens styrka med vårt ultrasäkra, värmebehandlade trä. Genom innovation kombinerar vårt trä avancerad vetenskap och precisionsingenjörskap för enastående prestanda.",
       
       // Features
       "unmatchedStability": "Oöverträffad stabilitet",

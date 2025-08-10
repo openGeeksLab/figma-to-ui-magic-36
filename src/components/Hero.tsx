@@ -57,8 +57,7 @@ const Hero = () => {
         
         <div className="flex h-[157px] justify-center items-center gap-2.5 w-full bg-white p-5 rounded-[0px_28px_28px_0px]">
           <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-md:text-base max-sm:text-sm">
-          Drivs av banbrytande teknik. Upplev vetenskapens styrka med vårt ultrasäkra, värmebehandlade trä.
-          Genom innovation kombinerar vårt trä avancerad vetenskap och precisionsingenjörskap för enastående prestanda.
+          {t('heroDescription')}
           </p>
         </div>
         
