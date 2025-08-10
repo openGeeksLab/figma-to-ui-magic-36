@@ -116,7 +116,7 @@ const resources = {
       // Hero section
       "heroLine1": "Naturally sustainable,",
       "heroLine2": "Reliable, Sustainability", 
-      "heroLine3": "through technology",
+      "heroLine3": "Through technology",
       "heroDescription": "Inspired by revolutionary innovation. Experience the power of science with our ultra-safe, heat-treated wood. Through innovation, our wood combines advanced science and precision engineering for outstanding performance.",
       
       // Features
