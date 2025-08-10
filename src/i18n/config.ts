@@ -105,7 +105,11 @@ const resources = {
       
       // Blog page
       "ourBlog": "Our",
-      "blogHighlight": "Blog"
+      "blogHighlight": "Blog",
+      
+      // Index page
+      "stockholmHouse": "The House in the Heart of Stockholm's Archipelago",
+      "stockholmHouseHighlight": "in the Heart of Stockholm's Archipelago"
     }
   },
   sv: {
@@ -209,7 +213,11 @@ const resources = {
       
       // Blog page
       "ourBlog": "Vår",
-      "blogHighlight": "blogg"
+      "blogHighlight": "blogg",
+      
+      // Index page
+      "stockholmHouse": "Huset i hjärtat av Stockholms skärgård",
+      "stockholmHouseHighlight": "i hjärtat av Stockholms skärgård"
     }
   }
 };

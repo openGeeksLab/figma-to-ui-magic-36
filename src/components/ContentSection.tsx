@@ -1,5 +1,6 @@
 import React from 'react';
 import SampleRequestPopup from './SampleRequestPopup';
+import { useTranslation } from 'react-i18next';
 
 interface ContentSectionProps {
   title: string;
@@ -12,6 +13,9 @@ interface ContentSectionProps {
   showButton?: boolean;
   buttonText?: string;
   className?: string;
+  useTranslation?: boolean;
+  translationKey?: string;
+  highlightTranslationKey?: string;
 }
 
 const ContentSection: React.FC<ContentSectionProps> = ({
@@ -24,18 +28,25 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   reverse = false,
   showButton = true,
   buttonText = "Get a Free Sample",
-  className = ""
+  className = "",
+  useTranslation: useTranslationProp = false,
+  translationKey,
+  highlightTranslationKey
 }) => {
+  const { t } = useTranslation();
   const renderTitle = () => {
-    if (!highlightedWord) {
-      return <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">{title}</h2>;
+    const displayTitle = useTranslationProp && translationKey ? t(translationKey) : title;
+    const displayHighlight = useTranslationProp && highlightTranslationKey ? t(highlightTranslationKey) : highlightedWord;
+    
+    if (!displayHighlight) {
+      return <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">{displayTitle}</h2>;
     }
 
-    const parts = title.split(highlightedWord);
+    const parts = displayTitle.split(displayHighlight);
     return (
       <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">
         {parts[0]}
-        <span className="text-[#DCB481]">{highlightedWord}</span>
+        <span className="text-[#DCB481]">{displayHighlight}</span>
         {parts[1]}
       </h2>
     );
