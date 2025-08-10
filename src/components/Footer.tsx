@@ -64,10 +64,10 @@ const Footer = () => {
   <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">
     Email:&nbsp;
     <a
-      href="mailto:info@wood-panel.se"
+      href="mailto:info@thermotra.se"
       className="text-white font-bold hover:text-[#DCB481] transition-colors"
     >
-      info@wood-panel.se
+      info@thermotra.se
     </a>
   </span>
 </div>
@@ -76,7 +76,7 @@ const Footer = () => {
   <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">
     Phone:&nbsp;
     <a
-      href="tel:+46772227545"
+      href="tel:+4670494849"
       className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors"
     >
       +46 70 494 84 98
