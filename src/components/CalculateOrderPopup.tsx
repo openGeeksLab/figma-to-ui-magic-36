@@ -65,7 +65,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         const basePrice = isSpecialCladdingRoute ? 21.5 : 25;
         const kurs = 11.15;
         // setCalculatedPrice(square*basePrice*1.25*1.5*kurs);
-        if (surfaceTreatment === 'Brushed' || surfaceTreatment === 'Finely sawn') {
+        if (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn') {
           // setCalculatedPrice((basePrice+2.5)*1.25*1.5*kurs * squareValue);
            setCalculatedPrice(1000);
            
@@ -193,21 +193,21 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Form Section */}
               <div className="space-y-4">
-                {/* Surface Treatment Display */}
-                {(surfaceTreatment || productDetails?.surfaceTreatment) && (
+                Surface Treatment Display
+                {/* {(surfaceTreatment || productDetails?.surfaceTreatment) && (
                   <div className="w-full h-12 px-4 rounded-full border-0 bg-gray-100 flex items-center text-gray-700">
                     <span className="text-sm text-gray-500 mr-2">Surface:</span>
                     <span>{surfaceTreatment || productDetails?.surfaceTreatment}</span>
                   </div>
-                )}
+                )} */}
                 
                 {/* Color Name Display */}
-                {(toneColor || productDetails?.colorName) && (
+                {/* {(toneColor || productDetails?.colorName) && (
                   <div className="w-full h-12 px-4 rounded-full border-0 bg-gray-100 flex items-center text-gray-700">
                     <span className="text-sm text-gray-500 mr-2">Color:</span>
                     <span>{toneColor || productDetails?.colorName}</span>
                   </div>
-                )}
+                )} */}
                 
                 <div className="relative">
                   <Input
