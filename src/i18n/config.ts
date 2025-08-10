@@ -114,7 +114,7 @@ const resources = {
       "getFreeSample": "Get a Free Sample",
       
       // Features
-      "unmatchedStability": "Unmatched Stability",
+      "unmatchedStability": "Oöverträffad stabilitet",
       "enhancedDurability": "Förbättrad Hållbarhet", 
       "sustainabilityFeature": "Sustainability",
       "toxinFree": "Toxin-free and Chemical-free",
