@@ -92,7 +92,7 @@ const Footer = () => {
       <div className="flex justify-between items-center w-full px-0 py-6 max-md:flex-col max-md:gap-5 max-md:items-start max-sm:px-0 max-sm:py-5">
         <div className="flex items-center gap-8">
           <span className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-            © {currentYear} Thermowood
+            © {currentYear} NordicThermoträ
           </span>
         </div>
         <nav className="flex items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:gap-4" aria-label="Legal links">
