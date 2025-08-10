@@ -168,7 +168,7 @@ const resources = {
       // Surface treatments
       "surfaceTreatment": "Surface Treatment",
       "smoothPlaned": "Smooth planed",
-      "roughSawn": "Rough sawn",
+      "roughSawn": "Finely sawn",
       "brushed": "Brushed",
       "dimensions": "Dimensions",
       "toneColor": "Tone Color",
