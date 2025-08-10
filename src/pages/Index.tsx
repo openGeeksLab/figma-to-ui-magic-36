@@ -46,9 +46,9 @@ const Index = () => {
                   </svg>
                 </div>
                 <div className="flex flex-col items-center gap-4">
-                  <h3 className="text-[#454545] text-center text-xl font-bold">Enhanced Durability</h3>
+                  <h3 className="text-[#454545] text-center text-xl font-bold">Förbättrad Hållbarhet</h3>
                   <p className="text-[#454545] text-center text-base font-normal leading-[23.36px]">
-                  Enhanced durability to resist wear while preserving beauty.
+                  Förbättrad hållbarhet för att motstå slitage samtidigt som skönheten bevaras.
                   </p>
                 </div>
               </article>

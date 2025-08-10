@@ -115,7 +115,7 @@ const resources = {
       
       // Features
       "unmatchedStability": "Unmatched Stability",
-      "enhancedDurability": "Enhanced Durability", 
+      "enhancedDurability": "Förbättrad Hållbarhet", 
       "sustainabilityFeature": "Sustainability",
       "toxinFree": "Toxin-free and Chemical-free",
       "noResin": "No Resin",
