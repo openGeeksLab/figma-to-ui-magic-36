@@ -56,7 +56,11 @@ const resources = {
       "contactUsHighlight": "Us",
       "getInTouch": "Get",
       "getInTouchHighlight": "in touch",
-      "contactDescription": "Our team is dedicated to assisting you with any inquiries or concerns. We are committed to delivering exceptional customer service, high-quality products, and fast shipping."
+      "contactDescription": "Our team is dedicated to assisting you with any inquiries or concerns. We are committed to delivering exceptional customer service, high-quality products, and fast shipping.",
+      "callUs": "Call us",
+      "emailUs": "Email us",
+      "contactAddress": "Address",
+      "operatingHours": "Operating Hours"
     }
   },
   sv: {
@@ -111,7 +115,11 @@ const resources = {
       "contactUsHighlight": "oss",
       "getInTouch": "Kom i",
       "getInTouchHighlight": "kontakt",
-      "contactDescription": "Vårt team är engagerat i att hjälpa dig med alla frågor eller funderingar. Vi strävar efter att leverera enastående kundservice, produkter av högsta kvalitet och snabba leveranser."
+      "contactDescription": "Vårt team är engagerat i att hjälpa dig med alla frågor eller funderingar. Vi strävar efter att leverera enastående kundservice, produkter av högsta kvalitet och snabba leveranser.",
+      "callUs": "Ring oss",
+      "emailUs": "Mejla oss",
+      "contactAddress": "Adress",
+      "operatingHours": "Öppettider"
     }
   }
 };
