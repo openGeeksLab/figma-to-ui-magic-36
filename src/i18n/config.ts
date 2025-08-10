@@ -138,7 +138,11 @@ const resources = {
       // Enhanced wood section
       "enhanceWoodTitle": "We enhance wood naturally with heat, steam, and nothing else",
       "enhanceWoodHighlight": "wood naturally",
-      "enhanceWoodDescription": "Using only heat and steam, we've developed an exclusive method that enhances the natural properties of wood to an unprecedented level. By removing moisture from the wood cells, we've created a product that's not only durable and stable but also beautiful and sustainable, all without the use of any chemicals. Our technology is the result of years of research and development, which we're proud to say is the finest and most advanced in the market."
+      "enhanceWoodDescription": "Using only heat and steam, we've developed an exclusive method that enhances the natural properties of wood to an unprecedented level. By removing moisture from the wood cells, we've created a product that's not only durable and stable but also beautiful and sustainable, all without the use of any chemicals. Our technology is the result of years of research and development, which we're proud to say is the finest and most advanced in the market.",
+      
+      // Effortless installation section
+      "effortlessInstallationTitle": "Effortless installation with unparalleled lightweight superiority",
+      "effortlessInstallationHighlight": "unparalleled"
     }
   },
   sv: {
@@ -275,7 +279,11 @@ const resources = {
       // Enhanced wood section
       "enhanceWoodTitle": "Vi förbättrar trä naturligt med värme, ånga och inget annat",
       "enhanceWoodHighlight": "trä naturligt",
-      "enhanceWoodDescription": "Med endast värme och ånga har vi utvecklat en exklusiv metod som förbättrar träets naturliga egenskaper till en enastående nivå. Genom att avlägsna fukt från träcellerna har vi skapat en produkt som inte bara är hållbar och stabil utan också vacker och miljövänlig, allt utan användning av kemikalier. Vår teknologi är resultatet av års forskning och utveckling, som vi är stolta över att säga är den finaste och mest avancerade på marknaden."
+      "enhanceWoodDescription": "Med endast värme och ånga har vi utvecklat en exklusiv metod som förbättrar träets naturliga egenskaper till en enastående nivå. Genom att avlägsna fukt från träcellerna har vi skapat en produkt som inte bara är hållbar och stabil utan också vacker och miljövänlig, allt utan användning av kemikalier. Vår teknologi är resultatet av års forskning och utveckling, som vi är stolta över att säga är den finaste och mest avancerade på marknaden.",
+      
+      // Effortless installation section
+      "effortlessInstallationTitle": "Enkel installation med oöverträffad lätt överlägsenhet",
+      "effortlessInstallationHighlight": "oöverträffad"
     }
   }
 };
