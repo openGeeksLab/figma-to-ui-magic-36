@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import SampleRequestPopup from './SampleRequestPopup';
 
 interface ContentSectionProps {
@@ -23,9 +24,11 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   imageAlt = "",
   reverse = false,
   showButton = true,
-  buttonText = "Get a Free Sample",
+  buttonText,
   className = ""
 }) => {
+  const { t } = useTranslation();
+  const defaultButtonText = buttonText || t('nav.sample');
   const renderTitle = () => {
     if (!highlightedWord) {
       return <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl text-left">{title}</h2>;
@@ -55,7 +58,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
       {showButton && (
         <SampleRequestPopup>
           <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-base font-normal hover:bg-[#c9a373] transition-colors">
-            {buttonText}
+            {defaultButtonText}
           </button>
         </SampleRequestPopup>
       )}
