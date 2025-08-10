@@ -148,7 +148,11 @@ const resources = {
       "catalogTitle": "Interior & Exterior Wall Panel Catalog",
       "catalogHighlight": "Catalog",
       "catalogDescription": "You can get the catalogue with our panels here.",
-      "downloadCatalog": "Download Catalog"
+      "downloadCatalog": "Download Catalog",
+      
+      // Products page
+      "ourProducts": "Our Products",
+      "ourProductsHighlight": "Products"
     }
   },
   sv: {
@@ -295,7 +299,11 @@ const resources = {
       "catalogTitle": "Katalog med Väggpaneler för Interiör och Exteriör",
       "catalogHighlight": "Katalog",
       "catalogDescription": "Du kan hämta katalogen med våra paneler här.",
-      "downloadCatalog": "Hämta Katalogen"
+      "downloadCatalog": "Hämta Katalogen",
+      
+      // Products page
+      "ourProducts": "Våra Produkter",
+      "ourProductsHighlight": "Produkter"
     }
   }
 };

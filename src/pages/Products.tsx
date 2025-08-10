@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
@@ -11,6 +12,7 @@ import ProductFilter from '@/components/ProductFilter';
 import { Loader2 } from "lucide-react";
 
 const Products = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const plugin = React.useRef(Autoplay({ delay: 70000, stopOnInteraction: true }));
   const [products, setProducts] = useState<Tables<"products">[]>([]);
@@ -131,7 +133,7 @@ const Products = () => {
         
         <div className="absolute bottom-8 left-16 max-md:left-10 max-sm:bottom-4 max-sm:left-5 z-10">
           <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-[22px] bg-white px-5 py-3 max-sm:px-3 max-sm:py-2 rounded-[28px] leading-tight">
-            Our <span className="text-[#DCB481]">Products</span>
+            {t('ourProducts').split(t('ourProductsHighlight'))[0]}<span className="text-[#DCB481]">{t('ourProductsHighlight')}</span>
           </h1>
         </div>
       </section>
