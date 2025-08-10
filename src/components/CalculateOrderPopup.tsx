@@ -60,7 +60,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         // const isSpecialRoute = ['/cladding/f-9', '/cladding/f-7'].includes(location.pathname);//Deco must be added to the list
         const basePrice = isSpecialCladdingRoute ? 21.5 : 25;
         const kurs = 11.15;
-        setCalculatedPrice(basePrice*1.25*1.5*kurs);
+        setCalculatedPrice(square*basePrice*1.25*1.5*kurs);
       } 
       else {
         // Clear square and price when either field is empty or invalid
