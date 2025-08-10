@@ -99,7 +99,7 @@ const About = () => {
       {t('ourValuesPrefix')} <span className="text-[#DCB481]">{t('ourValuesHighlight')}</span>
     </h2>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-    Our core values are Commitment, Quality and Responsibility in everything we do. Our core values describe how we act towards each other and towards our customers, suppliers, and other partners.
+    {t('valuesParagraph')}
     </p>
     
   </div>

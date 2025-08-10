@@ -38,7 +38,8 @@ const resources = {
       "ourVisionHighlight": "Vision",
       "visionParagraph": "Our Vision is to be the leading provider of premium interior and exterior wood wall panels, inspiring sustainable and innovative design solutions that transform indoor and outdoor spaces in the Nordic countries.",
       "ourValuesPrefix": "Our",
-      "ourValuesHighlight": "Values"
+      "ourValuesHighlight": "Values",
+      "valuesParagraph": "Our core values are Commitment, Quality and Responsibility in everything we do. Our core values describe how we act towards each other and towards our customers, suppliers, and other partners."
     }
   },
   sv: {
@@ -75,7 +76,8 @@ const resources = {
       "ourVisionHighlight": "vision",
       "visionParagraph": "Vår vision är att vara den ledande leverantören av interiöra och exteriöra träväggspaneler av högsta kvalitet, som inspirerar till hållbara och innovativa designlösningar som förvandlar inomhus- och utomhusmiljöer i Norden",
       "ourValuesPrefix": "Våra",
-      "ourValuesHighlight": "värderingar"
+      "ourValuesHighlight": "värderingar",
+      "valuesParagraph": "Våra kärnvärden är Engagemang, Kvalitet och Ansvar i allt vi gör. Våra kärnvärden beskriver hur vi agerar gentemot varandra och gentemot våra kunder, leverantörer och andra samarbetspartners."
     }
   }
 };
