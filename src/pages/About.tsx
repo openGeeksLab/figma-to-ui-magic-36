@@ -84,7 +84,7 @@ const About = () => {
   </div>
   <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full mr-36 max-md:mr-0">
     <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
-      Our <span className="text-[#DCB481]">Vision</span>
+      {t('ourVisionPrefix')} <span className="text-[#DCB481]">{t('ourVisionHighlight')}</span>
     </h2>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
     Our Vision is to be the leading provider of premium interior and exterior wood wall panels, inspiring sustainable and innovative design solutions that transform indoor and outdoor spaces in the Nordic countries.
