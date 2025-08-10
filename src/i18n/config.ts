@@ -28,7 +28,10 @@ const resources = {
       
       // About page
       "aboutUs": "About",
-      "aboutUsHighlight": "Us"
+      "aboutUsHighlight": "Us",
+      "simplyMadePrefix": "Simply",
+      "simplyMadeHighlight": "made",
+      "simplyMadeSuffix": "of wood"
     }
   },
   sv: {
@@ -55,7 +58,10 @@ const resources = {
       
       // About page
       "aboutUs": "Om",
-      "aboutUsHighlight": "Oss"
+      "aboutUsHighlight": "Oss",
+      "simplyMadePrefix": "Helt",
+      "simplyMadeHighlight": "enkelt gjord",
+      "simplyMadeSuffix": "av trä"
     }
   }
 };

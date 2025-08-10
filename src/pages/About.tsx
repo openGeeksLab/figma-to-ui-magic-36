@@ -60,7 +60,7 @@ const About = () => {
 <section className="w-full flex justify-between items-start px-8 py-24 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
   <div className="flex-1 flex items-start max-md:w-full">
     <h1 className="text-[#454545] text-[42px] font-bold leading-tight max-md:text-[32px] max-sm:text-2xl text-left">
-      Simply <span className="text-[#DCB481]">made</span><br />of wood
+      {t('simplyMadePrefix')} <span className="text-[#DCB481]">{t('simplyMadeHighlight')}</span><br />{t('simplyMadeSuffix')}
     </h1>
   </div>
   <div className="flex-1 flex flex-col gap-6 max-md:w-full">
