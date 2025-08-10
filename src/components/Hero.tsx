@@ -42,9 +42,9 @@ const Hero = () => {
       <div className="flex w-full max-w-[685px] flex-col justify-end items-start absolute h-auto min-h-[425px] left-10 top-[190px] max-[1400px]:left-4 max-[1400px]:w-[calc(100%_-_32px)] max-xl:left-8 max-xl:w-[calc(100%_-_64px)] max-lg:left-6 max-lg:w-[calc(100%_-_48px)] max-md:w-[90%] max-md:h-auto max-md:left-5 max-md:top-[100px] max-sm:w-[calc(100%_-_32px)] max-sm:left-4 max-sm:bottom-10 max-sm:top-auto z-10">
         <div className="flex flex-col items-start gap-[15px] bg-white p-5 rounded-[28px_28px_0px_0px]">
           <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
-            <span className="text-[#454545]">Sustainable by nature,</span>
+            <span className="text-[#454545]">Naturally sustainable,</span>
             <br />
-            <span className="text-[#DCB481]">guaranteed</span>
+            <span className="text-[#DCB481]">trusted</span>
             <br />
             <span className="text-[#454545]">durable by technology</span>
           </h1>
@@ -52,7 +52,7 @@ const Hero = () => {
         
         <div className="flex h-[157px] justify-center items-center gap-2.5 w-full bg-white p-5 rounded-[0px_28px_28px_0px]">
           <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-md:text-base max-sm:text-sm">
-            Proin felis metus, cursus sed justo at, dignissim pellentesque tortor. Praesent cursus felis diam, eu venenatis sem faucibus vitae. Sed varius augue ex, ac pulvinar mauris lobortis in. Aliquam erat volutpat. Fusce ex justo, eleifend a tristique ultricies, ultrices ut lectus. Mauris nec magna dolor. Duis eget orci ut augue ultrices finibus.
+          Powered by cutting-edge technology. Experience the strength of science with our ultra-stable, thermally modified wood
           </p>
         </div>
         
