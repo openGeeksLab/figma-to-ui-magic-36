@@ -123,7 +123,7 @@ const About = () => {
   </div>
   <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full mr-36 max-md:mr-0">
       <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
-      We <span className="text-[#DCB481]">Provide</span>
+      {t('weProvidePrefix')} <span className="text-[#DCB481]">{t('weProvideHighlight')}</span>
     </h2>
     <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
   <ul className="list-disc ml-6">
