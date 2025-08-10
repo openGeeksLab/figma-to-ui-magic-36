@@ -127,10 +127,10 @@ const About = () => {
     </h2>
     <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
   <ul className="list-disc ml-6">
-    <li>Tailored solutions that match your architectural style.</li>
-    <li>Expert advice to guide you from concept to completion.</li>
-    <li>Skilled installation ensuring perfect alignment and durability.</li>
-    <li>Keeping your wood panels looking their best year after year.</li>
+    <li>{t('provideItem1')}</li>
+    <li>{t('provideItem2')}</li>
+    <li>{t('provideItem3')}</li>
+    <li>{t('provideItem4')}</li>
   </ul>
 </div>
   </div>
