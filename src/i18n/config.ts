@@ -157,7 +157,15 @@ const resources = {
       // Product types
       "cladding": "Cladding",
       "decking": "Decking", 
-      "allProducts": "All Products"
+      "allProducts": "All Products",
+      
+      // Surface treatments
+      "surfaceTreatment": "Surface Treatment",
+      "smoothPlaned": "Smooth planed",
+      "roughSawn": "Rough sawn",
+      "brushed": "Brushed",
+      "dimensions": "Dimensions",
+      "toneColor": "Tone Color"
     }
   },
   sv: {
@@ -313,7 +321,15 @@ const resources = {
       // Product types
       "cladding": "Beklädnad",
       "decking": "Däck",
-      "allProducts": "Alla Produkter"
+      "allProducts": "Alla Produkter",
+      
+      // Surface treatments
+      "surfaceTreatment": "Ytbehandling",
+      "smoothPlaned": "Slät hyvlad",
+      "roughSawn": "Grovt sågad",
+      "brushed": "Borstad",
+      "dimensions": "Dimensioner",
+      "toneColor": "Tonfärg"
     }
   }
 };

@@ -261,7 +261,7 @@ const ProductDetail = () => {
               {/* Surface Treatment */}
               <div>
                 <label className="block text-lg font-semibold text-[#454545] mb-2">
-                  Surface Treatment
+                  {t('surfaceTreatment')}
                 </label>
                 <div className="relative">
                   <select 
@@ -269,9 +269,9 @@ const ProductDetail = () => {
                     onChange={(e) => setSelectedSurfaceTreatment(e.target.value)}
                     className="w-full p-3 border border-gray-300 rounded-lg appearance-none bg-white focus:outline-none focus:ring-2 focus:ring-[#DCB481]"
                   >
-                    <option value="Smooth planed">Smooth planed</option>
-                    <option value="Rough sawn">Rough sawn</option>
-                    <option value="Brushed">Brushed</option>
+                    <option value="Smooth planed">{t('smoothPlaned')}</option>
+                    <option value="Rough sawn">{t('roughSawn')}</option>
+                    <option value="Brushed">{t('brushed')}</option>
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
                 </div>
@@ -280,7 +280,7 @@ const ProductDetail = () => {
               {/* Dimensions */}
               <div>
                 <label className="block text-lg font-semibold text-[#454545] mb-2">
-                  Dimensions
+                  {t('dimensions')}
                 </label>
                 <div className="relative">
                   <select 
@@ -299,7 +299,7 @@ const ProductDetail = () => {
               {/* Tone Color */}
               <div>
                 <h3 className="text-lg font-semibold text-[#454545] mb-4">
-                  Tone Color: <span className="text-gray-600">{colorNames[selectedColorSwatch]}</span>
+                  {t('toneColor')}: <span className="text-gray-600">{colorNames[selectedColorSwatch]}</span>
                 </h3>
                 <div className="grid grid-cols-3 max-sm:grid-cols-3 gap-1 max-sm:gap-0.5 w-full max-w-[50%] overflow-hidden max-sm:scale-50 max-sm:origin-left">
                    {/* First row - Wood texture images */}
