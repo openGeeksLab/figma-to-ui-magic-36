@@ -16,6 +16,7 @@ interface ContentSectionProps {
   useTranslation?: boolean;
   translationKey?: string;
   highlightTranslationKey?: string;
+  descriptionTranslationKey?: string;
 }
 
 const ContentSection: React.FC<ContentSectionProps> = ({
@@ -31,7 +32,8 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   className = "",
   useTranslation: useTranslationProp = false,
   translationKey,
-  highlightTranslationKey
+  highlightTranslationKey,
+  descriptionTranslationKey
 }) => {
   const { t } = useTranslation();
   const renderTitle = () => {
@@ -56,7 +58,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
     <div className={`flex flex-col items-start gap-6 flex-1 max-md:w-full ${reverse ? 'ml-36 max-lg:ml-24 max-md:ml-0' : 'mr-36 max-lg:mr-24 max-md:mr-0'}`}>
       {renderTitle()}
       <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-        {description}
+        {useTranslationProp && descriptionTranslationKey ? t(descriptionTranslationKey) : description}
       </div>
       {additionalDescription && (
         <div className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
