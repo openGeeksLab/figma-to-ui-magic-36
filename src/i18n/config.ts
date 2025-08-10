@@ -45,7 +45,8 @@ const resources = {
       "provideItem1": "Tailored solutions that match your architectural style.",
       "provideItem2": "Expert advice to guide you from concept to completion.",
       "provideItem3": "Skilled installation ensuring perfect alignment and durability.",
-      "provideItem4": "Keeping your wood panels looking their best year after year."
+      "provideItem4": "Keeping your wood panels looking their best year after year.",
+      "sustainability": "Sustainability"
     }
   },
   sv: {
@@ -89,7 +90,8 @@ const resources = {
       "provideItem1": "Skräddarsydda lösningar som matchar din arkitektoniska stil.",
       "provideItem2": "Expertråd som vägleder dig från idé till färdigställande.",
       "provideItem3": "Skicklig installation med perfekt inriktning och hållbarhet.",
-      "provideItem4": "Vi ser till att dina träpaneler ser bäst ut år efter år."
+      "provideItem4": "Vi ser till att dina träpaneler ser bäst ut år efter år.",
+      "sustainability": "Hållbarhet"
     }
   }
 };
