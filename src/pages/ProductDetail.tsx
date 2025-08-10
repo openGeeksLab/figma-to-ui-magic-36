@@ -448,7 +448,14 @@ const ProductDetail = () => {
                </div>
 
               {/* Calculate Price Button */}
-              <CalculateOrderPopup>
+              <CalculateOrderPopup
+                productDetails={{
+                  productName: product.name,
+                  surfaceTreatment: selectedSurfaceTreatment,
+                  dimension: selectedDimension,
+                  colorName: colorNames[selectedColorSwatch]
+                }}
+              >
                 <button className="w-full bg-[#DCB481] text-white py-4 px-6 rounded-lg font-semibold hover:bg-[#C8A373] transition-colors text-lg">
                   Calculate Price
                 </button>
@@ -465,7 +472,14 @@ const ProductDetail = () => {
           <p className="text-lg text-gray-600 leading-relaxed mb-4">
             Luna Trio 26x92 is a sophisticated 3D cladding of Nordic Pine. It creates a visually elegant and modern wood surface. Luna Trio is highly suitable for facades, interiors, and other decorative surfaces where a sustainable and chemical-free wood surface is desired. Additionally, if left untreated outside, it develops a beautiful naturally greyed patina.
           </p>
-          <CalculateOrderPopup>
+          <CalculateOrderPopup
+            productDetails={{
+              productName: product.name,
+              surfaceTreatment: selectedSurfaceTreatment,
+              dimension: selectedDimension,
+              colorName: colorNames[selectedColorSwatch]
+            }}
+          >
             <button className="bg-white text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-50 transition-colors">
               Fill the Form
             </button>

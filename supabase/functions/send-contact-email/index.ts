@@ -14,6 +14,16 @@ interface ContactEmailRequest {
   email: string;
   phone: string;
   message: string;
+  productDetails?: {
+    productName?: string;
+    surfaceTreatment?: string;
+    dimension?: string;
+    colorName?: string;
+    length?: string;
+    width?: string;
+    square?: string;
+    estimatedPrice?: string;
+  };
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -23,7 +33,7 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, phone, message }: ContactEmailRequest = await req.json();
+    const { name, email, phone, message, productDetails }: ContactEmailRequest = await req.json();
 
     console.log("Processing contact form submission:", { name, email, phone });
 
@@ -64,6 +74,19 @@ const handler = async (req: Request): Promise<Response> => {
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Phone:</strong> ${phone}</p>
+            ${productDetails ? `
+            <h3 style="color: #454545; margin-top: 20px;">Product Details:</h3>
+            <div style="background-color: #ffffff; padding: 15px; border-radius: 5px; margin: 10px 0;">
+              ${productDetails.productName ? `<p><strong>Product:</strong> ${productDetails.productName}</p>` : ''}
+              ${productDetails.surfaceTreatment ? `<p><strong>Surface Treatment:</strong> ${productDetails.surfaceTreatment}</p>` : ''}
+              ${productDetails.dimension ? `<p><strong>Dimension:</strong> ${productDetails.dimension}</p>` : ''}
+              ${productDetails.colorName ? `<p><strong>Color:</strong> ${productDetails.colorName}</p>` : ''}
+              ${productDetails.length ? `<p><strong>Length:</strong> ${productDetails.length} mm</p>` : ''}
+              ${productDetails.width ? `<p><strong>Width:</strong> ${productDetails.width} mm</p>` : ''}
+              ${productDetails.square ? `<p><strong>Square Meters:</strong> ${productDetails.square} m²</p>` : ''}
+              ${productDetails.estimatedPrice ? `<p><strong>Estimated Price:</strong> ${productDetails.estimatedPrice}</p>` : ''}
+            </div>
+            ` : ''}
             <p><strong>Message:</strong></p>
             <p style="background-color: white; padding: 15px; border-radius: 5px; border-left: 4px solid #DCB481;">${message}</p>
           </div>

@@ -13,9 +13,15 @@ import { X } from "lucide-react";
 
 interface CalculateOrderPopupProps {
   children: React.ReactNode;
+  productDetails?: {
+    productName: string;
+    surfaceTreatment: string;
+    dimension: string;
+    colorName: string;
+  };
 }
 
-const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) => {
+const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, productDetails }) => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -70,11 +76,50 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children }) =
     });
   };
 
-  const handleContactUs = () => {
-    toast({
-      title: "Contact Request",
-      description: "We'll get back to you with an exact calculation.",
-    });
+  const handleContactUs = async () => {
+    try {
+      const emailData = {
+        name: "Price Calculation Request",
+        email: "info@nordicthermotra.se",
+        phone: "Not provided",
+        message: "Customer has requested a price calculation for the selected product configuration.",
+        productDetails: {
+          productName: productDetails?.productName,
+          surfaceTreatment: productDetails?.surfaceTreatment,
+          dimension: productDetails?.dimension,
+          colorName: productDetails?.colorName,
+          length: formData.length,
+          width: formData.width,
+          square: formData.square,
+          estimatedPrice: calculatedPrice ? `${calculatedPrice.toFixed(0)} SEK` : undefined
+        }
+      };
+
+      const response = await fetch('https://xksrscyjywtnmtwmgihm.supabase.co/functions/v1/send-contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emailData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Request Sent",
+          description: "We'll get back to you with an exact calculation.",
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to send request. Please try again.",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send request. Please try again.",
+      });
+    }
     setIsOpen(false);
   };
 
