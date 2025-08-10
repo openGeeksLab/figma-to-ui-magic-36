@@ -65,18 +65,26 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         const basePrice = isSpecialCladdingRoute ? 21.5 : 25;
         const kurs = 11.15;
         // setCalculatedPrice(square*basePrice*1.25*1.5*kurs);
-        if ((productDetails?.colorName !== 'Unstained wood' && productDetails?.colorName !== 'Natural') && 
-          (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn')) {
+        if (
+          productDetails?.colorName !== 'Unstained wood' &&
+          productDetails?.colorName !== 'Natural' &&
+          (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn')
+        ) {
             // Якщо колір "Colors" і обробка "Brushed" або "Finely sawn"
               // setCalculatedPrice((basePrice + 2.5) * 1.35 * 1.5 * kurs * square);
               setCalculatedPrice(1000);
         } 
-        else if ((productDetails?.colorName !== 'Unstained wood' && productDetails?.colorName === 'Natural')) {
+        else if (
+          productDetails?.colorName !== 'Unstained wood' &&
+          productDetails?.colorName !== 'Natural'
+        ) {
             // Якщо тільки колір "Colors"
               // setCalculatedPrice(basePrice * 1.35 * 1.5 * kurs * square);
               setCalculatedPrice(2000);
         } 
-        else if (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn') {
+        else if (
+          productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn'
+        ) {
             // Якщо тільки обробка "Brushed" або "Finely sawn"
               // setCalculatedPrice((basePrice + 2.5) * 1.25 * 1.5 * kurs * square);
               setCalculatedPrice(3000);
