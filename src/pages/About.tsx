@@ -68,7 +68,7 @@ const About = () => {
     {t('aboutFirstParagraph')}
     </p>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-    We believe in creating interior and outdoor environments that not only look stunning but also stand the test of time. Whether you're enhancing a residential property or a commercial facade, our team is here to bring your vision to life with expert guidance and superior products.
+    {t('aboutSecondParagraph')}
     </p>
   </div>
 </section>

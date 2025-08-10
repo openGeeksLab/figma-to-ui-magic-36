@@ -32,7 +32,8 @@ const resources = {
       "simplyMadePrefix": "Simply",
       "simplyMadeHighlight": "made",
       "simplyMadeSuffix": "of wood",
-      "aboutFirstParagraph": "At Nordic Thermoträ, we are passionate about transforming spaces with the natural beauty and durability of heat-treated wood. With years of experience in the industry, we specialize in providing high-quality, sustainable wood solutions tailored to meet the unique needs of each client."
+      "aboutFirstParagraph": "At Nordic Thermoträ, we are passionate about transforming spaces with the natural beauty and durability of heat-treated wood. With years of experience in the industry, we specialize in providing high-quality, sustainable wood solutions tailored to meet the unique needs of each client.",
+      "aboutSecondParagraph": "We believe in creating interior and outdoor environments that not only look stunning but also stand the test of time. Whether you're enhancing a residential property or a commercial facade, our team is here to bring your vision to life with expert guidance and superior products."
     }
   },
   sv: {
@@ -63,7 +64,8 @@ const resources = {
       "simplyMadePrefix": "Helt",
       "simplyMadeHighlight": "enkelt gjord",
       "simplyMadeSuffix": "av trä",
-      "aboutFirstParagraph": "På Nordic Thermoträ AB brinner vi för att förvandla utrymmen med den naturliga skönheten och hållbarheten av värmebehandlat trä. Med många års erfarenhet i branschen specialiserar vi oss på att tillhandahålla högkvalitativa, hållbara trälösningar som är skräddarsydda för att möta varje kunds unika behov."
+      "aboutFirstParagraph": "På Nordic Thermoträ AB brinner vi för att förvandla utrymmen med den naturliga skönheten och hållbarheten av värmebehandlat trä. Med många års erfarenhet i branschen specialiserar vi oss på att tillhandahålla högkvalitativa, hållbara trälösningar som är skräddarsydda för att möta varje kunds unika behov.",
+      "aboutSecondParagraph": "Vi tror på att skapa interiör- och utomhusmiljöer som inte bara ser fantastiska ut utan också står sig över tid. Oavsett om du vill försköna en bostadsfastighet eller en kommersiell fasad finns vårt team här för att förverkliga din vision med hjälp av expertrådgivning och överlägsna produkter."
     }
   }
 };
