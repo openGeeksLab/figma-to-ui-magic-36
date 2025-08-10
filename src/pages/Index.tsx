@@ -43,9 +43,9 @@ const Index = () => {
                   </svg>
                 </div>
                 <div className="flex flex-col items-center gap-4">
-                  <h3 className="text-[#454545] text-center text-xl font-bold">Unmatched Stability</h3>
+                  <h3 className="text-[#454545] text-center text-xl font-bold">Enhanced Durability</h3>
                   <p className="text-[#454545] text-center text-base font-normal leading-[23.36px]">
-                    Vivamus scelerisque lacus eget ligula vestibulum mattis.
+                  Enhanced durability to resist wear while preserving beauty.
                   </p>
                 </div>
               </article>
@@ -59,7 +59,7 @@ const Index = () => {
                 <div className="flex flex-col items-center gap-4">
                   <h3 className="text-[#454545] text-center text-xl font-bold">Unmatched Stability</h3>
                   <p className="text-[#454545] text-center text-base font-normal leading-[23.36px]">
-                    Vivamus scelerisque lacus eget ligula vestibulum mattis.
+                  Unrivaled stability to keep your wood steady and secure.
                   </p>
                 </div>
               </article>
@@ -71,9 +71,9 @@ const Index = () => {
                   </svg>
                 </div>
                 <div className="flex flex-col items-center gap-4">
-                  <h3 className="text-[#454545] text-center text-xl font-bold">Unmatched Stability</h3>
+                  <h3 className="text-[#454545] text-center text-xl font-bold">Sustainability</h3>
                   <p className="text-[#454545] text-center text-base font-normal leading-[23.36px]">
-                    Vivamus scelerisque lacus eget ligula vestibulum mattis.
+                  Sustainability that protects nature for generations ahead.
                   </p>
                 </div>
               </article>
