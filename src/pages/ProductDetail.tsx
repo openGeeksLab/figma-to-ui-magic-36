@@ -270,7 +270,7 @@ const ProductDetail = () => {
                     className="w-full p-3 border border-gray-300 rounded-lg appearance-none bg-white focus:outline-none focus:ring-2 focus:ring-[#DCB481]"
                   >
                     <option value="Smooth planed">{t('smoothPlaned')}</option>
-                    <option value="Rough sawn">{t('roughSawn')}</option>
+                    <option value="Finely sawn">{t('roughSawn')}</option>
                     <option value="Brushed">{t('brushed')}</option>
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
