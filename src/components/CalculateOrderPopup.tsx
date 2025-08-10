@@ -71,7 +71,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
            
          }
          else {
-         setCalculatedPrice(2000);
+         setCalculatedPrice(surfaceTreatment);
          }
       } 
       else {
