@@ -101,7 +101,11 @@ const resources = {
       "galleryHighlight": "Gallery",
       "ourProjects": "Our",
       "projectsHighlight": "Projects",
-      "galleryDescription": "Explore our stunning collection of wooden panel projects. Each design showcases the natural beauty and versatility of wood in modern architecture."
+      "galleryDescription": "Explore our stunning collection of wooden panel projects. Each design showcases the natural beauty and versatility of wood in modern architecture.",
+      
+      // Blog page
+      "ourBlog": "Our",
+      "blogHighlight": "Blog"
     }
   },
   sv: {
@@ -201,7 +205,11 @@ const resources = {
       "galleryHighlight": "galleri",
       "ourProjects": "Våra",
       "projectsHighlight": "projekt",
-      "galleryDescription": "Utforska vår fantastiska samling av träpanelprojekt. Varje design visar träets naturliga skönhet och mångsidighet i modern arkitektur."
+      "galleryDescription": "Utforska vår fantastiska samling av träpanelprojekt. Varje design visar träets naturliga skönhet och mångsidighet i modern arkitektur.",
+      
+      // Blog page
+      "ourBlog": "Vår",
+      "blogHighlight": "blogg"
     }
   }
 };

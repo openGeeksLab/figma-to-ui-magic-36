@@ -7,6 +7,7 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import Autoplay from "embla-carousel-autoplay";
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
+import { useTranslation } from 'react-i18next';
 
 interface BlogPost {
   id: string;
@@ -24,6 +25,7 @@ interface PostType {
 }
 
 const Blog = () => {
+  const { t } = useTranslation();
   const plugin = React.useRef(Autoplay({ delay: 70000, stopOnInteraction: true }));
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [postTypes, setPostTypes] = useState<PostType[]>([]);
@@ -146,7 +148,7 @@ const Blog = () => {
         
         <div className="absolute bottom-8 left-16 max-md:left-10 max-sm:bottom-4 max-sm:left-5 z-10">
           <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-[22px] bg-white px-5 py-3 max-sm:px-3 max-sm:py-2 rounded-[28px] leading-tight">
-            Our <span className="text-[#DCB481]">Blog</span>
+            {t('ourBlog')} <span className="text-[#DCB481]">{t('blogHighlight')}</span>
           </h1>
         </div>
       </section>
