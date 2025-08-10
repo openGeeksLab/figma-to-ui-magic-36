@@ -59,7 +59,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
             </div>
 
             {/* Placeholder columns for future filters */}
-            <div>
+            {/* <div>
               <h4 className="text-sm font-medium text-[#454545] mb-3">Something</h4>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
@@ -87,9 +87,9 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                   </label>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div>
+            {/* <div>
               <h4 className="text-sm font-medium text-[#454545] mb-3">Something</h4>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
@@ -105,9 +105,9 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                   </label>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div>
+            {/* <div>
               <h4 className="text-sm font-medium text-[#454545] mb-3">Something</h4>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
@@ -123,7 +123,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                   </label>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Mobile Accordion Layout */}
@@ -155,7 +155,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="category1" className="border-none">
+              {/* <AccordionItem value="category1" className="border-none">
                 <AccordionTrigger className="text-sm font-medium text-[#454545] py-2 hover:no-underline">
                   Something
                 </AccordionTrigger>
@@ -187,9 +187,9 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                     </div>
                   </div>
                 </AccordionContent>
-              </AccordionItem>
+              </AccordionItem> */}
 
-              <AccordionItem value="category2" className="border-none">
+              {/* <AccordionItem value="category2" className="border-none">
                 <AccordionTrigger className="text-sm font-medium text-[#454545] py-2 hover:no-underline">
                   Something
                 </AccordionTrigger>
@@ -209,9 +209,9 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                     </div>
                   </div>
                 </AccordionContent>
-              </AccordionItem>
+              </AccordionItem> */}
 
-              <AccordionItem value="category3" className="border-none">
+              {/* <AccordionItem value="category3" className="border-none">
                 <AccordionTrigger className="text-sm font-medium text-[#454545] py-2 hover:no-underline">
                   Something
                 </AccordionTrigger>
@@ -231,7 +231,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                     </div>
                   </div>
                 </AccordionContent>
-              </AccordionItem>
+              </AccordionItem> */}
             </Accordion>
           </div>
         </div>
