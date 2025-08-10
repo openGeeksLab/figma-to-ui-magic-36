@@ -501,7 +501,7 @@ const ProductDetail = () => {
         <div className="mx-auto max-w-full">
           <h2 className="text-2xl md:text-4xl font-bold text-[#454545] mb-8 max-sm:text-xl break-words">Personalised orders</h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-4">
-            Luna Trio 26x92 is a sophisticated 3D cladding of Nordic Pine. It creates a visually elegant and modern wood surface. Luna Trio is highly suitable for facades, interiors, and other decorative surfaces where a sustainable and chemical-free wood surface is desired. Additionally, if left untreated outside, it develops a beautiful naturally greyed patina.
+            Nordic Thermoträ is a sophisticated 3D cladding of Nordic Pine. It creates a visually elegant and modern wood surface. Thermoträ is highly suitable for facades, interiors, and other decorative surfaces where a sustainable and chemical-free wood surface is desired. Additionally, if left untreated outside, it develops a beautiful naturally greyed patina.
           </p>
           <CalculateOrderPopup
             productDetails={{
