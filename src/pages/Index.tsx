@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
@@ -9,7 +10,9 @@ import ContactForm from '@/components/ContactForm';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import SampleRequestPopup from '@/components/SampleRequestPopup';
+
 const Index = () => {
+  const { t } = useTranslation();
   return <div className="flex w-full max-w-full flex-col items-center mx-auto my-0 min-h-screen overflow-x-hidden">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" />
       
@@ -28,9 +31,9 @@ const Index = () => {
           <section className="flex flex-col items-center gap-16 w-full px-8 py-24 max-xl:px-6 max-lg:px-6 max-md:px-5 max-md:py-[60px] max-sm:px-4 max-sm:py-10">
             <header className="w-full max-w-[778px] text-[#454545] text-center text-[42px] font-bold max-md:w-full max-md:text-[32px] max-sm:text-2xl">
               <h2>
-                <span className="text-[#454545]">We enhance </span>
-                <span className="text-[#DCB481]">wood naturally </span>
-                <span className="text-[#454545]">with heat, steam, and nothing else</span>
+                <span className="text-[#454545]">{t('enhanceWoodTitle').split(t('enhanceWoodHighlight'))[0]}</span>
+                <span className="text-[#DCB481]">{t('enhanceWoodHighlight')} </span>
+                <span className="text-[#454545]">{t('enhanceWoodTitle').split(t('enhanceWoodHighlight'))[1]}</span>
               </h2>
             </header>
             
