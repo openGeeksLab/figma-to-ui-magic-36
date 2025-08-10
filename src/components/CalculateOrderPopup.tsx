@@ -71,7 +71,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
               // setCalculatedPrice((basePrice + 2.5) * 1.35 * 1.5 * kurs * square);
               setCalculatedPrice(1000);
         } 
-        else if ((productDetails?.colorName === 'Unstained wood' || productDetails?.colorName === 'Natural')) {
+        else if ((productDetails?.colorName !== 'Unstained wood' && productDetails?.colorName === 'Natural')) {
             // Якщо тільки колір "Colors"
               // setCalculatedPrice(basePrice * 1.35 * 1.5 * kurs * square);
               setCalculatedPrice(2000);
