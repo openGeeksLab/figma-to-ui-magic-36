@@ -87,7 +87,7 @@ const About = () => {
       {t('ourVisionPrefix')} <span className="text-[#DCB481]">{t('ourVisionHighlight')}</span>
     </h2>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-    Our Vision is to be the leading provider of premium interior and exterior wood wall panels, inspiring sustainable and innovative design solutions that transform indoor and outdoor spaces in the Nordic countries.
+    {t('visionParagraph')}
     </p>
   </div>
 </section>
