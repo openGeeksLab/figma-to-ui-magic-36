@@ -24,7 +24,7 @@ const ProductDetail = () => {
   const [selectedDimension, setSelectedDimension] = useState('');
   const [selectedColorSwatch, setSelectedColorSwatch] = useState(0); // Default to first swatch
   
-  const colorNames = ['Netonets', 'Natural', 'Russet', 'Mocha', 'Ivory', 'Silver', 'Steel', 'Graphit', 'Coal', 'Graphit Black', 'Graphit Grey', 'Virsi'];
+  const colorNames = ['Unstained wood', 'Natural', 'Russet', 'Mocha', 'Ivory', 'Silver', 'Steel', 'Graphit', 'Coal', 'Graphit Black', 'Graphit Grey', 'Virsi'];
 
   // Helper functions for Swedish content
   const getProductDescription = () => {
