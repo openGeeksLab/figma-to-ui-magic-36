@@ -133,7 +133,11 @@ const resources = {
       "woodCladding": "Wood Cladding",
       "thermallyModified": "Thermally Modified",
       "claddingToEnhance": "Cladding to Enhance Any",
-      "environment": "Environment"
+      "environment": "Environment",
+      
+      // Enhanced wood section
+      "enhanceWoodTitle": "We enhance wood naturally with heat, steam, and nothing else",
+      "enhanceWoodHighlight": "wood naturally"
     }
   },
   sv: {
@@ -265,7 +269,11 @@ const resources = {
       "woodCladding": "Träpanel",
       "thermallyModified": "Värmebehandlad",
       "claddingToEnhance": "Beklädnad för att Förbättra",
-      "environment": "Alla Miljöer"
+      "environment": "Alla Miljöer",
+      
+      // Enhanced wood section
+      "enhanceWoodTitle": "Vi förbättrar trä naturligt med värme, ånga och inget annat",
+      "enhanceWoodHighlight": "trä naturligt"
     }
   }
 };
