@@ -12,7 +12,19 @@ const resources = {
       "about": "About",
       "blog": "Blog",
       "contact": "Contact",
-      "getSample": "Get a Free Sample"
+      "getSample": "Get a Free Sample",
+      
+      // Footer
+      "company": "Company",
+      "product": "Product",
+      "exteriorPanels": "Exterior Wood Panels",
+      "interiorPanels": "Interior Wood Panels",
+      "privacyPolicy": "Privacy Policy",
+      "address": "Address:",
+      "email": "Email:",
+      "phone": "Phone:",
+      "cookiePolicy": "Cookie Policy",
+      "termsOfUse": "General Terms of Use"
     }
   },
   sv: {
@@ -23,7 +35,19 @@ const resources = {
       "about": "Om oss", 
       "blog": "Blogg",
       "contact": "Kontakt",
-      "getSample": "Få ett gratis prov"
+      "getSample": "Få ett gratis prov",
+      
+      // Footer
+      "company": "Företag",
+      "product": "Produkt",
+      "exteriorPanels": "Utomhus Trätäckningar",
+      "interiorPanels": "Inomhus Trätäckningar",
+      "privacyPolicy": "Integritetspolicy",
+      "address": "Adress:",
+      "email": "E-post:",
+      "phone": "Telefon:",
+      "cookiePolicy": "Cookie Policy",
+      "termsOfUse": "Allmänna Villkor"
     }
   }
 };

@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useTranslation();
 
   return (
     <footer className="flex flex-col items-start w-full bg-[#F3F0E7] px-8 py-0 max-sm:px-4 max-sm:py-0">
@@ -38,31 +40,31 @@ const Footer = () => {
         </div>
         
         <nav className="flex w-[257px] flex-col items-start gap-6 max-md:w-full" aria-label="Company links">
-          <h3 className="text-white text-xl font-bold w-full max-sm:text-lg">Company</h3>
+          <h3 className="text-white text-xl font-bold w-full max-sm:text-lg">{t('company')}</h3>
           <ul className="flex flex-col justify-center items-start gap-4 w-full">
-            <li><a href="/blog" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Blog</a></li>
-            <li><a href="#about" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">About</a></li>
-            <li><a href="#contact" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Contact</a></li>
+            <li><a href="/blog" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('blog')}</a></li>
+            <li><a href="#about" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('about')}</a></li>
+            <li><a href="#contact" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('contact')}</a></li>
           </ul>
         </nav>
         
         <nav className="flex w-[257px] flex-col items-start gap-6 max-md:w-full" aria-label="Product links">
-          <h3 className="text-white text-xl font-bold w-full max-sm:text-lg">Product</h3>
+          <h3 className="text-white text-xl font-bold w-full max-sm:text-lg">{t('product')}</h3>
           <ul className="flex flex-col justify-center items-start gap-4 w-full">
-            <li><a href="#exterior-panels" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Exterior Wood Panels</a></li>
-            <li><a href="#interior-panels" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Interior Wood Panels</a></li>
-            <li><a href="#privacy" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Privacy Policy</a></li>
+            <li><a href="#exterior-panels" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('exteriorPanels')}</a></li>
+            <li><a href="#interior-panels" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('interiorPanels')}</a></li>
+            <li><a href="#privacy" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('privacyPolicy')}</a></li>
           </ul>
         </nav>
         
         <address className="flex w-[374px] flex-col items-start gap-6 max-md:w-full not-italic">
           <div className="flex flex-col justify-center items-start gap-4 w-full">
-            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">Address:</span>
+            <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">{t('address')}</span>
             <span className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base whitespace-nowrap">Annelötsvägen 61 Grödinge Stockholm</span>
           </div>
        <div className="flex flex-col justify-center items-start gap-4 w-full">
   <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">
-    Email:&nbsp;
+    {t('email')}&nbsp;
     <a
       href="mailto:info@nordicthermotra.se"
       className="text-white font-bold hover:text-[#DCB481] transition-colors"
@@ -74,7 +76,7 @@ const Footer = () => {
 
          <div className="flex flex-col justify-center items-start gap-4 w-full">
   <span className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base">
-    Phone:&nbsp;
+    {t('phone')}&nbsp;
     <a
       href="tel:+4670494849"
       className="text-white text-lg font-bold leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors"
@@ -94,9 +96,9 @@ const Footer = () => {
           </span>
         </div>
         <nav className="flex items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:gap-4" aria-label="Legal links">
-          <a href="#cookies" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Cookie Policy</a>
-          <a href="#terms" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">General Terms of Use</a>
-          <a href="#privacy" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Privacy Policy</a>
+          <a href="#cookies" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('cookiePolicy')}</a>
+          <a href="#terms" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('termsOfUse')}</a>
+          <a href="#privacy" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('privacyPolicy')}</a>
         </nav>
       </div>
     </footer>
