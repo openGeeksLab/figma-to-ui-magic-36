@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useTranslation } from 'react-i18next';
 import Header from "@/components/Header";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -11,7 +10,6 @@ import { useGallery } from "@/hooks/useGallery";
 import Autoplay from "embla-carousel-autoplay";
 
 const Gallery = () => {
-  const { t } = useTranslation();
   const plugin = React.useRef(Autoplay({ delay: 70000, stopOnInteraction: true }));
   const { images, loading } = useGallery();
 
@@ -58,7 +56,7 @@ const Gallery = () => {
           
           <div className="absolute bottom-8 left-16 max-md:left-13 max-sm:bottom-4 max-sm:left-8 z-10">
             <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl bg-white px-5 py-3 rounded-[28px]">
-              {t('gallery.hero')}
+              Our <span className="text-[#DCB481]">Gallery</span>
             </h1>
           </div>
         </section>
@@ -69,7 +67,7 @@ const Gallery = () => {
             {/* Header */}
             <div className="text-center mb-16">
               <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl mb-4">
-                {t('gallery.title')}
+                Our <span className="text-[#DCB481]">Projects</span>
               </h2>
               <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base max-w-3xl mx-auto">
                 Explore our stunning collection of wooden panel projects. Each design showcases the natural beauty and versatility of wood in modern architecture.

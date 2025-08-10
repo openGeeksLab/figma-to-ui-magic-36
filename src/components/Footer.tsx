@@ -1,8 +1,6 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
-  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -40,16 +38,16 @@ const Footer = () => {
         </div>
         
         <nav className="flex w-[257px] flex-col items-start gap-6 max-md:w-full" aria-label="Company links">
-          <h3 className="text-white text-xl font-bold w-full max-sm:text-lg">{t('footer.company_links')}</h3>
+          <h3 className="text-white text-xl font-bold w-full max-sm:text-lg">Company</h3>
           <ul className="flex flex-col justify-center items-start gap-4 w-full">
-            <li><a href="/blog" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('nav.blog')}</a></li>
-            <li><a href="/about" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('nav.about')}</a></li>
-            <li><a href="/contact" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('nav.contact')}</a></li>
+            <li><a href="/blog" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Blog</a></li>
+            <li><a href="#about" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">About</a></li>
+            <li><a href="#contact" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Contact</a></li>
           </ul>
         </nav>
         
         <nav className="flex w-[257px] flex-col items-start gap-6 max-md:w-full" aria-label="Product links">
-          <h3 className="text-white text-xl font-bold w-full max-sm:text-lg">{t('footer.products')}</h3>
+          <h3 className="text-white text-xl font-bold w-full max-sm:text-lg">Product</h3>
           <ul className="flex flex-col justify-center items-start gap-4 w-full">
             <li><a href="#exterior-panels" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Exterior Wood Panels</a></li>
             <li><a href="#interior-panels" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">Interior Wood Panels</a></li>
