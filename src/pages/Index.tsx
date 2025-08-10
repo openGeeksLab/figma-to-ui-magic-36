@@ -8,6 +8,7 @@ import ImageGallery from '@/components/ImageGallery';
 import ContactForm from '@/components/ContactForm';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
+import SampleRequestPopup from '@/components/SampleRequestPopup';
 const Index = () => {
   return <div className="flex w-full max-w-full flex-col items-center mx-auto my-0 min-h-screen overflow-x-hidden">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" />
@@ -104,9 +105,11 @@ const Index = () => {
               <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
                 You can get the catalogue with our panels here.
               </p>
-                <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-xl font-normal hover:bg-[#c9a373] transition-colors">
-                  Download Catalog
-                </button>
+                <SampleRequestPopup>
+                  <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-xl font-normal hover:bg-[#c9a373] transition-colors">
+                    Download Catalog
+                  </button>
+                </SampleRequestPopup>
               </div>
             </article>
           </section>
