@@ -52,7 +52,7 @@ const Hero = () => {
         
         <div className="flex h-[157px] justify-center items-center gap-2.5 w-full bg-white p-5 rounded-[0px_28px_28px_0px]">
           <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-md:text-base max-sm:text-sm">
-          Powered by cutting-edge technology. Experience the strength of science with our ultra-stable, thermally modified wood
+          Powered by cutting-edge technology. Experience the strength of science with our ultra-stable, thermally modified wood.Driven by innovation, our wood combines advanced science and precision engineering for unmatched performance
           </p>
         </div>
         
