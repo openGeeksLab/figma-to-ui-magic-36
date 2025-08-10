@@ -65,7 +65,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         const basePrice = isSpecialCladdingRoute ? 21.5 : 25;
         const kurs = 11.15;
         // setCalculatedPrice(square*basePrice*1.25*1.5*kurs);
-        if ((productDetails?.colorName !== 'Unstained wood' || productDetails?.colorName !== 'Natural') && 
+        if ((productDetails?.colorName !== 'Unstained wood' && productDetails?.colorName !== 'Natural') && 
           (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn')) {
             // Якщо колір "Colors" і обробка "Brushed" або "Finely sawn"
               // setCalculatedPrice((basePrice + 2.5) * 1.35 * 1.5 * kurs * square);
