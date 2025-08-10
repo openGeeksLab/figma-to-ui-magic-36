@@ -249,7 +249,7 @@ const resources = {
       "tailoredApproach": "Skräddarsydd lösning för varje kund",
       
       // ImageGallery
-      "customCladding": "Skräddarsydd beklädnad",
+      "customCladding": "Skräddarsydd Beklädnad",
       "toMatch": "för att",
       "match": "Matcha Valfri",
       "any": "",
