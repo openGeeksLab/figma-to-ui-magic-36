@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -7,6 +8,7 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import Autoplay from "embla-carousel-autoplay";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const plugin = React.useRef(Autoplay({ delay: 70000, stopOnInteraction: true }));
 
   const images = [
@@ -52,7 +54,7 @@ const Contact = () => {
           
           <div className="absolute bottom-8 left-16 max-md:left-13 max-sm:bottom-4 max-sm:left-8 z-10">
             <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl bg-white px-5 py-3 rounded-[28px]">
-              Contact <span className="text-[#DCB481]">Us</span>
+              {t('contactUs')} <span className="text-[#DCB481]">{t('contactUsHighlight')}</span>
             </h1>
           </div>
         </section>
@@ -63,7 +65,7 @@ const Contact = () => {
             {/* Header */}
             <div className="text-center mb-16">
               <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl mb-4">
-                Get <span className="text-[#DCB481]">in touch</span>
+                {t('getInTouch')} <span className="text-[#DCB481]">{t('getInTouchHighlight')}</span>
               </h2>
               <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base max-w-3xl mx-auto">
                 Our team is dedicated to assisting you with any inquiries or concerns. We are committed to delivering exceptional customer service, high-quality products, and fast shipping.
