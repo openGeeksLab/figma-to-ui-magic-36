@@ -24,31 +24,64 @@ const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
+    
+    // Name validation
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
     }
+    
+    // Email validation
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
+    
+    // Phone validation
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
+    } else {
+      // Remove all non-digit characters for validation
+      const cleanPhone = formData.phone.replace(/\D/g, '');
+      // Check if it's a valid phone number (at least 7 digits, max 15)
+      if (cleanPhone.length < 7 || cleanPhone.length > 15) {
+        newErrors.phone = 'Please enter a valid phone number';
+      }
     }
+    
+    // Message validation
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
     }
+    
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const {
-      name,
-      value
-    } = e.target;
+    const { name, value } = e.target;
+    
+    // Format phone number as user types
+    let formattedValue = value;
+    if (name === 'phone') {
+      // Remove all non-digit characters
+      const digits = value.replace(/\D/g, '');
+      
+      // Format as phone number with spaces/dashes
+      if (digits.length <= 3) {
+        formattedValue = digits;
+      } else if (digits.length <= 6) {
+        formattedValue = `${digits.slice(0, 3)}-${digits.slice(3)}`;
+      } else if (digits.length <= 10) {
+        formattedValue = `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+      } else {
+        // For international numbers, just add spaces
+        formattedValue = digits.slice(0, 15); // Limit to 15 digits
+      }
+    }
+    
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: formattedValue
     }));
 
     // Clear error when user starts typing
@@ -63,7 +96,6 @@ const ContactForm = () => {
     e.preventDefault();
     
     if (!validateForm()) {
-      alert('Please fill in all fields correctly');
       return;
     }
     
