@@ -65,14 +65,24 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         const basePrice = isSpecialCladdingRoute ? 21.5 : 25;
         const kurs = 11.15;
         // setCalculatedPrice(square*basePrice*1.25*1.5*kurs);
-        if (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn') {
-          setCalculatedPrice((basePrice+2.5)*1.25*1.5*kurs * square);
-          //  setCalculatedPrice(1000);
-           
-         }
-         else {
-         setCalculatedPrice(basePrice*1.25*1.5*kurs * square);
-         }
+        if ((productDetails?.colorName !== 'Unstained wood' || productDetails?.colorName !== 'Natural') && 
+          (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn')) {
+            // Якщо колір "Colors" і обробка "Brushed" або "Finely sawn"
+              setCalculatedPrice((basePrice + 2.5) * 1.35 * 1.5 * kurs * square);
+        } 
+        else if ((productDetails?.colorName !== 'Unstained wood' || productDetails?.colorName !== 'Natural')) {
+            // Якщо тільки колір "Colors"
+              setCalculatedPrice(basePrice * 1.35 * 1.5 * kurs * square);
+        } 
+        else if (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn') {
+            // Якщо тільки обробка "Brushed" або "Finely sawn"
+              setCalculatedPrice((basePrice + 2.5) * 1.25 * 1.5 * kurs * square);
+        } else {
+            // Якщо ні колір, ні обробка не підпадають під умови
+              setCalculatedPrice(basePrice * 1.25 * 1.5 * kurs * square);
+              
+        }
+      
       } 
       else {
         // Clear square and price when either field is empty or invalid
@@ -91,13 +101,20 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         const isSpecialCladdingRoute = ['/cladding/f-1', '/cladding/f-2', '/cladding/f-3', '/cladding/f-4', '/cladding/f-5', '/cladding/f-6', '/cladding/f-8', '/cladding/f-10', '/cladding/shp-s', '/cladding/shp' ].includes(location.pathname);
         const basePrice = isSpecialCladdingRoute ? 21.5 : 25;
         const kurs = 11.15;
-        if (surfaceTreatment === 'Brushed' || surfaceTreatment === 'Finely sawn') {
-         setCalculatedPrice((basePrice+2.5)*1.25*1.5*kurs * squareValue);
-          // setCalculatedPrice(1000);
-          
-        }
-        else {
-        setCalculatedPrice(basePrice*1.25*1.5*kurs * squareValue);
+        if ((productDetails?.colorName !== 'Unstained wood' || productDetails?.colorName !== 'Natural') && 
+          (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn')) {
+            // Якщо колір "Colors" і обробка "Brushed" або "Finely sawn"
+              setCalculatedPrice((basePrice + 2.5) * 1.35 * 1.5 * kurs * squareValue);
+              } else if ((productDetails?.colorName !== 'Unstained wood' || productDetails?.colorName !== 'Natural')) {
+            // Якщо тільки колір "Colors"
+              setCalculatedPrice(basePrice * 1.35 * 1.5 * kurs * squareValue);
+              } else if (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn') {
+            // Якщо тільки обробка "Brushed" або "Finely sawn"
+              setCalculatedPrice((basePrice + 2.5) * 1.25 * 1.5 * kurs * squareValue);
+              } else {
+            // Якщо ні колір, ні обробка не підпадають під умови
+              setCalculatedPrice(basePrice * 1.25 * 1.5 * kurs * squareValue);
+              
         }
       }
     }
