@@ -113,6 +113,11 @@ const resources = {
       "stockholmHouseDescription": "In the hearts of the archipelago the materials had to be strong enough to withstand the harsh weather conditions, yet lightweight enough to facilitate installation. After extensive testing, they selected Thermowood F-3 smooth planed profiles in combination with three different dimensions 90 mm, 115 mm, and 140 mm for its durability, resistance to the elements, and aesthetic appeal. The result is a stunning and functional venue that offers relaxing and close-to-nature feeling.",
       "getFreeSample": "Get a Free Sample",
       
+      // Hero section
+      "heroLine1": "Naturally sustainable,",
+      "heroLine2": "Reliable,", 
+      "heroLine3": "Sustainability through technology",
+      
       // Features
       "unmatchedStability": "Oöverträffad stabilitet",
       "enhancedDurability": "Förbättrad Hållbarhet", 
@@ -276,6 +281,11 @@ const resources = {
       "stockholmHouseHighlight": "i hjärtat av Stockholms skärgård",
       "stockholmHouseDescription": "I hjärtat av skärgården var materialen tvungna att vara tillräckligt starka för att klara de hårda väderförhållandena, men ändå tillräckligt lätta för att underlätta installationen. Efter omfattande tester valde de Thermowood F-3 släthyvlade profiler i kombination med tre olika dimensioner 90 mm, 115 mm och 140 mm för dess hållbarhet, motståndskraft mot väder och vind samt estetiska tilltal. Resultatet är en fantastisk och funktionell plats som erbjuder en avkopplande och naturnära känsla.",
       "getFreeSample": "Hämta ett gratis prov",
+      
+      // Hero section
+      "heroLine1": "Naturligt hållbar,",
+      "heroLine2": "Pålitlig,",
+      "heroLine3": "Hållbar tack vare teknik",
       
       // Features
       "unmatchedStability": "Oöverträffad stabilitet",
