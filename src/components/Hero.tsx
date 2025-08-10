@@ -44,7 +44,7 @@ const Hero = () => {
           <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
             <span className="text-[#454545]">Naturally sustainable,</span>
             <br />
-            <span className="text-[#DCB481]">trusted</span>
+            <span className="text-[#DCB481]">trusted,</span>
             <br />
             <span className="text-[#454545]">durable by technology</span>
           </h1>
