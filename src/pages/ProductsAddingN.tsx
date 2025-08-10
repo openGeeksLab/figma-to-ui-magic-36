@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 interface ProductFormData {
   name: string;
   description?: string;
+  description_sv?: string;
   sizes: string[];
   specifications: string[];
   details: string[];
@@ -181,6 +182,7 @@ const ProductsAddingN = () => {
         .insert({
           name: data.name,
           description: data.description || null,
+          description_sv: data.description_sv || null,
           sizes: validSizes,
           specifications: validSpecifications,
           details: validDetails,
@@ -339,15 +341,27 @@ const ProductsAddingN = () => {
                   )}
                 </div>
 
-                {/* Description Field */}
-                <div className="space-y-2">
-                  <Label htmlFor="description">Product Description</Label>
-                  <Textarea
-                    id="description"
-                    {...register("description")}
-                    placeholder="Enter product description"
-                    rows={4}
-                  />
+                {/* Description Fields */}
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="description">Product Description (English)</Label>
+                    <Textarea
+                      id="description"
+                      {...register("description")}
+                      placeholder="Enter product description in English"
+                      rows={4}
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="description_sv">Product Description (Swedish)</Label>
+                    <Textarea
+                      id="description_sv"
+                      {...register("description_sv")}
+                      placeholder="Ange produktbeskrivning på svenska"
+                      rows={4}
+                    />
+                  </div>
                 </div>
 
                 {/* Specifications Field */}
