@@ -65,7 +65,7 @@ const About = () => {
   </div>
   <div className="flex-1 flex flex-col gap-6 max-md:w-full">
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
-    At Nordic Thermoträ, we are passionate about transforming spaces with the natural beauty and durability of heat-treated wood. With years of experience in the industry, we specialize in providing high-quality, sustainable wood solutions tailored to meet the unique needs of each client.
+    {t('aboutFirstParagraph')}
     </p>
     <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
     We believe in creating interior and outdoor environments that not only look stunning but also stand the test of time. Whether you're enhancing a residential property or a commercial facade, our team is here to bring your vision to life with expert guidance and superior products.

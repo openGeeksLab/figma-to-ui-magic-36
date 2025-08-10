@@ -31,7 +31,8 @@ const resources = {
       "aboutUsHighlight": "Us",
       "simplyMadePrefix": "Simply",
       "simplyMadeHighlight": "made",
-      "simplyMadeSuffix": "of wood"
+      "simplyMadeSuffix": "of wood",
+      "aboutFirstParagraph": "At Nordic Thermoträ, we are passionate about transforming spaces with the natural beauty and durability of heat-treated wood. With years of experience in the industry, we specialize in providing high-quality, sustainable wood solutions tailored to meet the unique needs of each client."
     }
   },
   sv: {
@@ -61,7 +62,8 @@ const resources = {
       "aboutUsHighlight": "Oss",
       "simplyMadePrefix": "Helt",
       "simplyMadeHighlight": "enkelt gjord",
-      "simplyMadeSuffix": "av trä"
+      "simplyMadeSuffix": "av trä",
+      "aboutFirstParagraph": "På Nordic Thermoträ AB brinner vi för att förvandla utrymmen med den naturliga skönheten och hållbarheten av värmebehandlat trä. Med många års erfarenhet i branschen specialiserar vi oss på att tillhandahålla högkvalitativa, hållbara trälösningar som är skräddarsydda för att möta varje kunds unika behov."
     }
   }
 };
