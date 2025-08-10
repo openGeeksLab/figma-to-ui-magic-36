@@ -240,7 +240,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
             <div className="flex flex-col justify-center items-center lg:items-start">
               <h3 className="text-xl font-semibold text-[#454545] mb-4">Your prise is:</h3>
               <div className="text-4xl font-bold text-[#DCB481] mb-4">
-                {calculatedPrice ? `${surfaceTreatment} SEK*` : '-- SEK*'}
+                {calculatedPrice ? `${surfaceTreatment} SEK*` : {surfaceTreatment}}
               </div>
               <p className="text-sm text-gray-500 text-center lg:text-left">
                 * The calculation is approximate. Leave a request and we will make an exact calculation of your order.
