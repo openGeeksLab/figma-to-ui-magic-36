@@ -68,15 +68,18 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         if ((productDetails?.colorName !== 'Unstained wood' || productDetails?.colorName !== 'Natural') && 
           (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn')) {
             // Якщо колір "Colors" і обробка "Brushed" або "Finely sawn"
-              setCalculatedPrice((basePrice + 2.5) * 1.35 * 1.5 * kurs * square);
+              // setCalculatedPrice((basePrice + 2.5) * 1.35 * 1.5 * kurs * square);
+              setCalculatedPrice(1000);
         } 
         else if ((productDetails?.colorName !== 'Unstained wood' || productDetails?.colorName !== 'Natural')) {
             // Якщо тільки колір "Colors"
-              setCalculatedPrice(basePrice * 1.35 * 1.5 * kurs * square);
+              // setCalculatedPrice(basePrice * 1.35 * 1.5 * kurs * square);
+              setCalculatedPrice(2000);
         } 
         else if (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn') {
             // Якщо тільки обробка "Brushed" або "Finely sawn"
-              setCalculatedPrice((basePrice + 2.5) * 1.25 * 1.5 * kurs * square);
+              // setCalculatedPrice((basePrice + 2.5) * 1.25 * 1.5 * kurs * square);
+              setCalculatedPrice(3000);
         } else {
             // Якщо ні колір, ні обробка не підпадають під умови
               setCalculatedPrice(basePrice * 1.25 * 1.5 * kurs * square);
@@ -104,16 +107,13 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         if ((productDetails?.colorName !== 'Unstained wood' || productDetails?.colorName !== 'Natural') && 
           (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn')) {
             // Якщо колір "Colors" і обробка "Brushed" або "Finely sawn"
-              // setCalculatedPrice((basePrice + 2.5) * 1.35 * 1.5 * kurs * squareValue);
-              setCalculatedPrice(1000);
+              setCalculatedPrice((basePrice + 2.5) * 1.35 * 1.5 * kurs * squareValue);
               } else if ((productDetails?.colorName !== 'Unstained wood' || productDetails?.colorName !== 'Natural')) {
             // Якщо тільки колір "Colors"
-              // setCalculatedPrice(basePrice * 1.35 * 1.5 * kurs * squareValue);
-              setCalculatedPrice(2000);
+              setCalculatedPrice(basePrice * 1.35 * 1.5 * kurs * squareValue);
               } else if (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn') {
             // Якщо тільки обробка "Brushed" або "Finely sawn"
-              // setCalculatedPrice((basePrice + 2.5) * 1.25 * 1.5 * kurs * squareValue);
-              setCalculatedPrice(3000);
+              setCalculatedPrice((basePrice + 2.5) * 1.25 * 1.5 * kurs * squareValue);
               } else {
             // Якщо ні колір, ні обробка не підпадають під умови
               setCalculatedPrice(basePrice * 1.25 * 1.5 * kurs * squareValue);
