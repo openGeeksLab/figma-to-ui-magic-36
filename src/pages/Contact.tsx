@@ -89,7 +89,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <h3 className="text-[#454545] text-xl font-bold mb-2">Email us</h3>
-                <p className="text-[#454545] text-base">info@thermotra.se</p>
+                <p className="text-[#454545] text-base">info@nordicthermotra.se</p>
               </div>
               
               <div className="text-center">
