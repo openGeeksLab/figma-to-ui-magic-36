@@ -50,6 +50,9 @@ const Gallery = () => {
                     src={image.src}
                     alt={image.alt}
                     className="w-full h-full object-cover max-md:h-[200px] rounded-[28px]"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    fetchPriority={index === 0 ? "high" : "low"}
+                    decoding="async"
                   />
                 </CarouselItem>
               ))}
