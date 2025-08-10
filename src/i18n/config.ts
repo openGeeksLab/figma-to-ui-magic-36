@@ -171,7 +171,24 @@ const resources = {
       "roughSawn": "Rough sawn",
       "brushed": "Brushed",
       "dimensions": "Dimensions",
-      "toneColor": "Tone Color"
+      "toneColor": "Tone Color",
+      
+      // Sample Request Popup
+      "sampleRequestTitle": "Get a Free Sample",
+      "sampleNamePlaceholder": "Name",
+      "sampleEmailPlaceholder": "Email",
+      "samplePhonePlaceholder": "Phone",
+      "sampleMessagePlaceholder": "Message",
+      "sampleSending": "Sending...",
+      "sampleSend": "Send",
+      "sampleError": "Error",
+      "sampleFillRequired": "Please fill in all required fields.",
+      "sampleValidEmail": "Please enter a valid email address.",
+      "sampleValidPhone": "Please enter a valid phone number.",
+      "sampleRequestSent": "Sample Request Sent!",
+      "sampleRequestDescription": "We'll send you a free sample within 2-3 business days.",
+      "sampleRequestFailed": "Failed to send sample request. Please try again.",
+      "sampleCloseAriaLabel": "Close sample request form"
     }
   },
   sv: {
@@ -341,7 +358,24 @@ const resources = {
       "roughSawn": "Grovt sågad",
       "brushed": "Borstad",
       "dimensions": "Dimensioner",
-      "toneColor": "Tonfärg"
+      "toneColor": "Tonfärg",
+      
+      // Sample Request Popup
+      "sampleRequestTitle": "Få ett gratis prov",
+      "sampleNamePlaceholder": "Namn",
+      "sampleEmailPlaceholder": "E-post",
+      "samplePhonePlaceholder": "Telefon",
+      "sampleMessagePlaceholder": "Meddelande",
+      "sampleSending": "Skickar...",
+      "sampleSend": "Skicka",
+      "sampleError": "Fel",
+      "sampleFillRequired": "Vänligen fyll i alla obligatoriska fält.",
+      "sampleValidEmail": "Vänligen ange en giltig e-postadress.",
+      "sampleValidPhone": "Vänligen ange ett giltigt telefonnummer.",
+      "sampleRequestSent": "Provförfrågan skickad!",
+      "sampleRequestDescription": "Vi skickar dig ett gratis prov inom 2-3 arbetsdagar.",
+      "sampleRequestFailed": "Misslyckades med att skicka provförfrågan. Vänligen försök igen.",
+      "sampleCloseAriaLabel": "Stäng formulär för provförfrågan"
     }
   }
 };
