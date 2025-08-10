@@ -17,13 +17,21 @@ export const useGallery = () => {
   const [loading, setLoading] = useState(true);
   const { toast } = useToast();
 
-  const fetchImages = async () => {
+  const fetchImages = async (limit?: number) => {
     try {
       setLoading(true);
-      const { data, error } = await supabase
+      
+      let query = supabase
         .from('gallery_images')
         .select('*')
         .order('created_at', { ascending: false });
+      
+      // Add limit if specified for pagination
+      if (limit) {
+        query = query.limit(limit);
+      }
+
+      const { data, error } = await query;
 
       if (error) {
         console.error('Error fetching gallery images:', error);

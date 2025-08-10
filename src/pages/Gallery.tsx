@@ -83,7 +83,7 @@ const Gallery = () => {
             ) : (
               /* Gallery grid */
               <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
-                {images.map((image) => (
+                {images.map((image, index) => (
                   <Dialog key={image.id}>
                     <DialogTrigger asChild>
                       <div className="group relative overflow-hidden rounded-[16px] cursor-pointer hover:scale-[1.02] transition-transform duration-300 break-inside-avoid mb-4">
@@ -91,6 +91,21 @@ const Gallery = () => {
                           src={image.image_url}
                           alt={image.title}
                           className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                          loading={index < 8 ? "eager" : "lazy"}
+                          decoding="async"
+                          style={{
+                            contentVisibility: 'auto',
+                            containIntrinsicSize: '300px 200px',
+                            ...(index >= 8 && { opacity: 0, transition: 'opacity 0.3s ease-in-out' })
+                          }}
+                          onLoad={(e) => {
+                            const img = e.target as HTMLImageElement;
+                            img.style.opacity = '1';
+                          }}
+                          onError={(e) => {
+                            const img = e.target as HTMLImageElement;
+                            img.src = '/placeholder.svg';
+                          }}
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300" />
                         
@@ -110,6 +125,8 @@ const Gallery = () => {
                           src={image.image_url}
                           alt={image.title}
                           className="min-w-full min-h-full object-contain cursor-grab active:cursor-grabbing"
+                          loading="lazy"
+                          decoding="async"
                           style={{ 
                             minWidth: 'max(100%, auto)',
                             minHeight: 'max(100%, auto)',
