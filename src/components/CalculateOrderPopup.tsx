@@ -19,9 +19,11 @@ interface CalculateOrderPopupProps {
     dimension: string;
     colorName: string;
   };
+  surfaceTreatment?: string;
+  toneColor?: string;
 }
 
-const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, productDetails }) => {
+const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, productDetails, surfaceTreatment, toneColor }) => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -30,6 +32,8 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
     square: ''
   });
   const [calculatedPrice, setCalculatedPrice] = useState<number | null>(null);
+  const [selectedSurfaceTreatment, setSelectedSurfaceTreatment] = useState(surfaceTreatment || '');
+  const [selectedToneColor, setSelectedToneColor] = useState(toneColor || '');
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
