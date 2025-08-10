@@ -55,7 +55,8 @@ const resources = {
       "contactUs": "Contact",
       "contactUsHighlight": "Us",
       "getInTouch": "Get",
-      "getInTouchHighlight": "in touch"
+      "getInTouchHighlight": "in touch",
+      "contactDescription": "Our team is dedicated to assisting you with any inquiries or concerns. We are committed to delivering exceptional customer service, high-quality products, and fast shipping."
     }
   },
   sv: {
@@ -109,7 +110,8 @@ const resources = {
       "contactUs": "Kontakta",
       "contactUsHighlight": "oss",
       "getInTouch": "Kom i",
-      "getInTouchHighlight": "kontakt"
+      "getInTouchHighlight": "kontakt",
+      "contactDescription": "Vårt team är engagerat i att hjälpa dig med alla frågor eller funderingar. Vi strävar efter att leverera enastående kundservice, produkter av högsta kvalitet och snabba leveranser."
     }
   }
 };

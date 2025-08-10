@@ -68,7 +68,7 @@ const Contact = () => {
                 {t('getInTouch')} <span className="text-[#DCB481]">{t('getInTouchHighlight')}</span>
               </h2>
               <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base max-w-3xl mx-auto">
-                Our team is dedicated to assisting you with any inquiries or concerns. We are committed to delivering exceptional customer service, high-quality products, and fast shipping.
+                {t('contactDescription')}
               </p>
             </div>
             
