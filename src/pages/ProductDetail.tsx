@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
@@ -13,7 +14,8 @@ import colorNatural from '@/assets/color-natural.png';
 const ProductDetail = () => {
   const { type, productName } = useParams();
   const navigate = useNavigate();
-  const [product, setProduct] = useState<Tables<"products"> | null>(null);
+  const { t, i18n } = useTranslation();
+  const [product, setProduct] = useState<any>(null);
   const [productImages, setProductImages] = useState<Tables<"product_images">[]>([]);
   const [similarProducts, setSimilarProducts] = useState<Tables<"products">[]>([]);
   const [selectedImage, setSelectedImage] = useState<string>('');
@@ -23,6 +25,21 @@ const ProductDetail = () => {
   const [selectedColorSwatch, setSelectedColorSwatch] = useState(0); // Default to first swatch
   
   const colorNames = ['Netonets', 'Natural', 'Russet', 'Mocha', 'Ivory', 'Silver', 'Steel', 'Graphit', 'Coal', 'Graphit Black', 'Graphit Grey', 'Virsi'];
+
+  // Helper functions for Swedish content
+  const getProductDescription = () => {
+    if (i18n.language === 'sv' && product?.description_sv) {
+      return product.description_sv;
+    }
+    return product?.description || `${product?.name} is a sophisticated 3D cladding of Nordic Pine. It creates a visually elegant and modern wood surface. Highly suitable for facades, interiors, and other decorative surfaces where a sustainable and chemical-free wood surface is desired.`;
+  };
+
+  const getProductDetails = () => {
+    if (i18n.language === 'sv' && product?.details_sv) {
+      return product.details_sv;
+    }
+    return product?.details || [];
+  };
 
   useEffect(() => {
     if (productName) {
@@ -224,7 +241,7 @@ const ProductDetail = () => {
               <h1 className="text-2xl md:text-4xl font-bold text-[#454545] max-sm:text-xl break-words">{product.name}</h1>
               
               <p className="text-gray-600 leading-relaxed">
-                {product.description || `${product.name} is a sophisticated 3D cladding of Nordic Pine. It creates a visually elegant and modern wood surface. Highly suitable for facades, interiors, and other decorative surfaces where a sustainable and chemical-free wood surface is desired.`}
+                {getProductDescription()}
               </p>
 
               {/* Surface Treatment */}
@@ -436,14 +453,14 @@ const ProductDetail = () => {
                {/* Details */}
                <div>
                  <h3 className="text-lg font-semibold text-[#454545] mb-4">Details</h3>
-                 <div className="space-y-2">
-                   {(product?.details as string[] || []).map((detail, index) => (
-                     <div key={index} className="flex items-center space-x-2">
-                       <Check className="w-5 h-5 text-green-500" />
-                       <span className="text-gray-600">{detail}</span>
-                     </div>
-                   ))}
-                 </div>
+                  <div className="space-y-2">
+                    {(getProductDetails() as string[] || []).map((detail, index) => (
+                      <div key={index} className="flex items-center space-x-2">
+                        <Check className="w-5 h-5 text-green-500" />
+                        <span className="text-gray-600">{detail}</span>
+                      </div>
+                    ))}
+                  </div>
                </div>
                </div>
 
