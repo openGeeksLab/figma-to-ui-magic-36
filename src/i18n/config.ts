@@ -251,9 +251,9 @@ const resources = {
       // ImageGallery
       "customCladding": "Skräddarsydd beklädnad",
       "toMatch": "för att",
-      "match": "matcha",
-      "any": "valfri",
-      "anyAesthetic": "estetik"
+      "match": "Matcha Valfri",
+      "any": "",
+      "anyAesthetic": "Estetik"
     }
   }
 };
