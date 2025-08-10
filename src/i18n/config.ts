@@ -152,7 +152,12 @@ const resources = {
       
       // Products page
       "ourProducts": "Our Products",
-      "ourProductsHighlight": "Products"
+      "ourProductsHighlight": "Products",
+      
+      // Product types
+      "cladding": "Cladding",
+      "decking": "Decking", 
+      "allProducts": "All Products"
     }
   },
   sv: {
@@ -303,7 +308,12 @@ const resources = {
       
       // Products page
       "ourProducts": "Våra Produkter",
-      "ourProductsHighlight": "Produkter"
+      "ourProductsHighlight": "Produkter",
+      
+      // Product types
+      "cladding": "Beklädnad",
+      "decking": "Däck",
+      "allProducts": "Alla Produkter"
     }
   }
 };

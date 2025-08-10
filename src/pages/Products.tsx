@@ -72,6 +72,14 @@ const Products = () => {
 
   const uniqueTypes = Array.from(new Set(products.map(product => product.type)));
 
+  // Translation function for product types
+  const translateProductType = (type: string) => {
+    const lowerType = type.toLowerCase();
+    if (lowerType === 'cladding') return t('cladding');
+    if (lowerType === 'decking') return t('decking');
+    return type;
+  };
+
   // Get all unique sizes from products
   const allSizes = Array.from(new Set(
     products.flatMap(product => (product.sizes as string[]) || [])
@@ -152,7 +160,7 @@ const Products = () => {
                     : "bg-gray-100 text-[#454545] hover:bg-gray-200"
                 }`}
               >
-                All Products
+                {t('allProducts')}
               </button>
               {uniqueTypes.map((type) => (
                 <button 
@@ -164,7 +172,7 @@ const Products = () => {
                       : "bg-gray-100 text-[#454545] hover:bg-gray-200"
                   }`}
                 >
-                  {type}
+                  {translateProductType(type)}
                 </button>
               ))}
             </div>
@@ -231,7 +239,7 @@ const Products = () => {
                       }}
                     />
                     <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors">
-                      {product.type}
+                      {translateProductType(product.type)}
                     </button>
                     <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors !rounded-full min-w-8 min-h-8">
                       <svg className="w-4 h-4 text-[#454545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
