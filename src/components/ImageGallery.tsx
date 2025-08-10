@@ -75,18 +75,17 @@ const ImageGallery = () => {
           <div className="inline-flex flex-col items-start absolute left-[30px] bottom-10 max-sm:left-4 max-sm:bottom-5">
             <div className="flex items-center gap-2.5 bg-white p-2.5 rounded-[28px_28px_0px_0px]">
               <h4 className="text-[#454545] text-[32px] font-bold max-md:text-2xl max-sm:text-lg">
-                Thermally Modified
+                {t('thermallyModified')}
               </h4>
             </div>
             <div className="flex items-center gap-2.5 bg-white p-2.5 rounded-[0px_28px_28px_0px]">
               <h4 className="text-[#454545] text-[32px] font-bold max-md:text-2xl max-sm:text-lg">
-                <span className="text-[#DCB481]">Cladding </span>
-                <span className="text-[#454545]">to Enhance Any</span>
+                <span className="text-[#DCB481]">{t('claddingToEnhance')} </span>
               </h4>
             </div>
             <div className="flex items-center gap-2.5 bg-white p-2.5 rounded-[0px_0px_28px_28px]">
               <h4 className="text-[#454545] text-[32px] font-bold max-md:text-2xl max-sm:text-lg">
-                Environment
+                {t('environment')}
               </h4>
             </div>
           </div>

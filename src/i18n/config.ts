@@ -130,7 +130,10 @@ const resources = {
       "anyAesthetic": "Aesthetic",
       "next": "Next",
       "generation": "Generation",
-      "woodCladding": "Wood Cladding"
+      "woodCladding": "Wood Cladding",
+      "thermallyModified": "Thermally Modified",
+      "claddingToEnhance": "Cladding to Enhance Any",
+      "environment": "Environment"
     }
   },
   sv: {
@@ -259,7 +262,10 @@ const resources = {
       "anyAesthetic": "Estetik",
       "next": "Nästa",
       "generation": "Generations",
-      "woodCladding": "Träpanel"
+      "woodCladding": "Träpanel",
+      "thermallyModified": "Värmebehandlad",
+      "claddingToEnhance": "Beklädnad för att Förbättra",
+      "environment": "Alla Miljöer"
     }
   }
 };
