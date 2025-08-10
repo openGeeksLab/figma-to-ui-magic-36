@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SampleRequestPopup from './SampleRequestPopup';
 import LanguageSelector from './LanguageSelector';
@@ -7,6 +7,9 @@ import LanguageSelector from './LanguageSelector';
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t } = useTranslation();
+  const location = useLocation();
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className="relative flex w-full justify-between items-center bg-white px-8 py-12 max-md:px-5 max-md:py-6 max-sm:p-4">
@@ -19,23 +22,23 @@ const Header = () => {
       </Link>
       
       <nav className="flex items-center gap-[49px] max-md:hidden" role="navigation" aria-label="Main navigation">
-        <Link to="/products" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+        <Link to="/products" className={`flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-xl font-normal leading-[29.2px] transition-colors ${isActive('/products') ? 'text-[#DCB481]' : 'text-[#454545] hover:text-[#DCB481]'}`}>
           {t('products')}
         </Link>
         
-        <Link to="/gallery" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+        <Link to="/gallery" className={`flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-xl font-normal leading-[29.2px] transition-colors ${isActive('/gallery') ? 'text-[#DCB481]' : 'text-[#454545] hover:text-[#DCB481]'}`}>
           {t('gallery')}
         </Link>
         
-        <Link to="/about" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+        <Link to="/about" className={`flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-xl font-normal leading-[29.2px] transition-colors ${isActive('/about') ? 'text-[#DCB481]' : 'text-[#454545] hover:text-[#DCB481]'}`}>
           {t('about')}
         </Link>
         
-        <Link to="/blog" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+        <Link to="/blog" className={`flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-xl font-normal leading-[29.2px] transition-colors ${isActive('/blog') ? 'text-[#DCB481]' : 'text-[#454545] hover:text-[#DCB481]'}`}>
           {t('blog')}
         </Link>
         
-        <Link to="/contact" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+        <Link to="/contact" className={`flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-xl font-normal leading-[29.2px] transition-colors ${isActive('/contact') ? 'text-[#DCB481]' : 'text-[#454545] hover:text-[#DCB481]'}`}>
           {t('contact')}
         </Link>
         
@@ -69,35 +72,35 @@ const Header = () => {
             
             <Link 
               to="/products" 
-              className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
+              className={`text-lg font-normal py-3 px-2 transition-colors border-b border-gray-100 last:border-b-0 ${isActive('/products') ? 'text-[#DCB481]' : 'text-[#454545] hover:text-[#DCB481]'}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t('products')}
             </Link>
             <Link 
               to="/gallery" 
-              className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
+              className={`text-lg font-normal py-3 px-2 transition-colors border-b border-gray-100 last:border-b-0 ${isActive('/gallery') ? 'text-[#DCB481]' : 'text-[#454545] hover:text-[#DCB481]'}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t('gallery')}
             </Link>
             <Link 
               to="/about" 
-              className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
+              className={`text-lg font-normal py-3 px-2 transition-colors border-b border-gray-100 last:border-b-0 ${isActive('/about') ? 'text-[#DCB481]' : 'text-[#454545] hover:text-[#DCB481]'}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t('about')}
             </Link>
             <Link 
               to="/blog" 
-              className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
+              className={`text-lg font-normal py-3 px-2 transition-colors border-b border-gray-100 last:border-b-0 ${isActive('/blog') ? 'text-[#DCB481]' : 'text-[#454545] hover:text-[#DCB481]'}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t('blog')}
             </Link>
             <Link 
               to="/contact" 
-              className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
+              className={`text-lg font-normal py-3 px-2 transition-colors border-b border-gray-100 last:border-b-0 ${isActive('/contact') ? 'text-[#DCB481]' : 'text-[#454545] hover:text-[#DCB481]'}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t('contact')}
