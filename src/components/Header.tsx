@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SampleRequestPopup from './SampleRequestPopup';
+import LanguageSelector from './LanguageSelector';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <header className="relative flex w-full justify-between items-center bg-white px-8 py-12 max-md:px-5 max-md:py-6 max-sm:p-4">
@@ -15,33 +18,39 @@ const Header = () => {
         />
       </Link>
       
-      <nav className="flex items-center gap-[49px] max-md:hidden" role="navigation" aria-label="Main navigation">
-        <Link to="/products" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
-          Products
-        </Link>
+      <div className="flex items-center gap-4">
+        <nav className="flex items-center gap-[49px] max-md:hidden" role="navigation" aria-label="Main navigation">
+          <Link to="/products" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+            {t('nav.products')}
+          </Link>
+          
+          <Link to="/gallery" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+            {t('nav.gallery')}
+          </Link>
+          
+          <Link to="/about" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+            {t('nav.about')}
+          </Link>
+          
+          <Link to="/blog" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+            {t('nav.blog')}
+          </Link>
+          
+          <Link to="/contact" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
+            {t('nav.contact')}
+          </Link>
+          
+          <SampleRequestPopup>
+            <button className="flex h-[51px] justify-center items-center gap-2.5 bg-[#DCB481] px-8 py-[18px] rounded-[28px] text-[#454545] text-xl font-normal hover:bg-[#c9a373] transition-colors">
+              {t('nav.sample')}
+            </button>
+          </SampleRequestPopup>
+        </nav>
         
-        <Link to="/gallery" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
-          Gallery
-        </Link>
-        
-        <Link to="/about" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
-          About
-        </Link>
-        
-        <Link to="/blog" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
-          Blog
-        </Link>
-        
-        <Link to="/contact" className="flex h-10 justify-center items-center gap-2.5 px-0 py-2 text-[#454545] text-xl font-normal leading-[29.2px] hover:text-[#DCB481] transition-colors">
-          Contact
-        </Link>
-        
-        <SampleRequestPopup>
-          <button className="flex h-[51px] justify-center items-center gap-2.5 bg-[#DCB481] px-8 py-[18px] rounded-[28px] text-[#454545] text-xl font-normal hover:bg-[#c9a373] transition-colors">
-            Get a Free Sample
-          </button>
-        </SampleRequestPopup>
-      </nav>
+        <div className="max-md:hidden">
+          <LanguageSelector />
+        </div>
+      </div>
       
       <button 
         className="hidden text-[#454545] text-2xl max-md:block p-2 rounded-lg hover:bg-gray-100 transition-colors"
@@ -58,47 +67,51 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg z-50 md:hidden border-t">
           <nav className="flex flex-col p-6 space-y-6">
+            <div className="flex justify-end mb-4">
+              <LanguageSelector />
+            </div>
+            
             <Link 
               to="/products" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Products
+              {t('nav.products')}
             </Link>
             <Link 
               to="/gallery" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Gallery
+              {t('nav.gallery')}
             </Link>
             <Link 
               to="/about" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              About
+              {t('nav.about')}
             </Link>
             <Link 
               to="/blog" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Blog
+              {t('nav.blog')}
             </Link>
             <Link 
               to="/contact" 
               className="text-[#454545] text-lg font-normal py-3 px-2 hover:text-[#DCB481] transition-colors border-b border-gray-100 last:border-b-0"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Contact
+              {t('nav.contact')}
             </Link>
             <SampleRequestPopup>
               <button 
                 className="bg-[#DCB481] px-8 py-4 rounded-[28px] text-[#454545] text-lg font-normal mt-4 w-full hover:bg-[#c9a373] transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Get a Free Sample
+                {t('nav.sample')}
               </button>
             </SampleRequestPopup>
           </nav>

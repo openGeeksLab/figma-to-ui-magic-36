@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "products": "Products",
+    "gallery": "Gallery", 
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "sample": "Get a Free Sample"
+  },
+  "hero": {
+    "title": "Premium Nonwoven Fabrics for Industrial Applications",
+    "subtitle": "Leading manufacturer of high-quality nonwoven fabrics serving industries worldwide with innovative solutions and exceptional durability.",
+    "cta": "Explore Our Products",
+    "catalog": "Download Catalog"
+  },
+  "intro": {
+    "title": "About Our Company",
+    "description": "We are a leading manufacturer of premium nonwoven fabrics, specializing in industrial applications. With over two decades of experience, we provide innovative solutions that meet the highest quality standards for industries worldwide."
+  },
+  "features": {
+    "title": "Why Choose Our Nonwoven Fabrics",
+    "quality": {
+      "title": "Premium Quality",
+      "description": "Our nonwoven fabrics are manufactured using the latest technology and highest quality materials to ensure superior performance and durability."
+    },
+    "versatile": {
+      "title": "Versatile Applications",
+      "description": "From industrial filtration to medical applications, our nonwoven fabrics are designed to meet diverse industry requirements."
+    },
+    "sustainable": {
+      "title": "Sustainable Manufacturing",
+      "description": "We are committed to environmentally responsible manufacturing processes and sustainable material sourcing."
+    },
+    "custom": {
+      "title": "Custom Solutions",
+      "description": "We offer customized nonwoven fabric solutions tailored to your specific application requirements and industry standards."
+    }
+  },
+  "content": {
+    "natural": {
+      "title": "Natural Color Nonwoven Fabrics",
+      "description": "Our natural color nonwoven fabrics offer excellent breathability and comfort, perfect for applications requiring natural aesthetics and eco-friendly solutions."
+    },
+    "colored": {
+      "title": "Colored Nonwoven Fabrics",
+      "description": "Available in a wide range of vibrant colors, our colored nonwoven fabrics combine functionality with aesthetic appeal for various industrial and commercial applications."
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "filter": {
+      "all": "All Products",
+      "natural": "Natural Color",
+      "colored": "Colored"
+    },
+    "detail": {
+      "description": "Product Description",
+      "specifications": "Technical Specifications",
+      "applications": "Applications",
+      "samples": "Request Samples",
+      "contact": "Contact for Pricing"
+    }
+  },
+  "gallery": {
+    "title": "Our Projects",
+    "hero": "Gallery"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team for inquiries about our nonwoven fabric solutions",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "message": "Message",
+      "send": "Send Message",
+      "success": "Thank you for your message! We'll get back to you soon.",
+      "error": "There was an error sending your message. Please try again."
+    },
+    "info": {
+      "address": {
+        "title": "Visit us",
+        "line1": "123 Industrial Street",
+        "line2": "Manufacturing District",
+        "line3": "City, Country 12345"
+      },
+      "email": {
+        "title": "Email us",
+        "address": "info@company.com"
+      },
+      "phone": {
+        "title": "Call us",
+        "number": "+46 70 494 84 98"
+      }
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Leading the future of nonwoven fabric manufacturing",
+    "story": {
+      "title": "Our Story",
+      "content": "With over two decades of experience in the nonwoven fabric industry, we have established ourselves as a trusted partner for businesses worldwide. Our commitment to innovation, quality, and customer satisfaction has driven our continuous growth and success."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To provide innovative, high-quality nonwoven fabric solutions that exceed customer expectations while maintaining sustainable and environmentally responsible manufacturing practices."
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": "Quality Excellence",
+      "innovation": "Continuous Innovation", 
+      "sustainability": "Environmental Responsibility",
+      "service": "Customer Focus"
+    }
+  },
+  "blog": {
+    "title": "Latest News & Insights",
+    "readMore": "Read More"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What types of nonwoven fabrics do you manufacture?",
+      "answer": "We manufacture a wide range of nonwoven fabrics including spunbond, meltblown, and needle-punched fabrics in various weights, colors, and specifications to meet diverse industrial applications."
+    },
+    "q2": {
+      "question": "Can you provide custom nonwoven fabric solutions?",
+      "answer": "Yes, we specialize in custom solutions. Our engineering team works closely with clients to develop nonwoven fabrics that meet specific requirements for weight, color, texture, and performance characteristics."
+    },
+    "q3": {
+      "question": "What is your minimum order quantity?",
+      "answer": "Our minimum order quantities vary depending on the specific product and customization requirements. Please contact our sales team for detailed information about MOQs for your specific needs."
+    },
+    "q4": {
+      "question": "Do you offer samples for testing?",
+      "answer": "Yes, we provide free samples for testing and evaluation. You can request samples through our website or by contacting our sales team directly."
+    },
+    "q5": {
+      "question": "What industries do you serve?",
+      "answer": "We serve various industries including automotive, construction, agriculture, medical, filtration, geotextiles, and many other industrial applications that require high-quality nonwoven fabrics."
+    }
+  },
+  "footer": {
+    "company": "Premium nonwoven fabric manufacturer serving industries worldwide with innovative solutions.",
+    "products": "Products",
+    "company_links": "Company",
+    "support": "Support",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try again",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel"
+  }
+}

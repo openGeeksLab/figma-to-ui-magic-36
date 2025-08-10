@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "products": "Produkter",
+    "gallery": "Galleri",
+    "about": "Om oss",
+    "blog": "Blogg",
+    "contact": "Kontakt",
+    "sample": "Få ett gratis prov"
+  },
+  "hero": {
+    "title": "Högkvalitativa nonwoven-tyger för industriella tillämpningar",
+    "subtitle": "Ledande tillverkare av högkvalitativa nonwoven-tyger som betjänar industrier världen över med innovativa lösningar och exceptionell hållbarhet.",
+    "cta": "Utforska våra produkter",
+    "catalog": "Ladda ner katalog"
+  },
+  "intro": {
+    "title": "Om vårt företag",
+    "description": "Vi är en ledande tillverkare av högkvalitativa nonwoven-tyger som specialiserar sig på industriella tillämpningar. Med över två decennier av erfarenhet tillhandahåller vi innovativa lösningar som uppfyller de högsta kvalitetsstandarderna för industrier världen över."
+  },
+  "features": {
+    "title": "Varför välja våra nonwoven-tyger",
+    "quality": {
+      "title": "Förstklassig kvalitet",
+      "description": "Våra nonwoven-tyger tillverkas med den senaste teknologin och material av högsta kvalitet för att säkerställa överlägsen prestanda och hållbarhet."
+    },
+    "versatile": {
+      "title": "Mångsidiga tillämpningar",
+      "description": "Från industriell filtrering till medicinska tillämpningar är våra nonwoven-tyger designade för att möta olika industrikrav."
+    },
+    "sustainable": {
+      "title": "Hållbar tillverkning",
+      "description": "Vi är engagerade i miljöansvariga tillverkningsprocesser och hållbar materialanskaffning."
+    },
+    "custom": {
+      "title": "Anpassade lösningar",
+      "description": "Vi erbjuder skräddarsydda nonwoven-tyglösningar anpassade till dina specifika tillämpningskrav och industristandarder."
+    }
+  },
+  "content": {
+    "natural": {
+      "title": "Naturfärgade nonwoven-tyger",
+      "description": "Våra naturfärgade nonwoven-tyger erbjuder utmärkt andningsförmåga och komfort, perfekta för tillämpningar som kräver naturlig estetik och miljövänliga lösningar."
+    },
+    "colored": {
+      "title": "Färgade nonwoven-tyger",
+      "description": "Tillgängliga i ett brett utbud av livfulla färger kombinerar våra färgade nonwoven-tyger funktionalitet med estetisk tilltalande för olika industriella och kommersiella tillämpningar."
+    }
+  },
+  "products": {
+    "title": "Våra produkter",
+    "filter": {
+      "all": "Alla produkter",
+      "natural": "Naturfärg",
+      "colored": "Färgad"
+    },
+    "detail": {
+      "description": "Produktbeskrivning",
+      "specifications": "Tekniska specifikationer",
+      "applications": "Tillämpningar",
+      "samples": "Begär prover",
+      "contact": "Kontakta för prissättning"
+    }
+  },
+  "gallery": {
+    "title": "Våra projekt",
+    "hero": "Galleri"
+  },
+  "contact": {
+    "title": "Kontakta oss",
+    "subtitle": "Kom i kontakt med vårt team för förfrågningar om våra nonwoven-tyglösningar",
+    "form": {
+      "name": "Namn",
+      "email": "E-post",
+      "company": "Företag",
+      "message": "Meddelande",
+      "send": "Skicka meddelande",
+      "success": "Tack för ditt meddelande! Vi återkommer till dig snart.",
+      "error": "Det uppstod ett fel när meddelandet skickades. Försök igen."
+    },
+    "info": {
+      "address": {
+        "title": "Besök oss",
+        "line1": "123 Industrial Street",
+        "line2": "Tillverkningsdistrikt",
+        "line3": "Stad, Land 12345"
+      },
+      "email": {
+        "title": "Maila oss",
+        "address": "info@company.com"
+      },
+      "phone": {
+        "title": "Ring oss",
+        "number": "+46 70 494 84 98"
+      }
+    }
+  },
+  "about": {
+    "title": "Om oss",
+    "subtitle": "Leder framtiden för nonwoven-tygtillverkning",
+    "story": {
+      "title": "Vår historia",
+      "content": "Med över två decennier av erfarenhet inom nonwoven-tygindustrin har vi etablerat oss som en pålitlig partner för företag världen över. Vårt engagemang för innovation, kvalitet och kundnöjdhet har drivit vår kontinuerliga tillväxt och framgång."
+    },
+    "mission": {
+      "title": "Vårt uppdrag",
+      "content": "Att tillhandahålla innovativa, högkvalitativa nonwoven-tyglösningar som överträffar kundernas förväntningar samtidigt som vi upprätthåller hållbara och miljöansvariga tillverkningsmetoder."
+    },
+    "values": {
+      "title": "Våra värderingar",
+      "quality": "Kvalitetsexcellens",
+      "innovation": "Kontinuerlig innovation",
+      "sustainability": "Miljöansvar",
+      "service": "Kundfokus"
+    }
+  },
+  "blog": {
+    "title": "Senaste nyheter och insikter",
+    "readMore": "Läs mer"
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "q1": {
+      "question": "Vilka typer av nonwoven-tyger tillverkar ni?",
+      "answer": "Vi tillverkar ett brett utbud av nonwoven-tyger inklusive spunbond, meltblown och needle-punched tyger i olika vikter, färger och specifikationer för att möta olika industriella tillämpningar."
+    },
+    "q2": {
+      "question": "Kan ni tillhandahålla anpassade nonwoven-tyglösningar?",
+      "answer": "Ja, vi specialiserar oss på anpassade lösningar. Vårt ingenjörsteam arbetar nära med kunder för att utveckla nonwoven-tyger som uppfyller specifika krav på vikt, färg, textur och prestandaegenskaper."
+    },
+    "q3": {
+      "question": "Vad är er minsta orderkvantitet?",
+      "answer": "Våra minsta orderkvantiteter varierar beroende på den specifika produkten och anpassningskraven. Kontakta vårt säljteam för detaljerad information om MOQ för dina specifika behov."
+    },
+    "q4": {
+      "question": "Erbjuder ni prover för testning?",
+      "answer": "Ja, vi tillhandahåller gratis prover för testning och utvärdering. Du kan begära prover genom vår webbplats eller genom att kontakta vårt säljteam direkt."
+    },
+    "q5": {
+      "question": "Vilka industrier betjänar ni?",
+      "answer": "Vi betjänar olika industrier inklusive fordons-, bygg-, jordbruks-, medicinsk-, filtrerings-, geotextil- och många andra industriella tillämpningar som kräver högkvalitativa nonwoven-tyger."
+    }
+  },
+  "footer": {
+    "company": "Förstklassig nonwoven-tygtillverkare som betjänar industrier världen över med innovativa lösningar.",
+    "products": "Produkter",
+    "company_links": "Företag",
+    "support": "Support",
+    "rights": "Alla rättigheter förbehållna."
+  },
+  "common": {
+    "loading": "Laddar...",
+    "error": "Ett fel uppstod",
+    "tryAgain": "Försök igen",
+    "close": "Stäng",
+    "save": "Spara",
+    "cancel": "Avbryt"
+  }
+}
