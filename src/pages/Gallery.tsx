@@ -8,8 +8,10 @@ import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 import { useGallery } from "@/hooks/useGallery";
 import Autoplay from "embla-carousel-autoplay";
+import { useTranslation } from 'react-i18next';
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const plugin = React.useRef(Autoplay({ delay: 70000, stopOnInteraction: true }));
   const { images, loading } = useGallery();
 
@@ -56,7 +58,7 @@ const Gallery = () => {
           
           <div className="absolute bottom-8 left-16 max-md:left-13 max-sm:bottom-4 max-sm:left-8 z-10">
             <h1 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl bg-white px-5 py-3 rounded-[28px]">
-              Our <span className="text-[#DCB481]">Gallery</span>
+              {t('ourGallery')} <span className="text-[#DCB481]">{t('galleryHighlight')}</span>
             </h1>
           </div>
         </section>
@@ -67,10 +69,10 @@ const Gallery = () => {
             {/* Header */}
             <div className="text-center mb-16">
               <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl mb-4">
-                Our <span className="text-[#DCB481]">Projects</span>
+                {t('ourProjects')} <span className="text-[#DCB481]">{t('projectsHighlight')}</span>
               </h2>
               <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base max-w-3xl mx-auto">
-                Explore our stunning collection of wooden panel projects. Each design showcases the natural beauty and versatility of wood in modern architecture.
+                {t('galleryDescription')}
               </p>
             </div>
             

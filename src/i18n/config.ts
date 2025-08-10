@@ -94,7 +94,14 @@ const resources = {
       "faqQ4": "Are the materials sustainably sourced?",
       "faqA4": "Absolutely! All our wood is sourced from responsibly managed forests with proper certifications. Our thermal modification process uses only heat and steam, no chemicals.",
       "faqQ5": "What is the lifespan of exterior wood wall panels?",
-      "faqA5": "With proper installation and maintenance, our thermally modified wood panels can last 25-30 years or more, significantly longer than traditional wood products."
+      "faqA5": "With proper installation and maintenance, our thermally modified wood panels can last 25-30 years or more, significantly longer than traditional wood products.",
+      
+      // Gallery page
+      "ourGallery": "Our",
+      "galleryHighlight": "Gallery",
+      "ourProjects": "Our",
+      "projectsHighlight": "Projects",
+      "galleryDescription": "Explore our stunning collection of wooden panel projects. Each design showcases the natural beauty and versatility of wood in modern architecture."
     }
   },
   sv: {
@@ -187,7 +194,14 @@ const resources = {
       "faqQ4": "Är materialen hållbart inköpta?",
       "faqA4": "Absolut! Allt vårt trä kommer från ansvarsfullt förvaltade skogar med rätt certifieringar. Vår termiska modifieringsprocess använder endast värme och ånga, inga kemikalier.",
       "faqQ5": "Vad är livslängden för utomhusträpaneler?",
-      "faqA5": "Med korrekt installation och underhåll kan våra termiskt modifierade träpaneler hålla 25-30 år eller mer, betydligt längre än traditionella träprodukter."
+      "faqA5": "Med korrekt installation och underhåll kan våra termiskt modifierade träpaneler hålla 25-30 år eller mer, betydligt längre än traditionella träprodukter.",
+      
+      // Gallery page
+      "ourGallery": "Vårt",
+      "galleryHighlight": "galleri",
+      "ourProjects": "Våra",
+      "projectsHighlight": "projekt",
+      "galleryDescription": "Utforska vår fantastiska samling av träpanelprojekt. Varje design visar träets naturliga skönhet och mångsidighet i modern arkitektur."
     }
   }
 };
