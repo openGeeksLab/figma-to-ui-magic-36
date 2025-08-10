@@ -127,7 +127,10 @@ const resources = {
       "toMatch": "to",
       "match": "Match",
       "any": "Any",
-      "anyAesthetic": "Aesthetic"
+      "anyAesthetic": "Aesthetic",
+      "next": "Next",
+      "generation": "Generation",
+      "woodCladding": "Wood Cladding"
     }
   },
   sv: {
@@ -253,7 +256,10 @@ const resources = {
       "toMatch": "för att",
       "match": "Matcha Valfri",
       "any": "",
-      "anyAesthetic": "Estetik"
+      "anyAesthetic": "Estetik",
+      "next": "Nästa",
+      "generation": "Generations",
+      "woodCladding": "Träpanel"
     }
   }
 };
