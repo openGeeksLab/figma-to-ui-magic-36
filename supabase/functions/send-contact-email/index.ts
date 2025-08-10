@@ -65,7 +65,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send notification email to admin (using the same email for demo)
     const adminEmailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: ["drudeveldvurech@gmail.com"], // Replace with your actual admin email
+      to: ["drudeveldvurech@gmail.com", "info@nordicthermotra.se","whitefox@whitefoxcompany.com"], // Replace with your actual admin email
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
