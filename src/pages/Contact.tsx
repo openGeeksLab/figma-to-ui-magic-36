@@ -89,7 +89,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <h3 className="text-[#454545] text-xl font-bold mb-2">Email us</h3>
-                <p className="text-[#454545] text-base">info@wood-panel.se</p>
+                <p className="text-[#454545] text-base">info@thermotra.se</p>
               </div>
               
               <div className="text-center">
@@ -100,7 +100,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <h3 className="text-[#454545] text-xl font-bold mb-2">Address</h3>
-                <p className="text-[#454545] text-base">Stockholm, Sweden</p>
+                <p className="text-[#454545] text-base">Annelötsvägen 61 Grödinge Stockholm</p>
               </div>
               
               <div className="text-center">
@@ -110,7 +110,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <h3 className="text-[#454545] text-xl font-bold mb-2">Operating Hours</h3>
-                <p className="text-[#454545] text-base">9:00AM - 5:00PM EST</p>
+                <p className="text-[#454545] text-base">9:00AM - 7:00PM EST</p>
               </div>
             </div>
             
