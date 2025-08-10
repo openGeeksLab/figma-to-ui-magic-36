@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface FAQItem {
   question: string;
@@ -6,28 +7,29 @@ interface FAQItem {
 }
 
 const FAQ = () => {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   const faqItems: FAQItem[] = [
     {
-      question: "Are exterior wood wall panels weather-resistant?",
-      answer: "Yes! Our panels are designed to withstand various weather conditions, including rain, humidity, and temperature fluctuations. Proper maintenance will enhance longevity."
+      question: t('faqQ1'),
+      answer: t('faqA1')
     },
     {
-      question: "How do I maintain wood wall panels?",
-      answer: "Regular cleaning with mild soap and water, periodic inspection for damage, and occasional resealing or refinishing will keep your panels looking great for years."
+      question: t('faqQ2'),
+      answer: t('faqA2')
     },
     {
-      question: "Can I install the panels myself?",
-      answer: "While DIY installation is possible for experienced builders, we recommend professional installation to ensure proper mounting, weatherproofing, and warranty coverage."
+      question: t('faqQ3'),
+      answer: t('faqA3')
     },
     {
-      question: "Are the materials sustainably sourced?",
-      answer: "Absolutely! All our wood is sourced from responsibly managed forests with proper certifications. Our thermal modification process uses only heat and steam, no chemicals."
+      question: t('faqQ4'),
+      answer: t('faqA4')
     },
     {
-      question: "What is the lifespan of exterior wood wall panels?",
-      answer: "With proper installation and maintenance, our thermally modified wood panels can last 25-30 years or more, significantly longer than traditional wood products."
+      question: t('faqQ5'),
+      answer: t('faqA5')
     }
   ];
 
@@ -39,9 +41,9 @@ const FAQ = () => {
     <section className="flex h-[511px] justify-between items-start w-full px-0 py-24 max-md:flex-col max-md:gap-10 max-md:h-auto max-md:px-0 max-md:py-[60px] max-sm:px-0 max-sm:py-10">
       <header className="w-[477px] text-[#454545] text-[42px] font-bold max-md:w-full max-md:text-[32px] max-sm:text-2xl">
         <h2>
-          <span className="text-[#454545]">Still a </span>
-          <span className="text-[#DCB481]">question</span>
-          <span className="text-[#454545]">? Here are the answers</span>
+          <span className="text-[#454545]">{t('stillQuestion')} </span>
+          <span className="text-[#DCB481]">{t('questionHighlight')}</span>
+          <span className="text-[#454545]">{t('questionSuffix')}</span>
         </h2>
       </header>
       

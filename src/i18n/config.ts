@@ -79,7 +79,22 @@ const resources = {
       "validEmailRequired": "Please enter a valid email address",
       "phoneRequired": "Phone number is required",
       "validPhoneRequired": "Please enter a valid phone number",
-      "messageRequired": "Message is required"
+      "messageRequired": "Message is required",
+      
+      // FAQ section
+      "stillQuestion": "Still a",
+      "questionHighlight": "question",
+      "questionSuffix": "? Here are the answers",
+      "faqQ1": "Are exterior wood wall panels weather-resistant?",
+      "faqA1": "Yes! Our panels are designed to withstand various weather conditions, including rain, humidity, and temperature fluctuations. Proper maintenance will enhance longevity.",
+      "faqQ2": "How do I maintain wood wall panels?",
+      "faqA2": "Regular cleaning with mild soap and water, periodic inspection for damage, and occasional resealing or refinishing will keep your panels looking great for years.",
+      "faqQ3": "Can I install the panels myself?",
+      "faqA3": "While DIY installation is possible for experienced builders, we recommend professional installation to ensure proper mounting, weatherproofing, and warranty coverage.",
+      "faqQ4": "Are the materials sustainably sourced?",
+      "faqA4": "Absolutely! All our wood is sourced from responsibly managed forests with proper certifications. Our thermal modification process uses only heat and steam, no chemicals.",
+      "faqQ5": "What is the lifespan of exterior wood wall panels?",
+      "faqA5": "With proper installation and maintenance, our thermally modified wood panels can last 25-30 years or more, significantly longer than traditional wood products."
     }
   },
   sv: {
@@ -157,7 +172,22 @@ const resources = {
       "validEmailRequired": "Vänligen ange en giltig e-postadress",
       "phoneRequired": "Telefonnummer krävs",
       "validPhoneRequired": "Vänligen ange ett giltigt telefonnummer",
-      "messageRequired": "Meddelande krävs"
+      "messageRequired": "Meddelande krävs",
+      
+      // FAQ section
+      "stillQuestion": "Har du fortfarande en",
+      "questionHighlight": "fråga",
+      "questionSuffix": "? Här är svaren",
+      "faqQ1": "Är utomhusträpaneler väderbeständiga?",
+      "faqA1": "Ja! Våra paneler är designade för att motstå olika väderförhållanden, inklusive regn, fuktighet och temperaturförändringar. Korrekt underhåll förlänger livslängden.",
+      "faqQ2": "Hur underhåller jag träväggspaneler?",
+      "faqA2": "Regelbunden rengöring med mild tvål och vatten, periodisk inspektion för skador och tillfällig försegling eller renovering håller dina paneler fina i många år.",
+      "faqQ3": "Kan jag installera panelerna själv?",
+      "faqA3": "Även om DIY-installation är möjlig för erfarna byggare, rekommenderar vi professionell installation för att säkerställa korrekt montering, väderskydd och garantitäckning.",
+      "faqQ4": "Är materialen hållbart inköpta?",
+      "faqA4": "Absolut! Allt vårt trä kommer från ansvarsfullt förvaltade skogar med rätt certifieringar. Vår termiska modifieringsprocess använder endast värme och ånga, inga kemikalier.",
+      "faqQ5": "Vad är livslängden för utomhusträpaneler?",
+      "faqA5": "Med korrekt installation och underhåll kan våra termiskt modifierade träpaneler hålla 25-30 år eller mer, betydligt längre än traditionella träprodukter."
     }
   }
 };
