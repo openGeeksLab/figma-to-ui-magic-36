@@ -183,7 +183,9 @@ export type Database = {
         Row: {
           created_at: string
           description: string | null
+          description_sv: string | null
           details: Json | null
+          details_sv: Json | null
           id: string
           main_picture_path: string
           main_picture_url: string
@@ -196,7 +198,9 @@ export type Database = {
         Insert: {
           created_at?: string
           description?: string | null
+          description_sv?: string | null
           details?: Json | null
+          details_sv?: Json | null
           id?: string
           main_picture_path: string
           main_picture_url: string
@@ -209,7 +213,9 @@ export type Database = {
         Update: {
           created_at?: string
           description?: string | null
+          description_sv?: string | null
           details?: Json | null
+          details_sv?: Json | null
           id?: string
           main_picture_path?: string
           main_picture_url?: string

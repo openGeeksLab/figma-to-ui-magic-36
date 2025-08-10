@@ -12,9 +12,9 @@ import colorNetonets from '@/assets/color-netonets.png';
 import colorNatural from '@/assets/color-natural.png';
 
 const ProductDetail = () => {
+  const { t, i18n } = useTranslation();
   const { type, productName } = useParams();
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
   const [product, setProduct] = useState<any>(null);
   const [productImages, setProductImages] = useState<Tables<"product_images">[]>([]);
   const [similarProducts, setSimilarProducts] = useState<Tables<"products">[]>([]);
@@ -241,7 +241,21 @@ const ProductDetail = () => {
               <h1 className="text-2xl md:text-4xl font-bold text-[#454545] max-sm:text-xl break-words">{product.name}</h1>
               
               <p className="text-gray-600 leading-relaxed">
-                {getProductDescription()}
+                {(() => {
+                  const isSwedish = i18n.language === 'sv';
+                  
+                  if (isSwedish && product?.description_sv) {
+                    return product.description_sv;
+                  } else if (product?.description) {
+                    return product.description;
+                  } else {
+                    // Default fallback text
+                    const defaultText = isSwedish 
+                      ? `${product?.name} är en sofistikerad 3D-beklädnad av nordisk furu. Den skapar en visuellt elegant och modern träyta. Mycket lämplig för fasader, interiörer och andra dekorativa ytor där en hållbar och kemikaliefri träyta önskas.`
+                      : `${product?.name} is a sophisticated 3D cladding of Nordic Pine. It creates a visually elegant and modern wood surface. Highly suitable for facades, interiors, and other decorative surfaces where a sustainable and chemical-free wood surface is desired.`;
+                    return defaultText;
+                  }
+                })()}
               </p>
 
               {/* Surface Treatment */}
