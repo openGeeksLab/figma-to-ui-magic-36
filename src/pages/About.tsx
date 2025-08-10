@@ -74,7 +74,7 @@ const About = () => {
 </section>
 
 {/* SECTION 1: Image left, Text right */}
-<section className="w-full flex justify-between items-center px-8 py-24 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
+<section className="w-full flex justify-between items-center px-8 py-12 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[30px] max-sm:py-5">
   <div className="flex-1 flex justify-center items-center max-md:w-full max-md:h-[400px]">
     <img
       src="/lovable-uploads/3ce6cc59-1de5-4737-955d-81985d6afcb6.png"
@@ -93,7 +93,7 @@ const About = () => {
 </section>
 
 {/* SECTION 2: Text left, Image right */}
-<section className="w-full flex justify-between items-center px-8 py-24 gap-12 max-md:flex-col-reverse max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
+<section className="w-full flex justify-between items-center px-8 py-12 gap-12 max-md:flex-col-reverse max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[30px] max-sm:py-5">
   <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full ml-36 max-md:ml-0">
     <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
       {t('ourValuesPrefix')} <span className="text-[#DCB481]">{t('ourValuesHighlight')}</span>
@@ -113,7 +113,7 @@ const About = () => {
 </section>
 
 {/* SECTION 3: Image left, Text right */}
-<section className="w-full flex justify-between items-center px-8 py-24 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
+<section className="w-full flex justify-between items-center px-8 py-12 gap-12 max-md:flex-col max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[30px] max-sm:py-5">
   <div className="flex-1 flex justify-center items-center max-md:w-full max-md:h-[400px]">
     <img
       src="/lovable-uploads/11f4848a-da9c-4f0c-b73b-f4b0fd9607a9.png"
@@ -137,7 +137,7 @@ const About = () => {
 </section>
 
 {/* SECTION 4: Text left, Image right - We Provide */}
-<section className="w-full flex justify-between items-center px-8 py-24 gap-12 max-md:flex-col-reverse max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[60px] max-sm:py-10">
+<section className="w-full flex justify-between items-center px-8 py-12 gap-12 max-md:flex-col-reverse max-md:px-5 max-sm:px-4 max-md:gap-10 max-md:py-[30px] max-sm:py-5">
   <div className="flex-1 flex flex-col items-start gap-6 max-md:w-full ml-36 max-md:ml-0">
   <h2 className="text-[#454545] text-[42px] font-bold max-md:text-[32px] max-sm:text-2xl">
       {t('sustainability')}
