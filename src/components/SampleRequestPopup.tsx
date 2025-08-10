@@ -19,27 +19,103 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    
+    // Format phone number as user types
+    let formattedValue = value;
+    if (name === 'phone') {
+      // Remove all non-digit characters
+      const digits = value.replace(/\D/g, '');
+      
+      // Format as phone number with spaces/dashes
+      if (digits.length <= 3) {
+        formattedValue = digits;
+      } else if (digits.length <= 6) {
+        formattedValue = `${digits.slice(0, 3)}-${digits.slice(3)}`;
+      } else if (digits.length <= 10) {
+        formattedValue = `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+      } else {
+        formattedValue = digits.slice(0, 15);
+      }
+    }
+    
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: formattedValue
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Basic validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
+      toast({
+        title: "Error",
+        description: "Please fill in all required fields.",
+      });
+      return;
+    }
+
+    // Email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      toast({
+        title: "Error",
+        description: "Please enter a valid email address.",
+      });
+      return;
+    }
+
+    // Phone validation
+    const cleanPhone = formData.phone.replace(/\D/g, '');
+    if (cleanPhone.length < 7 || cleanPhone.length > 15) {
+      toast({
+        title: "Error",
+        description: "Please enter a valid phone number.",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Request Submitted!",
-      description: "We'll send you a free sample soon.",
-    });
-    
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    setIsSubmitting(false);
-    setIsOpen(false);
+    try {
+      const emailData = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: `Sample Request: ${formData.message || "Customer has requested a free sample. No additional message provided."}`
+      };
+
+      const response = await fetch('https://xksrscyjywtnmtwmgihm.supabase.co/functions/v1/send-contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emailData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Sample Request Sent!",
+          description: "We'll send you a free sample within 2-3 business days.",
+        });
+        
+        // Reset form and close popup
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setIsOpen(false);
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to send sample request. Please try again.",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send sample request. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleOpen = () => {
@@ -119,6 +195,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
                       placeholder="Phone"
                       value={formData.phone}
                       onChange={handleInputChange}
+                      required
                       className="w-full h-14 px-6 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
                     />
                     
