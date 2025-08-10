@@ -83,7 +83,14 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         const isSpecialCladdingRoute = ['/cladding/f-1', '/cladding/f-2', '/cladding/f-3', '/cladding/f-4', '/cladding/f-5', '/cladding/f-6', '/cladding/f-8', '/cladding/f-10', '/cladding/shp-s', '/cladding/shp' ].includes(location.pathname);
         const basePrice = isSpecialCladdingRoute ? 21.5 : 25;
         const kurs = 11.15;
+        if (surfaceTreatment === 'Brushed' || surfaceTreatment === 'Finely sawn') {
+         // setCalculatedPrice((basePrice+2.5)*1.25*1.5*kurs * squareValue);
+          setCalculatedPrice(1000);
+          
+        }
+        else {
         setCalculatedPrice(basePrice*1.25*1.5*kurs * squareValue);
+        }
       }
     }
   };
