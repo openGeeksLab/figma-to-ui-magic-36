@@ -34,17 +34,21 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
+    
+    // Only allow numbers and decimal points
+    const numericValue = value.replace(/[^0-9.]/g, '');
+    
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: numericValue
     }));
 
     // Auto-calculate square meters when length and width are provided
     if (name === 'length' || name === 'width') {
-      const length = name === 'length' ? parseFloat(value) : parseFloat(formData.length);
-      const width = name === 'width' ? parseFloat(value) : parseFloat(formData.width);
+      const length = name === 'length' ? parseFloat(numericValue) : parseFloat(formData.length);
+      const width = name === 'width' ? parseFloat(numericValue) : parseFloat(formData.width);
       
-      if (length && width) {
+      if (length && width && !isNaN(length) && !isNaN(width)) {
         const square = (length * width) / 1000000;
         setFormData(prev => ({
           ...prev,
@@ -59,12 +63,23 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         setCalculatedPrice(basePrice*1.25*1.5*kurs);
       } 
       else {
-        // Clear square and price when either field is empty
+        // Clear square and price when either field is empty or invalid
         setFormData(prev => ({
           ...prev,
           square: ''
         }));
         setCalculatedPrice(null);
+      }
+    }
+    
+    // Handle direct square input
+    if (name === 'square' && numericValue) {
+      const squareValue = parseFloat(numericValue);
+      if (!isNaN(squareValue)) {
+        const isSpecialCladdingRoute = ['/cladding/f-1', '/cladding/f-2', '/cladding/f-3', '/cladding/f-4', '/cladding/f-5', '/cladding/f-6', '/cladding/f-8', '/cladding/f-10', '/cladding/shp-s', '/cladding/shp' ].includes(location.pathname);
+        const basePrice = isSpecialCladdingRoute ? 21.5 : 25;
+        const kurs = 11.15;
+        setCalculatedPrice(basePrice*1.25*1.5*kurs * squareValue);
       }
     }
   };
@@ -158,44 +173,49 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Form Section */}
-            <div className="space-y-4">
-              <div className="relative">
-                <Input
-                  type="number"
-                  name="length"
-                  placeholder="Length"
-                  value={formData.length}
-                  onChange={handleInputChange}
-                  className="w-full h-12 px-4 pr-12 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
-                />
-                <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">mm</span>
+              <div className="space-y-4">
+                <div className="relative">
+                  <Input
+                    type="text"
+                    name="length"
+                    placeholder="Length"
+                    value={formData.length}
+                    onChange={handleInputChange}
+                    className="w-full h-12 px-4 pr-12 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
+                    inputMode="decimal"
+                    pattern="[0-9]*\.?[0-9]*"
+                  />
+                  <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">mm</span>
+                </div>
+                
+                <div className="relative">
+                  <Input
+                    type="text"
+                    name="width"
+                    placeholder="Wide"
+                    value={formData.width}
+                    onChange={handleInputChange}
+                    className="w-full h-12 px-4 pr-12 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
+                    inputMode="decimal"
+                    pattern="[0-9]*\.?[0-9]*"
+                  />
+                  <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">mm</span>
+                </div>
+                
+                <div className="relative">
+                  <Input
+                    type="text"
+                    name="square"
+                    placeholder="Square"
+                    value={formData.square}
+                    onChange={handleInputChange}
+                    className="w-full h-12 px-4 pr-12 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
+                    inputMode="decimal"
+                    pattern="[0-9]*\.?[0-9]*"
+                  />
+                  <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">m²</span>
+                </div>
               </div>
-              
-              <div className="relative">
-                <Input
-                  type="number"
-                  name="width"
-                  placeholder="Wide"
-                  value={formData.width}
-                  onChange={handleInputChange}
-                  className="w-full h-12 px-4 pr-12 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
-                />
-                <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">mm</span>
-              </div>
-              
-              <div className="relative">
-                <Input
-                  type="number"
-                  name="square"
-                  placeholder="Square"
-                  value={formData.square}
-                  onChange={handleInputChange}
-                  className="w-full h-12 px-4 pr-12 rounded-full border-0 bg-white placeholder-gray-400 text-gray-700 shadow-sm"
-                  readOnly
-                />
-                <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">m²</span>
-              </div>
-            </div>
 
             {/* Price Section */}
             <div className="flex flex-col justify-center items-center lg:items-start">
