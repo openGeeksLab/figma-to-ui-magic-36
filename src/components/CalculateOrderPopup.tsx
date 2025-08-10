@@ -193,7 +193,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Form Section */}
               <div className="space-y-4">
-                Surface Treatment Display
+                {/* Surface Treatment Display */}
                 {/* {(surfaceTreatment || productDetails?.surfaceTreatment) && (
                   <div className="w-full h-12 px-4 rounded-full border-0 bg-gray-100 flex items-center text-gray-700">
                     <span className="text-sm text-gray-500 mr-2">Surface:</span>
