@@ -46,7 +46,10 @@ const resources = {
       "provideItem2": "Expert advice to guide you from concept to completion.",
       "provideItem3": "Skilled installation ensuring perfect alignment and durability.",
       "provideItem4": "Keeping your wood panels looking their best year after year.",
-      "sustainability": "Sustainability"
+      "sustainability": "Sustainability",
+      "sustainabilityParagraph1": "As a leading provider of premium interior and exterior wood wall panels, Nordic Thermoträ delivers sustainable and innovative design solutions that transform indoor and outdoor spaces.",
+      "sustainabilityParagraph2": "For us, the environment and sustainability are obvious issues in everyday life. We work to contribute to a sustainable society thriving in harmony with nature. Our heat-treated wood is sustainably produced in Finland, using timber from FSC-certified forests and a treatment process completely free from chemicals.",
+      "sustainabilityParagraph3": "The result? A wood that's not only beautiful – it's strong, dimensionally stable, and built to last, no matter the climate. We continuously work to reduce our climate footprint, e.g. by gradually switching to the latest technology and actively influencing our subcontractors."
     }
   },
   sv: {
@@ -91,7 +94,10 @@ const resources = {
       "provideItem2": "Expertråd som vägleder dig från idé till färdigställande.",
       "provideItem3": "Skicklig installation med perfekt inriktning och hållbarhet.",
       "provideItem4": "Vi ser till att dina träpaneler ser bäst ut år efter år.",
-      "sustainability": "Hållbarhet"
+      "sustainability": "Hållbarhet",
+      "sustainabilityParagraph1": "Som en ledande leverantör av interiöra och exteriöra väggpaneler i trä levererar Nordic Thermoträ hållbara och innovativa designlösningar som förändrar inomhus- och utomhusmiljöer.",
+      "sustainabilityParagraph2": "För oss är miljö och hållbarhet självklara frågor i vardagen. Vi arbetar för att bidra till ett hållbart samhälle som frodas i harmoni med naturen. Vårt värmebehandlade trä produceras på ett hållbart sätt i Finland, med virke från FSC-certifierade skogar och en behandlingsprocess helt fri från kemikalier. Resultatet?",
+      "sustainabilityParagraph3": "Ett trä som inte bara är vackert - det är också starkt, formstabilt och byggt för att hålla, oavsett klimat. Vi arbetar kontinuerligt för att minska vårt klimatavtryck, t.ex. genom att gradvis övergå till den senaste tekniken och aktivt påverka våra underleverantörer."
     }
   }
 };
