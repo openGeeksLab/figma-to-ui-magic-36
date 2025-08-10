@@ -120,7 +120,14 @@ const resources = {
       "toxinFree": "Toxin-free and Chemical-free",
       "noResin": "No Resin",
       "lowMaintenance": "Low Maintenance",
-      "tailoredApproach": "Tailored Approach for Each Customer"
+      "tailoredApproach": "Tailored Approach for Each Customer",
+      
+      // ImageGallery
+      "customCladding": "Custom Cladding",
+      "toMatch": "to",
+      "match": "Match",
+      "any": "Any",
+      "anyAesthetic": "Aesthetic"
     }
   },
   sv: {
@@ -239,7 +246,14 @@ const resources = {
       "toxinFree": "Giftfri och kemikaliefri",
       "noResin": "Ingen hartser",
       "lowMaintenance": "Lågt underhåll",
-      "tailoredApproach": "Skräddarsydd lösning för varje kund"
+      "tailoredApproach": "Skräddarsydd lösning för varje kund",
+      
+      // ImageGallery
+      "customCladding": "Skräddarsydd beklädnad",
+      "toMatch": "för att",
+      "match": "matcha",
+      "any": "valfri",
+      "anyAesthetic": "estetik"
     }
   }
 };

@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ImageGallery = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="flex h-[1008px] items-start gap-6 w-full py-0 max-xl:px-6 max-lg:px-6 max-md:flex-col max-md:h-auto max-md:gap-5 max-md:px-5 max-md:py-0 max-sm:px-4 max-sm:py-0" aria-label="Product gallery">
       <div 
@@ -21,19 +24,19 @@ const ImageGallery = () => {
           <div className="flex flex-col items-start">
             <div className="flex items-center gap-2.5 bg-white p-2.5 rounded-[28px_28px_0px_0px]">
               <h3 className="text-[#454545] text-[42px] font-bold max-md:text-[28px] max-sm:text-xl">
-                Custom Cladding
+                {t('customCladding')}
               </h3>
             </div>
             <div className="flex items-center gap-2.5 bg-white p-2.5 rounded-[0px_28px_28px_0px]">
               <h3 className="text-[#454545] text-[42px] font-bold max-md:text-[28px] max-sm:text-xl">
-                <span className="text-[#454545]">to </span>
-                <span className="text-[#DCB481]">Match </span>
-                <span className="text-[#454545]">Any</span>
+                <span className="text-[#454545]">{t('toMatch')} </span>
+                <span className="text-[#DCB481]">{t('match')} </span>
+                <span className="text-[#454545]">{t('any')}</span>
               </h3>
             </div>
             <div className="flex items-center gap-2.5 bg-white p-2.5 rounded-[0px_0px_28px_28px]">
               <h3 className="text-[#454545] text-[42px] font-bold max-md:text-[28px] max-sm:text-xl">
-                Aesthetic
+                {t('anyAesthetic')}
               </h3>
             </div>
           </div>
