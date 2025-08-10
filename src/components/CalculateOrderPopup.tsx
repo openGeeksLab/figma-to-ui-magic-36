@@ -66,8 +66,8 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         const kurs = 11.15;
         // setCalculatedPrice(square*basePrice*1.25*1.5*kurs);
         if (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn') {
-          // setCalculatedPrice((basePrice+2.5)*1.25*1.5*kurs * squareValue);
-           setCalculatedPrice(1000);
+          setCalculatedPrice((basePrice+2.5)*1.25*1.5*kurs * square);
+          //  setCalculatedPrice(1000);
            
          }
          else {
@@ -92,8 +92,8 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         const basePrice = isSpecialCladdingRoute ? 21.5 : 25;
         const kurs = 11.15;
         if (surfaceTreatment === 'Brushed' || surfaceTreatment === 'Finely sawn') {
-         // setCalculatedPrice((basePrice+2.5)*1.25*1.5*kurs * squareValue);
-          setCalculatedPrice(1000);
+         setCalculatedPrice((basePrice+2.5)*1.25*1.5*kurs * squareValue);
+          // setCalculatedPrice(1000);
           
         }
         else {
