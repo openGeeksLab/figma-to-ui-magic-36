@@ -8,11 +8,13 @@ import Autoplay from "embla-carousel-autoplay";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import ProductFilter from '@/components/ProductFilter';
+import { Loader2 } from "lucide-react";
 
 const Products = () => {
   const navigate = useNavigate();
   const plugin = React.useRef(Autoplay({ delay: 70000, stopOnInteraction: true }));
   const [products, setProducts] = useState<Tables<"products">[]>([]);
+  const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>("All Products");
   const [showFilter, setShowFilter] = useState(false);
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
@@ -37,15 +39,22 @@ const Products = () => {
   }, []);
 
   const fetchProducts = async () => {
-    const { data, error } = await supabase
-      .from('products')
-      .select('*')
-      .order('created_at', { ascending: true });
+    try {
+      setLoading(true);
+      const { data, error } = await supabase
+        .from('products')
+        .select('*')
+        .order('created_at', { ascending: true });
 
-    if (error) {
+      if (error) {
+        console.error('Error fetching products:', error);
+      } else {
+        setProducts(data || []);
+      }
+    } catch (error) {
       console.error('Error fetching products:', error);
-    } else {
-      setProducts(data || []);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -184,35 +193,57 @@ const Products = () => {
             />
           )}
 
-          {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {sizeFilteredProducts.map((product) => (
-              <div 
-                key={product.id} 
-                className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border cursor-pointer"
-                onClick={() => handleProductClick(product)}
-              >
-                <div className="aspect-square overflow-hidden relative">
-                  <img 
-                    src={product.main_picture_url} 
-                    alt={product.name} 
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors">
-                    {product.type}
-                  </button>
-                  <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors !rounded-full min-w-8 min-h-8">
-                    <svg className="w-4 h-4 text-[#454545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                  </button>
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
-                    <h3 className="text-sm font-medium">{product.name}</h3>
+          {/* Loading state */}
+          {loading ? (
+            <div className="flex justify-center items-center py-12">
+              <Loader2 className="h-8 w-8 animate-spin" />
+            </div>
+          ) : (
+            /* Products Grid */
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {sizeFilteredProducts.map((product, index) => (
+                <div 
+                  key={product.id} 
+                  className="group relative bg-white rounded-[16px] overflow-hidden shadow-sm border cursor-pointer"
+                  onClick={() => handleProductClick(product)}
+                >
+                  <div className="aspect-square overflow-hidden relative">
+                    <img 
+                      src={product.main_picture_url} 
+                      alt={product.name} 
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      loading={index < 8 ? "eager" : "lazy"}
+                      decoding="async"
+                      style={{
+                        contentVisibility: 'auto',
+                        containIntrinsicSize: '300px 300px',
+                        ...(index >= 8 && { opacity: 0, transition: 'opacity 0.3s ease-in-out' })
+                      }}
+                      onLoad={(e) => {
+                        const img = e.target as HTMLImageElement;
+                        img.style.opacity = '1';
+                      }}
+                      onError={(e) => {
+                        const img = e.target as HTMLImageElement;
+                        img.src = '/placeholder.svg';
+                      }}
+                    />
+                    <button className="absolute top-3 left-3 bg-white text-[#454545] px-3 py-1 rounded-[12px] text-xs font-medium hover:bg-gray-50 transition-colors">
+                      {product.type}
+                    </button>
+                    <button className="absolute top-3 right-3 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-colors !rounded-full min-w-8 min-h-8">
+                      <svg className="w-4 h-4 text-[#454545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                      </svg>
+                    </button>
+                    <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3">
+                      <h3 className="text-sm font-medium">{product.name}</h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
