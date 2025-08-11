@@ -118,7 +118,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
           (productDetails?.surfaceTreatment === 'Brushed' || productDetails?.surfaceTreatment === 'Finely sawn')
         ) {
             // Якщо колір "Colors" і обробка "Brushed" або "Finely sawn"
-              setCalculatedPrice((basePrice + 2.5) * 1.35 * 1.5 * kurs * squareValue);
+              setCalculatedPrice((basePrice + 2.5+7.0) * 1.25 * 1.5 * kurs * squareValue);
               // setCalculatedPrice(1000);
         } 
         else if (
@@ -126,7 +126,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
           productDetails?.colorName !== 'Natural'
         ) {
             // Якщо тільки колір "Colors"
-              setCalculatedPrice(basePrice * 1.35 * 1.5 * kurs * squareValue);
+              setCalculatedPrice((basePrice+7.0) * 1.25 * 1.5 * kurs * squareValue);
               // setCalculatedPrice(2000);
         } 
         else if (
