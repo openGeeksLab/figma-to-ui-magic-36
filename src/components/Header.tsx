@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { User, LogOut, Settings } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import SampleRequestPopup from './SampleRequestPopup';
 import LanguageSelector from './LanguageSelector';
+import { useAuth } from './AuthContext';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t } = useTranslation();
   const location = useLocation();
+  const { user, isAdmin, signOut } = useAuth();
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -49,6 +54,59 @@ const Header = () => {
             {t('getSample')}
           </button>
         </SampleRequestPopup>
+
+        {/* Auth Section */}
+        {user ? (
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="icon" className="relative">
+                <User className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-56">
+              <div className="px-2 py-1.5 text-sm">
+                <p className="font-medium">{user.email}</p>
+                {isAdmin && (
+                  <p className="text-xs text-muted-foreground">Administrator</p>
+                )}
+              </div>
+              <DropdownMenuSeparator />
+              {isAdmin && (
+                <>
+                  <DropdownMenuItem asChild>
+                    <Link to="/products-adding-n" className="cursor-pointer">
+                      <Settings className="mr-2 h-4 w-4" />
+                      Add Products
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/blog-adding" className="cursor-pointer">
+                      <Settings className="mr-2 h-4 w-4" />
+                      Add Blog Posts
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/uploading-pictures" className="cursor-pointer">
+                      <Settings className="mr-2 h-4 w-4" />
+                      Upload Pictures
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                </>
+              )}
+              <DropdownMenuItem onClick={() => signOut()}>
+                <LogOut className="mr-2 h-4 w-4" />
+                Sign Out
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        ) : (
+          <Link to="/auth">
+            <Button variant="outline" className="text-[#454545] border-[#DCB481] hover:bg-[#DCB481]/10">
+              Sign In
+            </Button>
+          </Link>
+        )}
       </nav>
       
       <button 
