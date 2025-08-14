@@ -19,9 +19,10 @@ const Products = () => {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>("All Products");
 
-  // Scroll to top when component mounts
+  // Ensure page starts at top immediately
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Instant scroll to top without animation
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, []);
   const [showFilter, setShowFilter] = useState(false);
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
