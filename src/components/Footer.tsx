@@ -51,8 +51,8 @@ const Footer = () => {
         <nav className="flex w-[257px] flex-col items-start gap-6 max-md:w-full" aria-label="Product links">
           <h3 className="text-white text-xl font-bold w-full max-sm:text-lg">{t('product')}</h3>
           <ul className="flex flex-col justify-center items-start gap-4 w-full">
-            <li><a href="#exterior-panels" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('exteriorPanels')}</a></li>
-            <li><a href="#interior-panels" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('interiorPanels')}</a></li>
+            <li><a href="/products" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('exteriorPanels')}</a></li>
+            <li><a href="/products" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('interiorPanels')}</a></li>
             <li><a href="#privacy" className="text-white text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('privacyPolicy')}</a></li>
           </ul>
         </nav>
