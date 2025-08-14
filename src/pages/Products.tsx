@@ -138,6 +138,10 @@ const Products = () => {
                     src={image.src}
                     alt={image.alt}
                     className="w-full h-full object-cover max-md:h-[200px]"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    fetchPriority={index === 0 ? "high" : "low"}
+                    decoding="async"
+                    sizes="100vw"
                   />
                 </div>
               </CarouselItem>
@@ -228,12 +232,13 @@ const Products = () => {
                       src={product.main_picture_url} 
                       alt={product.name} 
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      loading={index < 8 ? "eager" : "lazy"}
+                      loading={index < 4 ? "eager" : "lazy"}
+                      fetchPriority={index < 2 ? "high" : "low"}
                       decoding="async"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                       style={{
-                        contentVisibility: 'auto',
-                        containIntrinsicSize: '300px 300px',
-                        ...(index >= 8 && { opacity: 0, transition: 'opacity 0.3s ease-in-out' })
+                        contentVisibility: index >= 8 ? 'auto' : 'visible',
+                        containIntrinsicSize: index >= 8 ? '300px 300px' : 'none',
                       }}
                       onLoad={(e) => {
                         const img = e.target as HTMLImageElement;
