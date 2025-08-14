@@ -12,7 +12,7 @@ const resources = {
       "about": "About",
       "blog": "Blog",
       "contact": "Contact",
-      "getSample": "Get a Free Sample",
+      "getSample": "Our Products",
       
       // Footer
       "company": "Company",
@@ -203,7 +203,7 @@ const resources = {
       "about": "Om oss", 
       "blog": "Blogg",
       "contact": "Kontakt",
-      "getSample": "Få ett gratis prov",
+      "getSample": "Våra Produkter",
       
       // Footer
       "company": "Företag",
