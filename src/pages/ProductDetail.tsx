@@ -102,6 +102,10 @@ const ProductDetail = () => {
         console.error('Error fetching product images:', error);
       } else {
         console.log('Found product images:', data);
+        console.log('All images combined:', [
+          { url: product?.main_picture_url || '', isMain: true },
+          ...data.map(img => ({ url: img.image_url, isMain: false }))
+        ]);
         setProductImages(data || []);
       }
     } catch (error) {
