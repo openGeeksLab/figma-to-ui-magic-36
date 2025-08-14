@@ -195,9 +195,21 @@ const resources = {
       "sampleRequestFailed": "Failed to send sample request. Please try again.",
       "sampleCloseAriaLabel": "Close sample request form",
       
-      // Product detail selected options
-      "surface": "Surface",
-      "color": "Color"
+       // Product detail selected options
+       "surface": "Surface",
+       "color": "Color",
+       
+       // Product detail page
+       "specification": "Specification",
+       "details": "Details",
+       "personalisedOrders": "Personalised orders",
+       "fillTheForm": "Fill the Form",
+       "productDescription": "is a sophisticated 3D cladding of Nordic Pine. It creates a visually elegant and modern wood surface. Highly suitable for facades, interiors, and other decorative surfaces where a sustainable and chemical-free wood surface is desired. Additionally, if left untreated outside, it develops a beautiful naturally greyed patina.",
+       "defaultSpecifications": {
+         "dimensionallyStable": "Dimensionally stable",
+         "withoutChemicals": "Without added chemicals", 
+         "naturalProduct": "100% natural product"
+       }
     }
   },
   sv: {
@@ -390,12 +402,24 @@ const resources = {
       "sampleRequestDescription": "Vi skickar dig ett gratis prov inom 2-3 arbetsdagar.",
       "sampleRequestFailed": "Misslyckades med att skicka provförfrågan. Vänligen försök igen.",
       "sampleCloseAriaLabel": "Stäng formulär för provförfrågan",
-      
-      // Product detail selected options
-      "surface": "Yta",
-      "color": "Färg"
-    }
-  }
+       
+       // Product detail selected options
+       "surface": "Yta",
+       "color": "Färg",
+       
+       // Product detail page
+       "specification": "Specifikation",
+       "details": "Detaljer",
+       "personalisedOrders": "Personalanpassade beställningar",
+       "fillTheForm": "Fyll i formuläret",
+       "productDescription": "är en sofistikerad 3D-beklädnad av nordisk tall. Den skapar en visuellt elegant och modern träyta. Är mycket lämplig för fasader, interiörer och andra dekorativa ytor där en hållbar och kemikaliefri träyta önskas. Dessutom utvecklar den en vacker naturligt gråtonad patina om den lämnas obehandlad utomhus.",
+       "defaultSpecifications": {
+         "dimensionallyStable": "Formstabil",
+         "withoutChemicals": "Utan tillsatta kemikalier",
+         "naturalProduct": "100% naturprodukt"
+       }
+     }
+   }
 };
 
 i18n

@@ -31,7 +31,7 @@ const ProductDetail = () => {
     if (i18n.language === 'sv' && product?.description_sv) {
       return product.description_sv;
     }
-    return product?.description || `${product?.name} is a sophisticated 3D cladding of Nordic Pine. It creates a visually elegant and modern wood surface. Highly suitable for facades, interiors, and other decorative surfaces where a sustainable and chemical-free wood surface is desired.`;
+    return product?.description || `${product?.name} ${t('productDescription')}`;
   };
 
   const getProductDetails = () => {
@@ -453,7 +453,7 @@ const ProductDetail = () => {
 
                {/* Specification */}
                <div>
-                 <h3 className="text-lg font-semibold text-[#454545] mb-4">Specification</h3>
+                 <h3 className="text-lg font-semibold text-[#454545] mb-4">{t('specification')}</h3>
                  <div className="space-y-2">
                    {(product?.specifications as string[] || []).map((spec, index) => (
                      <div key={index} className="flex items-center space-x-2">
@@ -466,7 +466,7 @@ const ProductDetail = () => {
 
                 {/* Details */}
                 <div>
-                  <h3 className="text-lg font-semibold text-[#454545] mb-4">Details</h3>
+                  <h3 className="text-lg font-semibold text-[#454545] mb-4">{t('details')}</h3>
                    <div className="space-y-2">
                      {/* Selected Surface Treatment */}
                      <div className="flex items-center space-x-2">
@@ -512,10 +512,10 @@ const ProductDetail = () => {
       {/* Personalised Orders Section */}
       <section className="px-4 py-8 bg-[#F3F0E7] rounded-2xl mx-4 mt-8 max-md:px-3 max-sm:px-2 max-md:mx-3 max-sm:mx-2 overflow-hidden">
         <div className="mx-auto max-w-full">
-          <h2 className="text-2xl md:text-4xl font-bold text-[#454545] mb-8 max-sm:text-xl break-words">Personalised orders</h2>
-          <p className="text-lg text-gray-600 leading-relaxed mb-4">
-            Nordic Thermoträ is a sophisticated 3D cladding of Nordic Pine. It creates a visually elegant and modern wood surface. Thermoträ is highly suitable for facades, interiors, and other decorative surfaces where a sustainable and chemical-free wood surface is desired. Additionally, if left untreated outside, it develops a beautiful naturally greyed patina.
-          </p>
+          <h2 className="text-2xl md:text-4xl font-bold text-[#454545] mb-8 max-sm:text-xl break-words">{t('personalisedOrders')}</h2>
+           <p className="text-lg text-gray-600 leading-relaxed mb-4">
+             {product?.name} {t('productDescription')}
+           </p>
           <CalculateOrderPopup
             productDetails={{
               productName: product.name,
@@ -525,7 +525,7 @@ const ProductDetail = () => {
             }}
           >
             <button className="bg-white text-[#454545] px-6 py-3 rounded-[28px] text-sm font-medium hover:bg-gray-50 transition-colors">
-              Fill the Form
+              {t('fillTheForm')}
             </button>
           </CalculateOrderPopup>
         </div>
