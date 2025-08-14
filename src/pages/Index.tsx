@@ -46,10 +46,10 @@ const Index = () => {
                   </svg>
                 </div>
                 <div className="flex flex-col items-center gap-4">
-                  <h3 className="text-[#454545] text-center text-xl font-bold">Förbättrad Hållbarhet</h3>
-                  <p className="text-[#454545] text-center text-base font-normal leading-[23.36px]">
-                  Förbättrad hållbarhet för att motstå slitage samtidigt som skönheten bevaras.
-                  </p>
+                  <h3 className="text-[#454545] text-center text-xl font-bold">{t('enhancedDurability')}</h3>
+                   <p className="text-[#454545] text-center text-base font-normal leading-[23.36px]">
+                   {t('enhancedDurabilityDesc')}
+                   </p>
                 </div>
               </article>
               
@@ -60,10 +60,10 @@ const Index = () => {
                   </svg>
                 </div>
                 <div className="flex flex-col items-center gap-4">
-                  <h3 className="text-[#454545] text-center text-xl font-bold">Oöverträffad stabilitet</h3>
-                  <p className="text-[#454545] text-center text-base font-normal leading-[23.36px]">
-                  Oöverträffad stabilitet som håller ditt trä stadigt och säkert.
-                  </p>
+                  <h3 className="text-[#454545] text-center text-xl font-bold">{t('unmatchedStability')}</h3>
+                   <p className="text-[#454545] text-center text-base font-normal leading-[23.36px]">
+                   {t('unmatchedStabilityDesc')}
+                   </p>
                 </div>
               </article>
               
@@ -74,10 +74,10 @@ const Index = () => {
                   </svg>
                 </div>
                 <div className="flex flex-col items-center gap-4">
-                  <h3 className="text-[#454545] text-center text-xl font-bold">Hållbarhet</h3>
-                  <p className="text-[#454545] text-center text-base font-normal leading-[23.36px]">
-                  Hållbarhet som skyddar naturen för kommande generationer.
-                  </p>
+                  <h3 className="text-[#454545] text-center text-xl font-bold">{t('sustainabilityFeature')}</h3>
+                   <p className="text-[#454545] text-center text-base font-normal leading-[23.36px]">
+                   {t('sustainabilityFeatureDesc')}
+                   </p>
                 </div>
               </article>
             </div>

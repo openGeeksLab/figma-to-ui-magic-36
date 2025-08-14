@@ -120,13 +120,18 @@ const resources = {
       "heroDescription": "Inspired by revolutionary innovation. Experience the power of science with our ultra-safe, heat-treated wood. Through innovation, our wood combines advanced science and precision engineering for outstanding performance.",
       
       // Features
-      "unmatchedStability": "Oöverträffad stabilitet",
-      "enhancedDurability": "Förbättrad Hållbarhet", 
-      "sustainabilityFeature": "Hållbarhet",
+       "unmatchedStability": "Unmatched Stability",
+       "enhancedDurability": "Enhanced Durability", 
+       "sustainabilityFeature": "Sustainability",
       "toxinFree": "Toxin-free and Chemical-free",
       "noResin": "No Resin",
       "lowMaintenance": "Low Maintenance",
-      "tailoredApproach": "Tailored Approach for Each Customer",
+       "tailoredApproach": "Tailored Approach for Each Customer",
+       
+       // Feature descriptions
+       "enhancedDurabilityDesc": "Enhanced durability to resist wear while preserving beauty.",
+       "unmatchedStabilityDesc": "Unmatched stability that keeps your wood steady and secure.",
+       "sustainabilityFeatureDesc": "Sustainability that protects nature for future generations.",
       
       // ImageGallery
       "customCladding": "Custom Cladding",
@@ -310,14 +315,19 @@ const resources = {
       "heroLine3": "Hållbar tack vare teknik",
       "heroDescription": "Drivs av banbrytande teknik. Upplev vetenskapens styrka med vårt ultrasäkra, värmebehandlade trä. Genom innovation kombinerar vårt trä avancerad vetenskap och precisionsingenjörskap för enastående prestanda.",
       
-      // Features
-      "unmatchedStability": "Oöverträffad stabilitet",
-      "enhancedDurability": "Förbättrad hållbarhet",
-      "sustainabilityFeature": "Hållbarhet",
-      "toxinFree": "Giftfri och kemikaliefri",
-      "noResin": "Ingen hartser",
-      "lowMaintenance": "Lågt underhåll",
-      "tailoredApproach": "Skräddarsydd lösning för varje kund",
+       // Features
+       "unmatchedStability": "Oöverträffad stabilitet",
+       "enhancedDurability": "Förbättrad hållbarhet",
+       "sustainabilityFeature": "Hållbarhet",
+       "toxinFree": "Giftfri och kemikaliefri",
+       "noResin": "Ingen hartser",
+       "lowMaintenance": "Lågt underhåll",
+       "tailoredApproach": "Skräddarsydd lösning för varje kund",
+       
+       // Feature descriptions
+       "enhancedDurabilityDesc": "Förbättrad hållbarhet för att motstå slitage samtidigt som skönheten bevaras.",
+       "unmatchedStabilityDesc": "Oöverträffad stabilitet som håller ditt trä stadigt och säkert.",
+       "sustainabilityFeatureDesc": "Hållbarhet som skyddar naturen för kommande generationer.",
       
       // ImageGallery
       "customCladding": "Skräddarsydd Beklädnad",
