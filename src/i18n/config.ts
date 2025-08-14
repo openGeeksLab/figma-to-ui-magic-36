@@ -25,6 +25,7 @@ const resources = {
       "phone": "Phone:",
       "cookiePolicy": "Cookie Policy",
       "termsOfUse": "General Terms of Use",
+      "proudlyMadeBy": "Proudly made by ❤️ OpenGeeksLab",
       
       // About page
       "aboutUs": "About",
@@ -234,6 +235,7 @@ const resources = {
       "phone": "Telefon:",
       "cookiePolicy": "Cookie Policy",
       "termsOfUse": "Allmänna Villkor",
+      "proudlyMadeBy": "Stolt gjord av ❤️ OpenGeeksLab",
       
       // About page
       "aboutUs": "Om",
