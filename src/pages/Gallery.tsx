@@ -86,7 +86,7 @@ const Gallery = () => {
                 <Loader2 className="h-8 w-8 animate-spin" />
               </div>
             ) : (
-              /* Gallery grid */
+              /* Gallery grid with virtual scrolling optimization */
               <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
                 {images.map((image, index) => (
                   <Dialog key={image.id}>
@@ -96,12 +96,13 @@ const Gallery = () => {
                           src={image.image_url}
                           alt={image.title}
                           className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                          loading={index < 8 ? "eager" : "lazy"}
+                          loading={index < 4 ? "eager" : "lazy"}
                           decoding="async"
+                          fetchPriority={index < 2 ? "high" : "low"}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                           style={{
-                            contentVisibility: 'auto',
-                            containIntrinsicSize: '300px 200px',
-                            ...(index >= 8 && { opacity: 0, transition: 'opacity 0.3s ease-in-out' })
+                            contentVisibility: index >= 8 ? 'auto' : 'visible',
+                            containIntrinsicSize: index >= 8 ? '300px 400px' : 'none',
                           }}
                           onLoad={(e) => {
                             const img = e.target as HTMLImageElement;
@@ -113,7 +114,6 @@ const Gallery = () => {
                           }}
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300" />
-                        
                         
                         {/* Image title overlay */}
                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
