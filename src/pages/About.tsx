@@ -140,6 +140,7 @@ const About = () => {
     <li>{t('provideItem2')}</li>
     <li>{t('provideItem3')}</li>
     <li>{t('provideItem4')}</li>
+    <li>{t('provideItem5')}</li>
   </ul>
 </div>
   </div>
