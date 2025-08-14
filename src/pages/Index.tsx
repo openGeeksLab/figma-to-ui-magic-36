@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -9,7 +10,6 @@ import ImageGallery from '@/components/ImageGallery';
 import ContactForm from '@/components/ContactForm';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
-import SampleRequestPopup from '@/components/SampleRequestPopup';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -108,11 +108,11 @@ const Index = () => {
               <p className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base">
                 {t('catalogDescription')}
               </p>
-                <SampleRequestPopup>
+                <Link to="/products">
                   <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-xl font-normal hover:bg-[#c9a373] transition-colors">
-                    {t('downloadCatalog')}
+                    {t('getSample')}
                   </button>
-                </SampleRequestPopup>
+                </Link>
               </div>
             </article>
           </section>
