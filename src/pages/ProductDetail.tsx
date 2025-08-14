@@ -218,7 +218,7 @@ const ProductDetail = () => {
                 />
               </div>
               <div className="grid grid-cols-4 gap-2 w-full max-w-full overflow-hidden">
-                {allImages.slice(0, 4).map((image, index) => (
+                {allImages.map((image, index) => (
                   <div 
                     key={index} 
                     className={`aspect-square bg-gray-100 rounded cursor-pointer transition-all ${
