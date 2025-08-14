@@ -18,6 +18,11 @@ const Products = () => {
   const [products, setProducts] = useState<Tables<"products">[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>("All Products");
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [showFilter, setShowFilter] = useState(false);
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
 
