@@ -99,6 +99,9 @@ const Footer = () => {
           <a href="#cookies" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('cookiePolicy')}</a>
           <a href="#terms" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('termsOfUse')}</a>
           <a href="#privacy" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">{t('privacyPolicy')}</a>
+          <a href="https://opengeekslab.com/" target="_blank" rel="noopener noreferrer" className="text-[#454545] text-lg font-normal leading-[26.28px] max-sm:text-base hover:text-[#DCB481] transition-colors">
+            Proudly made by ❤️ OpenGeeksLab
+          </a>
         </nav>
       </div>
     </footer>
