@@ -1,5 +1,5 @@
 import React from 'react';
-import SampleRequestPopup from './SampleRequestPopup';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const IntroSection: React.FC = () => {
@@ -23,11 +23,11 @@ const IntroSection: React.FC = () => {
           Creates a connection between urban life and nature. Grown and strengthened in the harsh climate of Finland, the renewable Nordic forest provides us the best wood material, which we enhance with heat and steam only. Lunawood offers an easy-to-maintain, long-lasting and thoroughly sustainable wood products for all climates.
         </div>
         
-        <SampleRequestPopup>
+        <Link to="/products">
           <button className="flex h-11 justify-center items-center gap-2.5 bg-[#DCB481] px-6 py-4 rounded-[28px] text-[#454545] text-base font-normal hover:bg-[#c9a373] transition-colors">
             {t('getFreeSample')}
           </button>
-        </SampleRequestPopup>
+        </Link>
       </div>
     </section>
   );
