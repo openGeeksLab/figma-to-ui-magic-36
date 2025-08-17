@@ -378,7 +378,7 @@ const resources = {
       "ourProductsHighlight": "Produkter",
       
       // Product types
-      "cladding": "Beklädnad",
+      "cladding": "Fasadpanel",
       "decking": "Däck",
       "allProducts": "Alla Produkter",
       
