@@ -305,7 +305,7 @@ const ProductDetail = () => {
                 <h3 className="text-lg font-semibold text-[#454545] mb-4">
                   {t('toneColor')}: <span className="text-gray-600">{colorNames[selectedColorSwatch]}</span>
                 </h3>
-                <div className="grid grid-cols-3 max-sm:grid-cols-3 gap-1 max-sm:gap-0.5 w-full max-w-[50%] overflow-hidden max-sm:scale-50 max-sm:origin-left">
+                <div className="grid grid-cols-3 max-sm:grid-cols-3 gap-1 max-sm:gap-0.5 w-full max-w-[50%] max-sm:max-w-full overflow-hidden max-sm:mx-auto">
                    {/* First row - Wood texture images */}
                    <div 
                      className={`aspect-square rounded-lg border-2 cursor-pointer hover:border-[#DCB481] transition-colors overflow-hidden ${
