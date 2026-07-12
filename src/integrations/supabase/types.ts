@@ -14,16 +14,255 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      blog_images: {
+        Row: {
+          blog_post_id: string
+          created_at: string | null
+          id: string
+          image_url: string
+          storage_path: string
+        }
+        Insert: {
+          blog_post_id: string
+          created_at?: string | null
+          id?: string
+          image_url: string
+          storage_path: string
+        }
+        Update: {
+          blog_post_id?: string
+          created_at?: string | null
+          id?: string
+          image_url?: string
+          storage_path?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "blog_images_blog_post_id_fkey"
+            columns: ["blog_post_id"]
+            isOneToOne: false
+            referencedRelation: "blog_posts"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      blog_posts: {
+        Row: {
+          content: string | null
+          created_at: string | null
+          id: string
+          main_picture_path: string
+          main_picture_url: string
+          post_type_id: string
+          seo_keywords: string | null
+          slug: string | null
+          title: string
+          updated_at: string | null
+          youtube_link: string | null
+        }
+        Insert: {
+          content?: string | null
+          created_at?: string | null
+          id?: string
+          main_picture_path: string
+          main_picture_url: string
+          post_type_id: string
+          seo_keywords?: string | null
+          slug?: string | null
+          title: string
+          updated_at?: string | null
+          youtube_link?: string | null
+        }
+        Update: {
+          content?: string | null
+          created_at?: string | null
+          id?: string
+          main_picture_path?: string
+          main_picture_url?: string
+          post_type_id?: string
+          seo_keywords?: string | null
+          slug?: string | null
+          title?: string
+          updated_at?: string | null
+          youtube_link?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "blog_posts_post_type_id_fkey"
+            columns: ["post_type_id"]
+            isOneToOne: false
+            referencedRelation: "post_types"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      gallery_images: {
+        Row: {
+          created_at: string | null
+          description: string | null
+          id: string
+          image_url: string
+          storage_path: string
+          title: string
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          image_url: string
+          storage_path: string
+          title: string
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          image_url?: string
+          storage_path?: string
+          title?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      post_types: {
+        Row: {
+          created_at: string | null
+          id: string
+          is_default: boolean | null
+          name: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          is_default?: boolean | null
+          name: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          is_default?: boolean | null
+          name?: string
+        }
+        Relationships: []
+      }
+      product_images: {
+        Row: {
+          created_at: string | null
+          id: string
+          image_url: string
+          product_id: string
+          storage_path: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          image_url: string
+          product_id: string
+          storage_path: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          image_url?: string
+          product_id?: string
+          storage_path?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_images_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      products: {
+        Row: {
+          created_at: string | null
+          description: string | null
+          description_sv: string | null
+          details: string[] | null
+          details_sv: string[] | null
+          id: string
+          main_picture_path: string
+          main_picture_url: string
+          name: string
+          sizes: string[] | null
+          specifications: string[] | null
+          type: string
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          description?: string | null
+          description_sv?: string | null
+          details?: string[] | null
+          details_sv?: string[] | null
+          id?: string
+          main_picture_path: string
+          main_picture_url: string
+          name: string
+          sizes?: string[] | null
+          specifications?: string[] | null
+          type: string
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          description?: string | null
+          description_sv?: string | null
+          details?: string[] | null
+          details_sv?: string[] | null
+          id?: string
+          main_picture_path?: string
+          main_picture_url?: string
+          name?: string
+          sizes?: string[] | null
+          specifications?: string[] | null
+          type?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string | null
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "moderator" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +389,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "moderator", "user"],
+    },
   },
 } as const
