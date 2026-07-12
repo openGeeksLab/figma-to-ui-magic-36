@@ -48,11 +48,13 @@ serve(async (req) => {
       )
     }
 
-    // Assign admin role
+    // Assign admin role (insert or update)
     const { error: roleError } = await supabaseClient
       .from('user_roles')
-      .update({ role: 'admin' })
-      .eq('user_id', userData.user.id)
+      .upsert(
+        { user_id: userData.user.id, role: 'admin' },
+        { onConflict: 'user_id,role' }
+      )
 
     if (roleError) {
       console.error('Error assigning admin role:', roleError)
