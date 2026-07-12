@@ -10,28 +10,28 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "12.2.3 (519615d)"
+    PostgrestVersion: "14.5"
   }
   public: {
     Tables: {
       blog_images: {
         Row: {
           blog_post_id: string
-          created_at: string
+          created_at: string | null
           id: string
           image_url: string
           storage_path: string
         }
         Insert: {
           blog_post_id: string
-          created_at?: string
+          created_at?: string | null
           id?: string
           image_url: string
           storage_path: string
         }
         Update: {
           blog_post_id?: string
-          created_at?: string
+          created_at?: string | null
           id?: string
           image_url?: string
           storage_path?: string
@@ -49,7 +49,7 @@ export type Database = {
       blog_posts: {
         Row: {
           content: string | null
-          created_at: string
+          created_at: string | null
           id: string
           main_picture_path: string
           main_picture_url: string
@@ -57,12 +57,12 @@ export type Database = {
           seo_keywords: string | null
           slug: string | null
           title: string
-          updated_at: string
+          updated_at: string | null
           youtube_link: string | null
         }
         Insert: {
           content?: string | null
-          created_at?: string
+          created_at?: string | null
           id?: string
           main_picture_path: string
           main_picture_url: string
@@ -70,12 +70,12 @@ export type Database = {
           seo_keywords?: string | null
           slug?: string | null
           title: string
-          updated_at?: string
+          updated_at?: string | null
           youtube_link?: string | null
         }
         Update: {
           content?: string | null
-          created_at?: string
+          created_at?: string | null
           id?: string
           main_picture_path?: string
           main_picture_url?: string
@@ -83,7 +83,7 @@ export type Database = {
           seo_keywords?: string | null
           slug?: string | null
           title?: string
-          updated_at?: string
+          updated_at?: string | null
           youtube_link?: string | null
         }
         Relationships: [
@@ -98,72 +98,72 @@ export type Database = {
       }
       gallery_images: {
         Row: {
-          created_at: string
+          created_at: string | null
           description: string | null
           id: string
           image_url: string
           storage_path: string
           title: string
-          updated_at: string
+          updated_at: string | null
         }
         Insert: {
-          created_at?: string
+          created_at?: string | null
           description?: string | null
           id?: string
           image_url: string
           storage_path: string
           title: string
-          updated_at?: string
+          updated_at?: string | null
         }
         Update: {
-          created_at?: string
+          created_at?: string | null
           description?: string | null
           id?: string
           image_url?: string
           storage_path?: string
           title?: string
-          updated_at?: string
+          updated_at?: string | null
         }
         Relationships: []
       }
       post_types: {
         Row: {
-          created_at: string
+          created_at: string | null
           id: string
-          is_default: boolean
+          is_default: boolean | null
           name: string
         }
         Insert: {
-          created_at?: string
+          created_at?: string | null
           id?: string
-          is_default?: boolean
+          is_default?: boolean | null
           name: string
         }
         Update: {
-          created_at?: string
+          created_at?: string | null
           id?: string
-          is_default?: boolean
+          is_default?: boolean | null
           name?: string
         }
         Relationships: []
       }
       product_images: {
         Row: {
-          created_at: string
+          created_at: string | null
           id: string
           image_url: string
           product_id: string
           storage_path: string
         }
         Insert: {
-          created_at?: string
+          created_at?: string | null
           id?: string
           image_url: string
           product_id: string
           storage_path: string
         }
         Update: {
-          created_at?: string
+          created_at?: string | null
           id?: string
           image_url?: string
           product_id?: string
@@ -181,99 +181,69 @@ export type Database = {
       }
       products: {
         Row: {
-          created_at: string
+          created_at: string | null
           description: string | null
           description_sv: string | null
-          details: Json | null
-          details_sv: Json | null
+          details: string[] | null
+          details_sv: string[] | null
           id: string
           main_picture_path: string
           main_picture_url: string
           name: string
-          sizes: Json
-          specifications: Json | null
+          sizes: string[] | null
+          specifications: string[] | null
           type: string
-          updated_at: string
+          updated_at: string | null
         }
         Insert: {
-          created_at?: string
+          created_at?: string | null
           description?: string | null
           description_sv?: string | null
-          details?: Json | null
-          details_sv?: Json | null
+          details?: string[] | null
+          details_sv?: string[] | null
           id?: string
           main_picture_path: string
           main_picture_url: string
           name: string
-          sizes?: Json
-          specifications?: Json | null
+          sizes?: string[] | null
+          specifications?: string[] | null
           type: string
-          updated_at?: string
+          updated_at?: string | null
         }
         Update: {
-          created_at?: string
+          created_at?: string | null
           description?: string | null
           description_sv?: string | null
-          details?: Json | null
-          details_sv?: Json | null
+          details?: string[] | null
+          details_sv?: string[] | null
           id?: string
           main_picture_path?: string
           main_picture_url?: string
           name?: string
-          sizes?: Json
-          specifications?: Json | null
+          sizes?: string[] | null
+          specifications?: string[] | null
           type?: string
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      profiles: {
-        Row: {
-          avatar_url: string | null
-          created_at: string
-          email: string
-          full_name: string | null
-          id: string
-          updated_at: string
-          user_id: string
-        }
-        Insert: {
-          avatar_url?: string | null
-          created_at?: string
-          email: string
-          full_name?: string | null
-          id?: string
-          updated_at?: string
-          user_id: string
-        }
-        Update: {
-          avatar_url?: string | null
-          created_at?: string
-          email?: string
-          full_name?: string | null
-          id?: string
-          updated_at?: string
-          user_id?: string
+          updated_at?: string | null
         }
         Relationships: []
       }
       user_roles: {
         Row: {
-          created_at: string
+          created_at: string | null
           id: string
-          role: Database["public"]["Enums"]["user_role"]
+          role: Database["public"]["Enums"]["app_role"]
           user_id: string
         }
         Insert: {
-          created_at?: string
+          created_at?: string | null
           id?: string
-          role?: Database["public"]["Enums"]["user_role"]
+          role: Database["public"]["Enums"]["app_role"]
           user_id: string
         }
         Update: {
-          created_at?: string
+          created_at?: string | null
           id?: string
-          role?: Database["public"]["Enums"]["user_role"]
+          role?: Database["public"]["Enums"]["app_role"]
           user_id?: string
         }
         Relationships: []
@@ -283,24 +253,16 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      generate_slug: {
-        Args: { title: string }
-        Returns: string
-      }
-      get_current_user_role: {
-        Args: Record<PropertyKey, never>
-        Returns: Database["public"]["Enums"]["user_role"]
-      }
       has_role: {
         Args: {
-          _role: Database["public"]["Enums"]["user_role"]
+          _role: Database["public"]["Enums"]["app_role"]
           _user_id: string
         }
         Returns: boolean
       }
     }
     Enums: {
-      user_role: "admin" | "user"
+      app_role: "admin" | "moderator" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -428,7 +390,7 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
-      user_role: ["admin", "user"],
+      app_role: ["admin", "moderator", "user"],
     },
   },
 } as const
