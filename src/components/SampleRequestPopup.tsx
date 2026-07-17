@@ -87,7 +87,7 @@ const SampleRequestPopup: React.FC<SampleRequestPopupProps> = ({ children }) => 
         message: `Sample Request: ${formData.message || "Customer has requested a free sample. No additional message provided."}`
       };
 
-      const response = await fetch('https://xksrscyjywtnmtwmgihm.supabase.co/functions/v1/send-contact-email', {
+      const response = await fetch('https://gcfxfjazoyzxtevangwh.supabase.co/functions/v1/send-contact-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

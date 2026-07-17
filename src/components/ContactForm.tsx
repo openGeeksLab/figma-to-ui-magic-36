@@ -105,11 +105,11 @@ const ContactForm = () => {
     
     try {
       // Use direct fetch to the edge function
-      const response = await fetch('https://xksrscyjywtnmtwmgihm.supabase.co/functions/v1/send-contact-email', {
+      const response = await fetch('https://gcfxfjazoyzxtevangwh.supabase.co/functions/v1/send-contact-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhrc3JzY3lqeXd0bm10d21naWhtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4NzcyMjYsImV4cCI6MjA2NzQ1MzIyNn0.yX65KXWNzewok7zd-V2gNQW97yDryang9jdCdM1-Btg',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjZnhmamF6b3l6eHRldmFuZ3doIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM4NTA2MzIsImV4cCI6MjA5OTQyNjYzMn0.5OdqvYBvZI791MdMwygLq5dU9c-xYpqZVgHCi-462FU',
         },
         body: JSON.stringify(formData),
       });

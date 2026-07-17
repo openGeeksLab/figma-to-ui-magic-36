@@ -170,7 +170,7 @@ const CalculateOrderPopup: React.FC<CalculateOrderPopupProps> = ({ children, pro
         }
       };
 
-      const response = await fetch('https://xksrscyjywtnmtwmgihm.supabase.co/functions/v1/send-contact-email', {
+      const response = await fetch('https://gcfxfjazoyzxtevangwh.supabase.co/functions/v1/send-contact-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
