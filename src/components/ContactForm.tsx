@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { supabase } from '@/integrations/supabase/client';
+//import { supabase } from '@/integrations/supabase/client';
 interface FormData {
   name: string;
   email: string;
@@ -114,10 +114,14 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
-      
+      const text = await response.text();
+
+alert(`Status:, ${response.status}`);
+alert(`Response:, ${text}`);
+
+const result = text ? JSON.parse(text) : {};
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to send email1');
+        throw new Error(result.error || 'Failed to send email');
       }
       
       setIsSubmitted(true);
