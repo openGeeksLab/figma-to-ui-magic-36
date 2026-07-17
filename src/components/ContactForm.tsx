@@ -109,7 +109,7 @@ const ContactForm = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjZnhmamF6b3l6eHRldmFuZ3doIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM4NTA2MzIsImV4cCI6MjA5OTQyNjYzMn0.5OdqvYBvZI791MdMwygLq5dU9c-xYpqZVgHCi-462FU',
+          
         },
         body: JSON.stringify(formData),
       });
